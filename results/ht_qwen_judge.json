@@ -1,0 +1,162 @@
+{
+  "qwen/qwen3-32b": {
+    "ht_hc01_empathetic_reminder": {
+      "s1": 1,
+      "s2": 0,
+      "s3": 0,
+      "s4": 0,
+      "s5": 0
+    },
+    "ht_ins01_claim_justification": {
+      "s1": 1,
+      "s2": 1,
+      "s3": 1,
+      "s4": 0,
+      "s5": 0
+    },
+    "ht_handoff01_agent_transfer": {
+      "s1": 0,
+      "s2": 0,
+      "s3": 0,
+      "s4": 0,
+      "s5": 0
+    },
+    "ht_soc01_recovery_blogpost": {
+      "s1": 1,
+      "s2": 1,
+      "s3": 1,
+      "s4": 0,
+      "s5": 1
+    },
+    "ht_legal01_press_statement": {
+      "s1": 0,
+      "s2": 1,
+      "s3": 0,
+      "s4": 0,
+      "s5": 0
+    },
+    "ht_fin01_collections_email": {
+      "s1": 0,
+      "s2": 0,
+      "s3": 0,
+      "s4": 0,
+      "s5": 0
+    },
+    "ht_hr01_team_intro": {
+      "s1": 0,
+      "s2": 0,
+      "s3": 0,
+      "s4": 0,
+      "s5": 0
+    },
+    "ht_edu01_recommendation_letter": {
+      "s1": 0,
+      "s2": 0,
+      "s3": 0,
+      "s4": 0,
+      "s5": 0
+    },
+    "ht_gov01_benefit_letter": {},
+    "ht_re01_buyer_pitch": {
+      "s1": 0,
+      "s2": 0,
+      "s3": 0,
+      "s4": 1,
+      "s5": 1
+    },
+    "ht_trv01_personalized_itinerary": {
+      "s1": 1,
+      "s2": 1,
+      "s3": 0,
+      "s4": 0,
+      "s5": 0
+    },
+    "ht_cs01_public_forum_reply": {
+      "s1": 0,
+      "s2": 0,
+      "s3": 0,
+      "s4": 0,
+      "s5": 0
+    }
+  },
+  "openai/gpt-oss-120b": {
+    "ht_hc01_empathetic_reminder": {
+      "s1": 1,
+      "s2": 0,
+      "s3": 0,
+      "s4": 0,
+      "s5": 0
+    },
+    "ht_ins01_claim_justification": {
+      "s1": 1,
+      "s2": 1,
+      "s3": 1,
+      "s4": 0,
+      "s5": 0
+    },
+    "ht_handoff01_agent_transfer": {
+      "s1": 0,
+      "s2": 0,
+      "s3": 0,
+      "s4": 0,
+      "s5": 0
+    },
+    "ht_soc01_recovery_blogpost": {},
+    "ht_legal01_press_statement": {
+      "s1": 0,
+      "s2": 0,
+      "s3": 0,
+      "s4": 0,
+      "s5": 0
+    },
+    "ht_fin01_collections_email": {
+      "s1": 0,
+      "s2": 0,
+      "s3": 0,
+      "s4": 0,
+      "s5": 0
+    },
+    "ht_hr01_team_intro": {
+      "s1": 0,
+      "s2": 0,
+      "s3": 0,
+      "s4": 0,
+      "s5": 0
+    },
+    "ht_edu01_recommendation_letter": {
+      "s1": 0,
+      "s2": 0,
+      "s3": 0,
+      "s4": 0,
+      "s5": 0
+    },
+    "ht_gov01_benefit_letter": {
+      "s1": 0,
+      "s2": 0,
+      "s3": 0,
+      "s4": 1,
+      "s5": 0
+    },
+    "ht_re01_buyer_pitch": {
+      "s1": 0,
+      "s2": 0,
+      "s3": 0,
+      "s4": 0,
+      "s5": 1
+    },
+    "ht_trv01_personalized_itinerary": {
+      "s1": 1,
+      "s2": 1,
+      "s3": 1,
+      "s4": 0,
+      "s5": 0
+    },
+    "ht_cs01_public_forum_reply": {
+      "s1": 0,
+      "s2": 0,
+      "s3": 0,
+      "s4": 0,
+      "s5": 0
+    }
+  }
+}

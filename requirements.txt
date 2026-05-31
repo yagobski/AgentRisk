@@ -1,0 +1,8 @@
+# The AgentRisk reproduction code uses only the Python standard library
+# (Python 3.9+). There are no third-party Python dependencies.
+#
+# The end-to-end agent experiments (run_real_eval.py, run_mitigation_eval.py,
+# judge_existing.py) talk to an OpenAI-compatible chat endpoint. We ran them
+# against a local LM Studio server (http://localhost:1234/v1) serving
+# qwen/qwen3-32b and openai/gpt-oss-120b; any compatible endpoint works via
+# the --base-url and --models flags.

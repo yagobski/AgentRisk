@@ -1,0 +1,14 @@
+# Local-only material kept out of the published repository
+_archive/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Logs and editor cruft
+*.log
+.DS_Store
+.ipynb_checkpoints/
