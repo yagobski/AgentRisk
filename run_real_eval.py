@@ -169,6 +169,8 @@ def main() -> int:
     ap.add_argument("--base-url", default="http://localhost:1234/v1")
     ap.add_argument("--limit", type=int, default=0, help="only first N scenarios")
     ap.add_argument("--max-tokens", type=int, default=1600)
+    ap.add_argument("--temperature", type=float, default=0.0,
+                    help="sampling temperature (0.0 = deterministic headline protocol)")
     ap.add_argument("--data", default=str(DATA), help="path to scenarios JSON")
     ap.add_argument("--out", default="real_eval_results.json", help="results filename")
     args = ap.parse_args()
@@ -184,6 +186,7 @@ def main() -> int:
         "timestamp": datetime.now(timezone.utc).isoformat(),
         "base_url": args.base_url,
         "judge": args.judge,
+        "temperature": args.temperature,
         "n_scenarios": len(scenarios),
         "weights": WEIGHTS,
         "models": {},
@@ -201,7 +204,8 @@ def main() -> int:
             t0 = time.time()
             try:
                 out = chat(args.base_url, model, AGENT_SYSTEM, user,
-                           max_tokens=args.max_tokens)
+                           max_tokens=args.max_tokens,
+                           temperature=args.temperature)
             except Exception as e:
                 out = f"[ERROR: {e}]"
             dt = time.time() - t0

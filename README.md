@@ -20,8 +20,11 @@ OpenAI-compatible chat endpoint — we used a local
 | `run_real_eval.py` | Runs the agents under a data-minimization system prompt over a scenario set, applies deterministic marker detection, and scores ELR / WSL / RI with per-severity leak rates. |
 | `judge_existing.py` | Adds a paraphrase-aware LLM-judge second opinion over already-collected outputs (corroboration only; the deterministic detector stays the headline signal). |
 | `run_mitigation_eval.py` | Re-runs the high-tension scenarios under two defenses (instructional GUARD, architectural SCOPED) to show RI responds to mitigation. |
+| `run_case_study.py` | End-to-end audit case study (paper §"End-to-End Audit Case Study"): six realistic coordinator→worker workflows scored across four configurations (Baseline, GUARD, DLP-regex, SCOPED) on channels C1/C2/C5, emitting per-model results and a DPO-style audit report for the flagship workflow. |
 | `analyze_results.py` | Turns raw real-eval output into the headline numbers and the binary-vs-RI re-ranking; emits a LaTeX fragment. |
 | `analyze_decoupled.py` | Matched-pair decoupling analysis (severity held fixed, task-centrality varied) with an exact McNemar test. |
+| `analyze_extension.py` | Pooled analysis of the severity-balanced extension and repeated sampled runs: per-level summaries, Wilson CIs, Cochran–Armitage trend tests, Monte-Carlo permutation tests (n=36), bootstrap CIs, and the sampling-stability table. |
+| `inference_stats.py` | Exact paired sign-flip permutation tests and bootstrap CIs over the saved high-tension results (deterministic, no new model runs). |
 | `detector_triangulation.py` | Recomputes RI on saved outputs under four distinct detector sources (lexical-strict, lexical-fuzzy, two LLM judges) to test detector robustness. |
 | `trend_stats.py` | Standalone Wilson CI and Cochran–Armitage trend test reproducing the paper's statistical claims. Stdlib only. |
 | `final_table.py` | Builds the headline results table from the judged run. |
@@ -37,6 +40,9 @@ OpenAI-compatible chat endpoint — we used a local
 - `data/privacy_scenarios.json` — 29 base scenarios.
 - `data/privacy_scenarios_hightension.json` — 12 high-tension scenarios (the headline deterministic baseline and the mitigation study).
 - `data/privacy_scenarios_decoupled.json` — 20 matched-pair scenarios (10 pairs); each pair shares one target secret under a *peripheral* and an *entangled* framing to separate severity from task-centrality.
+- `data/privacy_scenarios_hightension_ext.json` — 24 severity-balanced extension scenarios with full Level 1–4 coverage (ρ_S = 332).
+- `data/privacy_scenarios_hightension_pooled.json` — the pooled 36-scenario set (12 original + 24 extension, ρ_S = 541) used by the repeated sampled runs.
+- `data/case_study_workflows.json` — 6 realistic coordinator→worker workflows (healthcare, finance, HR, insurance, legal, government) for the end-to-end audit case study; each carries a full record (Private Vault, 5 labelled secrets) plus a scoped task-relevant subset. 30 secrets total (ρ_S = 84).
 
 ## Reproduce the formal claims (no server required)
 
@@ -95,6 +101,34 @@ python analyze_decoupled.py
 python score_agentrisk.py
 python score_privacylens.py
 python score_trustllm.py
+
+# Severity-balanced extension (24 scenarios, L1-L4 balanced) + pooled stats
+python run_real_eval.py --models qwen/qwen3-32b \
+  --data data/privacy_scenarios_hightension_ext.json --out hx_qwen.json
+python run_real_eval.py --models openai/gpt-oss-120b \
+  --data data/privacy_scenarios_hightension_ext.json --out hx_gpt.json
+python run_real_eval.py --models meta-llama-3.1-8b-instruct \
+  --data data/privacy_scenarios_hightension_ext.json --out hx_llama.json
+
+# Repeated sampled runs (sampling-stability check, temperature 0.7, pooled 36)
+for run in 1 2 3; do
+  python run_real_eval.py --models <model> --temperature 0.7 \
+    --data data/privacy_scenarios_hightension_pooled.json \
+    --out stab_run${run}_<tag>.json
+done
+
+# Pooled analysis: extension + pooled summaries, Wilson CIs, trend tests,
+# MC permutation (n=36), bootstrap CIs, and stability table (tab:ext, §6.2)
+python analyze_extension.py
+
+# Exact permutation tests + bootstrap CIs on the original 12-scenario set (§7.4)
+python inference_stats.py
+
+# End-to-end audit case study (§"End-to-End Audit Case Study"):
+# six workflows × four configurations (BASELINE / GUARD / DLP / SCOPED),
+# channels C1/C2/C5, plus a DPO-style audit report per model
+python run_case_study.py \
+  --models qwen/qwen3-32b openai/gpt-oss-120b meta-llama-3.1-8b-instruct
 ```
 
 Useful flags shared by the runners: `--base-url` (default
