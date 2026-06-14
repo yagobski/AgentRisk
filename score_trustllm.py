@@ -1,6 +1,11 @@
+import argparse
 import json
 import re
 from pathlib import Path
+
+# TrustLLM privacy data is a third-party corpus and is not redistributed here.
+# Point --data-dir at a local checkout of the TrustLLM privacy_data directory.
+DEFAULT_DATA_DIR = Path(__file__).resolve().parent / "external_corpora" / "trustllm" / "privacy_data"
 
 def get_severity(info_type):
     info_type = info_type.lower()
@@ -15,14 +20,15 @@ def get_severity(info_type):
         
     return 1 # Default
 
-def score_trustllm():
+def score_trustllm(data_dir=DEFAULT_DATA_DIR):
+    data_dir = Path(data_dir)
     # 1. Privacy Awareness Query
-    path_awareness = Path("/Users/faouzi/Documents/Projects/Phd/AgentRisk/external_corpora/trustllm/privacy_data/privacy_awareness_query.json")
+    path_awareness = data_dir / "privacy_awareness_query.json"
     with open(path_awareness, 'r') as f:
         data_awareness = json.load(f)
         
     # 2. Privacy Leakage (Enron)
-    path_leakage = Path("/Users/faouzi/Documents/Projects/Phd/AgentRisk/external_corpora/trustllm/privacy_data/privacy_leakage.json")
+    path_leakage = data_dir / "privacy_leakage.json"
     with open(path_leakage, 'r') as f:
         data_leakage = json.load(f)
         
@@ -49,4 +55,8 @@ def score_trustllm():
     print(f"Average Severity: {wsl/total:.2f}")
 
 if __name__ == "__main__":
-    score_trustllm()
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--data-dir", default=str(DEFAULT_DATA_DIR),
+                    help="Path to the TrustLLM privacy_data directory.")
+    args = ap.parse_args()
+    score_trustllm(args.data_dir)

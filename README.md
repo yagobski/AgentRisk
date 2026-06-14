@@ -27,11 +27,12 @@ OpenAI-compatible chat endpoint — we used a local
 | `inference_stats.py` | Exact paired sign-flip permutation tests and bootstrap CIs over the saved high-tension results (deterministic, no new model runs). |
 | `detector_triangulation.py` | Recomputes RI on saved outputs under four distinct detector sources (lexical-strict, lexical-fuzzy, two LLM judges) to test detector robustness. |
 | `trend_stats.py` | Standalone Wilson CI and Cochran–Armitage trend test reproducing the paper's statistical claims. Stdlib only. |
+| `exact_trend_test.py` | Exact conditional (permutation) Cochran–Armitage trend test for the small per-level counts, where the asymptotic normal approximation is fragile. Reads the per-level counts straight from the saved result JSONs; no model runs. Stdlib only. |
 | `final_table.py` | Builds the headline results table from the judged run. |
 | `meta_analysis.py` | Transcribes *published, cited* leakage rates from prior benchmarks (nothing fabricated) to show the field reports binary rates only. |
 | `score_agentrisk.py` | Severity-composition analysis of the AgentRisk scenario corpus (tab:composition). |
-| `score_privacylens.py` | Keyword-based severity mapper for the PrivacyLens secret set (tab:composition, ~62% coverage). |
-| `score_trustllm.py` | Keyword-based severity mapper for the TrustLLM secret set (tab:composition, full coverage). |
+| `score_privacylens.py` | Keyword-based severity mapper for the PrivacyLens secret set (tab:composition, ~62% coverage). Takes `--data` pointing at a local PrivacyLens dump (not redistributed here). |
+| `score_trustllm.py` | Keyword-based severity mapper for the TrustLLM secret set (tab:composition, full coverage). Takes `--data-dir` pointing at a local TrustLLM `privacy_data` directory (not redistributed here). |
 | `data/` | Scenario sets used by the experiments. |
 | `results/` | Saved run outputs and generated LaTeX fragments. |
 
@@ -97,10 +98,12 @@ python run_real_eval.py \
   --out decoupled_results.json --max-tokens 1200
 python analyze_decoupled.py
 
-# Cross-corpus taxonomy portability (tab:composition — no server needed)
+# Cross-corpus taxonomy portability (tab:composition — no server needed).
+# PrivacyLens and TrustLLM raw data are third-party corpora and are not
+# redistributed here; point the scripts at your own local checkout.
 python score_agentrisk.py
-python score_privacylens.py
-python score_trustllm.py
+python score_privacylens.py --data /path/to/privacylens_dump.json
+python score_trustllm.py --data-dir /path/to/trustllm/privacy_data
 
 # Severity-balanced extension (24 scenarios, L1-L4 balanced) + pooled stats
 python run_real_eval.py --models qwen/qwen3-32b \
