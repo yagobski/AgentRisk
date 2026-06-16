@@ -1,15 +1,10 @@
-# AgentLeak / AgentRisk — Reproduction Code
+# AgentRisk — Reproduction Code
 
-> **Paper accepted in IEEE Access** — DOI: [10.1109/ACCESS.2026.3704541](https://doi.org/10.1109/ACCESS.2026.3704541)  
-> Accepted author version (CC BY 4.0): [`paper/agentleak/main.pdf`](paper/agentleak/main.pdf)
-
-Reproducible code for the **AgentLeak** benchmark and **AgentRisk** scoring
-framework. AgentLeak evaluates internal-channel privacy leakage in multi-agent
-LLM systems across seven instrumented channels (C1–C7). AgentRisk scores
-failures with a **severity-weighted, density-normalized Risk Index**
-$\mathrm{RI} = \mathrm{WSL}/\rho_S \in [0,1]$, where each disclosed secret
-contributes a weight by its sensitivity level (1–4) and $\rho_S$ is the total
-weighted risk mass available in the scenario.
+Reproducible code for the AgentRisk paper. AgentRisk scores privacy failures in
+multi-agent LLM systems with a **severity-weighted, density-normalized Risk
+Index** $\mathrm{RI} = \mathrm{WSL}/\rho_S \in [0,1]$, where each disclosed
+secret contributes a weight by its sensitivity level (1–4) and $\rho_S$ is the
+total weighted risk mass available in the scenario.
 
 Everything here runs on the Python standard library (Python 3.9+); there are no
 third-party Python dependencies. The end-to-end agent experiments query an
@@ -40,7 +35,6 @@ OpenAI-compatible chat endpoint — we used a local
 | `score_trustllm.py` | Keyword-based severity mapper for the TrustLLM secret set (tab:composition, full coverage). Takes `--data-dir` pointing at a local TrustLLM `privacy_data` directory (not redistributed here). |
 | `data/` | Scenario sets used by the experiments. |
 | `results/` | Saved run outputs and generated LaTeX fragments. |
-| `paper/agentleak/` | Accepted author version of the IEEE Access paper (LaTeX source + compiled PDF, CC BY 4.0). |
 
 ### Scenario sets
 
@@ -151,19 +145,3 @@ Useful flags shared by the runners: `--base-url` (default
 - Severity-weighted results are measured directly on the open-model experiments,
   where each secret's level is known. They are never retro-fitted onto external
   corpora that publish only binary labels.
-
-## Citation
-
-If you use this code or the AgentLeak benchmark, please cite:
-
-```bibtex
-@article{elyagoubi2026agentleak,
-  author  = {El Yagoubi, Faouzi and Badu-Marfo, Godwin and Al Mallah, Ranwa},
-  title   = {{AgentLeak}: A Benchmark for Internal-Channel Privacy Leakage in
-             Multi-Agent {LLM} Systems},
-  journal = {IEEE Access},
-  year    = {2026},
-  volume  = {14},
-  doi     = {10.1109/ACCESS.2026.3704541}
-}
-```
