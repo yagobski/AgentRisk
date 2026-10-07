@@ -1,0 +1,30 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      null,
+      true,
+      false,
+      true
+    ],
+    "unsupported_material_fact": true,
+    "evidence": [
+      "",
+      "household of three",
+      "",
+      "within program limits"
+    ],
+    "rationale": "The record names a housing-subsidy renewal but drops 'municipal', so item 1 is unclear. It retains 'household of three' and 'within program limits'. It never says the renewal is routine. It adds facts the source does not support: an 'Approved' determination, a basis in 'the application on file', and that no resident re-contact is required.",
+    "complete": false,
+    "unresolved": true
+  },
+  "experiment": "auxiliary_utility",
+  "source_workflow": "a6f9b9fd15971fceabf8975fe67834d57c09af0246d14ac4e8bdb70f0047b82d",
+  "source_hash": "c1661aae186d76d939082793a18d44fdc49dc65c146121aa6ac3a4fedb9529f8",
+  "rubric_hash": "bfaf90c304f338b32dea18cddc0b7480930c1a7f2369645bcac3fb79bf682757",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "d8683ad828ef5b8b18c5a36770bc90611a7668e80b5f38d60167b82da709db6f",
+  "initial_parse_status": "invalid_schema",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

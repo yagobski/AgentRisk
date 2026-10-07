@@ -1,0 +1,30 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      null,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": true,
+    "evidence": [
+      "",
+      "Lease dispute — landlord’s withholding of deposit",
+      "landlord’s withholding of deposit",
+      "Demand letter seeking return of the deposit."
+    ],
+    "rationale": "The record retains the lease dispute with the landlord, the withheld deposit and the demand-letter request. It never explicitly states that the client seeks representation; the matter/client framing only implies it, so that item is unclear. The record also adds material the source does not support: a directive not to re-interview the client and a claim that a matter file exists to review.",
+    "complete": false,
+    "unresolved": true
+  },
+  "experiment": "auxiliary_utility",
+  "source_workflow": "ad3ec29e6a710943f6c51d1dba6bc97aee204697c8fda189db55beaae55727a1",
+  "source_hash": "7820a717ec42d0141b7251d154fd157f5bf4f847dbfd36dc8dd634131b33ae43",
+  "rubric_hash": "53e022194f930d8917c6f5d4c3df7fffc187ff3250032ac7900637182eebf590",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "50fdc17355a61c5e28df853ccad75e0a789c9bb28164a8e85f505ab6cbdfa038",
+  "initial_parse_status": "invalid_schema",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

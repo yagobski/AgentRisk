@@ -1,0 +1,32 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": true,
+    "evidence": [
+      "Home-contents water damage",
+      "water damage from a burst pipe",
+      "Policy active",
+      "claim within coverage limits",
+      "Adjuster visit:** Requested"
+    ],
+    "rationale": "All five essential items are retained accurately. The record adds details not in the source: the policyholder name 'Tomas Bjork', the phone number 250-555-7741, and 'not yet scheduled'. These are unsupported material facts.",
+    "complete": false,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility",
+  "source_workflow": "d8a6b447e153a079db2cf4ab1facf49311a48d0664ec7700de15afdb6cc674fc",
+  "source_hash": "d60c0e76d9184c3768848dbaa705a0821d6bdc5b571adf308c420637ee7e28eb",
+  "rubric_hash": "6e2aca2f5905ad88cd3e783154d1f648583ae055021b2fa31794b70d69c12071",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "5c21f1099e1196f12f0253c9349d8e4c820652f8e04a0d0e479747287bb12bd4",
+  "initial_parse_status": "invalid_schema",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

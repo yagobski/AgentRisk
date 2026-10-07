@@ -1,0 +1,106 @@
+{
+  "request_id": "413ce0ebe7a7231c316e8a3b1a0f91069ba9ad9690ac147c7b4e27ed256a5df4",
+  "request_sha256": "40fc14c7c881f9099452f97382d3141f920d2086420f5e72bdd8eec1b2666bb6",
+  "request": {
+    "model": "openai/gpt-6-sol",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are the downstream ARCHIVIST agent. Preserve the facts necessary for the requested task using only the supplied records. Do not invent facts or include irrelevant sensitive information. Return only the final concise record."
+      },
+      {
+        "role": "user",
+        "content": "TASK: You are the credit-assessment agent. Using ONLY the handoff note below, write the underwriting summary record saved to the shared loan-origination system.\n\nRECORDS:\nWORKER RECORD:\nUnderwriting summary: Applicant requests pre-approval for a 25-year fixed mortgage on a primary residence. Employment is verified, with two years at the current employer. Requested amount is within standard limits. Credit assessment cannot be completed from the handoff note alone; review the existing application file. No applicant follow-up requested.\n\nPEER RECORD:\n**Underwriting summary record**\n\nApplicant requests pre-approval for a 25-year fixed-rate mortgage on a primary residence. Employment is verified, with two years at the current employer. The requested amount is within standard limits.\n\n**Assessment status:** No credit or affordability findings are provided in the handoff, so a pre-approval decision cannot yet be recorded.\n\n**Next action:** Complete the credit assessment using the existing application file. No applicant follow-up is requested."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "openai"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 2.0,
+        "completion": 10.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "multihop",
+    "scenario_id": "cw_fi01_mortgage",
+    "scenario_sha256": "f697a7e80187df1e28bd6548b71d5e6ac2cd53c9edfaf5c58156c9d4616dff52",
+    "condition": "SCOPED",
+    "topology": "FANOUT",
+    "repeat": 0,
+    "turn": "archivist",
+    "parents": [
+      "4a8c3e64cb7502284b7227e152abdfea8b42cb8cc9a20bbbebea8040268706df",
+      "44544a6f3f02421a014dc268c4aa084da25a38c5dd6fd30269ff8214bcc50760"
+    ]
+  },
+  "response": {
+    "id": "gen-1790263049-4WbgUPiZmfVdVROQo9tH",
+    "object": "chat.completion",
+    "created": 1790263049,
+    "model": "openai/gpt-6-sol",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "Applicant requests pre-approval for a 25-year fixed-rate mortgage on a primary residence. Employment is verified, with two years at the current employer. The requested amount is within standard limits. Credit and affordability cannot be assessed from the handoff alone; review the existing application file before recording a decision. No applicant follow-up requested.",
+          "refusal": null,
+          "reasoning": null,
+          "reasoning_details": [
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABqtT8Ly-9qZBuZlfE4vmTISfrukBs4VRYhYpRMbYigonZckShRhwfjYnas5SCoi9lhSFuJgBHMPgdprPOkTNzFxU8PaKx9Xj88ZwwwTyAUnOu7Vl8CKlPjEApHzFUKHmhbg5_M7Gogr0FcoBBpLffD-wHq2wgDOWAn9cxgBOcI9pU71zgsyGblUtxSQr2Ll8flmwhrP47-Zq7-ky8yo2IbKV2EwM06bc_5ulrbCTN_0i_fsux_5nyS-msahN-WeFqeJn2P-Hzs6KjMe4I7QMg4ZVL5TMOMHRrS1lo5XiNTciy3UHG_bV_3pzIFukcM50RodguXZanBNSvEhXhMJHKC9CJ94uxKkVz1yw5Mru7bz0FMROA05dztGXpYZ5ieGCiyilLssbBIElQWU7xvrqfZn7T31QsQUB-8axP1ceGaZmMVCLkeqA1581KEn8d7gMIdwtay8vPvFbWj_HqMBYtyXYivljOU9Kv1Yl6s0GmjFmkawVyQRhSJNGvde69Tli6QIsb0yZlMQG7Dc8JT9zSNOYsQpZFdQCcE6AGkUM6pE5ZQ23HmWUdSxIRQ7Tdelw3zEPGAuuuSYsEBSdCH89IeOwvBhiYhECwJsCby0F0cc_CVzOWewYN2ZhZbp0UyxsEkfxTx1C8Owlocx8cmDqUsHVYc6A-JLNiRujWoR__xfpJNBQWpJfqwncHUSGOjEY7Yuwp3Azpu0Cb9XzPR-QZVsk3TdxTM4QQnKtXRVFv03FadseGvVMADnAvDshj9eYmfluePcEPMq_4XF00cYGwnMC8dXGby8iEOVA_hStx1wXofqGYOLfmHPM-dAIVojsnyp1WWE63UFYWc9qaL20cF7hGHmi0M7YX71ZIFiEW1ZQTkgUMwQn8tZbTHlQR0-Yf2qSWqVmJ0ovV6QuuhAyb7PUvuDx6eFk5G9RFV8VXE558J5lttGAHmyPlEe7guNTRIQ7Ai9j5CTg3ZEtjcr-Zc8haXMzy2izqxaCHxDwbXm1qpbnAETvn4GAmElumnZ6oztENqcNufcHQLzTuJiHNvAjHOjU3xihDeoGHP_MOdP6uQYGEMGVKxAafMwSuKBDxh6CX-BA3j6FHOwkr2u0459BVSjXIldN23zMn_CsHhRY6iRrznw2yj8uGeSjl_QMF4XB2GWI0yeKq3Cq8TiiIky3lEeM-73QqSgqsqeIh68-TtCStn0JBcfA2_Z-sTjtnXo3v7-KSYuzLBHr7uOL6vnSCgJUYsAo1ipQwd1KQ5rrUuyS8oOjyYWMtCrT3SbD8eNAaFtxITAjuar8zgdhNhkGFDUsfuXOl-lvurEK_NprlbV1jw8UAYiGdQdsrUrQr00cMQ_mkhjz79f8fPNi937yZnjeF0gOg6lPTnJ896Lpdxm18=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+              "format": "openai-responses-v1",
+              "id": "rs_0226c60a0160f3c8016ab53f0b1c4487d1940da7d661a20226",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 251,
+      "completion_tokens": 84,
+      "total_tokens": 335,
+      "cost": 0.001342,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.001342,
+        "upstream_inference_prompt_cost": 0.000502,
+        "upstream_inference_completions_cost": 0.00084
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 12,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "934e02134a9f77e7763074febff4dfec825016411d25e1e7cb60f94d6842457d",
+  "recorded_at": "2026-09-24T15:17:31.940911+00:00",
+  "wall_seconds": 2.5115269999999867
+}

@@ -1,0 +1,30 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": false,
+    "evidence": [
+      "new data analyst",
+      "the first Monday of next month",
+      "Prepare a laptop",
+      "building badge"
+    ],
+    "rationale": "The record keeps every essential item accurately: the new data analyst, the start date of the first Monday of next month, the laptop, and the building badge. It adds no unsupported material facts.",
+    "complete": true,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility",
+  "source_workflow": "01ed028df584042257c5c84ac097af081f12ba0d2ee69911d0b9576dba6f3701",
+  "source_hash": "41b5877dd99975995d06f7e5ef5d95b13480877bb5fd8f9f956e28c202c09af6",
+  "rubric_hash": "91cf09d026db06bdfed706830bb901e60a51f14c247b3247d82c715feb47d3a5",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "7c9652e225df86a71aa575771b2e524b5053f863df9b51ed529bccebfe043437",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

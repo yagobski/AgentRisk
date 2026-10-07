@@ -1,0 +1,117 @@
+SAVED multihop openai/gpt-6-sol cw_go01_benefit 0 73f444e1a4 $0.001960
+SAVED multihop openai/gpt-6-sol cw_hc01_appointment 0 d4fe35ee75 $0.001936
+SAVED multihop anthropic/claude-opus-5.5 cw_fi01_mortgage 0 a178796bae $0.008876
+SAVED multihop anthropic/claude-opus-5.5 cw_go01_benefit 0 49f5e3a2e8 $0.009076
+SAVED multihop openai/gpt-6-sol cw_hc01_appointment 0 a8d149e926 $0.001412
+SAVED multihop openai/gpt-6-sol cw_go01_benefit 0 a02dc61cc6 $0.002178
+SAVED multihop anthropic/claude-opus-5.5 cw_fi01_mortgage 0 b501b1829a $0.006248
+SAVED multihop anthropic/claude-opus-5.5 cw_go01_benefit 0 447aa0cd16 $0.005872
+SAVED multihop openai/gpt-6-sol cw_go01_benefit 0 11db636650 $0.001250
+SAVED multihop openai/gpt-6-sol cw_hc01_appointment 0 5dd72c43ef $0.001138
+SAVED multihop openai/gpt-6-sol cw_go01_benefit 0 7a013871f7 $0.001194
+WORKFLOW cw_go01_benefit openai/gpt-6-sol FULL clarification
+SAVED multihop openai/gpt-6-sol cw_hc01_appointment 0 62a3a0f2d0 $0.001750
+WORKFLOW cw_hc01_appointment openai/gpt-6-sol FULL clarification
+SAVED multihop anthropic/claude-opus-5.5 cw_fi01_mortgage 0 81ce235d5a $0.011400
+SAVED multihop anthropic/claude-opus-5.5 cw_go01_benefit 0 7757c7853a $0.008016
+SAVED multihop anthropic/claude-opus-5.5 cw_fi01_mortgage 0 b8ccfa5ef7 $0.015548
+WORKFLOW cw_fi01_mortgage anthropic/claude-opus-5.5 SCOPED clarification
+SAVED multihop anthropic/claude-opus-5.5 cw_go01_benefit 0 cf44fe28d0 $0.012656
+WORKFLOW cw_go01_benefit anthropic/claude-opus-5.5 FULL clarification
+SAVED multihop openai/gpt-6-sol cw_hc01_appointment 0 3e26b33342 $0.001792
+SAVED multihop openai/gpt-6-sol cw_hr01_onboarding 0 ecbe48928d $0.002214
+SAVED multihop anthropic/claude-opus-5.5 cw_go01_benefit 0 ffc99f47bc $0.008000
+SAVED multihop openai/gpt-6-sol cw_hc01_appointment 0 136b059273 $0.000994
+SAVED multihop anthropic/claude-opus-5.5 cw_le01_intake 0 8abc2e1bdc $0.012356
+SAVED multihop openai/gpt-6-sol cw_hc01_appointment 0 648bbd8885 $0.000924
+SAVED multihop anthropic/claude-opus-5.5 cw_go01_benefit 0 3161549d91 $0.006284
+SAVED multihop openai/gpt-6-sol cw_hr01_onboarding 0 ea551140ef $0.001818
+SAVED multihop openai/gpt-6-sol cw_hr01_onboarding 0 b7175bfb92 $0.001050
+SAVED multihop openai/gpt-6-sol cw_hc01_appointment 0 a3b8f6cc8d $0.001466
+WORKFLOW cw_hc01_appointment openai/gpt-6-sol SCOPED clarification
+SAVED multihop anthropic/claude-opus-5.5 cw_le01_intake 0 bd2fe3afa6 $0.009984
+SAVED multihop anthropic/claude-opus-5.5 cw_go01_benefit 0 a05350f7c9 $0.008432
+SAVED multihop openai/gpt-6-sol cw_hr01_onboarding 0 45c21d63a3 $0.001694
+WORKFLOW cw_hr01_onboarding openai/gpt-6-sol FULL clarification
+SAVED multihop anthropic/claude-opus-5.5 cw_le01_intake 0 205647aed1 $0.007680
+SAVED multihop anthropic/claude-opus-5.5 cw_go01_benefit 0 b14fbfbb72 $0.011500
+WORKFLOW cw_go01_benefit anthropic/claude-opus-5.5 SCOPED clarification
+SAVED multihop anthropic/claude-opus-5.5 cw_le01_intake 0 4f701c7e7f $0.019308
+WORKFLOW cw_le01_intake anthropic/claude-opus-5.5 SCOPED clarification
+SAVED multihop openai/gpt-6-sol cw_go01_benefit 0 2916989b93 $0.001614
+SAVED multihop openai/gpt-6-sol cw_fi01_mortgage 0 5bf5addee7 $0.001816
+SAVED multihop openai/gpt-6-sol cw_le01_intake 0 46c7cfd0a0 $0.001996
+SAVED multihop anthropic/claude-opus-5.5 cw_hc01_appointment 0 13ae292e1c $0.007656
+SAVED multihop openai/gpt-6-sol cw_go01_benefit 0 6d3998cf0a $0.001160
+SAVED multihop openai/gpt-6-sol cw_fi01_mortgage 0 53342c079e $0.001218
+SAVED multihop openai/gpt-6-sol cw_le01_intake 0 090f8b0140 $0.001294
+SAVED multihop openai/gpt-6-sol cw_fi01_mortgage 0 6ec73516ea $0.001004
+SAVED multihop openai/gpt-6-sol cw_go01_benefit 0 33147abb20 $0.001252
+SAVED multihop openai/gpt-6-sol cw_fi01_mortgage 0 5a758a67af $0.001468
+WORKFLOW cw_fi01_mortgage openai/gpt-6-sol FULL clarification
+SAVED multihop anthropic/claude-opus-5.5 cw_hc01_appointment 0 702ea79561 $0.008924
+SAVED multihop openai/gpt-6-sol cw_go01_benefit 0 6eac674491 $0.001298
+WORKFLOW cw_go01_benefit openai/gpt-6-sol SCOPED clarification
+SAVED multihop openai/gpt-6-sol cw_le01_intake 0 da6b35f706 $0.001878
+SAVED multihop openai/gpt-6-sol cw_le01_intake 0 4a7235de59 $0.002534
+WORKFLOW cw_le01_intake openai/gpt-6-sol SCOPED clarification
+SAVED multihop anthropic/claude-opus-5.5 cw_hc01_appointment 0 413105eecc $0.009216
+SAVED multihop anthropic/claude-opus-5.5 cw_hc01_appointment 0 1e42f36b89 $0.008840
+WORKFLOW cw_hc01_appointment anthropic/claude-opus-5.5 FULL clarification
+SAVED multihop anthropic/claude-opus-5.5 cw_hr01_onboarding 0 6b2a6a34e2 $0.007392
+SAVED multihop openai/gpt-6-sol cw_in01_claim 0 743b101957 $0.001706
+SAVED multihop openai/gpt-6-sol cw_le01_intake 0 74b136c591 $0.002560
+SAVED multihop anthropic/claude-opus-5.5 cw_hc01_appointment 0 13fb133a00 $0.009556
+SAVED multihop openai/gpt-6-sol cw_in01_claim 0 fd50321a7e $0.001178
+SAVED multihop anthropic/claude-opus-5.5 cw_hr01_onboarding 0 764c09a58f $0.005872
+SAVED multihop openai/gpt-6-sol cw_le01_intake 0 9676417f1e $0.001000
+SAVED multihop openai/gpt-6-sol cw_in01_claim 0 17de34657b $0.000924
+SAVED multihop anthropic/claude-opus-5.5 cw_hc01_appointment 0 409775b89d $0.005164
+SAVED multihop openai/gpt-6-sol cw_le01_intake 0 6b3377076d $0.001012
+WORKFLOW cw_le01_intake openai/gpt-6-sol FULL ready
+SAVED multihop openai/gpt-6-sol cw_in01_claim 0 77f3af93c5 $0.001242
+WORKFLOW cw_in01_claim openai/gpt-6-sol SCOPED clarification
+SAVED multihop anthropic/claude-opus-5.5 cw_hr01_onboarding 0 b371117452 $0.008256
+SAVED multihop anthropic/claude-opus-5.5 cw_hc01_appointment 0 523624ffc7 $0.009080
+SAVED multihop anthropic/claude-opus-5.5 cw_hr01_onboarding 0 fdb6555264 $0.008880
+WORKFLOW cw_hr01_onboarding anthropic/claude-opus-5.5 FULL clarification
+SAVED multihop anthropic/claude-opus-5.5 cw_hc01_appointment 0 ded9ad6bca $0.014792
+WORKFLOW cw_hc01_appointment anthropic/claude-opus-5.5 SCOPED clarification
+SAVED multihop openai/gpt-6-sol cw_hr01_onboarding 0 a802f750ba $0.001828
+SAVED multihop openai/gpt-6-sol cw_fi01_mortgage 0 f3ffb6e3d3 $0.001842
+SAVED multihop anthropic/claude-opus-5.5 cw_in01_claim 0 52c757e5bc $0.007940
+SAVED multihop anthropic/claude-opus-5.5 cw_fi01_mortgage 0 c0f5c26762 $0.011764
+SAVED multihop openai/gpt-6-sol cw_hr01_onboarding 0 b9708c10c6 $0.001378
+SAVED multihop openai/gpt-6-sol cw_fi01_mortgage 0 ac592e1411 $0.001216
+SAVED multihop openai/gpt-6-sol cw_hr01_onboarding 0 170aeb06aa $0.001148
+SAVED multihop openai/gpt-6-sol cw_fi01_mortgage 0 f10834168d $0.001556
+SAVED multihop anthropic/claude-opus-5.5 cw_fi01_mortgage 0 69fa6728b4 $0.006928
+SAVED multihop anthropic/claude-opus-5.5 cw_in01_claim 0 bd492e1c9c $0.006784
+SAVED multihop openai/gpt-6-sol cw_hr01_onboarding 0 c9d11cefbc $0.001406
+WORKFLOW cw_hr01_onboarding openai/gpt-6-sol SCOPED clarification
+SAVED multihop openai/gpt-6-sol cw_fi01_mortgage 0 e286d8c4c4 $0.001848
+WORKFLOW cw_fi01_mortgage openai/gpt-6-sol SCOPED clarification
+SAVED multihop anthropic/claude-opus-5.5 cw_fi01_mortgage 0 cdbc8e2045 $0.010364
+SAVED multihop anthropic/claude-opus-5.5 cw_in01_claim 0 9e3aea9db4 $0.011164
+SAVED multihop anthropic/claude-opus-5.5 cw_fi01_mortgage 0 9b6cd4a45b $0.015732
+WORKFLOW cw_fi01_mortgage anthropic/claude-opus-5.5 FULL clarification
+SAVED multihop anthropic/claude-opus-5.5 cw_in01_claim 0 d1906c183f $0.013616
+WORKFLOW cw_in01_claim anthropic/claude-opus-5.5 SCOPED clarification
+SAVED multihop openai/gpt-6-sol cw_in01_claim 0 0e6ccccc3f $0.002134
+SAVED multihop anthropic/claude-opus-5.5 cw_hr01_onboarding 0 27c0b1f9a0 $0.006820
+SAVED multihop anthropic/claude-opus-5.5 cw_in01_claim 0 33ef211ccb $0.008580
+SAVED multihop anthropic/claude-opus-5.5 cw_hr01_onboarding 0 9d20d091e5 $0.003920
+SAVED multihop anthropic/claude-opus-5.5 cw_le01_intake 0 982f536853 $0.013396
+SAVED multihop openai/gpt-6-sol cw_in01_claim 0 de8c46071b $0.001340
+SAVED multihop anthropic/claude-opus-5.5 cw_in01_claim 0 0f95393c04 $0.004680
+SAVED multihop openai/gpt-6-sol cw_in01_claim 0 6c183a9259 $0.001042
+WORKFLOW cw_in01_claim openai/gpt-6-sol FULL ready
+SAVED multihop anthropic/claude-opus-5.5 cw_hr01_onboarding 0 386fce5988 $0.006756
+SAVED multihop anthropic/claude-opus-5.5 cw_in01_claim 0 c297fda31c $0.009248
+SAVED multihop anthropic/claude-opus-5.5 cw_le01_intake 0 9f265934e1 $0.007936
+SAVED multihop anthropic/claude-opus-5.5 cw_hr01_onboarding 0 010795eb2b $0.008976
+WORKFLOW cw_hr01_onboarding anthropic/claude-opus-5.5 SCOPED clarification
+SAVED multihop anthropic/claude-opus-5.5 cw_le01_intake 0 ff590761b6 $0.009472
+WORKFLOW cw_le01_intake anthropic/claude-opus-5.5 FULL ready
+SAVED multihop anthropic/claude-opus-5.5 cw_in01_claim 0 30837b8e85 $0.011828
+WORKFLOW cw_in01_claim anthropic/claude-opus-5.5 FULL clarification

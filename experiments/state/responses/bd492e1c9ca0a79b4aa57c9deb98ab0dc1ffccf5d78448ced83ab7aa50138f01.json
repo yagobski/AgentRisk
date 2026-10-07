@@ -1,0 +1,105 @@
+{
+  "request_id": "bd492e1c9ca0a79b4aa57c9deb98ab0dc1ffccf5d78448ced83ab7aa50138f01",
+  "request_sha256": "e9141f0f33917e8174f6e29ba9f742a4fd1bd676631b413234e2fafb49eeb437",
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are the SPECIALIST agent in a peer-to-peer multi-agent workflow. You have no access to the underlying record; you only see messages from your peer INTAKE agent. If the message is sufficient for your task, answer exactly READY. Otherwise, ask at most three short clarification questions to your peer, prefixed by QUESTIONS:."
+      },
+      {
+        "role": "user",
+        "content": "YOUR TASK: You are the adjuster-assignment agent. Using ONLY the handoff note below, write the claim record saved to the shared claims-management system.\n\nMESSAGE FROM PEER:\nClaim type: Home-contents, water damage\nCause: Burst pipe\nPolicy status: Active; claim is within coverage limits\nRequest: Policyholder has requested an adjuster visit. Please assign an adjuster and schedule the inspection.\nStatus: Claim opened. The policyholder has been told an adjuster will be in touch, so no re-interview is needed for the details above.\nNext steps: Assign an adjuster, contact the policyholder through the contact method on file to book the visit, then assess and document the damaged contents."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "anthropic"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 4.0,
+        "completion": 20.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "p2p_langgraph",
+    "scenario_id": "cw_in01_claim",
+    "scenario_sha256": "4ac6cd236c5ac54a4b7758acb6ac13b8a0b198964bd762d3c82e54cce7aa9556",
+    "condition": "SCOPED",
+    "topology": "PEER",
+    "repeat": 0,
+    "turn": "specialist",
+    "parents": [
+      "52c757e5bc099e301bfce2efc1fcce5091ab6b4b6f8f929f14d5a3da5aaa7957"
+    ]
+  },
+  "response": {
+    "id": "gen-1790660155-KEkmuAnUNsiw7rDnl1sk",
+    "object": "chat.completion",
+    "created": 1790660155,
+    "model": "anthropic/claude-opus-5.5",
+    "provider": "Anthropic",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "end_turn",
+        "message": {
+          "role": "assistant",
+          "content": "QUESTIONS:\n1. What are the claim number, policy number, and policyholder name? I have no record access, so I need these to create and link the claim record.\n2. What is the address of the property to be inspected, and what is the policyholder's preferred contact method and details? \"On file\" isn't visible to me, and I need both to assign a regional adjuster and book the visit.\n3. What were the date of loss and the date the claim was reported, and are there any urgent factors, such as ongoing leaking, the home being uninhabitable, or emergency mitigation already done?",
+          "refusal": null,
+          "reasoning": "I don't have enough to file this claim yet — I still need the claim or policy number, policyholder identity confirmation, contact details, date of loss, and the property address so an adjuster can be assigned by region. I should ask for these before proceeding.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "I don't have enough to file this claim yet — I still need the claim or policy number, policyholder identity confirmation, contact details, date of loss, and the property address so an adjuster can be assigned by region. I should ask for these before proceeding.\n\n",
+              "format": "anthropic-claude-v1",
+              "index": 0,
+              "signature": "CAQS4gYKEAgSGAI4AUIIdGhpbmtpbmcSDBIi0rCpct1jU+2Z2xoMFdKA/D1m58GheNnmIjA7eTNM8b+Zy6Es8mthRi951lDH6uIR9ntLXuHqf6USxJS6eEinL6FEY+8k9vMQIK4q/wUHh/LfplQdD10/p6KpgyomNGKbZeRl92TIzNZJSg0cC8rOLAg3cVXAa3GIG61JltEnbOXeoDqXg9SmgI7m2JoXx4HrlwaPxylFyA2QlmNZRkxKd/PqRnTmwXzdyrMls7d0qxOPkNOc2mxqSkMeaz08HbKMAzstTfkfAVxOVBBqiWA9hwedN8PYwnLTmJ4Txf4zig1pPwQNtv9HZot3kL5Z4TLV8z7R4jUboWrssujif/9A6RJV2A8ybHtXfZa/sXJW/ykDyKm6tS9ubGc3PRTAXOzxoogMcH+WDn7JfqsEG5/fEgf86RjQmcrQ6jGuZ+a7krGCOczC5o++3LJ5AAHkxH3bmbzfXMyV0L7UAdqfpMb1dmy8wNgF6N02mlwTstt8s5mzwwRP8vwgvB9H/0J+G7C3hpE3ZhWX8cIosNnxQnJPPbf4cTJb68s4ReCaHW4RiI8SmWboGeL9uwnL1eNJ2A2ojtbS0BH0t8qzc+9UAhRnofBjbjEOBMisW75S+DHfAMNZB6RlfRUrBWuJUQFskdcKT4HNB5J4AUybtoBEKYIPBfNBKq9nwYdZYxHu85/NfP367P84gH5bIy8TRAHIxOlYKX/ejvKY+Ea/DPc4Qf7KRfbwGmnap7JrXkRtPydzVFA9N+DqcwutIRN61oSTm7YbZ/qrIuARWrhn2cKXwKft3+CgeD68WhXPEzRS65USRJeftKGnNBcwtE9PZeqQGqjFBQvkbhadQ8i+Sp5K930qQ2B2ElaRcxjglQp/7xLI2Ny8TSJCotGfAwjsjTZp9Wbg9Yt+b6Q6JWjeIB5ZhRugGNZ/eD4DV6tKWcfa2bFtX71xEjcFLh+eSl0m2GSJZ02Kag4bVqWNyNhoHhWI5BWpQfN3D0yQ8wRP0HN8n6glQg7Ij/81LMnE/WVhLTD70QmoMWVuVZbTasjbIqPhJX4iexHItGXjsCdgCezdp/cE0nHXJ1ZSrNu20yzO/kFKjZxH6hqYrWnZkJpETzIayxjQxkoV3rRaiPLp3teomhgB"
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 361,
+      "completion_tokens": 267,
+      "total_tokens": 628,
+      "cost": 0.006784,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.006784,
+        "upstream_inference_prompt_cost": 0.001444,
+        "upstream_inference_completions_cost": 0.00534
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 90,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "3cc462a4e77c3c063927f1659bc262ae6a546541597728d3de37b6b853274045",
+  "recorded_at": "2026-09-29T05:35:59.297794+00:00",
+  "wall_seconds": 6.18336308299331
+}

@@ -1,0 +1,32 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": false,
+    "evidence": [
+      "Post-surgery knee physiotherapy",
+      "Twice weekly",
+      "six weeks",
+      "Morning appointments",
+      "following routine meniscus repair; cleared for rehab"
+    ],
+    "rationale": "All five essential items are retained accurately. The name and phone number match the full source record. The status and next action describe the booking workflow and do not add unsupported material facts.",
+    "complete": true,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "5c1472f6a931e4e0a9c22091b9e88d420a3e90f6ad36162eac211f67ff64c586",
+  "source_hash": "d38e776e9ff64db4448745890b46fca1e05ec2fdc7a60a50e0f244411049c52e",
+  "rubric_hash": "48a4fc2966fc104a4ad0d4f3ff93aa6e9463c0a605ce728039b04ee996909a63",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "392119feb0f802a8429c53ed1fe3a5cf4ff8f28223954c89cce65d269965f3f2",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

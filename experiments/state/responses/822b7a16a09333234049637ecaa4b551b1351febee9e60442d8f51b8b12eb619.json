@@ -1,0 +1,96 @@
+{
+  "request_id": "822b7a16a09333234049637ecaa4b551b1351febee9e60442d8f51b8b12eb619",
+  "request_sha256": "c0b97eaaebdf68743c3dec6bc2080de941eecfcb5272aa566a171e3a93a37350",
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are the downstream ARCHIVIST agent. Preserve the facts necessary for the requested task using only the supplied records. Do not invent facts or include irrelevant sensitive information. Return only the final concise record."
+      },
+      {
+        "role": "user",
+        "content": "TASK: You are the adjuster-assignment agent. Using ONLY the handoff note below, write the claim record saved to the shared claims-management system.\n\nRECORDS:\n**CLAIM RECORD**\n\n**Claim Type:** Home-contents – Water damage\n**Cause of Loss:** Burst pipe\n**Policy Status:** Active – Verified\n**Coverage Determination:** Within policy coverage limits\n**Claim Status:** Open\n**Acknowledgement:** Sent to policyholder\n**Intake:** Complete (no re-interview required)\n\n**Action Required:**\n- Assign adjuster\n- Schedule on-site visit (requested by policyholder)\n\n**Scheduling:** Use contact details and address on file\n\n**Policyholder Guidance Provided:**\n- Photograph affected items\n- Retain damaged belongings for inspection"
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "anthropic"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 4.0,
+        "completion": 20.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "multihop",
+    "scenario_id": "cw_in01_claim",
+    "scenario_sha256": "4ac6cd236c5ac54a4b7758acb6ac13b8a0b198964bd762d3c82e54cce7aa9556",
+    "condition": "SCOPED",
+    "topology": "DYNAMIC",
+    "repeat": 0,
+    "turn": "archivist",
+    "parents": [
+      "f497203d0cfd51e274ad9c5aa826d7c2c9b640c6d748c0142031b2b32b8641f4"
+    ]
+  },
+  "response": {
+    "id": "gen-1790262984-RpopSNSQRkmlg0B7TmjW",
+    "object": "chat.completion",
+    "created": 1790262984,
+    "model": "anthropic/claude-opus-5.5",
+    "provider": "Anthropic",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "end_turn",
+        "message": {
+          "role": "assistant",
+          "content": "**CLAIM RECORD**\n\n**Claim Type:** Home contents, water damage\n**Cause of Loss:** Burst pipe\n**Policy Status:** Active, verified\n**Coverage:** Within policy coverage limits\n**Claim Status:** Open\n**Acknowledgement:** Sent to policyholder\n**Intake:** Complete. No re-interview required.\n\n**Pending Actions:**\n- Assign adjuster\n- Schedule on-site visit (requested by policyholder), using the contact details and address on file\n\n**Guidance Given to Policyholder:**\n- Photograph affected items\n- Keep damaged belongings for inspection",
+          "refusal": null,
+          "reasoning": null
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 359,
+      "completion_tokens": 214,
+      "total_tokens": 573,
+      "cost": 0.005716,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.005716,
+        "upstream_inference_prompt_cost": 0.001436,
+        "upstream_inference_completions_cost": 0.00428
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "120c792ebfbbc9a33501be9fc32d5ee31e41775a80272d2cdbd2f0865783e4ff",
+  "recorded_at": "2026-09-24T15:16:27.036201+00:00",
+  "wall_seconds": 2.914652416999999
+}

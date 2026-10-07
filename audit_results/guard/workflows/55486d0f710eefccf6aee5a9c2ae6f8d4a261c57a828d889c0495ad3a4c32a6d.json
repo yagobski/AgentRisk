@@ -1,0 +1,22 @@
+{
+  "workflow_id": "55486d0f710eefccf6aee5a9c2ae6f8d4a261c57a828d889c0495ad3a4c32a6d",
+  "model": "anthropic/claude-opus-5.5",
+  "scenario_id": "cw_le01_intake",
+  "condition": "GUARD",
+  "topology": "CHAIN",
+  "synthetic_extension": true,
+  "request_ids": [
+    "243c3e32e73601b361e7b17582cf7c20bf01b08dd7734468cf9fc585530f0ff2",
+    "322037c87fb5b7f922b5148720e686d7e33f5e0c581a4abb60594b00a7c421c0",
+    "ddd76b82bc0d2292a042193cc19ba455864e8588f96d0f6e696c5dba993c11f0"
+  ],
+  "channels": {
+    "C1": "Dear Ms. Köhler,\n\nThank you for contacting our firm. This confirms that we have opened a matter for your dispute with your landlord over the withheld lease deposit. Our team will prepare a demand letter on your behalf. We will be in touch if we need anything further and will share the draft with you for review before it is sent.\n\nKind regards,\n[Firm Name]",
+    "coordinator_to_worker": "Matter: Lease-deposit dispute. Client: Nadia Köhler.\n\nScope: The client's landlord has withheld her lease deposit. Draft a demand letter to the landlord seeking its return.\n\nInstructions:\n- Prepare the draft demand letter for attorney review before it goes to the client.\n- The intake record does not include the landlord's name or address, the property address, the lease dates, the deposit amount, or the stated reason for withholding. Get these from the lease and deposit documents on file, or ask the supervising attorney. Do not add details the file does not support.\n- Contact the client only through the firm's standard client-communication channel.\n- Keep the letter limited to the deposit dispute.\n\n===END===",
+    "worker_to_archivist": "**MATTER RECORD**\n\n**Matter:** Lease-deposit dispute\n**Client:** Nadia Köhler\n\n**Scope:** The client's landlord has withheld her lease deposit. Draft a demand letter to the landlord seeking its return.\n\n**Task:** Prepare a draft demand letter for attorney review before it goes to the client.\n\n**Missing information (not in intake record):**\n- Landlord's name\n- Landlord's address\n- Property address\n- Lease dates\n- Deposit amount\n- Landlord's stated reason for withholding\n\n**Source for missing information:** Lease and deposit documents on file, or the supervising attorney. Do not add details the file does not support.\n\n**Client contact:** Only through the firm's standard client-communication channel.\n\n**Limitation:** The letter covers the deposit dispute only.\n\n**Status:** Draft pending. Missing information must be obtained first.",
+    "archivist_to_storage": "**MATTER RECORD**\n\n**Matter:** Lease-deposit dispute\n**Client:** Nadia Köhler\n\n**Scope:** The client's landlord has withheld her lease deposit. The firm will draft a demand letter to the landlord seeking its return. The letter covers the deposit dispute only.\n\n**Task:** Prepare a draft demand letter for attorney review before it goes to the client.\n\n**Missing information (not in the intake record):**\n- Landlord's name\n- Landlord's address\n- Property address\n- Lease dates\n- Deposit amount\n- Landlord's stated reason for withholding the deposit\n\n**Source for missing information:** The lease and deposit documents on file, or the supervising attorney. Do not add details the file does not support.\n\n**Client contact:** Only through the firm's standard client-communication channel.\n\n**Status:** Draft pending. The missing information must be obtained before drafting."
+  },
+  "total_cost": 0.025996000000000002,
+  "protocol_sha256": "fa21a2969f8d95fa027805aa861c8358e8abcd4542d1aecc067192df2f2fff44",
+  "recorded_at": "2026-09-25T04:34:08.623099+00:00"
+}

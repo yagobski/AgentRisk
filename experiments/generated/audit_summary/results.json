@@ -1,0 +1,201 @@
+{
+  "p2p": [
+    {
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "FULL",
+      "n": 6,
+      "weighted_amount": 10,
+      "inventory_mass": 84,
+      "RI": 0.11904761904761904,
+      "c1_clean_internal_exposed": 4,
+      "clarification_rounds": 5,
+      "clarification_reply_exposed": 3
+    },
+    {
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "SCOPED",
+      "n": 6,
+      "weighted_amount": 0,
+      "inventory_mass": 84,
+      "RI": 0.0,
+      "c1_clean_internal_exposed": 0,
+      "clarification_rounds": 6,
+      "clarification_reply_exposed": 0
+    },
+    {
+      "model": "openai/gpt-6-sol",
+      "condition": "FULL",
+      "n": 6,
+      "weighted_amount": 10,
+      "inventory_mass": 84,
+      "RI": 0.11904761904761904,
+      "c1_clean_internal_exposed": 4,
+      "clarification_rounds": 4,
+      "clarification_reply_exposed": 0
+    },
+    {
+      "model": "openai/gpt-6-sol",
+      "condition": "SCOPED",
+      "n": 6,
+      "weighted_amount": 0,
+      "inventory_mass": 84,
+      "RI": 0.0,
+      "c1_clean_internal_exposed": 0,
+      "clarification_rounds": 6,
+      "clarification_reply_exposed": 0
+    }
+  ],
+  "native": {
+    "workflows": 92,
+    "exposed_workflows": 32,
+    "tau_RI_vs_WLS_occurrence_tier": {
+      "tau_b": 0.40502569837769614,
+      "concordant": 180,
+      "discordant": 50,
+      "ties_x_only": 174,
+      "ties_y_only": 25
+    },
+    "tau_RI_vs_WLS_native_low": {
+      "tau_b": 0.31746113363655504,
+      "concordant": 180,
+      "discordant": 75,
+      "ties_x_only": 174,
+      "ties_y_only": 0
+    },
+    "tau_RI_vs_WLS_native_high": {
+      "tau_b": 0.31746113363655504,
+      "concordant": 180,
+      "discordant": 75,
+      "ties_x_only": 174,
+      "ties_y_only": 0
+    },
+    "by_topology": [
+      {
+        "topology": "CHAIN",
+        "n": 12,
+        "RI": 0.11904761904761904,
+        "WSL_mean": 1.6666666666666667,
+        "WLS_occ_mean": 5.0,
+        "WLS_native_low_mean": 1.3999999999999997,
+        "WLS_native_high_mean": 1.3999999999999997,
+        "occurrences_per_distinct": 3.0
+      },
+      {
+        "topology": "FANOUT",
+        "n": 11,
+        "RI": 0.14285714285714285,
+        "WSL_mean": 2.0,
+        "WLS_occ_mean": 10.0,
+        "WLS_native_low_mean": 2.8181818181818183,
+        "WLS_native_high_mean": 2.8181818181818183,
+        "occurrences_per_distinct": 5.0
+      },
+      {
+        "topology": "DYNAMIC",
+        "n": 11,
+        "RI": 0.11038961038961038,
+        "WSL_mean": 1.5454545454545454,
+        "WLS_occ_mean": 3.090909090909091,
+        "WLS_native_low_mean": 0.8727272727272727,
+        "WLS_native_high_mean": 0.8727272727272727,
+        "occurrences_per_distinct": 2.0
+      },
+      {
+        "topology": "PEER",
+        "n": 12,
+        "RI": 0.11904761904761904,
+        "WSL_mean": 1.6666666666666667,
+        "WLS_occ_mean": 4.25,
+        "WLS_native_low_mean": 1.1833333333333333,
+        "WLS_native_high_mean": 1.1833333333333333,
+        "occurrences_per_distinct": 2.55
+      }
+    ],
+    "mapping": {
+      "secrets": 30,
+      "mapped_to_native_type": 19,
+      "source": "author keyword mapping (released for inspection)"
+    }
+  },
+  "burden": {
+    "multihop_and_p2p": {
+      "workflows": 92,
+      "exposed": 32,
+      "messages_all": 433,
+      "words_all": 30436,
+      "words_c1": 3366,
+      "messages_flagged": 103,
+      "words_flagged": 8021,
+      "exposed_found_c1_only": 0,
+      "minutes_all": {
+        "175": 173.92,
+        "238": 127.88235294117646,
+        "300": 101.45333333333333
+      },
+      "minutes_flagged": {
+        "175": 45.83428571428571,
+        "238": 33.70168067226891,
+        "300": 26.736666666666668
+      },
+      "minutes_c1": {
+        "175": 19.234285714285715,
+        "238": 14.142857142857142,
+        "300": 11.22
+      }
+    },
+    "panel": {
+      "marker": {
+        "outputs_to_read": 10,
+        "words_to_read": 2209,
+        "items_to_verify": 10,
+        "union_items_covered": 10,
+        "union_items": 13,
+        "minutes": {
+          "175": 12.622857142857143,
+          "238": 9.281512605042018,
+          "300": 7.363333333333333
+        }
+      },
+      "semantic": {
+        "outputs_to_read": 12,
+        "words_to_read": 2355,
+        "items_to_verify": 13,
+        "union_items_covered": 13,
+        "union_items": 13,
+        "minutes": {
+          "175": 13.457142857142857,
+          "238": 9.894957983193278,
+          "300": 7.85
+        }
+      },
+      "union": {
+        "outputs_to_read": 12,
+        "words_to_read": 2355,
+        "items_to_verify": 13,
+        "union_items_covered": 13,
+        "union_items": 13,
+        "minutes": {
+          "175": 13.457142857142857,
+          "238": 9.894957983193278,
+          "300": 7.85
+        }
+      },
+      "exhaustive": {
+        "outputs_to_read": 72,
+        "words_to_read": 7078,
+        "items_to_verify": 360,
+        "union_items_covered": 13,
+        "union_items": 13,
+        "minutes": {
+          "175": 40.44571428571429,
+          "238": 29.73949579831933,
+          "300": 23.593333333333334
+        }
+      }
+    },
+    "panel_outputs": 72,
+    "reference": "none (detector-relative; no human labels)"
+  },
+  "human_labels": null,
+  "model_calls": 0
+}

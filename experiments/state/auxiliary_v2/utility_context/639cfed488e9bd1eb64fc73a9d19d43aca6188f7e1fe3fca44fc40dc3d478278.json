@@ -1,0 +1,32 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": false,
+    "evidence": [
+      "Appointment: First post-surgery knee physiotherapy session",
+      "Plan: Twice weekly for six weeks",
+      "Plan: Twice weekly for six weeks",
+      "Scheduling preference: Mornings",
+      "Referral: Rehabilitation after routine meniscus repair; cleared for rehab"
+    ],
+    "rationale": "All five essential items are retained accurately. The name and contact number are grounded in the full source record. Labeling this the 'First' session is a minor framing choice, not a material factual claim.",
+    "complete": true,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "06a9e6ef63075f55829887f0005e3d1f17f6dcb8117ed17e4da74e41a13d9b0e",
+  "source_hash": "fb131677684ce103bfe764622b45bb7a12251542ebca5d4bde777fa54569e5ee",
+  "rubric_hash": "48a4fc2966fc104a4ad0d4f3ff93aa6e9463c0a605ce728039b04ee996909a63",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "639cfed488e9bd1eb64fc73a9d19d43aca6188f7e1fe3fca44fc40dc3d478278",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

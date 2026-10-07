@@ -1,0 +1,11 @@
+{
+  "records_by_detector": {
+    "marker": 360,
+    "regex_dlp": 360,
+    "cross_model_judge": 360
+  },
+  "edge_records": 316,
+  "scope_inconsistencies": 0,
+  "empty_scope_edges": 198,
+  "fully_reachable_scope_claim": false
+}

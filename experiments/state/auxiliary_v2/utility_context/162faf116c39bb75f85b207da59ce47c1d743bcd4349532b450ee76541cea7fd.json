@@ -1,0 +1,30 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": true,
+    "evidence": [
+      "**Role:** Data Analyst",
+      "**Start Date:** First Monday of next month",
+      "Laptop with standard data analyst setup",
+      "Building access badge"
+    ],
+    "rationale": "All four essential items are retained. The ticket also adds a completion step involving a coordinator that is not supported by the source.",
+    "complete": false,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "6c17467578557cb5c8638e65952fc01e795e366d22130f7d3e46c607f83c361b",
+  "source_hash": "f371f1fbbdf44471985f331f85543a6d4cc2bfb3649de3d9b3cfbf5a27fabe10",
+  "rubric_hash": "91cf09d026db06bdfed706830bb901e60a51f14c247b3247d82c715feb47d3a5",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "openai/gpt-6-sol",
+  "request_id": "162faf116c39bb75f85b207da59ce47c1d743bcd4349532b450ee76541cea7fd",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

@@ -1,0 +1,13 @@
+{
+  "workflow_id": "d7aaf6951ea6fc081e28e303467ffd613eabb54690e4bb0f98a582c928700d39",
+  "scenario_id": "cw_hc01_appointment",
+  "model": "anthropic/claude-opus-5.5",
+  "condition": "GUARD",
+  "status": "transport_uncertain",
+  "request_ids": [
+    "14556d13f1f5be9636f73e60e391e2dcac39a2364e81457432c2e113fa762f5f",
+    "9938c827d67fbf970d7a02e909c66f3d9c9420c3760445294d2e5ced5f7f1186",
+    "aff539c0b3b04a5bdd2a54327e256f396da0e6d94b4a067180947cc3d3996908"
+  ],
+  "treatment": "no retry; retained full budget reservation; not scored as zero or success"
+}

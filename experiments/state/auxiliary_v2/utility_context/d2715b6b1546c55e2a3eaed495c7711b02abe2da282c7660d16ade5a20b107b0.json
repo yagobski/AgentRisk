@@ -1,0 +1,30 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      null,
+      true,
+      true
+    ],
+    "unsupported_material_fact": true,
+    "evidence": [
+      "for a new data analyst",
+      "",
+      "Prepare a laptop",
+      "building badge for a new data analyst"
+    ],
+    "rationale": "The role, laptop, and badge are retained. The source gives the start date only as the first Monday of next month. The record instead states a specific date, 'Monday, June 1', which the source does not support. It cannot be confirmed that this date matches, so the start-date item is unclear and the date counts as an unsupported material fact.",
+    "complete": false,
+    "unresolved": true
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "62b4e9b66a4fc05a1cae2d797fd06abff52464a7c77af697570ed10ee11dfe3a",
+  "source_hash": "a52416d29e6fcfea9a3ca7683721901bad9b2fdd19465c33423a7d8f55245a05",
+  "rubric_hash": "91cf09d026db06bdfed706830bb901e60a51f14c247b3247d82c715feb47d3a5",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "d2715b6b1546c55e2a3eaed495c7711b02abe2da282c7660d16ade5a20b107b0",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

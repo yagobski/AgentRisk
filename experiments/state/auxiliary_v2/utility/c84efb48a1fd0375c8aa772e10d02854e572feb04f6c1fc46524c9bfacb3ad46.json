@@ -1,0 +1,32 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": true,
+    "evidence": [
+      "Claim Type:** Home contents",
+      "water damage (burst pipe)",
+      "Policy Status:** Active",
+      "Coverage:** Within coverage limits",
+      "Requested Action:** Adjuster visit"
+    ],
+    "rationale": "All essential items are retained. The record also adds a policyholder name, contact number, and communication details not supported by the handoff note.",
+    "complete": false,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility",
+  "source_workflow": "a734c2c59e4c85de11091729b41afaa7d54b7e3529f5e3a794472cd9b893033c",
+  "source_hash": "4162eb84717225f1a7316a5b91ee21b957864de0a1da1a5bd8720742de1f335f",
+  "rubric_hash": "6e2aca2f5905ad88cd3e783154d1f648583ae055021b2fa31794b70d69c12071",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "openai/gpt-6-sol",
+  "request_id": "c84efb48a1fd0375c8aa772e10d02854e572feb04f6c1fc46524c9bfacb3ad46",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

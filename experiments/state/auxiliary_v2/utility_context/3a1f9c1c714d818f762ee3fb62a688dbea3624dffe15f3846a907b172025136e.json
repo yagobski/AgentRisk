@@ -1,0 +1,30 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": false,
+    "evidence": [
+      "Client seeks representation",
+      "lease deposit dispute",
+      "a landlord’s withholding of her lease deposit",
+      "requests a demand letter"
+    ],
+    "rationale": "All four essential items are retained accurately. The client name and mobile number appear in the full source. The notes on missing details are procedural rather than material facts. Privacy was not judged.",
+    "complete": true,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "9830cc399373c8e0a9fd04cf30a24dad14f065f6fdc8fd932685dc0a8a520c37",
+  "source_hash": "a92e53eb94d2c5921d3ffc35aa7023da7ea2d74493fb337aedd7c689afa5750e",
+  "rubric_hash": "53e022194f930d8917c6f5d4c3df7fffc187ff3250032ac7900637182eebf590",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "3a1f9c1c714d818f762ee3fb62a688dbea3624dffe15f3846a907b172025136e",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

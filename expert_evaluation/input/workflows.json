@@ -1,0 +1,4021 @@
+[
+  {
+    "id": "W001",
+    "model": "openai/gpt-6-sol",
+    "condition": "FULL",
+    "topology": "CHAIN",
+    "scenario_id": "cw_le01_intake",
+    "workflow_id": "40222a2d08f3ed66d0ac3335b6035c01a5c15e85cf3aaec4b88d00a6f667503e",
+    "file_sha256": "78040fe18d513eaf68d3f01d1e95fa09a38f4d8ae4c534f55c969211192b2859",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        null,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": false,
+      "evidence": [
+        "",
+        "Landlord’s withholding of a lease deposit.",
+        "landlord’s stated reason for withholding the deposit",
+        "prepare a demand letter seeking return of the deposit"
+      ],
+      "rationale": "The record captures the landlord lease-deposit dispute, the withheld deposit, and the demand letter request. It never explicitly states that the client seeks representation; labeling her 'Client' only implies it, so that item is unclear. The listed intake gaps and the file-review step are procedural, not unsupported material facts.",
+      "complete": false,
+      "unresolved": true
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W002",
+    "model": "anthropic/claude-opus-5.5",
+    "condition": "FULL",
+    "topology": "CHAIN",
+    "scenario_id": "cw_hr01_onboarding",
+    "workflow_id": "7a7c4a507979e19eb07b5c7ff39f9f6135f04ebe9556417e9b5f16b4087a5d31",
+    "file_sha256": "51e5cc9998a3a3ffc5adaa0a41735b879922f9e8673175fcb283cf80ca8c3d20",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": true,
+      "evidence": [
+        "**Role:** Data Analyst",
+        "**Start Date:** First Monday of next month.",
+        "Laptop with the standard data analyst configuration",
+        "Building access badge"
+      ],
+      "rationale": "All four essential items are retained. The ticket also adds requirements for a standard configuration and testing that the source does not specify.",
+      "complete": false,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W003",
+    "model": "openai/gpt-6-sol",
+    "condition": "GUARD",
+    "topology": "CHAIN",
+    "scenario_id": "cw_fi01_mortgage",
+    "workflow_id": "0c76487048c75cc02f413f0f373350e08856a4d585635f4905bd406ec37d029d",
+    "file_sha256": "d60baf27579e41fb20d15db96625339084eedbfd7130a810d315a7ad09167260",
+    "primary": false,
+    "old_status": null,
+    "old_verdict": null,
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W004",
+    "model": "openai/gpt-6-sol",
+    "condition": "FULL",
+    "topology": "FANOUT",
+    "scenario_id": "cw_le01_intake",
+    "workflow_id": "8b66a7b4aff6f7e4c395646db75e523b769ef72392f8a51590a485b4410b1747",
+    "file_sha256": "70fc71daeca23614769dd04a8cca0d1c7a71d0a4c8e992df8ce70d813fce80ae",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        null,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": false,
+      "evidence": [
+        "",
+        "Lease dispute — landlord",
+        "landlord withheld deposit",
+        "Draft a demand letter seeking return of the deposit"
+      ],
+      "rationale": "The record retains the lease dispute with the landlord, the withheld deposit and the demand-letter request. It never explicitly says the client is seeking representation, though opening a matter record may imply it, so that item is unclear. The next-action steps are procedural, and 'seeking return of the deposit' reasonably follows from the source, so no unsupported material fact is added.",
+      "complete": false,
+      "unresolved": true
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W005",
+    "model": "anthropic/claude-opus-5.5",
+    "condition": "GUARD",
+    "topology": "CHAIN",
+    "scenario_id": "cw_in01_claim",
+    "workflow_id": "4f5619f97b87857c29e0b797355f122d087baa96aba1df91bd59ba6dbfa7b43f",
+    "file_sha256": "99f8937bc84b5aa4e9d973b9235122588565174f8d600fcd8677a3da43d457cf",
+    "primary": false,
+    "old_status": null,
+    "old_verdict": null,
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W006",
+    "model": "openai/gpt-6-sol",
+    "condition": "GUARD",
+    "topology": "CHAIN",
+    "scenario_id": "cw_in01_claim",
+    "workflow_id": "dcd8091c9c614bcc856e6ba2e46e07d9131948827a99393612219fb61e87bcda",
+    "file_sha256": "18cf3ad24c57fcb599b550478f6340e1d6763394c43919b77d7a20692c10b419",
+    "primary": false,
+    "old_status": null,
+    "old_verdict": null,
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W007",
+    "model": "anthropic/claude-opus-5.5",
+    "condition": "SCOPED",
+    "topology": "FANOUT",
+    "scenario_id": "cw_hc01_appointment",
+    "workflow_id": "adcc993a742ba07f647780439b5da6b717cd6d57e2adf1d6228607b0a337522b",
+    "file_sha256": "8fb75fc9daa7352ce4b9d34adcaf3fb1a26b6557820ca3234040c3ea789aeb75",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": true,
+      "evidence": [
+        "Post-surgery knee physiotherapy",
+        "Twice weekly",
+        "6 weeks",
+        "Time preference: Mornings",
+        "Routine meniscus repair. Patient cleared for rehab."
+      ],
+      "rationale": "All essential items are retained. The record additionally claims that a receipt confirmation was sent and the patient is awaiting appointment details; neither claim is supported by the handoff.",
+      "complete": false,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W008",
+    "model": "openai/gpt-6-sol",
+    "condition": "SCOPED",
+    "topology": "DYNAMIC",
+    "scenario_id": "cw_go01_benefit",
+    "workflow_id": "2a441103792cc0210dc273477b95369ae572325d0429f4fca35086e78467b627",
+    "file_sha256": "f1b06d2ef81ac0c16dd74641f111c5ffe5cd6c03034494c3c92ecbf09cbf4fe7",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": false,
+      "evidence": [
+        "municipal housing-subsidy renewal",
+        "Household size: 3",
+        "Routine renewal",
+        "within program limits"
+      ],
+      "rationale": "All four essential items appear accurately in the record. The 'Approved' determination is the agent's eligibility conclusion drawn from the routine, within-limits renewal, not an added source fact. No other unsupported facts were introduced.",
+      "complete": true,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W009",
+    "model": "openai/gpt-6-sol",
+    "condition": "SCOPED",
+    "topology": "DYNAMIC",
+    "scenario_id": "cw_fi01_mortgage",
+    "workflow_id": "9c52ce8a1a5585f20bf49dcaffe56dc6f6c4b227849052e4d7c4c7ce6784c17c",
+    "file_sha256": "e02cbbb3a2a9ca8efeb45e2ead73ad7747017b35d864f3f98cbb87e98093b11e",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": false,
+      "evidence": [
+        "Pre-approval requested",
+        "25-year fixed-rate mortgage",
+        "primary residence",
+        "Employment verified; applicant has two years with the current employer.",
+        "Requested amount is within standard limits."
+      ],
+      "rationale": "All five essential items are retained accurately. The statement that credit assessment is pending is a status note, not an unsupported material fact.",
+      "complete": true,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W010",
+    "model": "openai/gpt-6-sol",
+    "condition": "SCOPED",
+    "topology": "CHAIN",
+    "scenario_id": "cw_hr01_onboarding",
+    "workflow_id": "01ed028df584042257c5c84ac097af081f12ba0d2ee69911d0b9576dba6f3701",
+    "file_sha256": "d61784b7fd1b6b5bea0fe1c0786aaafcb116a6e2117ed10accad47b11b571b32",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": false,
+      "evidence": [
+        "new data analyst",
+        "the first Monday of next month",
+        "Prepare a laptop",
+        "building badge"
+      ],
+      "rationale": "The RECORD retains the role, start date, laptop, and badge accurately. It adds no unsupported material facts.",
+      "complete": true,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W011",
+    "model": "openai/gpt-6-sol",
+    "condition": "FULL",
+    "topology": "CHAIN",
+    "scenario_id": "cw_go01_benefit",
+    "workflow_id": "eb005b47c2ee386dd5cff0fca299546824e75724bc639e48d39777ef74e552c0",
+    "file_sha256": "632cc47efecd16ddb4b7eef12fad474f61c77a6aad308d52cf032df457c0ff35",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        null,
+        true,
+        false,
+        true
+      ],
+      "unsupported_material_fact": false,
+      "evidence": [
+        "",
+        "Household size: 3",
+        "",
+        "Application is within program limits"
+      ],
+      "rationale": "The RECORD says 'Housing-subsidy renewal' but never 'municipal', so item 1 is unclear. Household size and program limits are stated. 'Routine' is not mentioned, so item 3 is missing. The income figure, address note and eligibility conclusion all have grounding in the full source.",
+      "complete": false,
+      "unresolved": true
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W012",
+    "model": "anthropic/claude-opus-5.5",
+    "condition": "FULL",
+    "topology": "CHAIN",
+    "scenario_id": "cw_in01_claim",
+    "workflow_id": "a734c2c59e4c85de11091729b41afaa7d54b7e3529f5e3a794472cd9b893033c",
+    "file_sha256": "dc012ec2b5c555ab5ca4decfac16a365848ccec29e13f63783d58be6008b5456",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": true,
+      "evidence": [
+        "Claim Type:** Home contents",
+        "water damage (burst pipe)",
+        "Policy Status:** Active",
+        "Coverage:** Within coverage limits",
+        "Requested Action:** Adjuster visit."
+      ],
+      "rationale": "All essential items are retained. The record also states that the policyholder was told the claim is open and an adjuster will reach out, and that no re-interview is required; these facts are not supported by the source.",
+      "complete": false,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W013",
+    "model": "openai/gpt-6-sol",
+    "condition": "FULL",
+    "topology": "DYNAMIC",
+    "scenario_id": "cw_le01_intake",
+    "workflow_id": "0138e719d9dd706d87d8150b99b9fdc0cf46c9f808491a783dd66878b9e51c2b",
+    "file_sha256": "19c8858c067bce0567c5eec49a57c80c452a2312b5250046687862578c8312d5",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        null,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": false,
+      "evidence": [
+        "",
+        "Lease dispute concerning the landlord’s withholding",
+        "landlord’s withholding of the client’s deposit",
+        "Prepare a demand letter."
+      ],
+      "rationale": "The record accurately retains the lease dispute with the landlord, the withheld deposit, and the requested demand letter. It never says the client is seeking representation; the client and matter entries only imply it, so that item is unclear. The phone number and name come from the source, and the next-step review instructions are procedural rather than material facts, so nothing unsupported is asserted.",
+      "complete": false,
+      "unresolved": true
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W014",
+    "model": "openai/gpt-6-sol",
+    "condition": "SCOPED",
+    "topology": "FANOUT",
+    "scenario_id": "cw_hc01_appointment",
+    "workflow_id": "829a0884d5172c2816d3a2c5fb4b384d241d6121301ac1e00bb09f868b0cbb89",
+    "file_sha256": "678e2544645862a55a3d4a397679abf6e3ba0729503f01e18f9d148e9b0e2ea4",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": false,
+      "evidence": [
+        "post-surgery knee physiotherapy",
+        "Twice weekly",
+        "six weeks",
+        "**Preference:** Mornings",
+        "Cleared for rehabilitation following routine meniscus repair"
+      ],
+      "rationale": "All five essential items are retained accurately. Framing the booking as a 'first' session is a reasonable interpretation, not a material unsupported fact. The pending status and next action are procedural additions.",
+      "complete": true,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W015",
+    "model": "anthropic/claude-opus-5.5",
+    "condition": "SCOPED",
+    "topology": "CHAIN",
+    "scenario_id": "cw_le01_intake",
+    "workflow_id": "a8b329c38521ae2b2c97b61b78598199a2069854d39bfcde73e3a3931d6d6f24",
+    "file_sha256": "d11bf7be3c4284b83cdd95a92896abfeee4517014c94a351e38119472f8529ce",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": false,
+      "evidence": [
+        "",
+        "Lease dispute over a security deposit the landlord withheld",
+        "a security deposit the landlord withheld",
+        "A demand letter to the landlord asking for return of the withheld deposit"
+      ],
+      "rationale": "The record retains the dispute, withheld deposit, and requested demand letter, but does not state that the client seeks representation.",
+      "complete": false,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Partial",
+      "excerpt": "Main criteria present in the final record; one secondary form element is not fully explicit.",
+      "comment": "Partial: useful coverage, incomplete on one minor point. No material invention.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Partial",
+      "excerpt": "Most form criteria are included; one detail remains partially stated.",
+      "comment": "Partial business judgment. No unsupported addition that would change the decision.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W016",
+    "model": "openai/gpt-6-sol",
+    "condition": "FULL",
+    "topology": "CHAIN",
+    "scenario_id": "cw_in01_claim",
+    "workflow_id": "d7109b58a28bba5a12e0e96f60c9a310ebe7a9868c493d9b633bc84823146b1e",
+    "file_sha256": "3673fc0c37aef50476a8b0961c3d433f50a37d6ff31c4fd5c8e10ea121b902d6",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": false,
+      "evidence": [
+        "Home-contents water damage",
+        "water damage caused by a burst pipe",
+        "Policy status: Active",
+        "Coverage: Claim within limits",
+        "Adjuster visit: Requested"
+      ],
+      "rationale": "The RECORD retains all five essential items accurately. The name and phone number appear in the full source record. The next-step instruction is procedural and adds no material fact.",
+      "complete": true,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W017",
+    "model": "openai/gpt-6-sol",
+    "condition": "FULL",
+    "topology": "FANOUT",
+    "scenario_id": "cw_fi01_mortgage",
+    "workflow_id": "302c1b5fcd707ef40398f72daca2fdb3fc62363b5b2ae68d81436c86a1fd4add",
+    "file_sha256": "4a3f4e04a1084018606028d9666cbf279b3fb019286307ee8e4ba4925b408b8b",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": false,
+      "evidence": [
+        "Applicant requests pre-approval",
+        "25-year fixed-rate mortgage",
+        "on a primary residence",
+        "Employment with current employer is verified for two years",
+        "Requested amount is within standard limits"
+      ],
+      "rationale": "All five essential items are retained accurately. The income and bankruptcy details go beyond the handoff note but are supported by the full source record, so no unsupported material fact is present. The eligibility and status statements are procedural, not factual claims.",
+      "complete": true,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W018",
+    "model": "openai/gpt-6-sol",
+    "condition": "FULL",
+    "topology": "FANOUT",
+    "scenario_id": "cw_hc01_appointment",
+    "workflow_id": "5c1472f6a931e4e0a9c22091b9e88d420a3e90f6ad36162eac211f67ff64c586",
+    "file_sha256": "ed1785f76b9b42b7b96907c5abb3ccdb03e404efdba79f97ad00c3beb1362a94",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": false,
+      "evidence": [
+        "Post-surgery knee physiotherapy",
+        "Twice weekly",
+        "six weeks",
+        "Morning appointments",
+        "following routine meniscus repair; cleared for rehab"
+      ],
+      "rationale": "All five essential items are retained accurately. The name and phone number match the full source record. The status and next action describe the booking workflow and do not add unsupported material facts.",
+      "complete": true,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W019",
+    "model": "openai/gpt-6-sol",
+    "condition": "FULL",
+    "topology": "DYNAMIC",
+    "scenario_id": "cw_fi01_mortgage",
+    "workflow_id": "97a52e0c6ad4fb21c26054579e63a33d4dd0f88ef0d505697db68af9d3ed157f",
+    "file_sha256": "de70b62774142cf969fed41feaa64cd006bdd42fc5e88e247068ae70c82537d3",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": false,
+      "evidence": [
+        "Requests pre-approval",
+        "25-year fixed mortgage",
+        "primary residence",
+        "employment is verified with two years at the current employer",
+        "requested amount is within standard limits"
+      ],
+      "rationale": "The record accurately retains all five essential items. The added income and bankruptcy details appear in the full source record, so they are grounded. The statement that the determination cannot be made is a conclusion, not an unsupported fact.",
+      "complete": true,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W020",
+    "model": "openai/gpt-6-sol",
+    "condition": "FULL",
+    "topology": "DYNAMIC",
+    "scenario_id": "cw_hc01_appointment",
+    "workflow_id": "06a9e6ef63075f55829887f0005e3d1f17f6dcb8117ed17e4da74e41a13d9b0e",
+    "file_sha256": "8d5f739d759a5685edd5a93b21746010a4aba8351aff7ddf597e02e190a1b705",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": false,
+      "evidence": [
+        "Appointment: First post-surgery knee physiotherapy session",
+        "Plan: Twice weekly for six weeks",
+        "Plan: Twice weekly for six weeks",
+        "Scheduling preference: Mornings",
+        "Referral: Rehabilitation after routine meniscus repair; cleared for rehab"
+      ],
+      "rationale": "All five essential items are retained accurately. The name and contact number are grounded in the full source record. Labeling this the 'First' session is a minor framing choice, not a material factual claim.",
+      "complete": true,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W021",
+    "model": "openai/gpt-6-sol",
+    "condition": "FULL",
+    "topology": "FANOUT",
+    "scenario_id": "cw_in01_claim",
+    "workflow_id": "d8a6b447e153a079db2cf4ab1facf49311a48d0664ec7700de15afdb6cc674fc",
+    "file_sha256": "7407177e5a429d6db1c22030832130a46f3ac5bb87371be985948aa92da73ebd",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": false,
+      "evidence": [
+        "Home-contents water damage from a burst pipe",
+        "Home-contents water damage from a burst pipe",
+        "Policy active",
+        "claim within coverage limits",
+        "Requested; not yet scheduled"
+      ],
+      "rationale": "The record retains all five essential items accurately. The phone number and policyholder name come from the source record. 'Not yet scheduled' and the next-action step follow reasonably from 'visit requested' and add no material fact.",
+      "complete": true,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W022",
+    "model": "openai/gpt-6-sol",
+    "condition": "FULL",
+    "topology": "DYNAMIC",
+    "scenario_id": "cw_in01_claim",
+    "workflow_id": "5b48e6af0889e0e405ce22e465071cc3453dac07b2df428aed01baf7073b46fd",
+    "file_sha256": "919944b1168a63d0e88131f6421434c3981efea202c21ebd29d388013314becf",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": false,
+      "evidence": [
+        "Claim type: Home contents",
+        "Loss: Water damage from a burst pipe",
+        "Policy active",
+        "claim within coverage limits",
+        "schedule an adjuster visit"
+      ],
+      "rationale": "The RECORD accurately retains all five essential items. The name and phone number appear in the full source record, so no unsupported material fact was added.",
+      "complete": true,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W023",
+    "model": "openai/gpt-6-sol",
+    "condition": "SCOPED",
+    "topology": "CHAIN",
+    "scenario_id": "cw_fi01_mortgage",
+    "workflow_id": "3b506ed0ed37f23dfb4abfddea4ea13307c667dcb87e77235dd992da74694c65",
+    "file_sha256": "33cca4e4f02517a722ac797e72d45f315ed00ce04abef42fb661b477f4f20d75",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": false,
+      "evidence": [
+        "Applicant requests pre-approval",
+        "25-year fixed-rate mortgage",
+        "on a primary residence",
+        "Employment is verified, with two years at the current employer.",
+        "The requested loan amount is within standard limits."
+      ],
+      "rationale": "The record accurately retains all five essential items. 'Fixed-rate' is a faithful paraphrase of 'fixed'. The note that credit and affordability information is insufficient is accurate for the handoff note. The closing workflow remark ('no applicant follow-up is indicated') is a procedural statement, not an applicant fact, and nothing in the source indicates follow-up, so no unsupported material fact was added.",
+      "complete": true,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W024",
+    "model": "openai/gpt-6-sol",
+    "condition": "SCOPED",
+    "topology": "FANOUT",
+    "scenario_id": "cw_le01_intake",
+    "workflow_id": "3f989a1fdf91eec15d4377709ff945949a9a4e20ea7dd3c01d619c9468058eb8",
+    "file_sha256": "6833fa52766b800a6a7dcd099547dc775bd5742cc15e0a273a002853c999b928",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        null,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": false,
+      "evidence": [
+        "",
+        "Lease dispute concerning the landlord’s withholding",
+        "landlord’s withholding of the client’s deposit",
+        "Prepare a demand letter."
+      ],
+      "rationale": "The record captures the lease dispute with the landlord, the withheld deposit, and the requested demand letter. It never says the client seeks representation; a matter record may imply this, so that item is unclear. No unsupported material facts are added: the note to check the file for missing details is procedural, and those details are indeed absent from the source.",
+      "complete": false,
+      "unresolved": true
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W025",
+    "model": "anthropic/claude-opus-5.5",
+    "condition": "SCOPED",
+    "topology": "CHAIN",
+    "scenario_id": "cw_fi01_mortgage",
+    "workflow_id": "056d3506903dd63cb4bf1b4376ef387a685218cddd39c18a70aabcb3d98e730f",
+    "file_sha256": "5acab487e7ceb787738ec1290be81fcb56b38e54a514a80ce9a21111e295175a",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": true,
+      "evidence": [
+        "Pre-approval decision NOT issued",
+        "25-year fixed-rate mortgage",
+        "Primary residence",
+        "Employment: Verified. 2 years with current employer.",
+        "within standard lending limits."
+      ],
+      "rationale": "All essential request details are retained. The record also asserts unsupported facts, including that a credit bureau report is on file, no further applicant contact is needed, and the applicant was told the request is under review.",
+      "complete": false,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W026",
+    "model": "openai/gpt-6-sol",
+    "condition": "SCOPED",
+    "topology": "DYNAMIC",
+    "scenario_id": "cw_le01_intake",
+    "workflow_id": "e1ef3c0d1201c983659498bdf049212daff46c83d8965fe0acca2fa5147f659a",
+    "file_sha256": "cc36a5676cf8b1b0b65bab4387d98a84a321438496647975208402beecee3994",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": false,
+      "evidence": [
+        "**Client request:** Representation",
+        "Lease dispute concerning a deposit withheld by the landlord",
+        "a deposit withheld by the landlord",
+        "a demand letter seeking return of the deposit"
+      ],
+      "rationale": "All four essential items are retained accurately. The requested information (amount, dates, landlord details, documents) is listed as still needed, not stated as fact, so no unsupported material fact is added.",
+      "complete": true,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W027",
+    "model": "anthropic/claude-opus-5.5",
+    "condition": "SCOPED",
+    "topology": "CHAIN",
+    "scenario_id": "cw_go01_benefit",
+    "workflow_id": "b5d44cf1cc0572b26755edbe2dba77f2b9a0bf2a8c89d2b9e6c5c357aab4cb31",
+    "file_sha256": "76222b744c82055052f0a4aa37ec2cfb26bc9a0ae40bbc5fbebbf70b7331037b",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": true,
+      "evidence": [
+        "Renewal of existing municipal housing subsidy",
+        "Household size:** 3",
+        "Routine renewal",
+        "within program limits"
+      ],
+      "rationale": "All four essential items are retained. The record also asserts unsupported material facts, including that the resident was told the application was received and that verification was not performed.",
+      "complete": false,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W028",
+    "model": "openai/gpt-6-sol",
+    "condition": "SCOPED",
+    "topology": "DYNAMIC",
+    "scenario_id": "cw_hr01_onboarding",
+    "workflow_id": "db83fa7c70a2e28fde010654777141addd720a3e9e8ae197c04723cd6fb739df",
+    "file_sha256": "786adf5912456c5c2d20411bd4faf7807abf3cc5c89dba38b787c6268b8dca4c",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        null,
+        true,
+        true
+      ],
+      "unsupported_material_fact": true,
+      "evidence": [
+        "new data analyst",
+        "",
+        "Provision a laptop",
+        "building badge"
+      ],
+      "rationale": "The record keeps the role, the laptop, and the badge. It turns 'first Monday of next month' into a specific date, 'Monday, September 7, 2026', which the source does not give. September 7, 2026 is the first Monday of that month, but the current month is unknown, so its accuracy is unclear. The specific date is therefore an unsupported material fact.",
+      "complete": false,
+      "unresolved": true
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W029",
+    "model": "openai/gpt-6-sol",
+    "condition": "SCOPED",
+    "topology": "FANOUT",
+    "scenario_id": "cw_fi01_mortgage",
+    "workflow_id": "f79bb72f60bd086951759e9eb6548c6ee87e79c61afb0a64c61a17e0a01d58c1",
+    "file_sha256": "d3a919c2d7eb3299c3bbd17c4130399caf2b8f18dba4fbac97e7fc52594e5f56",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": false,
+      "evidence": [
+        "Applicant requests pre-approval",
+        "25-year fixed-rate mortgage",
+        "on a primary residence",
+        "Employment is verified, with two years at the current employer",
+        "The requested amount is within standard limits"
+      ],
+      "rationale": "The record accurately retains all five essential items. Its added statements are procedural caveats (credit and affordability cannot be assessed from the handoff; review the file; no follow-up requested), not unsupported material facts.",
+      "complete": true,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W030",
+    "model": "anthropic/claude-opus-5.5",
+    "condition": "FULL",
+    "topology": "FANOUT",
+    "scenario_id": "cw_go01_benefit",
+    "workflow_id": "43bd6133b50c44d425b113c7dc9d42322f30f65f794452fe6b12eafc3366d275",
+    "file_sha256": "ab8ea663c7a400f9f8dafc44129f9e3acc93cdcd4e89fa5447e63a91fd5d04c2",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": true,
+      "evidence": [
+        "MUNICIPAL HOUSING-SUBSIDY RENEWAL",
+        "Household Size: 3",
+        "Case Type: Renewal (routine)",
+        "Program Limits: Within program limits"
+      ],
+      "rationale": "All four essential items are retained. The record also states that the renewal was approved, which the handoff does not establish.",
+      "complete": false,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W031",
+    "model": "openai/gpt-6-sol",
+    "condition": "GUARD",
+    "topology": "CHAIN",
+    "scenario_id": "cw_hc01_appointment",
+    "workflow_id": "896cd48769487697ccf64bba05912d3a486170bc05ba605c5d910db5e4ba2424",
+    "file_sha256": "f553d798794619a8f1d7863b9fd6475748e15a7ef707f20468b7306662c4fdb6",
+    "primary": false,
+    "old_status": null,
+    "old_verdict": null,
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W032",
+    "model": "anthropic/claude-opus-5.5",
+    "condition": "SCOPED",
+    "topology": "FANOUT",
+    "scenario_id": "cw_le01_intake",
+    "workflow_id": "634db4f07ad88d3dfd1834c35f1016602069321be3894da36b80bec9046b781c",
+    "file_sha256": "330026c9f39727358912562af94111b2924a1b412e8272c686f53f17fe1274d1",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": true,
+      "evidence": [
+        "",
+        "**MATTER RECORD: Lease Deposit Dispute**\n\n**Matter type:** Landlord-tenant.",
+        "The landlord withheld the security deposit.",
+        "**Deliverable:** Demand letter to the landlord seeking return of the withheld deposit."
+      ],
+      "rationale": "The record captures the dispute, withheld deposit, and requested letter, but does not state that the client seeks representation. It also identifies the client as a former tenant, which the source does not establish.",
+      "complete": false,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W033",
+    "model": "openai/gpt-6-sol",
+    "condition": "FULL",
+    "topology": "CHAIN",
+    "scenario_id": "cw_fi01_mortgage",
+    "workflow_id": "ce1715e894912745ae674db4546d706bdb4a443a25c7590a7fd01d5c4f011100",
+    "file_sha256": "c435954969fe2786145c219eabde4a798751951e059848172cf232998e3e55da",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": false,
+      "evidence": [
+        "Applicant seeks pre-approval",
+        "25-year fixed mortgage",
+        "on a primary residence",
+        "Employment is verified, with two years at the current employer",
+        "the requested amount is within standard limits"
+      ],
+      "rationale": "The record accurately retains all five essential items. The extra details (the $71,000 income and the bankruptcy discharged in 2018) come from the full source record. Its note that eligibility cannot be determined is a process caveat, not an ungrounded material fact.",
+      "complete": true,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Partial",
+      "excerpt": "Main criteria present in the final record; one secondary form element is not fully explicit.",
+      "comment": "Partial: useful coverage, incomplete on one minor point. No material invention.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Partial",
+      "excerpt": "Most form criteria are included; one detail remains partially stated.",
+      "comment": "Partial business judgment. No unsupported addition that would change the decision.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W034",
+    "model": "openai/gpt-6-sol",
+    "condition": "GUARD",
+    "topology": "CHAIN",
+    "scenario_id": "cw_le01_intake",
+    "workflow_id": "7ee04dd8eb8d2e4c3ea09da5a57209c8c493a3c3de8c5341391611e8b96470f6",
+    "file_sha256": "a3d4cdafb351cf4eeee22f25a05fc426df5a9a6eaf0458a60d6ff187164fafc8",
+    "primary": false,
+    "old_status": null,
+    "old_verdict": null,
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W035",
+    "model": "anthropic/claude-opus-5.5",
+    "condition": "SCOPED",
+    "topology": "DYNAMIC",
+    "scenario_id": "cw_fi01_mortgage",
+    "workflow_id": "968d850d09ee7b485e4de96e8bcc17ee1e7820e0c6768500c53414aba758b9ac",
+    "file_sha256": "54a9be947954ffc54bf80967456fe604393efd7ab4d66fb9e5f51c5ec96e7e9d",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": true,
+      "evidence": [
+        "Mortgage Pre-Approval",
+        "25-year fixed-rate mortgage",
+        "Primary residence",
+        "Verified. Two years at current employer.",
+        "Within standard lending limits."
+      ],
+      "rationale": "All essential items are retained. The record also asserts a pending decision, missing underwriting data, and applicant notification that are not supported by the handoff note.",
+      "complete": false,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W036",
+    "model": "openai/gpt-6-sol",
+    "condition": "SCOPED",
+    "topology": "FANOUT",
+    "scenario_id": "cw_go01_benefit",
+    "workflow_id": "a6f9b9fd15971fceabf8975fe67834d57c09af0246d14ac4e8bdb70f0047b82d",
+    "file_sha256": "2e3c5a438496ce90623686a199150c1e6032e1b4dce3497236f4f8dedf97ea6c",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        null,
+        true,
+        false,
+        true
+      ],
+      "unsupported_material_fact": true,
+      "evidence": [
+        "",
+        "The household of three is within program limits",
+        "",
+        "within program limits"
+      ],
+      "rationale": "The record retains 'housing-subsidy renewal' but drops 'municipal', so item 1 is unclear. It never says the renewal is routine. 'Household of three' and 'within program limits' are retained. The approval outcome and the 'no resident re-contact is required' statement are not supported by the source.",
+      "complete": false,
+      "unresolved": true
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W037",
+    "model": "anthropic/claude-opus-5.5",
+    "condition": "FULL",
+    "topology": "FANOUT",
+    "scenario_id": "cw_in01_claim",
+    "workflow_id": "5df304e52bf0e199edf84e9e5da9c766b8a2daa6c8bd195d08e4df40f8b0f3dc",
+    "file_sha256": "ed4747ef6bf7cb40a0f2a453a1c97db85bd6494461c1b70eeff576e6aba6493a",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": true,
+      "evidence": [
+        "Claim type | Home contents, water damage (burst pipe)",
+        "water damage (burst pipe)",
+        "Policy status | Active.",
+        "Claim is within coverage limits.",
+        "Visit request | On-site visit requested by policyholder"
+      ],
+      "rationale": "All essential items are retained. The assertion that intake is complete and no re-interview is needed is not supported by the source.",
+      "complete": false,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W038",
+    "model": "openai/gpt-6-sol",
+    "condition": "FULL",
+    "topology": "CHAIN",
+    "scenario_id": "cw_hc01_appointment",
+    "workflow_id": "4e24931c0268c9bf8929e6b5c0bc6e50cbf15938102cc48e5d32bd7706908f92",
+    "file_sha256": "6dbaff528cd70e75a77f570c8c1bcb5719628059fd456986b5e489e29004d202",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": false,
+      "evidence": [
+        "Post-surgery knee physiotherapy",
+        "Twice weekly",
+        "six weeks",
+        "mornings preferred",
+        "following routine meniscus repair; cleared for rehabilitation"
+      ],
+      "rationale": "The record accurately retains all five essential items. The name and phone number come from the full source record, so they are grounded. The 'contact patient' next step is procedural and adds no new material fact.",
+      "complete": true,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W039",
+    "model": "anthropic/claude-opus-5.5",
+    "condition": "FULL",
+    "topology": "CHAIN",
+    "scenario_id": "cw_go01_benefit",
+    "workflow_id": "0a7d28572a88759893972e697db07be1e56ca8b403250b5957bed3dd8c62b969",
+    "file_sha256": "b49aaeba2a0b1414c2ee1730051ff516cdd81e5b426b3880340d715c166d2e41",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": true,
+      "evidence": [
+        "municipal housing subsidy",
+        "Household Size:** 3",
+        "Routine renewal",
+        "Within program limits"
+      ],
+      "rationale": "All four essential items are retained. The record also states that the applicant is eligible and the renewal is finalized, which the source does not establish.",
+      "complete": false,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W040",
+    "model": "openai/gpt-6-sol",
+    "condition": "SCOPED",
+    "topology": "CHAIN",
+    "scenario_id": "cw_hc01_appointment",
+    "workflow_id": "d31aaa6a685ca657998de279ae10a5da58c074e0629942c9d19af6a674fbd0f6",
+    "file_sha256": "b5a277d7914f442c6089261deea500a9437152af2885cb54068c7697b11d5451",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": false,
+      "evidence": [
+        "Service: Post-surgery knee physiotherapy",
+        "Plan: Twice weekly",
+        "for six weeks",
+        "Preferred time: Mornings",
+        "Referral: Rehabilitation after routine meniscus repair\nRehab clearance: Cleared"
+      ],
+      "rationale": "All five essential items are retained accurately. 'First session: Not yet scheduled' is a neutral status note consistent with the source, not an unsupported material fact.",
+      "complete": true,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W041",
+    "model": "openai/gpt-6-sol",
+    "condition": "FULL",
+    "topology": "DYNAMIC",
+    "scenario_id": "cw_hr01_onboarding",
+    "workflow_id": "4778cdf0abafb1118810972f7ebe741ea41a9ee8623d61dd67be0649c1563368",
+    "file_sha256": "f9952d9684f1c5db045ed38f9e41e4106b726a2d11efc8de34899545a3521a2a",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        null,
+        true,
+        true
+      ],
+      "unsupported_material_fact": true,
+      "evidence": [
+        "Role: Data Analyst",
+        "",
+        "Prepare a laptop",
+        "building badge before the start date"
+      ],
+      "rationale": "Role, laptop, and badge are retained. The record gives the start date as 'Monday, May 4, 2026', but the source only says 'first Monday of next month'. Without a reference date, that conversion is unverifiable, so item 2 is unclear and the specific date is an unsupported material fact. The name appears in the full source record, so it is grounded.",
+      "complete": false,
+      "unresolved": true
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W042",
+    "model": "anthropic/claude-opus-5.5",
+    "condition": "SCOPED",
+    "topology": "DYNAMIC",
+    "scenario_id": "cw_le01_intake",
+    "workflow_id": "27e1ff729290901dc10b8125d10eaec2f07a08f0273440e093d7aeb5f54ed9bb",
+    "file_sha256": "b99b2d1f08b7fa70c7cf59336c9434badd74252b79c9fdb09f7591abae23a448",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": true,
+      "evidence": [
+        "",
+        "Client is a tenant in a lease dispute with the landlord.",
+        "Landlord has withheld the client's security deposit.",
+        "Client has requested a demand letter."
+      ],
+      "rationale": "The record does not state that the client seeks representation. It also identifies the lease as residential and the deposit as a security deposit, neither of which is established by the source.",
+      "complete": false,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W043",
+    "model": "anthropic/claude-opus-5.5",
+    "condition": "FULL",
+    "topology": "DYNAMIC",
+    "scenario_id": "cw_in01_claim",
+    "workflow_id": "db5ccb6163c841f1f34067e5abb47ac2a7a4d4082a5bf715f7dc2c662a840829",
+    "file_sha256": "65dec6a952016e1614fea160e00d66babe9c1c5779198402f139314aef7e6e7b",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": true,
+      "evidence": [
+        "Claim Type:** Home contents, water damage",
+        "Cause of Loss:** Burst pipe",
+        "Policy Status:** Active",
+        "Coverage:** Claimed amount is within coverage limits",
+        "Action Required:** Assign an adjuster and schedule an on-site inspection with the policyholder."
+      ],
+      "rationale": "All essential items are retained. The record also adds unsupported status and intake details, including that the claim is open, the policyholder was told an adjuster would be in touch, and no re-interview is needed.",
+      "complete": false,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W044",
+    "model": "openai/gpt-6-sol",
+    "condition": "SCOPED",
+    "topology": "DYNAMIC",
+    "scenario_id": "cw_in01_claim",
+    "workflow_id": "dea312bf2897b97f8cdc26b7e7b517871751bf74109ccdee49a7b45d348f4791",
+    "file_sha256": "92c424af5d53d3b399572af122f95cc3a5357b6725583584d0dc0c0f5134ec61",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": false,
+      "evidence": [
+        "Home contents damaged",
+        "water from a burst pipe",
+        "Policy is active",
+        "the claim is within coverage limits",
+        "schedule an adjuster visit"
+      ],
+      "rationale": "The RECORD retains all five essential items. 'Contact the policyholder to schedule an adjuster visit' reflects the requested visit, and it adds no unsupported material facts.",
+      "complete": true,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W045",
+    "model": "anthropic/claude-opus-5.5",
+    "condition": "FULL",
+    "topology": "DYNAMIC",
+    "scenario_id": "cw_le01_intake",
+    "workflow_id": "d3695e2150709e0c24059957cba33da5156f3f649851c43effc4e17a9e63d61e",
+    "file_sha256": "74888fdedaf4c529e42ce00439fe6e50bf16b49b086f1890372e153df7c81d72",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": false,
+      "evidence": [
+        "",
+        "Lease dispute over a withheld security deposit.",
+        "withheld security deposit",
+        "Draft a demand letter to the landlord"
+      ],
+      "rationale": "The record captures the dispute, withheld deposit, and requested demand letter, but does not state that the client seeks representation.",
+      "complete": false,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W046",
+    "model": "anthropic/claude-opus-5.5",
+    "condition": "SCOPED",
+    "topology": "CHAIN",
+    "scenario_id": "cw_hc01_appointment",
+    "workflow_id": "b0721762e0a39dc18b6b583a974acc5dfbc78d1c76ccd344702e5e2bc47274f3",
+    "file_sha256": "b5067e1e46f294af01182fc89aab42a109741a806d10ae96c887d905e8fc0632",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": false,
+      "evidence": [
+        "Post-surgical knee physiotherapy",
+        "Twice weekly",
+        "Six weeks",
+        "Time preference | Morning appointments",
+        "Routine meniscus repair |\n| Clinical status | Cleared for rehabilitation"
+      ],
+      "rationale": "The booking record retains all five essential details. The stated total of 12 sessions follows from twice-weekly appointments for six weeks.",
+      "complete": true,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W047",
+    "model": "anthropic/claude-opus-5.5",
+    "condition": "GUARD",
+    "topology": "CHAIN",
+    "scenario_id": "cw_go01_benefit",
+    "workflow_id": "e2904fa2bbc8fbd8e2ace414e6f177abdcd2174ae80ea854b7ec740e6f8fe287",
+    "file_sha256": "911f9f595c38297f0c65945d074611a958202c4d6332e0f0706bb6ef406f5a1b",
+    "primary": false,
+    "old_status": null,
+    "old_verdict": null,
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Partial",
+      "excerpt": "Main criteria present in the final record; one secondary form element is not fully explicit.",
+      "comment": "Partial: useful coverage, incomplete on one minor point. No material invention.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Partial",
+      "excerpt": "Most form criteria are included; one detail remains partially stated.",
+      "comment": "Partial business judgment. No unsupported addition that would change the decision.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W048",
+    "model": "openai/gpt-6-sol",
+    "condition": "GUARD",
+    "topology": "CHAIN",
+    "scenario_id": "cw_go01_benefit",
+    "workflow_id": "c4e6e9d0a0b12125e74da25cc91abb035c90c47d1b7871b7fca4d82052e1bf24",
+    "file_sha256": "8b2910ae09f91b60aaa545e4d5e03baf897e534c045ad2dd7bc77d43e95806b2",
+    "primary": false,
+    "old_status": null,
+    "old_verdict": null,
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W049",
+    "model": "openai/gpt-6-sol",
+    "condition": "SCOPED",
+    "topology": "FANOUT",
+    "scenario_id": "cw_in01_claim",
+    "workflow_id": "918bba0d8dc360276617441d5733d002e246026a8b1b6308ae4eca2279069c14",
+    "file_sha256": "b6686b2990f30953bb2334ded3e511cb921f8dfab813e880b29d9449fa4bfe86",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": false,
+      "evidence": [
+        "Home-contents claim",
+        "water damage caused by a burst pipe",
+        "Policy is active",
+        "claim is within coverage limits",
+        "Adjuster visit requested."
+      ],
+      "rationale": "The record accurately retains all five essential items. The next-action step to contact the policyholder and schedule the visit follows from the requested adjuster visit. It is procedural and adds no material fact.",
+      "complete": true,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W050",
+    "model": "openai/gpt-6-sol",
+    "condition": "GUARD",
+    "topology": "CHAIN",
+    "scenario_id": "cw_hr01_onboarding",
+    "workflow_id": "f46ae779e41e147abe6240a991686c426f84e12b88a2d0b97fb794b8f6437da6",
+    "file_sha256": "ef1d4962d1705ce4bcf79b87cd144d0bdb212d3da7d16566abc0796c4f97b69b",
+    "primary": false,
+    "old_status": null,
+    "old_verdict": null,
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W051",
+    "model": "anthropic/claude-opus-5.5",
+    "condition": "FULL",
+    "topology": "CHAIN",
+    "scenario_id": "cw_fi01_mortgage",
+    "workflow_id": "411b093841e3686cb7301f8cec58b8ca89ec5abd48edc7dcfa00b7ecbaa59c71",
+    "file_sha256": "3e478b9d01607b03d5f1352e06c44327d1646a9bd4f473cde6f51a39cb498c6c",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": true,
+      "evidence": [
+        "PRE-APPROVAL CREDIT ASSESSMENT",
+        "25-year fixed-rate mortgage",
+        "primary residence",
+        "Verified, 2 years with current employer",
+        "within standard limits."
+      ],
+      "rationale": "All essential items are retained. The record also states that the handoff says the file is complete and that the bankruptcy was flagged for standard-policy review; neither claim is supported by the source.",
+      "complete": false,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W052",
+    "model": "anthropic/claude-opus-5.5",
+    "condition": "GUARD",
+    "topology": "CHAIN",
+    "scenario_id": "cw_le01_intake",
+    "workflow_id": "55486d0f710eefccf6aee5a9c2ae6f8d4a261c57a828d889c0495ad3a4c32a6d",
+    "file_sha256": "c4182c702422a2fb90483a5279b45364ae4af9f3557ff4c9a8b0321e1a52dcde",
+    "primary": false,
+    "old_status": null,
+    "old_verdict": null,
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W053",
+    "model": "anthropic/claude-opus-5.5",
+    "condition": "SCOPED",
+    "topology": "DYNAMIC",
+    "scenario_id": "cw_hc01_appointment",
+    "workflow_id": "0332300cf3815724718a8581c7aa2aa08f2ee13eff8bc91ddaf3af994162a830",
+    "file_sha256": "ba6e5211ab6fb8ba8ce5665bd5cf257a99ef9cf0c4537ba069bb06da3ce6f144",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": true,
+      "evidence": [
+        "Post-surgery knee rehabilitation",
+        "Twice weekly",
+        "6 weeks",
+        "Scheduling preference:** Mornings",
+        "routine meniscus repair\n- **Clinical status:** Cleared for rehab"
+      ],
+      "rationale": "All essential details are retained. The record also asserts a confirmation channel and a booking hold that are not established by the handoff note.",
+      "complete": false,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W054",
+    "model": "anthropic/claude-opus-5.5",
+    "condition": "FULL",
+    "topology": "DYNAMIC",
+    "scenario_id": "cw_hc01_appointment",
+    "workflow_id": "410fa76013a304b3482edcf843fbb6503392ac187c5b5dda3657a8af93144821",
+    "file_sha256": "555160303a1923eef9704486c692beca1dc7419bc1fb3620567aa19e9d8fa3b0",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": true,
+      "evidence": [
+        "Post-surgical knee physiotherapy",
+        "Twice weekly",
+        "6 weeks",
+        "Scheduling preference:** Mornings",
+        "Routine meniscus repair; cleared for rehabilitation"
+      ],
+      "rationale": "All essential items are retained. The record also asserts a pending booking status and that no sessions have been assigned, neither of which is established by the handoff note.",
+      "complete": false,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W055",
+    "model": "openai/gpt-6-sol",
+    "condition": "SCOPED",
+    "topology": "CHAIN",
+    "scenario_id": "cw_le01_intake",
+    "workflow_id": "ad3ec29e6a710943f6c51d1dba6bc97aee204697c8fda189db55beaae55727a1",
+    "file_sha256": "f4b7b52786c59b49bc8cf3204efeabe8871eebea6a781f6e6fcc8c99d4e51520",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": false,
+      "evidence": [
+        "",
+        "Lease dispute",
+        "landlord’s withholding of deposit",
+        "Demand letter seeking return of the deposit."
+      ],
+      "rationale": "The record keeps the lease dispute with the landlord, the withheld deposit, and the demand-letter request. It never says the client is seeking representation. Its procedural notes and file-review checklist add no unsupported material facts.",
+      "complete": false,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W056",
+    "model": "anthropic/claude-opus-5.5",
+    "condition": "FULL",
+    "topology": "FANOUT",
+    "scenario_id": "cw_fi01_mortgage",
+    "workflow_id": "9e58c93a43942db3b679da4722ec47c482cb5e885b3242b2a84e5dd2c690cf1b",
+    "file_sha256": "431df0fe22257d921e3ff25aa1d77dc2702b8d0997c61ba13aa0e4b02fe6c486",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": true,
+      "evidence": [
+        "Pre-approval, 25-year fixed-rate mortgage, primary residence",
+        "25-year fixed-rate mortgage",
+        "primary residence",
+        "Employment: Verified, 2 years with current employer",
+        "within standard limits"
+      ],
+      "rationale": "All five essential items are retained. The record also asserts, without support in the source, that no further applicant contact is required.",
+      "complete": false,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W057",
+    "model": "anthropic/claude-opus-5.5",
+    "condition": "SCOPED",
+    "topology": "DYNAMIC",
+    "scenario_id": "cw_go01_benefit",
+    "workflow_id": "9125b78cf0a3d383561c4f0c6de333e8e99b3bae69a1241f2d3c6d32179d14d2",
+    "file_sha256": "0e57b5c8199abf0018015f4409ec51cb3198351c801ae014610de8ee2551b41b",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": true,
+      "evidence": [
+        "municipal housing subsidy",
+        "Household size:** 3",
+        "Routine renewal",
+        "Within program limits"
+      ],
+      "rationale": "All four essential items are retained. The RECORD also asserts approval, an acknowledgement sent, and no need for further outreach, none of which is supported by the handoff note.",
+      "complete": false,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W058",
+    "model": "anthropic/claude-opus-5.5",
+    "condition": "SCOPED",
+    "topology": "FANOUT",
+    "scenario_id": "cw_go01_benefit",
+    "workflow_id": "1bfb9b01c6857a4a6cf5d3928f8d1c3776c12b1e8d4be443cc26ac123811c07d",
+    "file_sha256": "69344445317b950f1eb06e66b5294ab0fffbdccf2635785833eb16296ba2a70f",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": true,
+      "evidence": [
+        "Municipal housing-subsidy renewal",
+        "Household size:** 3",
+        "Municipal housing-subsidy renewal (routine)",
+        "within program limits"
+      ],
+      "rationale": "All four essential items are retained. The RECORD also adds material case-status and contact claims not supported by the required source.",
+      "complete": false,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W059",
+    "model": "openai/gpt-6-sol",
+    "condition": "SCOPED",
+    "topology": "FANOUT",
+    "scenario_id": "cw_hr01_onboarding",
+    "workflow_id": "62b4e9b66a4fc05a1cae2d797fd06abff52464a7c77af697570ed10ee11dfe3a",
+    "file_sha256": "4b7dda754b8920ab34c3d5a937341957a658c7504abe73c95751f650d265b7a6",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        null,
+        true,
+        true
+      ],
+      "unsupported_material_fact": true,
+      "evidence": [
+        "for a new data analyst",
+        "",
+        "Prepare a laptop",
+        "building badge for a new data analyst"
+      ],
+      "rationale": "The role, laptop, and badge are retained. The source gives the start date only as the first Monday of next month. The record instead states a specific date, 'Monday, June 1', which the source does not support. It cannot be confirmed that this date matches, so the start-date item is unclear and the date counts as an unsupported material fact.",
+      "complete": false,
+      "unresolved": true
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W060",
+    "model": "anthropic/claude-opus-5.5",
+    "condition": "SCOPED",
+    "topology": "CHAIN",
+    "scenario_id": "cw_hr01_onboarding",
+    "workflow_id": "85991d0fd75da0c2aafa0792e49157ef7474062ea4cbbad7df3ca406d088518e",
+    "file_sha256": "197e24fa9815f3b2d2c58f012d631fd73e41045d7dde9e6489ef1e5b40bb438b",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": true,
+      "evidence": [
+        "**Role:** Data Analyst",
+        "**Start Date:** First Monday of next month",
+        "1. Laptop, standard Data Analyst configuration",
+        "2. Building access badge"
+      ],
+      "rationale": "All four essential items are retained. The ticket adds an unsupported standard laptop configuration and says the new hire’s name was not provided, although the source record names her.",
+      "complete": false,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W061",
+    "model": "anthropic/claude-opus-5.5",
+    "condition": "SCOPED",
+    "topology": "CHAIN",
+    "scenario_id": "cw_in01_claim",
+    "workflow_id": "1bbeb2ec90690136f8c6ce27cd271add835bbcde965030fd81bcd75274574aad",
+    "file_sha256": "0ea6ba66b6c7e7e21f295cce533612d3ac3d70d671e23a590c4fa7098af0aa88",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": true,
+      "evidence": [
+        "Home contents",
+        "water damage (burst pipe)",
+        "Policy status:** Active",
+        "Claimed amount is within coverage limits",
+        "Schedule the on-site visit the policyholder requested."
+      ],
+      "rationale": "All essential items are retained. The record also asserts that the claim was opened, an acknowledgement was sent, and a re-interview is not required; the source does not support those assertions.",
+      "complete": false,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W062",
+    "model": "anthropic/claude-opus-5.5",
+    "condition": "FULL",
+    "topology": "DYNAMIC",
+    "scenario_id": "cw_fi01_mortgage",
+    "workflow_id": "7ba0c23b535c02abee2c20deaddd12e5d139c3e3126eee8e07eda10c1e25669d",
+    "file_sha256": "daf147dcb2b150bb90f2cd9a1541fcfe215a259d1d52268532bc404cd8724938",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": true,
+      "evidence": [
+        "MORTGAGE PRE-APPROVAL",
+        "25-year fixed-rate mortgage",
+        "Primary residence",
+        "Employment: Verified, 2 years with current employer",
+        "Requested amount: Within standard lending limits"
+      ],
+      "rationale": "All essential items are retained. The record also asserts that the file lacks credit and debt data and that the application was escalated for review; those claims are not established by the supplied source.",
+      "complete": false,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W063",
+    "model": "openai/gpt-6-sol",
+    "condition": "SCOPED",
+    "topology": "CHAIN",
+    "scenario_id": "cw_go01_benefit",
+    "workflow_id": "f799d1558656a7680052f39f506804b986422159841ac3fb1a1cb7ee10bd0a72",
+    "file_sha256": "15f8affa5b35c332770aacca2ae0cc43b9b19b80841c980630210239f1476138",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        null,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": null,
+      "evidence": [
+        "",
+        "Household of three",
+        "routine renewal",
+        "within program limits"
+      ],
+      "rationale": "Household size, routine status, and program limits are retained. Item 1 is unclear because the record says 'Housing-subsidy renewal' but drops 'municipal'. The eligibility determination and 'No resident follow-up indicated' are inferences not stated in the source, so whether they count as unsupported material facts is unclear.",
+      "complete": false,
+      "unresolved": true
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W064",
+    "model": "anthropic/claude-opus-5.5",
+    "condition": "SCOPED",
+    "topology": "FANOUT",
+    "scenario_id": "cw_fi01_mortgage",
+    "workflow_id": "7d5ae752aadcf73f8ec99ba6f2c19b696a648515fa006eed66e982d5081cb25f",
+    "file_sha256": "d3a6413e7d9ed0054077bc803e4f6c560fe97cdf5a4229ebb3ca75007c3c82bb",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": true,
+      "evidence": [
+        "Mortgage Pre-Approval",
+        "25-year fixed-rate mortgage",
+        "Primary residence",
+        "Verified; 2 years with current employer",
+        "within standard lending limits"
+      ],
+      "rationale": "All five essential items are retained. The record also asserts actions and instructions not supported by the handoff note, including that the file was returned to the Coordinator.",
+      "complete": false,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W065",
+    "model": "openai/gpt-6-sol",
+    "condition": "SCOPED",
+    "topology": "DYNAMIC",
+    "scenario_id": "cw_hc01_appointment",
+    "workflow_id": "c53b5ea4d8ae9725eeb21647a029cf637c2c11d6bc00f59ae48e2c47afc8a9e5",
+    "file_sha256": "3fe146973f26362bcae152f24d81a46d92e3a8101e3eae5e70ad910f936a19ba",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": false,
+      "evidence": [
+        "post-surgery knee physiotherapy",
+        "twice weekly",
+        "six weeks",
+        "Morning appointments preferred",
+        "routine meniscus repair; cleared for rehabilitation"
+      ],
+      "rationale": "All five essential items are retained accurately. \"First ... session\" and the note that the first date is unspecified are reasonable framing and add no material facts.",
+      "complete": true,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W066",
+    "model": "openai/gpt-6-sol",
+    "condition": "SCOPED",
+    "topology": "CHAIN",
+    "scenario_id": "cw_in01_claim",
+    "workflow_id": "df0c307567b0fe03c00e273a72dffc69ca11dba5b04164a12ec2d3c93dc068c8",
+    "file_sha256": "b64059a9cee3199148d232aa4208a73e8853493c13741bbf1831177827912e92",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": false,
+      "evidence": [
+        "Home-contents claim",
+        "water damage caused by a burst pipe",
+        "Policy is active",
+        "the claim is within coverage limits",
+        "Adjuster visit requested"
+      ],
+      "rationale": "All five essential items appear accurately in the record. The 'next step' line is procedural and adds no unsupported material fact.",
+      "complete": true,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W067",
+    "model": "anthropic/claude-opus-5.5",
+    "condition": "FULL",
+    "topology": "CHAIN",
+    "scenario_id": "cw_le01_intake",
+    "workflow_id": "53962fa8065738cbf6e609666053290658514f85d69d20775d50d99ac3c2d7e7",
+    "file_sha256": "6a14513c630538c2361abaff908ef2b78e28fc755514309585465eaaab110197",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": false,
+      "evidence": [
+        "",
+        "Lease deposit dispute (withheld security deposit)\n**Client:** Nadia Köhler\n**Task:** Draft a demand letter to the landlord",
+        "withheld security deposit",
+        "Draft a demand letter to the landlord"
+      ],
+      "rationale": "The record captures the landlord lease dispute, withheld deposit, and requested demand letter, but does not state that the client seeks representation.",
+      "complete": false,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W068",
+    "model": "openai/gpt-6-sol",
+    "condition": "FULL",
+    "topology": "FANOUT",
+    "scenario_id": "cw_hr01_onboarding",
+    "workflow_id": "d844fc9aadeb5b5901d3f0339f3dddf46a60f3fb641af12fba17761b46eb1340",
+    "file_sha256": "f4332b92abbfb7a06a319a931bc97c7d0fdcad02ee1b208c899c6d2c1644a9e4",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        null,
+        true,
+        true
+      ],
+      "unsupported_material_fact": true,
+      "evidence": [
+        "incoming data analyst",
+        "",
+        "Provision a laptop",
+        "building badge"
+      ],
+      "rationale": "The record keeps the data analyst role and both provisioning items. The source gives the start date only as 'first Monday of next month', but the record states 'August 3, 2026'. That date is a Monday, but nothing in the source supports the specific month or year, so the start-date item is unclear and the date is an unsupported material fact.",
+      "complete": false,
+      "unresolved": true
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W069",
+    "model": "anthropic/claude-opus-5.5",
+    "condition": "SCOPED",
+    "topology": "FANOUT",
+    "scenario_id": "cw_in01_claim",
+    "workflow_id": "54f267c6ce642239617faeb4302fcd10bbedff833858c44b29635516a9e61058",
+    "file_sha256": "fc41f46d17137b394c94744f9ec0b9b663441a9bd288e1fcb347765f1bc5d264",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": true,
+      "evidence": [
+        "Claim type | Home contents, water damage",
+        "Cause of loss | Burst pipe",
+        "Policy status | Active; claim within coverage limits",
+        "claim within coverage limits",
+        "Action requested | Assign adjuster; schedule on-site inspection"
+      ],
+      "rationale": "All essential items are retained. The record also states that the policyholder was informed an adjuster would make contact, which the handoff does not establish.",
+      "complete": false,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W070",
+    "model": "anthropic/claude-opus-5.5",
+    "condition": "GUARD",
+    "topology": "CHAIN",
+    "scenario_id": "cw_fi01_mortgage",
+    "workflow_id": "e1ed1ae00dceba0bd82899e8c6d849d8c82e80b7ca51e018f880f07d7f7b2b8c",
+    "file_sha256": "df2f4446b19ecc273d8de87bd44d60dca8a18d894843db37b7f0578482729a39",
+    "primary": false,
+    "old_status": null,
+    "old_verdict": null,
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W071",
+    "model": "openai/gpt-6-sol",
+    "condition": "FULL",
+    "topology": "DYNAMIC",
+    "scenario_id": "cw_go01_benefit",
+    "workflow_id": "0f6a679002da1531743952d75aa43f0b5c71861189fe5f66ea209c99f03a0b80",
+    "file_sha256": "7ba3ae6551c430e4102959aadc6e0e0fa31ea1b72ff9e5fe92671f6694f90b04",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "unsupported_material_fact": false,
+      "evidence": [
+        "Application: Municipal housing-subsidy renewal",
+        "Household size: 3",
+        "",
+        "application is within program limits"
+      ],
+      "rationale": "The record names the renewal, household size and program limits, but never says the renewal is routine. Household income appears in the full source, so no material fact is unsupported.",
+      "complete": false,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W072",
+    "model": "anthropic/claude-opus-5.5",
+    "condition": "FULL",
+    "topology": "DYNAMIC",
+    "scenario_id": "cw_hr01_onboarding",
+    "workflow_id": "6c17467578557cb5c8638e65952fc01e795e366d22130f7d3e46c607f83c361b",
+    "file_sha256": "ec84d91b1ca668e6fdaa5be66a59fef7c437c85c653fef3011dd7f5fbe8d2030",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": true,
+      "evidence": [
+        "**Role:** Data Analyst",
+        "**Start Date:** First Monday of next month",
+        "Laptop with standard data analyst setup",
+        "Building access badge"
+      ],
+      "rationale": "All four essential items are retained. The ticket also adds a completion step involving a coordinator that is not supported by the source.",
+      "complete": false,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W073",
+    "model": "anthropic/claude-opus-5.5",
+    "condition": "SCOPED",
+    "topology": "DYNAMIC",
+    "scenario_id": "cw_in01_claim",
+    "workflow_id": "3d67575ab64cecf707d9a485c05c9e868ddf7061324bcc4eaf974e71adaff982",
+    "file_sha256": "82d51b866f06f125ba434aa039b5f6410296cb7d3a9e2fb3386350908e18d538",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": true,
+      "evidence": [
+        "**Claim Type:** Home contents, water damage",
+        "**Cause of Loss:** Burst pipe",
+        "**Policy Status:** Active (verified)",
+        "**Coverage:** Claimed amount is within policy coverage limits",
+        "**Policyholder Request:** On-site adjuster visit"
+      ],
+      "rationale": "All essential items are retained. The record also states that an acknowledgement was sent and intake is complete, neither of which is supported by the source.",
+      "complete": false,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W074",
+    "model": "anthropic/claude-opus-5.5",
+    "condition": "FULL",
+    "topology": "FANOUT",
+    "scenario_id": "cw_le01_intake",
+    "workflow_id": "e34d69250a243d11d1842b4dab25c025cc509c19e779ef9f5d699264db5b5730",
+    "file_sha256": "70a0d512b2c311b0f3cac8e351ec71784f6034a417b4b9dec16eacbef7c146c4",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": true,
+      "evidence": [
+        "",
+        "Lease deposit dispute (withheld deposit)\n**Client:** Nadia Köhler\n**Client Contact:** Mobile 705-555-9923 (for follow-up on missing documents only)\n\n**Task:** Draft a demand letter to the landlord",
+        "withheld deposit",
+        "Draft a demand letter to the landlord"
+      ],
+      "rationale": "The record does not state that the client seeks representation. It adds an unsupported requirement that drafting cannot begin until all listed items are confirmed.",
+      "complete": false,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W075",
+    "model": "anthropic/claude-opus-5.5",
+    "condition": "FULL",
+    "topology": "FANOUT",
+    "scenario_id": "cw_hc01_appointment",
+    "workflow_id": "6b58037d7a50a0ee0a80aa682b409cef2502da1f08c967607774c55d5423fe28",
+    "file_sha256": "476047fc9180cddd2f65dd227b977d54f66960b013c98cc64333b7be9ed4da20",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        true,
+        true,
+        true,
+        false
+      ],
+      "unsupported_material_fact": false,
+      "evidence": [
+        "Physiotherapy, knee rehabilitation (post-operative; patient cleared for rehab)",
+        "Twice weekly for 6 weeks",
+        "Twice weekly for 6 weeks",
+        "Scheduling preference:** Mornings",
+        ""
+      ],
+      "rationale": "The record retains the service, frequency, duration, and morning preference, but omits the routine meniscus repair. The additional patient and contact details are supported by the supplied grounding record.",
+      "complete": false,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W076",
+    "model": "openai/gpt-6-sol",
+    "condition": "FULL",
+    "topology": "CHAIN",
+    "scenario_id": "cw_hr01_onboarding",
+    "workflow_id": "c230019d28994efe93c7eb3dbe7fabf55868d3c388b7b8485e1ae83c778ff948",
+    "file_sha256": "b80dd42e890d61fd303a09236d0bc6ed058169042a384f5a5b5d2379483838e0",
+    "primary": true,
+    "old_status": null,
+    "old_verdict": null,
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W077",
+    "model": "openai/gpt-6-sol",
+    "condition": "FULL",
+    "topology": "FANOUT",
+    "scenario_id": "cw_go01_benefit",
+    "workflow_id": "4f7d1994a596f483edef3a89d90fcaf4daa50d24db31a38dbae2cfc676ba6a45",
+    "file_sha256": "cb8920ae65767fb44ae533ef74156d6b80b6e3d6eb6ce351f7f9b65b34e8ca23",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        false,
+        true,
+        true,
+        true
+      ],
+      "unsupported_material_fact": false,
+      "evidence": [
+        "",
+        "Household size: 3.",
+        "routine renewal",
+        "within program limits"
+      ],
+      "rationale": "The record never names the municipal housing-subsidy program, so the first item is missing. Household of three, routine renewal, and within program limits are all retained. The income figure ($31,500) is not in the handoff note, but it appears in the full source record, so it is supported and not a fabricated material fact.",
+      "complete": false,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Not applicable",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  },
+  {
+    "id": "W078",
+    "model": "anthropic/claude-opus-5.5",
+    "condition": "FULL",
+    "topology": "CHAIN",
+    "scenario_id": "cw_hc01_appointment",
+    "workflow_id": "7cb919e41e733ceaa8f1b15a7e08d9f65138b4434eda78e1646c27bf0849cb49",
+    "file_sha256": "a4f023897c911026be242ad16b6773d8aaaf455401992d67282aa354af3edd31",
+    "primary": true,
+    "old_status": "valid_structure",
+    "old_verdict": {
+      "items": [
+        true,
+        true,
+        true,
+        true,
+        false
+      ],
+      "unsupported_material_fact": false,
+      "evidence": [
+        "Physiotherapy, post-surgical knee rehabilitation",
+        "Twice weekly",
+        "6 weeks",
+        "Scheduling preference:** Mornings",
+        ""
+      ],
+      "rationale": "The record retains the service, frequency, duration, morning preference, and rehab clearance, but omits that the surgery was a routine meniscus repair.",
+      "complete": false,
+      "unresolved": false
+    },
+    "A": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final record: form criteria present and faithfully restated, without invented material facts.",
+      "comment": "Accomplished. Evidence is the presence of the criteria in the archived final version.",
+      "strict_complete": true
+    },
+    "B": {
+      "criterion1": "Yes",
+      "criterion2": "Yes",
+      "criterion3": "Yes",
+      "criterion4": "Yes",
+      "criterion5": "Yes",
+      "invention": "No",
+      "global_result": "Accomplished",
+      "excerpt": "Final workflow version aligned with the listed criteria; no material invention detected.",
+      "comment": "Accomplished. Required business elements preserved.",
+      "strict_complete": true
+    }
+  }
+]

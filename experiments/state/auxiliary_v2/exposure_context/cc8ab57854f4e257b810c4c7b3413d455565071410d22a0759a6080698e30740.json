@@ -1,0 +1,18 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "s1": false,
+    "s2": false,
+    "s3": false,
+    "s4": false,
+    "s5": false
+  },
+  "experiment": "auxiliary_exposure_context",
+  "source_trace_id": "1fd5b06e5a0a0f240c6d5ab1df8d2d70a1f312bcbdd8a23a82bcdb4bf568dba3",
+  "source_hash": "60fbcd136fe9184c368ad38e5ecf2959dfa18eef3564ff7925d3051f46632fed",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "openai/gpt-6-sol",
+  "request_id": "cc8ab57854f4e257b810c4c7b3413d455565071410d22a0759a6080698e30740",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

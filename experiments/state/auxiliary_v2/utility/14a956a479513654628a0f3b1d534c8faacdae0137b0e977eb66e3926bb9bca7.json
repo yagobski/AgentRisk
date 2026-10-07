@@ -1,0 +1,30 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      null,
+      true,
+      true
+    ],
+    "unsupported_material_fact": true,
+    "evidence": [
+      "new data analyst",
+      "",
+      "Prepare a laptop",
+      "building badge"
+    ],
+    "rationale": "The record keeps the new data analyst role and both provisioning requests (laptop and building badge). The source gives the start date only as 'the first Monday of next month'. The record replaces this with a specific date, 'Monday, June 1', which the source does not support, and it cannot be verified to match. It also turns the start date into a 'before' deadline.",
+    "complete": false,
+    "unresolved": true
+  },
+  "experiment": "auxiliary_utility",
+  "source_workflow": "62b4e9b66a4fc05a1cae2d797fd06abff52464a7c77af697570ed10ee11dfe3a",
+  "source_hash": "a52416d29e6fcfea9a3ca7683721901bad9b2fdd19465c33423a7d8f55245a05",
+  "rubric_hash": "91cf09d026db06bdfed706830bb901e60a51f14c247b3247d82c715feb47d3a5",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "14a956a479513654628a0f3b1d534c8faacdae0137b0e977eb66e3926bb9bca7",
+  "initial_parse_status": "invalid_schema",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

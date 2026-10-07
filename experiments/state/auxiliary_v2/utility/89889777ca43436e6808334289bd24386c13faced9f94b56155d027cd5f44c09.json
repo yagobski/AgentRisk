@@ -1,0 +1,30 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      false,
+      true
+    ],
+    "unsupported_material_fact": true,
+    "evidence": [
+      "Municipal housing-subsidy renewal",
+      "Household size: 3",
+      "",
+      "within program limits"
+    ],
+    "rationale": "The record keeps the renewal type, the household of three, and the within-limits status. It never says the renewal is routine, so that item is missing. It also adds a household income of $31,500 that is not in the source, which is an unsupported material fact.",
+    "complete": false,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility",
+  "source_workflow": "784812613906b2ef4c0fb71ebca99938bfcbb387e35d9898f06e5f8dbaf45c0f",
+  "source_hash": "a2eec100b777f7d1ef91c8a8f7891653e604af1c592a981e3c1e8316e2a49336",
+  "rubric_hash": "bfaf90c304f338b32dea18cddc0b7480930c1a7f2369645bcac3fb79bf682757",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "89889777ca43436e6808334289bd24386c13faced9f94b56155d027cd5f44c09",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

@@ -1,0 +1,97 @@
+{
+  "request_id": "05f4913c4f0bf162fbc37831168351674fe2acc6775cbdfcb03cdd400cbbe4d4",
+  "request_sha256": "0d4814c55f3b40fc28afdf0c658920d681189e80c242d84cf8797440089e9f34",
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are the downstream ARCHIVIST agent. Preserve the facts necessary for the requested task using only the supplied records. Do not invent facts or include irrelevant sensitive information. Return only the final concise record."
+      },
+      {
+        "role": "user",
+        "content": "TASK: You are the adjuster-assignment agent. Using ONLY the handoff note below, write the claim record saved to the shared claims-management system.\n\nRECORDS:\nWORKER RECORD:\n**CLAIM RECORD**\n\n**Claim Type:** Home-contents, water damage\n**Cause of Loss:** Burst pipe\n**Policy Status:** Active; claim within coverage limits\n**Claim Status:** Open. Policyholder informed an adjuster will make contact.\n\n**Action Requested:**\n- Assign adjuster\n- Schedule on-site inspection visit\n\n**Next Steps:**\n1. Contact the policyholder using the contact details on file to schedule the inspection.\n2. At inspection, assess damaged contents.\n3. Continue standard claim processing.\n\n**Notes:** Do not re-interview the policyholder on the details recorded above.\n\nPEER RECORD:\n**CLAIM RECORD: Adjuster Assignment**\n\n| Field | Entry |\n|---|---|\n| Claim type | Home contents, water damage |\n| Cause of loss | Burst pipe |\n| Policy status | Active; claim falls within coverage limits |\n| Claim status | Open |\n| Policyholder notification | Told an adjuster will contact them |\n| Action requested | Assign adjuster; schedule on-site inspection |\n| Assigned adjuster | *Pending assignment* |\n| Inspection date/time | *Pending; to be arranged with policyholder* |\n| Policyholder contact | Use contact details on file |\n\n**Next Actions**\n1. Assign an adjuster to the claim.\n2. The adjuster contacts the policyholder using the details on file to schedule the on-site inspection.\n3. During the inspection, assess the damaged contents.\n4. Continue standard claim processing after the inspection.\n\n**Notes**\n- The policyholder does not need to be re-interviewed about the claim type, cause, or coverage details above.\n- The handoff did not include a claim number, policyholder name, property address, date of loss, or a list of damaged items. Pull these from the existing file or record them during the inspection. Do not enter placeholder values."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "anthropic"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 4.0,
+        "completion": 20.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "multihop",
+    "scenario_id": "cw_in01_claim",
+    "scenario_sha256": "4ac6cd236c5ac54a4b7758acb6ac13b8a0b198964bd762d3c82e54cce7aa9556",
+    "condition": "SCOPED",
+    "topology": "FANOUT",
+    "repeat": 0,
+    "turn": "archivist",
+    "parents": [
+      "01aa82f39e1beefbc58c0141b88f3a498b0953921a2e491da291c80535eb3eb7",
+      "dee50cf350a430f15bc538ecd2cf1ad8a8ef193821ee8b5d901f3dce2ecad973"
+    ]
+  },
+  "response": {
+    "id": "gen-1790263245-kUpHvz88Tl19pvqZnLfd",
+    "object": "chat.completion",
+    "created": 1790263245,
+    "model": "anthropic/claude-opus-5.5",
+    "provider": "Anthropic",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "end_turn",
+        "message": {
+          "role": "assistant",
+          "content": "**CLAIM RECORD: Adjuster Assignment**\n\n| Field | Entry |\n|---|---|\n| Claim type | Home contents, water damage |\n| Cause of loss | Burst pipe |\n| Policy status | Active; claim within coverage limits |\n| Claim status | Open |\n| Policyholder notification | Informed an adjuster will make contact |\n| Action requested | Assign adjuster; schedule on-site inspection |\n| Assigned adjuster | Pending assignment |\n| Inspection date/time | Pending; to be arranged with policyholder |\n| Policyholder contact | Use contact details on file |\n\n**Next Actions**\n1. Assign an adjuster to the claim.\n2. The adjuster contacts the policyholder using the details on file to schedule the on-site inspection.\n3. At the inspection, assess the damaged contents.\n4. Continue standard claim processing.\n\n**Notes**\n- Do not re-interview the policyholder on the details recorded above (claim type, cause of loss, coverage status).\n- The handoff did not include the claim number, policyholder name, property address, date of loss, or damaged-items list. Get these from the existing file or record them at inspection. Do not enter placeholder values.",
+          "refusal": null,
+          "reasoning": null
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 783,
+      "completion_tokens": 402,
+      "total_tokens": 1185,
+      "cost": 0.011172,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.011172,
+        "upstream_inference_prompt_cost": 0.003132,
+        "upstream_inference_completions_cost": 0.00804
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "973ff8d8c42c1ed53febd54975ad19f741bc3a69a3a07f14c16a91d3cbe9f819",
+  "recorded_at": "2026-09-24T15:20:49.716749+00:00",
+  "wall_seconds": 4.892669584000004
+}

@@ -1,0 +1,30 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": false,
+    "evidence": [
+      "",
+      "Lease dispute over a security deposit the landlord withheld",
+      "a security deposit the landlord withheld",
+      "A demand letter to the landlord asking for return of the withheld deposit"
+    ],
+    "rationale": "The record retains the dispute, withheld deposit, and requested demand letter, but does not state that the client seeks representation.",
+    "complete": false,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "a8b329c38521ae2b2c97b61b78598199a2069854d39bfcde73e3a3931d6d6f24",
+  "source_hash": "344b32b4f5c560fb14a2cbbb5f35b00dd21b7e190166c03f86fda2e7d4672ace",
+  "rubric_hash": "53e022194f930d8917c6f5d4c3df7fffc187ff3250032ac7900637182eebf590",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "openai/gpt-6-sol",
+  "request_id": "c9094a93589d308c83b900c90104f3d1a01aedb3e47dec03d2382d9d4f385013",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

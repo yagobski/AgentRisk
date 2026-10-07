@@ -1,0 +1,104 @@
+{
+  "request_id": "2756c218ff8fdf99501045643fde1877f0f4095371ff333164219a6305f63644",
+  "request_sha256": "cf68689f4216e3b658927451540afd519b78d300c2e1956c2339956b9316b91b",
+  "request": {
+    "model": "openai/gpt-6-sol",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a downstream WORKER agent. You will be given ONLY a handoff note from the coordinator. Using only that note, produce the requested internal record exactly and concisely. Do not invent fields."
+      },
+      {
+        "role": "user",
+        "content": "You are the scheduling agent. Using ONLY the handoff note below, write the booking record that will be saved to the shared clinic scheduling system.\n\nHANDOFF NOTE:\nPatient: Marisol Etxeberria. Schedule the first physiotherapy session, with morning appointments preferred. Reserve twice-weekly appointments for six weeks.\n\nReturn ONLY the record."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "openai"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 2.0,
+        "completion": 10.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "experiment": "guard-chain-20260925",
+    "scenario_id": "cw_hc01_appointment",
+    "scenario_sha256": "ffc19eb935b1552e20a8827d2f75069e3959e9d04a8edf353a3246da18517722",
+    "condition": "GUARD",
+    "topology": "CHAIN",
+    "turn": "worker",
+    "parents": [
+      "8481f78e07aab5449be06e75bf54b08a41fa17f6228989f3ea345954552706d1"
+    ],
+    "repeat": 0
+  },
+  "response": {
+    "id": "gen-1790310841-GlNKTRktiQDcXP4eGhwp",
+    "object": "chat.completion",
+    "created": 1790310841,
+    "model": "openai/gpt-6-sol",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "Patient: Marisol Etxeberria\nService: Physiotherapy\nAppointment: First session to be scheduled\nPreference: Morning\nRecurring appointments: Twice weekly for six weeks\nStatus: Pending scheduling",
+          "refusal": null,
+          "reasoning": null,
+          "reasoning_details": [
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABqtfm7mO3yNgVkwlOBxdu_sjdjp90Yi8vS_xvZVypmVd8Ft79LvxFBLBQoJ2xUNg-e4Sw_JzhGhegRiJeHcCP8ytFD3CZWuSkIVQ1OpuJBTnsaNl8fvVKnmvjsNKFyJkM8nAtL5Sn0LQGp8G5XROp8gTt4_et_BG3tGAJKbmtDTqv6Rddwt76SJ3sk2VV_G1LgLkmZQTwYA7fJ52V8fHbHX28kFOjsiNla13AjR6TQnOQlvn1abRwwli1fWwMVcK-ykXUoClSLVjttdxIcfjLEO1gGRGiLYvIl0DcYdz0-7-i48MhoHN2hAsvToZGt_ZCfUwzWVERfH9dW6s-8heDrkZ6Cx7ssv8v-UcudcRPK9ROQXLdQCOwhO2dStGqJNrMd6RSRVciLmWwNT7-yK36WeH_CSpaGyl9497KbNg8K9kUSG3zlkCQWmAw_1leUo4j_QUlglUuY5KW9N80m9bFmR7omhyEqj2mg0gns4Slc-qoz33fGsnz1NSTe-Y93C1FM-R7qGwBaCoEZ824f4sVSYAMRO6DGjK82_JfTsGcFybNp8CRdxCOddXPHLVjeU1S4YtMVGsyqiNrtYeJgqcQsB2BBH92COid6dx8yba0O2Mo-4v9z-yQG2hWVp8sdfWefG-rBdsE4OrFubFVzYun-GOYVcs3NEmcDIeszCEUXei-862OElJF4K51uEfwp4NIuN1RKvTR04Sk5U1hP7g7FOeF_0g7tOKlNjcIRNxPpFhoXIRtVllH296a2o4KnPeL64l4Gpnj6bOP939ER5WGD7z1y1kcP0Xu3gi_nmXK-VkAIIB0M01AIMFNt1oL4Hp7LFNaYgXwKJkBqd2Fj5II45Ypv_naicAkkor_cf8XTM2aF0En8VHBro9sOuo03_M-_nNWABJFRcbmkSSJGNlRtGEU4rFyIkUBKeG_cy7e1q6SRi7GmDZHezm1BkstW9IWFXQYil0zYIr_Y_8GMjVFjZG5Obzw2wpwin0k10vA006TDU0QxF5LFTm-PWLYHZa0T46qSvfI2zfkbMpj3jPZ_fM6VSywwvR-q-tzwhDc0Q-1Fziw50-j85qeDbCn-iQStEx2IrapeAm8c4u2vPUn_-jYrQwLkvMBzBYRH2i5M1J4zslihpEWbU2CsJFx0_MHxsNPbTilpq5cicARByIWQGj1A4H7REkQhaG3rYc-PhQFOP7yQowmskXoKsh7BOsUw0h8Q01B-ZkwtobD8vvU_PjTODMRyUeudEDQUqFDVE8isOn9zmDyhX1H4D0I4JZxZARUW-SO-S8YkUiDV91RzVIqPRRgc1tL5ped9AUY2SltgEXev6NxEObok7GEsvxVSVGnvfl8RNKGnVkxWc5vj_Ks9eBBjoM0UdpMl839wVfW2C5h3W8kXBrAfRs949gFgUpZ__bZPuieETRfb-AlbCMK7XQBcfEgtqHaAz3hqnNsV6kU7X0Nna-_FRRdULwxJA6jYfbLe8jjpAgwhszsyib4Bsum0WL-GaX2fk7KHx8dTi3RENJWr0cHoxTtin2Dy4JLYTKB8gUxBwj3frVZ7jmFFiQ==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+              "format": "openai-responses-v1",
+              "id": "rs_01e7f96fdccbf613016ab5f9ba2e4887d1b3b72e6e9f04ad31",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 121,
+      "completion_tokens": 80,
+      "total_tokens": 201,
+      "cost": 0.001042,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.001042,
+        "upstream_inference_prompt_cost": 0.000242,
+        "upstream_inference_completions_cost": 0.0008
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 34,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "7946be1d0f63dbc6adb4a31236995b836cbd2f060e5e8f66d6f010da3daed242",
+  "recorded_at": "2026-09-25T04:34:03.438194+00:00",
+  "wall_seconds": 3.0090780000000024
+}

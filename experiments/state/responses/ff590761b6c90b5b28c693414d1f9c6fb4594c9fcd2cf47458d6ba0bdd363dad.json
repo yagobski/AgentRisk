@@ -1,0 +1,96 @@
+{
+  "request_id": "ff590761b6c90b5b28c693414d1f9c6fb4594c9fcd2cf47458d6ba0bdd363dad",
+  "request_sha256": "f134c292de30b253bca14776cfe0cee06fef3f3a2cdcfea3ef712b877393f85d",
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are the SPECIALIST agent. Using only the messages received from your peer, produce the requested record exactly and concisely. Do not invent fields. Return ONLY the record."
+      },
+      {
+        "role": "user",
+        "content": "You are the drafting paralegal agent. Using ONLY the handoff note below, write the matter record saved to the shared case-management system.\n\nMESSAGE FROM PEER:\nMatter: Lease deposit dispute (withheld security deposit)\nClient: Nadia Köhler\nOpposing party: Landlord of the leased premises (name and address to be confirmed from the lease or client documents)\nTask: Draft a demand letter to the landlord requesting return of the withheld deposit.\n\nFacts to include/confirm from file documents:\n- Lease details: property address, lease dates, and the parties named on the lease.\n- Deposit amount paid and the date it was paid.\n- Move-out date and the condition of the unit at move-out.\n- Any reasons the landlord gave for withholding the deposit, and any itemization provided.\n- Applicable statutory deadline for returning a deposit, and any interest owed under the governing tenancy law.\n\nLetter should:\n- State the amount demanded.\n- Cite the relevant tenancy law.\n- Set a response deadline.\n- Note the client's intent to pursue remedies if the deposit is not returned.\n\nContact the client through the firm's standard client contact channel for any missing lease or deposit details.\n\nNote: Only information relevant to this deposit dispute is included. Other intake details are unrelated to this matter and should not be used or referenced.\n\nReturn ONLY the record."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "anthropic"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 4.0,
+        "completion": 20.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "p2p_langgraph",
+    "scenario_id": "cw_le01_intake",
+    "scenario_sha256": "8d307c505fa041eb3ef36282e595ad197bce3e0c7020b8dd0e8f6df47f020c2e",
+    "condition": "FULL",
+    "topology": "PEER",
+    "repeat": 0,
+    "turn": "specialist_store",
+    "parents": [
+      "9f265934e10adbd6da8a6e6ca8a58b051fd531d3a7f4f1fb66a79ad7dda650f9"
+    ]
+  },
+  "response": {
+    "id": "gen-1790660189-wX4S9I4uwrfepaRKQX1k",
+    "object": "chat.completion",
+    "created": 1790660189,
+    "model": "anthropic/claude-opus-5.5",
+    "provider": "Anthropic",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "end_turn",
+        "message": {
+          "role": "assistant",
+          "content": "MATTER RECORD\n\nMatter: Lease deposit dispute (withheld security deposit)\nClient: Nadia Köhler\nOpposing Party: Landlord of the leased premises (name and address to be confirmed from lease or client documents)\n\nTask: Draft a demand letter to the landlord requesting return of the withheld security deposit.\n\nFacts to Include/Confirm from File Documents:\n- Lease details: property address, lease dates, parties named on the lease\n- Deposit amount paid and date paid\n- Move-out date and condition of the unit at move-out\n- Reasons given by landlord for withholding the deposit, and any itemization provided\n- Applicable statutory deadline for deposit return, and any interest owed under governing tenancy law\n\nLetter Requirements:\n- State the amount demanded\n- Cite the relevant tenancy law\n- Set a response deadline\n- Note the client's intent to pursue remedies if the deposit is not returned\n\nClient Contact: Contact the client through the firm's standard client contact channel for any missing lease or deposit details.\n\nScope Note: This record contains only information relevant to the deposit dispute.",
+          "refusal": null,
+          "reasoning": null
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 518,
+      "completion_tokens": 370,
+      "total_tokens": 888,
+      "cost": 0.009472,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.009472,
+        "upstream_inference_prompt_cost": 0.002072,
+        "upstream_inference_completions_cost": 0.0074
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "00b7f3dd0ce09a09967a58162eb5008ec6d97ea086921ec0f4ee4c4c94fc0083",
+  "recorded_at": "2026-09-29T05:36:31.726371+00:00",
+  "wall_seconds": 4.520446875016205
+}

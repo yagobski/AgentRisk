@@ -1,0 +1,96 @@
+{
+  "request_id": "30837b8e85740bc660495b902e87caf12171828215a587014667e573fd758f2c",
+  "request_sha256": "2a342ac56a00f0c4982d47db5e1ec5aeb3580c0b66302a3ee514115319c455ea",
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are the SPECIALIST agent. Using only the messages received from your peer, produce the requested record exactly and concisely. Do not invent fields. Return ONLY the record."
+      },
+      {
+        "role": "user",
+        "content": "You are the adjuster-assignment agent. Using ONLY the handoff note below, write the claim record saved to the shared claims-management system.\n\nMESSAGE FROM PEER:\nClaim handoff: adjuster assignment\n\n- Policyholder: Tomas Bjork\n- Claim type: Home-contents, water damage from a burst pipe\n- Policy status: Active. The claim is within coverage limits.\n- Request: Adjuster site visit requested by the policyholder\n- Contact for scheduling: 250-555-7741\n- Status: Claim opened and acknowledgement sent to the policyholder. No re-interview is needed. Please assign an adjuster and schedule the visit.\n\nYOUR QUESTIONS:\nQUESTIONS:\n1. What are the policy number and claim number, so the record links to the correct policy and claim file?\n2. What is the address of the damaged property for the site visit, and is there a date or time window when the policyholder is available?\n3. When did the burst pipe happen, and was any mitigation already done, such as water shut off or a restoration company called?\n\nPEER REPLY:\nHere is what I can confirm from the intake record for Tomas Bjork's home-contents claim (water damage from a burst pipe). The policy is active, the claim falls within coverage limits, and an adjuster visit has been requested.\n\n1. **Policy and claim numbers:** These aren't in the intake record. Please pull them from the policy system using the policyholder's name, or confirm them with him directly.\n\n2. **Property address and availability:** The address isn't recorded, and neither is an availability window. To arrange the visit, you can reach the policyholder at **250-555-7741** to confirm both.\n\n3. **Date of loss and mitigation:** The record doesn't say when the pipe burst or whether any mitigation was done, such as shutting off the water or calling a restoration company. The adjuster should confirm these during scheduling or at the visit.\n\nReturn ONLY the record."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "anthropic"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 4.0,
+        "completion": 20.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "p2p_langgraph",
+    "scenario_id": "cw_in01_claim",
+    "scenario_sha256": "4ac6cd236c5ac54a4b7758acb6ac13b8a0b198964bd762d3c82e54cce7aa9556",
+    "condition": "FULL",
+    "topology": "PEER",
+    "repeat": 0,
+    "turn": "specialist_store",
+    "parents": [
+      "c297fda31ceaeed456c29a4d634435b7fe1d907423976c0eabe04f66aff29df2"
+    ]
+  },
+  "response": {
+    "id": "gen-1790660188-Gpg9qsVex4JS8B1vrc4Q",
+    "object": "chat.completion",
+    "created": 1790660188,
+    "model": "anthropic/claude-opus-5.5",
+    "provider": "Anthropic",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "end_turn",
+        "message": {
+          "role": "assistant",
+          "content": "CLAIM RECORD: ADJUSTER ASSIGNMENT\n\nPolicyholder: Tomas Bjork\nPolicy Number: NOT PROVIDED (retrieve from policy system by policyholder name or confirm with policyholder)\nClaim Number: NOT PROVIDED (retrieve from claims system or confirm with policyholder)\nClaim Type: Home-contents, water damage (burst pipe)\nPolicy Status: Active\nCoverage: Within coverage limits\nDate of Loss: NOT RECORDED (confirm during scheduling or at site visit)\nMitigation Performed: NOT RECORDED (confirm whether water was shut off or a restoration company was engaged)\nDamaged Property Address: NOT RECORDED (confirm with policyholder)\nPolicyholder Availability: NOT RECORDED (confirm with policyholder)\nScheduling Contact: 250-555-7741\nRequest: Adjuster site visit (requested by policyholder)\nClaim Status: Opened, acknowledgement sent to policyholder\nRe-interview Required: No\nAction Required: Assign adjuster and schedule site visit. Before the visit, obtain the policy and claim numbers, property address, availability window, date of loss, and mitigation details.\nAssigned Adjuster: PENDING\nVisit Date/Time: PENDING",
+          "refusal": null,
+          "reasoning": null
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 702,
+      "completion_tokens": 451,
+      "total_tokens": 1153,
+      "cost": 0.011828,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.011828,
+        "upstream_inference_prompt_cost": 0.002808,
+        "upstream_inference_completions_cost": 0.00902
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "c12e129ca383be08e77a71188a5e85755136bcc1dc13939af83225571f57a39c",
+  "recorded_at": "2026-09-29T05:36:31.861709+00:00",
+  "wall_seconds": 5.353342582995538
+}

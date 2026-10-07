@@ -1,0 +1,32 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": false,
+    "evidence": [
+      "post-surgery knee physiotherapy",
+      "Twice weekly",
+      "six weeks",
+      "**Preference:** Mornings",
+      "Cleared for rehabilitation following routine meniscus repair"
+    ],
+    "rationale": "All five essential items are retained accurately. Framing the booking as a 'first' session is a reasonable interpretation, not a material unsupported fact. The pending status and next action are procedural additions.",
+    "complete": true,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "829a0884d5172c2816d3a2c5fb4b384d241d6121301ac1e00bb09f868b0cbb89",
+  "source_hash": "d8236ece2abc130bb94e99ce0a5b46752e96762dd35d8630adec30207180be66",
+  "rubric_hash": "48a4fc2966fc104a4ad0d4f3ff93aa6e9463c0a605ce728039b04ee996909a63",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "315964e0ed39f5a2c01c197d282a03b7c8fbad92e817d46f07b75c0e71d42d42",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

@@ -1,0 +1,105 @@
+{
+  "request_id": "764c09a58f204151919a0018703c012a5b3a512183391bbdf55c57359fdd8b6e",
+  "request_sha256": "da5b7b0f2369abe04d6cab3a9ed8140505bc037f2dffd0f715b73203088da53c",
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are the SPECIALIST agent in a peer-to-peer multi-agent workflow. You have no access to the underlying record; you only see messages from your peer INTAKE agent. If the message is sufficient for your task, answer exactly READY. Otherwise, ask at most three short clarification questions to your peer, prefixed by QUESTIONS:."
+      },
+      {
+        "role": "user",
+        "content": "YOUR TASK: You are the IT/facilities provisioning agent. Using ONLY the handoff note below, write the provisioning ticket saved to the shared service-desk system.\n\nMESSAGE FROM PEER:\nProvisioning request: new hire\n\n- Name: Priya Ramanathan\n- Role: Data Analyst\n- Start date: First Monday of next month\n- Needs: (1) Laptop, set up with the standard data analyst build. (2) Building access badge.\n- Deadline: Please have both items ready before the start date. Confirm back to Intake once they're complete."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "anthropic"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 4.0,
+        "completion": 20.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "p2p_langgraph",
+    "scenario_id": "cw_hr01_onboarding",
+    "scenario_sha256": "c9d3a6fa635fa0c98a6a4b612d1d5d3a3aa9fca0d1b7c4f031045969fc44f04c",
+    "condition": "FULL",
+    "topology": "PEER",
+    "repeat": 0,
+    "turn": "specialist",
+    "parents": [
+      "6b2a6a34e25671776111948c050abca766bd09352c82233cb3d2d3d9a63f8770"
+    ]
+  },
+  "response": {
+    "id": "gen-1790660125-2Pnxqp8IEqVg3anQVM8U",
+    "object": "chat.completion",
+    "created": 1790660125,
+    "model": "anthropic/claude-opus-5.5",
+    "provider": "Anthropic",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "end_turn",
+        "message": {
+          "role": "assistant",
+          "content": "QUESTIONS:\n1. What is the exact calendar start date? \"First Monday of next month\" depends on when the ticket is read, so the ticket needs a fixed date.\n2. Which office or building does the badge need to cover, and will Priya work on-site or remotely? This also decides whether the laptop is shipped or picked up.\n3. Who is Priya's hiring manager or cost center, for approval and asset assignment?",
+          "refusal": null,
+          "reasoning": "I still need a few key details before this ticket is complete: the department or manager name, the office location for the badge, a concrete start date rather than a vague reference, and whether the laptop should ship or be picked up on-site. I'll ask up to three clarifying questions to fill these gaps.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "I still need a few key details before this ticket is complete: the department or manager name, the office location for the badge, a concrete start date rather than a vague reference, and whether the laptop should ship or be picked up on-site. I'll ask up to three clarifying questions to fill these gaps.\n\n",
+              "format": "anthropic-claude-v1",
+              "index": 0,
+              "signature": "CAQS4AYKEAgSGAI4AUIIdGhpbmtpbmcSDAryM4hao1caOwno+RoMtctTtmMc9J8Eh00VIjBaFlXfpzZKlojnkqd+zC3tlR/eLq6c6iiTPjWTeFmjKbdm56IhS5AtyDdGPXifP8wq/QWeAysPO4t1q1y/1DveJlmlxufuA3CFxFl/EC1lZNpy6RBWzuTE9WwFkX/EvNb4i/TtXfgUWzpiSg6GnqkbxXau4DbIk6qcfSwAEqL/9+aAfMYbbKAzAeo4dPD5/9liZK9pZhMi+4uoIqjKgHOTr6S09PsFNi8OTS6uskmleJFAK8Zc1nw//Ug1qtEyw5mKWl+DVnMPlwhYuGDjpYf5etJDyQH7Rht9QOeAayTVsz7JlPAa6PehErwAfiOm01JzhhFQ76p0xN9oLowc3fDP/ErPnFmfYxipBQQJgJ+oeJ0CBJ09wlL3/3MN/7fhzC/Zv5aYiRasjVbc9NvkLmILcu4rCfF0fPt0gjPSlWnIaTOO7bXHsWRE99Ro4EqRZelon1KrS/xRZ6sC38rZgZVCcLUKVsis48x/FGoLRmJkJ/1H+MwuYZ/CiXIt6nGLngiJc+i2t7wl9Xdpp099nGmfLshLSeJ60kLn0rXl0dxp77WQl5pviNyAf8gnd+6zgIrZ1ophiRAyVpmHqhcIQDiORmo66BhgfN78JrC1IuEJ8oqaLi5H/eZQm77YxW9+JVFk2pwd9wESypqRec2aJTpAPa9bQSyT7JgeizFyw1R6pjJ4Yrf3IPi9xB58/QWIC9YVGYILS6z2Q32hQOcHIiIqf8IdXpDU1mGSWzrW+nBR4MALiSFmOCGj9+X754DnN4C7JwaISz41sRB4blRb3+++ki3v8p45ZtfCrufUBjVBVnge9TqQRPpfWzL9Tc0AR5FLB0GDeFfNw6xlueDjTeDzSYuQJwvlJ8oDFp29wdvngyjp7Cnc/GyIwDjyDH46wOvB2Q17aCko9K5eqz0K9SgM93/Hu1/jXQiQLYvTg47BsciuOF5zz/qEJQSlBlKo6MlVu+LVsvDY6JYD6jIlz4g+LkxEByFq8h3IztvuHNsslI1UrILfgIhZpadEOhKwcB1Gtt+FrrFtL8ZOhFMrxr/Cq86w8Ew5+LdA2yOUxZeAsMrDADHenJ9H1UU5St1/GQkYAQ=="
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 313,
+      "completion_tokens": 231,
+      "total_tokens": 544,
+      "cost": 0.005872,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.005872,
+        "upstream_inference_prompt_cost": 0.001252,
+        "upstream_inference_completions_cost": 0.00462
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 94,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "eca28081eb9d1e39cd8f7b7a40cab7df8e381cc68f2028f7d0f75f7d2000ce0d",
+  "recorded_at": "2026-09-29T05:35:28.668042+00:00",
+  "wall_seconds": 5.7210182920098305
+}

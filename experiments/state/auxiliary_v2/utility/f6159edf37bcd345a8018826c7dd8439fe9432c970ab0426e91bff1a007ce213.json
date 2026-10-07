@@ -1,0 +1,30 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": true,
+    "evidence": [
+      "**Role:** Data Analyst",
+      "**Start Date:** First Monday of next month",
+      "Laptop with standard Data Analyst setup",
+      "Building access badge"
+    ],
+    "rationale": "All essential items are retained. The record adds an unsupported specification for the laptop setup.",
+    "complete": false,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility",
+  "source_workflow": "6cd03cbb4cfd95b8c44b516775938f478ac543a3cc9d0e8db63fbeafbcd92e8b",
+  "source_hash": "cf8c125178f16c9e3694f8aef74e7424e45ce7d20f3078e94b95ef44e380a868",
+  "rubric_hash": "91cf09d026db06bdfed706830bb901e60a51f14c247b3247d82c715feb47d3a5",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "openai/gpt-6-sol",
+  "request_id": "f6159edf37bcd345a8018826c7dd8439fe9432c970ab0426e91bff1a007ce213",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

@@ -1,0 +1,106 @@
+{
+  "request_id": "ec39fc4ab1387f11e216d07e223a408dfbbfce5a1e2d4ecc641520cf3b2efcdb",
+  "request_sha256": "2bca2ba6c7a3bcf136abb7b432cf3a26611233303e202b35cbbe30e5c0c0ad7b",
+  "request": {
+    "model": "openai/gpt-6-sol",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are the downstream ARCHIVIST agent. Preserve the facts necessary for the requested task using only the supplied records. Do not invent facts or include irrelevant sensitive information. Return only the final concise record."
+      },
+      {
+        "role": "user",
+        "content": "TASK: You are the IT/facilities provisioning agent. Using ONLY the handoff note below, write the provisioning ticket saved to the shared service-desk system.\n\nRECORDS:\nProvisioning ticket\nNew hire: Priya Ramanathan\nRole: Data Analyst\nStart date: Monday, May 4, 2026\nRequest: Prepare a laptop and building badge before the start date."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "openai"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 2.0,
+        "completion": 10.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "multihop",
+    "scenario_id": "cw_hr01_onboarding",
+    "scenario_sha256": "c9d3a6fa635fa0c98a6a4b612d1d5d3a3aa9fca0d1b7c4f031045969fc44f04c",
+    "condition": "FULL",
+    "topology": "DYNAMIC",
+    "repeat": 0,
+    "execution_round": 1,
+    "turn": "archivist",
+    "parents": [
+      "4e051465fc1fc7aadde2589c11a40cee60eb82263aecb7a094b2e150eeffe86d"
+    ]
+  },
+  "response": {
+    "id": "gen-1790264127-RwqUaYBUbGTkL0rKUrkG",
+    "object": "chat.completion",
+    "created": 1790264127,
+    "model": "openai/gpt-6-sol",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "**Provisioning ticket**\n\nNew hire: Priya Ramanathan  \nRole: Data Analyst  \nStart date: Monday, May 4, 2026  \nRequest: Prepare a laptop and building badge before the start date.",
+          "refusal": null,
+          "reasoning": null,
+          "reasoning_details": [
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABqtUNCxT6odbFRbjTB_PZnHJ9EWSvmDEfRRKvlLv5dQiUnlk5ZMLUSAaRs8heV775_6iq7Bw4ErXBqRshydD9uOln0IF_bPtSsMXvYXGpp3GsR1O9Cf4wHXCxkNBUXJ72bPcAY9wTmcZSkp8rNJNdd3MtsQjwtM6mUWnyevgY86_JLK4eClyFgKP8U4Grd3YXWjsHsXBkz3C0BhS9LcIttk11z0bVJIeyu2e2FoAoGGnity6gvt4yECX0P09bomTV05cPlWCzwf3P5JZ6lIVmbYDpe3srB4v0xDSZafxaojL9A3sar5zNpJpgCzZU2wFdoIJ5PK5jbygHGIXJ2TBWaEo3NAtASwX700azjJjIwC9ivU3N56hfJY3_B-Ebb-FdVJL4OR_TGAY4S0tTIUTwGpJb0znS1azexlq2BLgR0kXIRDNyukYdpnPO3u4YKawiqf-_Lsr6AA0ENWKZVs9LFDyuRCkn8MexLMyBnacEtgSQ2c7sf-gZpKpL678iCcWARk1wYjzUflvYPWH7ZT6B8A6Ut0jCP3JNYJVNNE90kXDqH6jRVrdlbbZPa2a_a7E0jfK73oudBQCO_QTlAnykNpGKWub7PgrKivcnTqQINWlMbmuQGgiYkyZZdsMokJd2WtC1z1qmdkh3s4ruFDXvk6C1XxZQcnDWxMjtodNfrRuXUBEIqHnDn_i4RuVt-FPz5z5QNNNatify7ILRpV0Ph7_J-hM_mbqV-Ll15bzhhLuaXLL7UVASdi36lgU6k5_CgQD_C8O9mBQqqcc0R7o6LtcIftgJ5Yen6EhxOWLGm3rzWCCsGzdlZFanqxhfkDRYVWb9Rr5LJ8TBlGsXJe-48zV_JghCY26wyyjSguZ7MXdI6qO5h_PIWj36g47y4HDCuwpKYMWzaRdZwlDZlcWp8D0IiPB8McyRkU6AlXPIT9FTpxur7c5be3BhO06tea_WJC9S9VKZvaCUYKU4VGubOIGNoM7-FNGYEg_ccXpTE1DHw99biAmtsBBmPW_Bm0QCaN3AvCVmgW_hB5gkTMWE4jeNsw_Sr1uZtv8YfvqJ1YdWVm0YMlh7eViR-Wg8coGilKFdQs8vvGD4R_54WSnr0i0tSpfS6q9xkgxAuQe_NvrQtRayxFy13RmkXg9EGHUYZLFPs-LcNfU8sJ6bnfmDioLR-0A5-e2Ky3xpkptZ34iIXENoJvNMkWjQZ5iRu4WBjsV8VmNpBvlLPher3cld-PjrAXyHDvIQjCpJs2WIxSv18asdgbVaFRYjT_nrab0F3BBmiUjS4E56ZqeWcxd4mrBNkC-Qa9VUxN4AMDdhgCbgC2WBFMBWJ5mmIe_iaYaW6Yo3kuYhspMdZ6dL-yf52B2w5jNIw14k--81mzQbK7q6IjJ0vDfNgwyQP3DpU4WyVn6LSHibG5qBGAL-FaHZvsbOJJTlb3K1SWZRAROXDyLBlHL8=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+              "format": "openai-responses-v1",
+              "id": "rs_02e7be9ffd77696a016ab54340b28c87d1af549b83bc803a7e",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 130,
+      "completion_tokens": 67,
+      "total_tokens": 197,
+      "cost": 0.00093,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00093,
+        "upstream_inference_prompt_cost": 0.00026,
+        "upstream_inference_completions_cost": 0.00067
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 17,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "eab95ba15e32a058f582e1d06609f26a109fc3c402b45c0afb6afae4ed6a15ad",
+  "recorded_at": "2026-09-24T15:35:30.323308+00:00",
+  "wall_seconds": 2.818511832999995
+}

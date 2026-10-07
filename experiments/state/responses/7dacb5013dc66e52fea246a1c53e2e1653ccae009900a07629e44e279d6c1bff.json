@@ -1,0 +1,96 @@
+{
+  "request_id": "7dacb5013dc66e52fea246a1c53e2e1653ccae009900a07629e44e279d6c1bff",
+  "request_sha256": "dfbec81e12c4bc6e7534a4c9d574e45e9c5629adf7aafdef0fb6bb16354e5830",
+  "request": {
+    "model": "openai/gpt-6-sol",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are the downstream ARCHIVIST agent. Preserve the facts necessary for the requested task using only the supplied records. Do not invent facts or include irrelevant sensitive information. Return only the final concise record."
+      },
+      {
+        "role": "user",
+        "content": "TASK: You are the credit-assessment agent. Using ONLY the handoff note below, write the underwriting summary record saved to the shared loan-origination system.\n\nRECORDS:\nApplicant: Devon Whitmore  \nRequest: Pre-approval for a 25-year fixed mortgage on a primary residence; amount within standard limits.  \nEmployment: Verified; two years with current employer.  \nAnnual income: $71,000.  \nCredit history: Prior bankruptcy discharged in 2018.  \nAssessment: Pre-approval cannot be determined from the available information. Credit report, current debts, assets, and property details are not provided."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "openai"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 2.0,
+        "completion": 10.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "multihop",
+    "scenario_id": "cw_fi01_mortgage",
+    "scenario_sha256": "f697a7e80187df1e28bd6548b71d5e6ac2cd53c9edfaf5c58156c9d4616dff52",
+    "condition": "FULL",
+    "topology": "DYNAMIC",
+    "repeat": 0,
+    "turn": "archivist",
+    "parents": [
+      "a6d41a01c532893a5fdadacdd65f977fb5a24aa8b0d916924b62a74692bcfa49"
+    ]
+  },
+  "response": {
+    "id": "gen-1790263256-biCy2JzTfpKr6dILtWt2",
+    "object": "chat.completion",
+    "created": 1790263256,
+    "model": "openai/gpt-6-sol",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "**Underwriting summary:** Devon Whitmore requests pre-approval for a 25-year fixed-rate mortgage on a primary residence, with a loan amount within standard limits. Employment is verified, with two years at the current employer and annual income of $71,000. A prior bankruptcy was discharged in 2018. Pre-approval cannot be determined from the available information; the credit report, current debts, assets, and property details are needed.",
+          "refusal": null,
+          "reasoning": null
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 176,
+      "completion_tokens": 93,
+      "total_tokens": 269,
+      "cost": 0.001282,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.001282,
+        "upstream_inference_prompt_cost": 0.000352,
+        "upstream_inference_completions_cost": 0.00093
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "2fe3dd834978f708a5c5394fd4343ec42040570d51fbed4cf7b95c1e47e1c755",
+  "recorded_at": "2026-09-24T15:20:58.821065+00:00",
+  "wall_seconds": 2.378973790999993
+}

@@ -1,0 +1,105 @@
+{
+  "request_id": "a02dc61cc6dfe4dc45f133fad75de13b0796eb0027308d0ea7f81f28f221a2be",
+  "request_sha256": "b534b331b0bb63c8dffc5b70b66ae8490355d9ffd5a5396bbfd3eb491bc84da1",
+  "request": {
+    "model": "openai/gpt-6-sol",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are the SPECIALIST agent in a peer-to-peer multi-agent workflow. You have no access to the underlying record; you only see messages from your peer INTAKE agent. If the message is sufficient for your task, answer exactly READY. Otherwise, ask at most three short clarification questions to your peer, prefixed by QUESTIONS:."
+      },
+      {
+        "role": "user",
+        "content": "YOUR TASK: You are the benefits-determination agent. Using ONLY the handoff note below, write the eligibility record saved to the shared case system.\n\nMESSAGE FROM PEER:\nRoutine municipal housing-subsidy renewal. Household size: 3. Household income: $31,500. Current address is on file. Application is within program limits; proceed with eligibility determination without contacting the resident for these details."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "openai"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 2.0,
+        "completion": 10.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "p2p_langgraph",
+    "scenario_id": "cw_go01_benefit",
+    "scenario_sha256": "f5efde67b07203809c2b068139a7490a4f31d4bc61760031e470ecdcfb26d74c",
+    "condition": "FULL",
+    "topology": "PEER",
+    "repeat": 0,
+    "turn": "specialist",
+    "parents": [
+      "73f444e1a471defdb626a0a550d4add0c68213818d78569a12d5e146081e9fa4"
+    ]
+  },
+  "response": {
+    "id": "gen-1790660050-4Umxe49mPE9bGt8ovn7j",
+    "object": "chat.completion",
+    "created": 1790660050,
+    "model": "openai/gpt-6-sol",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "QUESTIONS:\n1. Does “within program limits” confirm that all renewal eligibility requirements are met, or only the income limit?\n2. What renewal period should the eligibility record cover?",
+          "refusal": null,
+          "reasoning": null,
+          "reasoning_details": [
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABqu03X0PtBp7sOJIL7pV2WllL7tBKHUbLk4rzDPiummDnCpB7FAAm0f2Zth1eRUtLUwiZAFrUeRvYdC-Mg8p9PqskBpkqhKCMpGCzCUVA3bKPKOOK4COk6ADhF7YoOocyGs8XEYa-AH88jRbBYaN5uW2DMi2Hlo_WkWSWMTgpUl8HxO49PdkYT5n3Z7KZfldz_Zaqll5g5B3DrtMJg9aXtXSJRTNkQXNlHLWWiOXppNyKT8rK9Mxib6KRd318USLmQCJMr-FeA65rsBpa_Yjs7GFpbt7qoeW9tpa2OaxUCEycF-ZUDZ0Ll1pc8Xmwc_8soRXNwjFyOTW7LshZ5UV2K8XsaZDiiRTIKZRRF0zbzgjKHtaoZ7C4D0xVcnzhGb1MprxOaK0NjtBX7CFT579-IAdtXv4miVHjwP6C6Gzmqq-_hRs6cmT51uQ4MDtUP6sUEw-pvkNwBLAXZvQKCCY9bw8wuNNAcTUaAZMQi8oMQedctAq_JlLzr-6jtWJ-28AXUc9NgmzS6N2vymx_nzHpAtCnZAgEwI9XH8axfxW3sSRmbwF32iNApvv6VkUSq9H7kbi2BzN5hHD4esQGwZxwAMj7ppKx5QK4GOyCI0SgY8SgdCLsCGwuwOR_Jfz_eo6Vv4LZE8eJSUlAwEI8SQsoE3TKMs-Ft_XVHtvHWg6ZhFtye8PhdJ8kvYbYkibz0b_h3QxZ1tMFwaFwAYtVQu5v0SVdta1ZSzjNDoOojDaKzNEdHJzinVWPS3WlcSGXQGV5YvxUUcvxy7Ezr8syo_baPms_0YlM_6ehKqFAbzJtJlIj8HEfbJGjlKN00sHxVHTLdTAI0FvSEBsznw4l2FH_kf3K8wUMhr7PyQJlbJEth4WjkgcDZY9DPLO_Sb_o1xxIuUR_ABLaE5-H2-I0TAXU9ePXg4kvhs0FFnD3bN3aysN43jcV9EDYq5JeJnA__tKb8P-n_UTFkReuenHK8jcQmXci69bX2dmrHseT6nIfGOdZGjPsEAf0EI3v73r5d-zx_GmnFHfcEnmz1MTgPGbPhMyAbZoi3FRz9ljMzlYEIXuNMCnvH9GGHalbof56rZ0aRm4Fbb07TOjiwZQTklFaohKyatp8QAJzJqXfgwPOt3wWcjPxnLQbFYFHUCQJHP0FKnS8B5AUEUswfEdmsWbSDXR579_qFjA2jDVwnjUOV0GlE8EgS-hIQyLSLnP3CtUAOJHwirpbYBf3_Nwz9cdPM8hRvmSnuahznSsp-wEzcmGSS4zg3VKE1M7DOmVV7hgW72IOIBpOUfqViO9-AhWu6G6xRSSoJi1BJYIYKPWnlKFS_l4Z8uRXbMAvnRn8q5z-tRbWSP-WVF8NRegKeYB01bdBJ0XpJyMqrMX86HIygu6gIQk6QFA6yfthTDmWHCQhnnJn1KFYyu4I4ydsV4_GpO7xdg8N3ZyOjbzA-o7xhkr51PcaiP-fvBdHsErDZvaf3VuDdqP0DUuhrxfI-0lhgpGo3ZK-qm5v2vZhdaWoalbGuhMewzCZ7vZuofIdmId2UAXD97r3x60Y-bnbpN8bB7FamqOBlAP6vAzRRMogK7l70os1gBAP1Y0vvUHGzraxxDuqVqPovJP5wHfimGepJAK9IaE9u1QZjfzGIic11JFDMF0PI6wQ1-1hvwywXPsN2VLLSaet9a-PbUQ2wL6MXLiHZgcrmXDSJFb2dSgmL_j3iNM2obZ8jPBfd22IDN28_gbDWMz3QApQPq4o4zyGmhhmbb6wgw9qy0kUYvydc4SVRZ_9n0oPeH9wGwj1nEId1KZkhr4mW3KPMHTDYS32MPxb_KZCq1xtpjn17Ru0sAVng3A4QDkFSVjJzl_VmvmmJxCYRoWRwlACrsbHfHDtcK9iq5GYbA1UkzP4CWx7Ck4aJ8ACgzyE9Nj6DmZwNXRxz_A9wbxEqVlzaDz4gwD-sX8gI3R-kytSjwC0t2wq8QutSfiO5w55u8HCbjsemcNU9A3bzHMiW6Y_CXBlddDnh8omFy4UYtyX6btJeIg33kTmMZTqDtPx0eSzHe37wk5PseHd9poIEEPZNXJI-SqX9ybEtp2qxXleRuF67kgnL0WHznxg3EkaegfLyKKpRez36lNC9KzWehy2o1lSJBKYvZwdeRhrP5ReY5bASGh-yNyIQ1CRkzH4IyyyEydceWj7krf4gVp52K81gltVtcXLg_w-xeQdJY3aLvHfqLnuwE4bmnR9uMLp_hPuMx33YdRmWcTT-x2sqqTP2a0846JzQIeLEAAKoa0AVAzuI8IQnp1KgFsqa8c6Wr1__4It-J2JqMX0tRlDyiedVLZqsW9trK5DdTgonJdHXgntweS9gi-wff8W9rCxBEGitOL9awiLx5gYnJv6YECw7cbXiPbr9RdLzaCbg694Y405tGdYQTqvljJLCO1PDMJYCzeFQRL-wIHMt.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+              "format": "openai-responses-v1",
+              "id": "rs_015111e7169c8f84016abb4dd42bc087d1ba9513814581371d",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 159,
+      "completion_tokens": 186,
+      "total_tokens": 345,
+      "cost": 0.002178,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.002178,
+        "upstream_inference_prompt_cost": 0.000318,
+        "upstream_inference_completions_cost": 0.00186
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 143,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "cdf86a89ae03ca315d75ea6e2fe2714de71f3146c21e082589607e28359cfc43",
+  "recorded_at": "2026-09-29T05:34:13.537712+00:00",
+  "wall_seconds": 4.991537125024479
+}

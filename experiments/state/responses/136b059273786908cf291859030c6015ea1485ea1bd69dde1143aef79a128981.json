@@ -1,0 +1,111 @@
+{
+  "request_id": "136b059273786908cf291859030c6015ea1485ea1bd69dde1143aef79a128981",
+  "request_sha256": "77631014325d8f204c9c25c1b54b45f8b5d576ca27d5cb5055c2a4bdcb81eb67",
+  "request": {
+    "model": "openai/gpt-6-sol",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are the SPECIALIST agent in a peer-to-peer multi-agent workflow. You have no access to the underlying record; you only see messages from your peer INTAKE agent. If the message is sufficient for your task, answer exactly READY. Otherwise, ask at most three short clarification questions to your peer, prefixed by QUESTIONS:."
+      },
+      {
+        "role": "user",
+        "content": "YOUR TASK: You are the scheduling agent. Using ONLY the handoff note below, write the booking record that will be saved to the shared clinic scheduling system.\n\nMESSAGE FROM PEER:\nSchedule the first post-surgery knee physiotherapy session. Referral is for routine meniscus repair; patient is cleared for rehabilitation. Book twice-weekly sessions for six weeks, with mornings preferred."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "openai"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 2.0,
+        "completion": 10.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "p2p_langgraph",
+    "scenario_id": "cw_hc01_appointment",
+    "scenario_sha256": "ffc19eb935b1552e20a8827d2f75069e3959e9d04a8edf353a3246da18517722",
+    "condition": "SCOPED",
+    "topology": "PEER",
+    "repeat": 0,
+    "turn": "specialist",
+    "parents": [
+      "3e26b33342c81226a1ff89de9eb99440e428267e3523a7e6e4c685a3f005760f"
+    ]
+  },
+  "response": {
+    "id": "gen-1790660073-341vI7i55cgFmo6iDvNX",
+    "object": "chat.completion",
+    "created": 1790660073,
+    "model": "openai/gpt-6-sol",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "QUESTIONS:\n1. What is the patient’s name or scheduling-system ID?\n2. What date should the six-week course start?\n3. Which clinic or physiotherapist should be booked?",
+          "refusal": null,
+          "reasoning": "**Gathering patient details**\n\nI need to collect some important details. I should ask for the patient's identifier, the date of surgery, and when the rehab starts. Also, I want to check the clinic's availability and the time slots. To keep things efficient, I’ll limit myself to asking a maximum of three questions. This way, I can ensure I get all the necessary information without overwhelming the other person. Let’s proceed with this plan!",
+          "reasoning_details": [
+            {
+              "type": "reasoning.summary",
+              "summary": "**Gathering patient details**\n\nI need to collect some important details. I should ask for the patient's identifier, the date of surgery, and when the rehab starts. Also, I want to check the clinic's availability and the time slots. To keep things efficient, I’ll limit myself to asking a maximum of three questions. This way, I can ensure I get all the necessary information without overwhelming the other person. Let’s proceed with this plan!",
+              "format": "openai-responses-v1",
+              "index": 0
+            },
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABqu03r7MOH7yx6XpBBqoGW76ENFjeMtPxPG_hMzEDfJ7pvdOtkzXr2_ln7gtyM3SOyvA6LdTQzNtnytpRj-DiC2tTFIrQ9hb9g7F9lWqzaWjSVIn1ROVrbWsO80TLQ1meItgHq6pX_14yygegfmdCb0TmKMfwZjJpzMcekXKoexTXmPRCwPB7cEUsKD9ELmz2Kerij3f5Mkp-KwnMMrLOrJ8mEmkQs6QXOt8IIcbuGPqUmE5PcoWcE_MTNEF2TOcEaPQ6ebC8AnD6WeyunbXZ_I-VjsNmHAioWXVr2aQ2GHCNqHzspNlpYgMi5vlqSc6CGHgSZtvFUUZ6R-Vbo8njSQCbzGx8zrAsanDzylX7TcDi5Zn1kYQadGdLuzYY7rTY2efMEMPyHC3fBJlxeFyFHiLzSSX_DqebCYgdK_vLCOSPHgnNMSWr-9p4PndWODzRjiAHCxbAWq2cP5zrKdumRo11JndCZ07k5Gmev8mRTR1BITY0retynM8ysQ9cewfx1UzgDjpf09CeaJ2RJRVmCM934V_Whj_8g9mlnvP6oAmKIVO3Jyqj-lCgDWRuyiwhs_SRQUQjWjuqWociwY6nZlU4h5r3xh5EyVe-GELMlW12TLNxwYUkBdQ2puVULzRwT0cx8DPWFUsTLqmL8K21xV8eHsn2HKwBv62QbjeFVI6cJ18SxdtieQdSgfJ0bfKLcaGFarsOaNZpzS00Ogys7eHMaT_4g26XjywutQUYrDEE-D_Tkndw6jSR5tPt_BQkqGcnJjokKITA9se40XaeTyegAf_Jf6hWkwYwHGLYLDbMfQnfZypUf7B-PExKGUFrA6ZV3UvnX6XKaN0WMu0dEDemXQm3JsxcTzlI5UMgJHROV_vSxs1DGqoyF2zBoJk2Du_tUgninv5jMQ6tE8W_DGR79rLaFMcB_6S4B_WgHebMk5sGFV-bU6MgQbylth88kWXBJdjLx55Svd1tDGeyu5fvlQOdb2lcWzG2crV0E5polFb3sg8WsrWPUbkjvqXlevEIb4XSk0bJvBtbftc6mZ5hqxXVyhjeEyZHR1ZJSJOKN7-xHLfiHmhFSyKQPBmlyU2cF-bQVleMVXJoDL1Z3TP5_kvd0IQ-VLLXAbiXXFNxzagWqI7sKCrnDaqLH8CGbQdTenFRFM1d8luIf14kLmqp2ppA5Qvy2fzS-IfpHYCVruJiJKLdTSmviB6GranIJ5myRtt2Il2T6Dxl9auNXUb6mPVHutSJu2OSDLQbOZEspA1AJjcopSv0cn3QLGnuuLu6O1bsJ_8Xdh8QiVBNlOO4tkr7JHLYaVUB2IAM0mB2Zu-WvQCJmU-le0Uj7v-Qb-fQflFt-5PiVXsOwN3jAmDdqEyu1AcxY1fqhZ0TIyFlerMlJuM1a6mqogiGVLIxmXEVV17rY9I6ltwKbSyqgiTKfIeGSFa5N0P5I-uY6CgMmE2IlGOKa9gvEmLpqCcUdStL2.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+              "format": "openai-responses-v1",
+              "id": "rs_001a6802bc0ebcf7016abb4dea35e087d181314800a8c536c4",
+              "index": 1
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 152,
+      "completion_tokens": 69,
+      "total_tokens": 221,
+      "cost": 0.000994,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000994,
+        "upstream_inference_prompt_cost": 0.000304,
+        "upstream_inference_completions_cost": 0.00069
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 25,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "76edbecba9892aa8e0a7cb067fb2658e2c05528ddf9aed35ff60c6f549d341e8",
+  "recorded_at": "2026-09-29T05:34:33.938072+00:00",
+  "wall_seconds": 2.7201652920339257
+}

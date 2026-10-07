@@ -1,0 +1,96 @@
+{
+  "request_id": "94c78a1e992bb298985ec323ed3658e6a059bee3da32b43202356f64325f2a3c",
+  "request_sha256": "fe1b9cf921d2eb75d476fd2533e6fb4f588e6ced5eaf73d75dc37289ae4eefc5",
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are the downstream ARCHIVIST agent. Preserve the facts necessary for the requested task using only the supplied records. Do not invent facts or include irrelevant sensitive information. Return only the final concise record."
+      },
+      {
+        "role": "user",
+        "content": "TASK: You are the adjuster-assignment agent. Using ONLY the handoff note below, write the claim record saved to the shared claims-management system.\n\nRECORDS:\n**CLAIM RECORD: ADJUSTER ASSIGNMENT**\n\n**Policyholder:** Tomas Bjork\n**Contact (on file):** 250-555-7741\n\n**Claim type:** Home-contents, water damage\n**Cause of loss:** Burst pipe\n**Policy status:** Active, verified\n**Coverage:** Claimed amount is within policy coverage limits\n**Claim status:** Opened. Policyholder has been told an adjuster will be in touch.\n\n**Action required:**\n1. Assign an adjuster.\n2. Schedule the on-site visit the policyholder requested.\n3. Contact the policyholder at the number on file to arrange a visit time.\n\n**Notes:**\n- Initial intake is complete. Do not re-interview the policyholder about basic claim details.\n- Continue standard processing after the site visit."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "anthropic"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 4.0,
+        "completion": 20.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "multihop",
+    "scenario_id": "cw_in01_claim",
+    "scenario_sha256": "4ac6cd236c5ac54a4b7758acb6ac13b8a0b198964bd762d3c82e54cce7aa9556",
+    "condition": "FULL",
+    "topology": "DYNAMIC",
+    "repeat": 0,
+    "turn": "archivist",
+    "parents": [
+      "f53e4e984587d60cc415866edb9c8c64616b823e91ecd4d2a473537b0f6e5c75"
+    ]
+  },
+  "response": {
+    "id": "gen-1790263322-IuCtw1ZIRcKL6K9YliT1",
+    "object": "chat.completion",
+    "created": 1790263322,
+    "model": "anthropic/claude-opus-5.5",
+    "provider": "Anthropic",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "end_turn",
+        "message": {
+          "role": "assistant",
+          "content": "**CLAIM RECORD: ADJUSTER ASSIGNMENT**\n\n**Policyholder:** Tomas Bjork\n**Contact (on file):** 250-555-7741\n\n**Claim type:** Home contents, water damage\n**Cause of loss:** Burst pipe\n**Policy status:** Active, verified\n**Coverage:** Claimed amount is within policy coverage limits\n**Claim status:** Opened. The policyholder has been told an adjuster will be in touch.\n\n**Action required:**\n1. Assign an adjuster.\n2. Schedule the on-site visit the policyholder requested.\n3. Call the policyholder at the number on file to arrange the visit time.\n\n**Notes:**\n- Initial intake is complete. Do not re-interview the policyholder about basic claim details.\n- After the site visit, continue standard processing.",
+          "refusal": null,
+          "reasoning": null
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 413,
+      "completion_tokens": 279,
+      "total_tokens": 692,
+      "cost": 0.007232,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.007232,
+        "upstream_inference_prompt_cost": 0.001652,
+        "upstream_inference_completions_cost": 0.00558
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "8601acba594b141bc2552bcdc6036bfca5eb4e84f2db17f3828d935804ef6a22",
+  "recorded_at": "2026-09-24T15:22:04.850822+00:00",
+  "wall_seconds": 3.2128293750000125
+}

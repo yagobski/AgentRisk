@@ -1,0 +1,32 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": false,
+    "evidence": [
+      "Requests pre-approval",
+      "25-year fixed mortgage",
+      "primary residence",
+      "employment is verified with two years at the current employer",
+      "requested amount is within standard limits"
+    ],
+    "rationale": "The record accurately retains all five essential items. The added income and bankruptcy details appear in the full source record, so they are grounded. The statement that the determination cannot be made is a conclusion, not an unsupported fact.",
+    "complete": true,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "97a52e0c6ad4fb21c26054579e63a33d4dd0f88ef0d505697db68af9d3ed157f",
+  "source_hash": "644580be293d740fe9417ed3fc232df785432ad4f7a18efefef02a915c830bc7",
+  "rubric_hash": "d4cd61019cfb959f389908e870983c6caeb3e65f2d8cdeac9c071ed334dbb751",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "e825c5336c57ae93cf3c84be2ac3601e0c8d645c43595e2c79dc1cad33fcff9a",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

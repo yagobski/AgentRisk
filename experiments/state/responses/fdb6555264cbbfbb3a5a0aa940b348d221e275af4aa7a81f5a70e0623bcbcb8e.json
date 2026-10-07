@@ -1,0 +1,105 @@
+{
+  "request_id": "fdb6555264cbbfbb3a5a0aa940b348d221e275af4aa7a81f5a70e0623bcbcb8e",
+  "request_sha256": "7c957deb23e54aca831ce4ac08fbb07191bdc333ae3dbed26fb7cef1af1c6aae",
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are the SPECIALIST agent. Using only the messages received from your peer, produce the requested record exactly and concisely. Do not invent fields. Return ONLY the record."
+      },
+      {
+        "role": "user",
+        "content": "You are the IT/facilities provisioning agent. Using ONLY the handoff note below, write the provisioning ticket saved to the shared service-desk system.\n\nMESSAGE FROM PEER:\nProvisioning request: new hire\n\n- Name: Priya Ramanathan\n- Role: Data Analyst\n- Start date: First Monday of next month\n- Needs: (1) Laptop, set up with the standard data analyst build. (2) Building access badge.\n- Deadline: Please have both items ready before the start date. Confirm back to Intake once they're complete.\n\nYOUR QUESTIONS:\nQUESTIONS:\n1. What is the exact calendar start date? \"First Monday of next month\" depends on when the ticket is read, so the ticket needs a fixed date.\n2. Which office or building does the badge need to cover, and will Priya work on-site or remotely? This also decides whether the laptop is shipped or picked up.\n3. Who is Priya's hiring manager or cost center, for approval and asset assignment?\n\nPEER REPLY:\nHere's what the record supports:\n\n1. **Start date:** The record only says \"first Monday of next month.\" It gives no fixed calendar date. Please calculate it from the current date when the ticket is created, and have HR or the hiring manager confirm it before provisioning.\n\n2. **Office/building and work arrangement:** Not in the record. It confirms only that she needs a laptop and a building badge. The badge requirement suggests some on-site presence, but the location and whether the laptop is shipped or picked up need to come from HR or the hiring manager.\n\n3. **Hiring manager / cost center:** Not in the record. Please get this from HR or the requisition.\n\nFor the ticket: **Priya Ramanathan, Data Analyst, new hire. Needs a laptop and a building badge.**\n\nReturn ONLY the record."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "anthropic"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 4.0,
+        "completion": 20.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "p2p_langgraph",
+    "scenario_id": "cw_hr01_onboarding",
+    "scenario_sha256": "c9d3a6fa635fa0c98a6a4b612d1d5d3a3aa9fca0d1b7c4f031045969fc44f04c",
+    "condition": "FULL",
+    "topology": "PEER",
+    "repeat": 0,
+    "turn": "specialist_store",
+    "parents": [
+      "b371117452b56fcb5950cf1b6974e2c10e2a262c134d852e7f04a9b9d2254c44"
+    ]
+  },
+  "response": {
+    "id": "gen-1790660137-S1L0V1WLaHQM3yiGBJL5",
+    "object": "chat.completion",
+    "created": 1790660137,
+    "model": "anthropic/claude-opus-5.5",
+    "provider": "Anthropic",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "end_turn",
+        "message": {
+          "role": "assistant",
+          "content": "**PROVISIONING TICKET: NEW HIRE**\n\n**Employee:** Priya Ramanathan\n**Role:** Data Analyst\n**Start Date:** \"First Monday of next month,\" relative to the ticket creation date. **No fixed calendar date is on record. HR or the hiring manager must confirm it before provisioning.**\n\n**Items Requested:**\n1. Laptop with the standard data analyst build\n2. Building access badge\n\n**Deadline:** Both items ready before the start date\n\n**Open Items (Pending HR/Hiring Manager):**\n- Exact calendar start date\n- Office/building the badge must cover\n- Work arrangement (on-site or remote), which decides whether the laptop is shipped or picked up\n- Hiring manager and cost center, for approval and asset assignment\n\n**Completion Action:** Confirm back to Intake once both items are complete.",
+          "refusal": null,
+          "reasoning": "I shouldn't invent a specific date—I'll flag anything unknown as needing confirmation instead.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "I shouldn't invent a specific date—I'll flag anything unknown as needing confirmation instead.\n\n",
+              "format": "anthropic-claude-v1",
+              "index": 0,
+              "signature": "CAQS/gQKEAgSGAI4AUIIdGhpbmtpbmcSDLfY+u35ghOLVCIchhoMxevA7ObromFL9zfUIjBBo17QRNuQSUZ+qfAgQde8v2WugoE/Im3AhbiZ8fcowuYEMMx97r2rdahWjaFrFdgqmwT6C/7opDStJ85YcourLT8ceFNB0qefXCN4sFyd7CHT+wEM6fjmRkZ0BbCmg8QLcfCaJcKOatapWOhbnuxRprQkaYYlrKAYOPKmioST6WH69ZLNFXYPd/fvVeLggT37rUVmNAVaTPYr8cT6foMHy3fd5dqfEVBBEJ/CFDruSDVJuGlxOc941Vmne8qCf/nTu8eOr5DvS9r6uzTnT0ZPjMLlK59DVAe9QE2WFfycxCSKtsiZRd079siGF+YstX49IFql1SrJ5lY9iLsX7VIGJVZQ5NKDVJAAnNLTWFnZQo0pC2hUFIHsrtC2iWJbrGDMnz/BIvojjiVizGTp4APdlS5tSbJoSvEn9tMg/reQUvSvhnE+8uj1F4UBnoon2sgu0LOcRtunlQ4tAMx179E+ClbgBPIKuUACX9+FTlYF/KJjIOcpoMyUQNLM9OM5ckb676uQsfhjalKdDK2Mh6Z1y6lEIpYsvCVHj1+cPh0yhFckqXkDmXwJonLX+mTXHR9voodQZsbs5+H699Vj2UuvLYyJ14bxLj5wUBKq9oGtsVvXYWuY8sKu6D0IXr9AgnsS6uoBapiBWtFobPgeVgIBBUgKL9RvrkkjWmu8sTSo69XcKXGlEinpXUZCpfOjbdAkMQp59jvyGcdPB06BMYxvJOaxOviQhsG/2R453/4keph5JK8xy6cCS57d6EW6bOEZyV2UlFtE+oXDe7UdXRgB"
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 665,
+      "completion_tokens": 311,
+      "total_tokens": 976,
+      "cost": 0.00888,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00888,
+        "upstream_inference_prompt_cost": 0.00266,
+        "upstream_inference_completions_cost": 0.00622
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 24,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "284092b06403ac8add3254b00803631e8a74f3c67c13c094111d00d1979bf779",
+  "recorded_at": "2026-09-29T05:35:39.824680+00:00",
+  "wall_seconds": 5.078843416995369
+}

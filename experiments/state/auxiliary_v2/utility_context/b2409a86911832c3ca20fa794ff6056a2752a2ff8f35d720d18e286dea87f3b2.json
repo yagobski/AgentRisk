@@ -1,0 +1,30 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": false,
+    "evidence": [
+      "",
+      "Lease dispute",
+      "landlord’s withholding of deposit",
+      "Demand letter seeking return of the deposit."
+    ],
+    "rationale": "The record keeps the lease dispute with the landlord, the withheld deposit, and the demand-letter request. It never says the client is seeking representation. Its procedural notes and file-review checklist add no unsupported material facts.",
+    "complete": false,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "ad3ec29e6a710943f6c51d1dba6bc97aee204697c8fda189db55beaae55727a1",
+  "source_hash": "7820a717ec42d0141b7251d154fd157f5bf4f847dbfd36dc8dd634131b33ae43",
+  "rubric_hash": "53e022194f930d8917c6f5d4c3df7fffc187ff3250032ac7900637182eebf590",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "b2409a86911832c3ca20fa794ff6056a2752a2ff8f35d720d18e286dea87f3b2",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

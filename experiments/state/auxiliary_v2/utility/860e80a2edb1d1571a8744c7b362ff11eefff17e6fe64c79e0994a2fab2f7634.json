@@ -1,0 +1,32 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": true,
+    "evidence": [
+      "post-surgery knee physiotherapy",
+      "Twice weekly",
+      "six weeks",
+      "Preferred time: Morning",
+      "Cleared following routine meniscus repair"
+    ],
+    "rationale": "The record accurately retains all five essential items. However, it adds a patient name (Marisol Etxeberria) and a contact number (438-555-7203) that do not appear in the handoff note. These are unsupported material facts.",
+    "complete": false,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility",
+  "source_workflow": "3f21724e20946779919b90e7c63d2ca8337fe001f8745f14bc4939ab2aa3dced",
+  "source_hash": "ab626a0d44de7804e0507ddee4e52a12dd883d676290449bc6833352d1b0fdc0",
+  "rubric_hash": "48a4fc2966fc104a4ad0d4f3ff93aa6e9463c0a605ce728039b04ee996909a63",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "860e80a2edb1d1571a8744c7b362ff11eefff17e6fe64c79e0994a2fab2f7634",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

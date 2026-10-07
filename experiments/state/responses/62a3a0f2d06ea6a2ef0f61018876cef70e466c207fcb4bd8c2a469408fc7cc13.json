@@ -1,0 +1,105 @@
+{
+  "request_id": "62a3a0f2d06ea6a2ef0f61018876cef70e466c207fcb4bd8c2a469408fc7cc13",
+  "request_sha256": "285d91237f5c74244693ccf44493e140c26f8f0894e96a80284b6bf294dddcd0",
+  "request": {
+    "model": "openai/gpt-6-sol",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are the SPECIALIST agent. Using only the messages received from your peer, produce the requested record exactly and concisely. Do not invent fields. Return ONLY the record."
+      },
+      {
+        "role": "user",
+        "content": "You are the scheduling agent. Using ONLY the handoff note below, write the booking record that will be saved to the shared clinic scheduling system.\n\nMESSAGE FROM PEER:\nSchedule Marisol Etxeberria for post-surgery knee physiotherapy following a routine meniscus repair. Cleared for rehabilitation. Book twice weekly for six weeks; mornings preferred. Contact: 438-555-7203.\n\nYOUR QUESTIONS:\nQUESTIONS:\n1. When should the six-week series start?\n2. Which clinic or physiotherapist should be booked?\n3. What appointment length should I use?\n\nPEER REPLY:\n1. No start date is specified; confirm with the patient.\n2. No clinic or physiotherapist is specified; confirm the preferred provider or location.\n3. No appointment length is specified; use the clinic’s standard post-surgical knee physiotherapy slot or confirm with the provider.\n\nBook twice weekly for six weeks, with mornings preferred.\n\nReturn ONLY the record."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "openai"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 2.0,
+        "completion": 10.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "p2p_langgraph",
+    "scenario_id": "cw_hc01_appointment",
+    "scenario_sha256": "ffc19eb935b1552e20a8827d2f75069e3959e9d04a8edf353a3246da18517722",
+    "condition": "FULL",
+    "topology": "PEER",
+    "repeat": 0,
+    "turn": "specialist_store",
+    "parents": [
+      "5dd72c43ef1ab78f9510ea7dc9e9a26815ad1f903558b6ef1848383011ae0a83"
+    ]
+  },
+  "response": {
+    "id": "gen-1790660058-Jpp5vFWd5q09B6NUGx82",
+    "object": "chat.completion",
+    "created": 1790660058,
+    "model": "openai/gpt-6-sol",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "Patient: Marisol Etxeberria\nContact: 438-555-7203\nService: Post-surgical knee physiotherapy following routine meniscus repair\nRehabilitation clearance: Cleared\nFrequency: Twice weekly for six weeks\nTime preference: Mornings\nStart date: Confirm with patient\nClinic/physiotherapist: Confirm preferred provider or location\nAppointment length: Clinic’s standard post-surgical knee physiotherapy slot, or confirm with provider\nBooking status: Pending start date and provider/location confirmation",
+          "refusal": null,
+          "reasoning": null,
+          "reasoning_details": [
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABqu03cO1-uq9WaDIwLjGSSnmQJXRlI2IKpbRkEuFtJzW_VdBwpqw6tB62qDqCHGcb3jnLRgfixDGxrQJh_Z7_1cghT9yP51p7AEopdlH8USzom1exWxCBUaSY6EJ80j_hWMZ3oLFBQxtkvhDlcqaJSANgEhrLNCASYxswrSlDYXUByi2BJDD0vTtdp4HPiC7ykkIOmmxptPagScB-tZ6zWvMi2Du3Moq50gzi2_CejV9mqkpLLaYz7RXOBVJ4FI5cRebXFvKsvs6-FKJujVBIXsQCw1AM3Oj_Y8swyzy46KI--6jxxvsGjhWmKUmE8Yax0-0v7H3dE2gWd_anG0adobGsDQsQecAXTM6BjSFbL3R-BvLXfVWdvGIRdC3dTmVm0HBpYl1XV6XjDB1CPp8Mx4ohNPUSADwtFxyy4dbfCMQg2MLl9DRKjaltknzZo3BrLTBasXrdQ3oNRHd4deyptMpoMlOHD-9cLwpeU7zkhmQvo3L3KO5jTj5gIXH5Dxx98KsJbB1BhXnhuj71qyV_r66w60ozUlB-QzEX6xUlfwDAAWNuJLwRfdtD8hMDF1Huihjw4cunJk2N_I6XE92_OiRYVGjt2VPnLrDG9frpdDvFbb4lf_mzv6I6urfVCmKAcbnZ0TGkqeC0-ptkmc_Uzs8D4s0yM8rnf63ydUZVJTu9Zegpf8QG4e7_OCNhyVS50rtD7wdlg_G6TA6jfoluBwdLt9jATUkezUxGzTk2_Sx4khG8bDnCgl0Hm7APopGUxD6XeMG2sotsep9ZG1YnibcdJ9PpV2Oj-8LbZ-O5bNjfZkyvHAIESXBvO85G0LwNiSZUyvv_4X4QbrQjuzVczFh8ur2UFilVEmZVTMkDgPI3_AIAhTEanXNy89EyOL1kIyfk3IbyefpXabTKeIOLE4k4__HUNcHkUdHUeeRc3USUYmQ82waVavRIHsowkCVtQ6QndWZUgQInSz4nd0ru9T8mPeHtjdy6erVtPsfz8HaBz-m2xkATnRq7amBQ77HUl514kRG8Fg0Hm_Jue-P2LCWXXMntGDO90d4gqDzDi3URBdP0GByAABcYKTp2QRmMDoar-frUa2scxHtQWmY8I3le79qnFDhRqcsj2kTUPjL6zCaiYnyNArfo-lsWUQrA9NBWYEWQjX2RvgDl20DK2q9Wr_D7V7-UgJ0bgfK2oY7delb98J14034k5Gtnb7GeSdWGXBYNr-Yw53ROlG3dRzc1345xT7y3sQvx6Yayy5FHeOq-n0Z6XNKHM7Z_pcWqNb1vG3f9cd1jeC9MYSl9rKNOiFeR8KX1h6abGxXhUWAz2A_rKsPe6YR_KKKKa9CVVBJ3HHNQakZc7OuoUKggvV5J08MjEkaMjKSb1atWNLHiVznBKj2w5qU6Of07uRZLX0T-EdGOuAsaoKzomxSnVHqkCgrLckrqa6-IU_q8xqE6lRnc=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+              "format": "openai-responses-v1",
+              "id": "rs_022b0d1f1c0941ad016abb4ddba3a487d193c85ddfc69f5d23",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 240,
+      "completion_tokens": 127,
+      "total_tokens": 367,
+      "cost": 0.00175,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00175,
+        "upstream_inference_prompt_cost": 0.00048,
+        "upstream_inference_completions_cost": 0.00127
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 17,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "2be5a19ebc0282e88aaf4deee3e800d08f96686999d5bf651e9014aea47abba6",
+  "recorded_at": "2026-09-29T05:34:19.479898+00:00",
+  "wall_seconds": 2.9254642499727197
+}

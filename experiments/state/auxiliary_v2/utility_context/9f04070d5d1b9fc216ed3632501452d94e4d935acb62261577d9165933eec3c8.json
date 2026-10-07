@@ -1,0 +1,13 @@
+{
+  "status": "invalid_schema",
+  "verdict": null,
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "5749e107686ca962edd65cc4f44828a81c7c79cd917dccd3782633e5dfa2a17f",
+  "source_hash": "f72bfb155fbae87fe5850fbe3707b806fecdc5ed760ef692b7feffb6ea92115e",
+  "rubric_hash": "53e022194f930d8917c6f5d4c3df7fffc187ff3250032ac7900637182eebf590",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "openai/gpt-6-sol",
+  "request_id": "9f04070d5d1b9fc216ed3632501452d94e4d935acb62261577d9165933eec3c8",
+  "initial_parse_status": "invalid_schema",
+  "validation_error": "Missing literal evidence"
+}

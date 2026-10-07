@@ -1,0 +1,30 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": false,
+    "evidence": [
+      "",
+      "Lease dispute concerning the landlord",
+      "landlord’s withholding of the client’s deposit",
+      "Prepare a demand letter"
+    ],
+    "rationale": "The record captures the lease dispute with the landlord, the withheld deposit, and the requested demand letter. It never says the client is seeking representation. The next-action note is a procedural instruction, not an unsupported factual claim.",
+    "complete": false,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility",
+  "source_workflow": "3f989a1fdf91eec15d4377709ff945949a9a4e20ea7dd3c01d619c9468058eb8",
+  "source_hash": "ddfcb87883f50646218879d1bf56ec0a663673843589c536214222efa785af15",
+  "rubric_hash": "53e022194f930d8917c6f5d4c3df7fffc187ff3250032ac7900637182eebf590",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "92be89496567a7a2e8a0001e2b52558d950f48fc2685c36865e2109942f1d4b6",
+  "initial_parse_status": "invalid_schema",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

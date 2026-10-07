@@ -1,0 +1,32 @@
+{
+  "live_enabled": false,
+  "api_key_env": "OPENROUTER_API_KEY",
+  "total_budget_usd": 45.0,
+  "stage_budgets_usd": {
+    "pilot": 1.0,
+    "frontier": 20.0,
+    "multihop": 16.0,
+    "judge": 8.0
+  },
+  "max_request_usd": 0.5,
+  "max_tokens": 4096,
+  "timeout_seconds": 180,
+  "temperature": null,
+  "reasoning_effort": "low",
+  "models": [
+    {
+      "id": "anthropic/claude-opus-5.5",
+      "provider": "anthropic",
+      "input_per_million": 4.0,
+      "output_per_million": 20.0,
+      "cache_write_per_million": 5.0
+    },
+    {
+      "id": "openai/gpt-6-sol",
+      "provider": "openai",
+      "input_per_million": 2.0,
+      "output_per_million": 10.0,
+      "cache_write_per_million": 2.5
+    }
+  ]
+}

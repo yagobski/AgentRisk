@@ -1,0 +1,104 @@
+{
+  "request_id": "b7576029d9c3c36f61fee3f8b9e5006474b447aeb61e5875e96df39f9a650fc6",
+  "request_sha256": "0b652ffbbc4e1eded9c4f9664f033d94e3205584977b740673ffa64f045060f2",
+  "request": {
+    "model": "openai/gpt-6-sol",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a downstream WORKER agent. You will be given ONLY a handoff note from the coordinator. Using only that note, produce the requested internal record exactly and concisely. Do not invent fields."
+      },
+      {
+        "role": "user",
+        "content": "You are the adjuster-assignment agent. Using ONLY the handoff note below, write the claim record saved to the shared claims-management system.\n\nHANDOFF NOTE:\nHome-contents claim for water damage from a burst pipe. An adjuster visit was requested. Contact the policyholder using the details on file to schedule it.\n\nReturn ONLY the record."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "openai"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 2.0,
+        "completion": 10.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "experiment": "guard-chain-20260925",
+    "scenario_id": "cw_in01_claim",
+    "scenario_sha256": "4ac6cd236c5ac54a4b7758acb6ac13b8a0b198964bd762d3c82e54cce7aa9556",
+    "condition": "GUARD",
+    "topology": "CHAIN",
+    "turn": "worker",
+    "parents": [
+      "c6fff5579538fee51b5454191c06f441fac646bf3e46ebb09dee97fc27e85f7c"
+    ],
+    "repeat": 0
+  },
+  "response": {
+    "id": "gen-1790310817-87lE4o8cyIx3IriNgCtA",
+    "object": "chat.completion",
+    "created": 1790310817,
+    "model": "openai/gpt-6-sol",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "Home-contents claim for water damage caused by a burst pipe. Adjuster visit requested. Contact the policyholder using the details on file to schedule the visit.",
+          "refusal": null,
+          "reasoning": null,
+          "reasoning_details": [
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABqtfmjIf4zXAa59UyWc4GeX5DXQqusy6ayRlhumWF9A-5N83l0sFZoZCnINSXJCzHoKtCKgwNAZD-hu7Ji9THilm5p35OXJh9TD2XYwhaB0SYhz4sOKJx37h90tZ0q9ofhBOTVGF023PhIzbEFlGCOEsrIOzLS7aDn0TvZKKCn9mpZwSplviXKgJWz4JsBPrGgc5gLGRcQ_cX3a953wF6NSWmxDNIzL20dr2HJcVfWNTtfObDhjrX_pKKwZ233tPKfNVLSjoUpFaTnSTT96Wi73ouITCCxEr-Os6Lhf4n6vXJFWIFpfl4ZkbE9YbgznxJWSgP5yn-EfD383dDBoucU9mu4S3cOAvFzgLnguBv8vv8gmaCcaFo2D99sTjE0RBTPdi1EoG0Pse0cKfXLwxv-nUY1cdUCCQv8py5nvFmgs2E13VHa6O_bBBA46xc2Pl8ehtQ71MAmIWvVIGeaUARMloc5FJ6aSIkSaP7KLVCkF15EmdPwyg-3HmDMRjk_BNZMWTXNKlHznE6agyKMpUtYoMOk_Mla-wq-esYTFE7pN8im6Xjf1yeEuKRbYAQy6JpwwxKUBvpw2_ihhfIo6s-k13F7dy89xVKWU5WZiMOi9Y2NDb7JoOoOZzC51rptaG-zyIfW66qPT06qjXxNEgjdVz_j--FYnlQvFbKzwINfhP6PgdcqGzW3AqEm9K-rLFjIlQxqVdMpH051QDi0miaVsjOxvwrkc0PrDTZcWTFNcFjHufUrNVlmUfFT01Y8pJ1NXyxuH62k4wSw5zl9BXGe6LpWDwUPolA76jcckzmzW-y5Y5vtU1bhEoWmjLZPo09dgAOVBqG0XjLc78f9W8kDcNML7ASeePHg8UxhjnzoWxw4bJC7kr9plvY-F3PAsSXlDAfQkRzNFTl7vTyuk9yWOx_FhRJ-zYWzjGoM1Bk8hQiTxYxHBb4SIM91Mg8J_QhxTx_X7oz7Xc2Y4VSdNz6r7gqxF2K_3d4q7_p37a_tROsLAoquxGD7VO6-iMLmanphHl1oqfMZ3jW_LXLvMZA36tvQq98GZw_KutipmZE1vlrx8Xr0xcsjYjVBrsgTFV0Cg-00BzY69Ujh8gIaBGfZ6huTBpfkoDVY7PFwQxMnoa-rOWrvbXD3ZMJlIZq_7XGCIlYHD_4ZJBhk-4xOT4PbpeGM8z7zkIoQpyoHwJREp7RCf7KqVF3S2rIVxiKt6amEdsxWKmBA4pvuuRE6Rh_IST_eQffNwW7LyCeaCDZloVFX2COy6nEIxpjK7dF3M-keEskumz27aNPUmYNIERonMXl3gnszylVLdEeCFuuPHhZNRR4O7CV7XuK3KbT2_98eyerqhcHsDdQBoU5oKVm7ZoJmVTGSHvgV8y8F3a-4WqFa5C5tq4_qV18PWxG6DS1xWXU4FKNSbifiZny0_9smWA3oJ_5OTFxjyZoJcdDknCBkknmeu83kU34wGr3thD8rfGTeBJHam2mSaBICDEPFsPfeYg==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+              "format": "openai-responses-v1",
+              "id": "rs_0c42806c3b717734016ab5f9a2529887d19598deb610a78313",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 122,
+      "completion_tokens": 62,
+      "total_tokens": 184,
+      "cost": 0.000864,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000864,
+        "upstream_inference_prompt_cost": 0.000244,
+        "upstream_inference_completions_cost": 0.00062
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 24,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "66f3ca880842e4309019b0ce1abd45fe737945bb2148b9101914bd28197b218d",
+  "recorded_at": "2026-09-25T04:33:38.804307+00:00",
+  "wall_seconds": 1.9081812920000019
+}

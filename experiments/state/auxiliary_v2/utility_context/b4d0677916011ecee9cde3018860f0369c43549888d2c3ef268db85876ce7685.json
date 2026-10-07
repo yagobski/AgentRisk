@@ -1,0 +1,32 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": false,
+    "evidence": [
+      "Home contents damaged",
+      "water from a burst pipe",
+      "Policy is active",
+      "the claim is within coverage limits",
+      "schedule an adjuster visit"
+    ],
+    "rationale": "The RECORD retains all five essential items. 'Contact the policyholder to schedule an adjuster visit' reflects the requested visit, and it adds no unsupported material facts.",
+    "complete": true,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "dea312bf2897b97f8cdc26b7e7b517871751bf74109ccdee49a7b45d348f4791",
+  "source_hash": "e9a1012ac633634f96f17aad29fe1a8bbccc109b8e48d0cd5f635e231e3bab6c",
+  "rubric_hash": "6e2aca2f5905ad88cd3e783154d1f648583ae055021b2fa31794b70d69c12071",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "b4d0677916011ecee9cde3018860f0369c43549888d2c3ef268db85876ce7685",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

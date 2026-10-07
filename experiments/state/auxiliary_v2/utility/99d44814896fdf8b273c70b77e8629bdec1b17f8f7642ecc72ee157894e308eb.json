@@ -1,0 +1,32 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": true,
+    "evidence": [
+      "MORTGAGE PRE-APPROVAL",
+      "25-year fixed-rate mortgage",
+      "Primary residence",
+      "Verified; 2 years with current employer",
+      "Within standard lending limits"
+    ],
+    "rationale": "All essential items are retained. The record also adds material facts not present in the handoff note, including income, bankruptcy history, and credit-check status.",
+    "complete": false,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility",
+  "source_workflow": "664ee8ffa3a395c6811fe9c6509500b556e6007ed82a18b64154ed67846aa888",
+  "source_hash": "41c0ac1c34d57f3eaabf52f66abf9a722604c37b826b846c90a8e2ced89863b2",
+  "rubric_hash": "d4cd61019cfb959f389908e870983c6caeb3e65f2d8cdeac9c071ed334dbb751",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "openai/gpt-6-sol",
+  "request_id": "99d44814896fdf8b273c70b77e8629bdec1b17f8f7642ecc72ee157894e308eb",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

@@ -1,0 +1,32 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": true,
+    "evidence": [
+      "Post-surgical knee physiotherapy",
+      "Twice weekly",
+      "6 weeks",
+      "Scheduling preference:** Mornings",
+      "Routine meniscus repair; cleared for rehabilitation"
+    ],
+    "rationale": "All essential items are retained. The record also asserts a pending booking status and that no sessions have been assigned, neither of which is established by the handoff note.",
+    "complete": false,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "410fa76013a304b3482edcf843fbb6503392ac187c5b5dda3657a8af93144821",
+  "source_hash": "1f5ce59fe6fbf638ba921410b46035c58d3ca912de582ea29ff0be1a58a70552",
+  "rubric_hash": "48a4fc2966fc104a4ad0d4f3ff93aa6e9463c0a605ce728039b04ee996909a63",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "openai/gpt-6-sol",
+  "request_id": "ee338edde815f9371dbc2350cef2a7e08c254cb15246becec29673a07d276332",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

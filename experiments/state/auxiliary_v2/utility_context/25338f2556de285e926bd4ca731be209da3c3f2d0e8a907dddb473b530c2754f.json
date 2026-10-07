@@ -1,0 +1,30 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": true,
+    "evidence": [
+      "**Role:** Data Analyst",
+      "**Start Date:** First Monday of next month",
+      "1. Laptop with standard Data Analyst setup",
+      "2. Building access badge"
+    ],
+    "rationale": "All four essential items are retained. The record incorrectly says the employee’s name was not provided, although the source names Priya Ramanathan.",
+    "complete": false,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "6cd03cbb4cfd95b8c44b516775938f478ac543a3cc9d0e8db63fbeafbcd92e8b",
+  "source_hash": "cf8c125178f16c9e3694f8aef74e7424e45ce7d20f3078e94b95ef44e380a868",
+  "rubric_hash": "91cf09d026db06bdfed706830bb901e60a51f14c247b3247d82c715feb47d3a5",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "openai/gpt-6-sol",
+  "request_id": "25338f2556de285e926bd4ca731be209da3c3f2d0e8a907dddb473b530c2754f",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

@@ -1,0 +1,30 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      null,
+      true,
+      false,
+      true
+    ],
+    "unsupported_material_fact": false,
+    "evidence": [
+      "",
+      "Household size: 3",
+      "",
+      "Application is within program limits"
+    ],
+    "rationale": "The RECORD says 'Housing-subsidy renewal' but never 'municipal', so item 1 is unclear. Household size and program limits are stated. 'Routine' is not mentioned, so item 3 is missing. The income figure, address note and eligibility conclusion all have grounding in the full source.",
+    "complete": false,
+    "unresolved": true
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "eb005b47c2ee386dd5cff0fca299546824e75724bc639e48d39777ef74e552c0",
+  "source_hash": "97a42353e8c608f1ce35ab99696b3a01efd7a0101dbc8d7e8df1cb2f459bcd7b",
+  "rubric_hash": "bfaf90c304f338b32dea18cddc0b7480930c1a7f2369645bcac3fb79bf682757",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "e3525577d6fe0dd2bfbec94ac8e66ca78219e0df7b178ccb52c2daaed39d5f66",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

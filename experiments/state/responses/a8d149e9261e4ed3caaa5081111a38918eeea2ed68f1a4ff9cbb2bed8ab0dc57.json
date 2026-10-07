@@ -1,0 +1,111 @@
+{
+  "request_id": "a8d149e9261e4ed3caaa5081111a38918eeea2ed68f1a4ff9cbb2bed8ab0dc57",
+  "request_sha256": "8e2249bd1b87b39caf6a2afad12fe114760f80d758b432d34790f88ac4ea3450",
+  "request": {
+    "model": "openai/gpt-6-sol",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are the SPECIALIST agent in a peer-to-peer multi-agent workflow. You have no access to the underlying record; you only see messages from your peer INTAKE agent. If the message is sufficient for your task, answer exactly READY. Otherwise, ask at most three short clarification questions to your peer, prefixed by QUESTIONS:."
+      },
+      {
+        "role": "user",
+        "content": "YOUR TASK: You are the scheduling agent. Using ONLY the handoff note below, write the booking record that will be saved to the shared clinic scheduling system.\n\nMESSAGE FROM PEER:\nSchedule Marisol Etxeberria for post-surgery knee physiotherapy following a routine meniscus repair. Cleared for rehabilitation. Book twice weekly for six weeks; mornings preferred. Contact: 438-555-7203."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "openai"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 2.0,
+        "completion": 10.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "p2p_langgraph",
+    "scenario_id": "cw_hc01_appointment",
+    "scenario_sha256": "ffc19eb935b1552e20a8827d2f75069e3959e9d04a8edf353a3246da18517722",
+    "condition": "FULL",
+    "topology": "PEER",
+    "repeat": 0,
+    "turn": "specialist",
+    "parents": [
+      "d4fe35ee75db293115c9f10bb8ad0913a829683b15b4a37d0d716de428b96646"
+    ]
+  },
+  "response": {
+    "id": "gen-1790660051-4xHu6K8om3EuxvD9i6E7",
+    "object": "chat.completion",
+    "created": 1790660051,
+    "model": "openai/gpt-6-sol",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "QUESTIONS:\n1. When should the six-week series start?\n2. Which clinic or physiotherapist should be booked?\n3. What appointment length should I use?",
+          "refusal": null,
+          "reasoning": "**Clarifying appointment details**\n\nI need to clarify the start date and duration for the appointment. The booking is for twice weekly over six weeks, with mornings preferred. I want to know the first availability and the specific clinic or location. I could schedule if I had system access, but since I don’t, I'll need to ask about the start date and appointment length, along with the provider. I think I have 2 or 3 questions to ask.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.summary",
+              "summary": "**Clarifying appointment details**\n\nI need to clarify the start date and duration for the appointment. The booking is for twice weekly over six weeks, with mornings preferred. I want to know the first availability and the specific clinic or location. I could schedule if I had system access, but since I don’t, I'll need to ask about the start date and appointment length, along with the provider. I think I have 2 or 3 questions to ask.",
+              "format": "openai-responses-v1",
+              "index": 0
+            },
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABqu03WZHtOYHktJJyA-a4jSZexFIJD30vWYSqklRQPoV7iho15m4XJZkua_9siQLfOOrKqqpPNkgcNGHRlxsQicUoh8MkLxmv-mwX_1idB7tBvuZwt-YrxLOnhOvzNo4ojw343RgfHWEwzhFSMPSPyJizKVgqL3kVlSVDSWXYch1s_n2sIgbY4F2_UTW1emM16G5iENuZVIs6nuNh_urN0vpg303-pplcD5qP_ybqnnJVFHIbz3Hc-OWXPA02hqlteZCsdXoDd2YQLtKfz_94mDTkNTGGhnaf2-JJ3RxlFLZ2lWPLC8mmtYJ1KbRyGaJg4_t0CmIOR402jS54D_cWsJov-qOi1ypPGc3cgKls7fkQBJKxcGauh5ZHoSjlOp20gCv5IzgeEs7vMGoIFa6t9J3YTz4AeIAiTcPP8iVIMcObMpeWvyDAp1bMCx765gRCK7rC4dqz3wkFHQ5UDKll3_J4SxLl2IPRjkh1iRa6etuDutp_uyj7nS2rWlHEBcYkcqHMt5-cPqPgfWUNQsF9k92JHh9NBV5N332EcpoNn5meFkEQnPpZGloivwMq8Mxl2QporkgkLsljVVfDIG4sjrb47ETp9YIH81aYeBnHnrlsWyl6p5BOW3mCudfbc6Ctku0zcph7RW-nSwwa1QPy18e88YKd_hSjc--MUpy89biTGtm3df7krFyS37MOR6WDv9HHdU7q7IMwEZR0z7QUsItBf82hTbC79OV95-a8B8ZcmaOxQYUYlymEhPtdJKzxvC5kcNN2yKsOpgdg0i1gcmFUPnseb7hoxebCMxXG-KFWGMpejczkI62lUAXDZBqzdAyMSEv8sW9FhjetQwXNOvFmZQ9IqqZ3sDc94QOlDJLZ7lEK2-DBlshkDLxN_Np2WBRgd71Y1rxBwpItxq2JvlOeBqReuz_28BdpPwc1fU_CFJFKPbdE4URLaIIMghHXP4jPgPMTf4h6XBGCQMmWBdKOddsCLdTgAASXDSFvJfAtAh4BLnKlGuay2WzDg8k4RfH2Uk56Z5IC7hd7zYpU3LDWKJpmLLfx3lm05JR9DI-kEAWeVhy4XcX7HGnxtXpH7AymNpHaVkl5u4bdJ0EaDoD5k02ZZiFyUx-3tQkotEu10AOoaGhUjUKutMfnOEJyaUF2QSYXqy_HHc0FqsK496QaI9EKLFfmdmSkLClibdg1aJo7z4zVA94X_D-oQqM_vP4AcvMD02uexXdmkKyC4xbFZiFYgBrj3FIUHedrBdYrvqcFnORcWRASOFSU244tTqojwNYWQCjZPvg9lfTlSXdx0pFqXZOeeIeU8-mZGnnG-N_I8NT8z6Co7CUizTMatsvQflduInOe2Bic1v2ns3MYwpzrPOSrEbmKI5YqTCF61F0Z1B9rnP5ET2-SyiNSz-Bp4Ka9-0htAdXRrhoNoqvGkicDyZy4F6WgknqenTcthkmxK9UDYBFFZKFglCktCsf0e6t1CWvxTX-3N2y3oHtzoZipDfIOU43A0-ue36E8-rPrapMG6vrKoJBA71vtPHm2XJy4I1fdqSzT5pKHBv4nb2-It2WSxqJQsjvU9rfLx4M5NRfx8vO4oo3kixL_sXbbUVhE2FaupKRVjAArUYFBXjXVB_7Gm6VIAlJMk05GIaS1OdZ9WClC5NyNSRo0dRzKllysO9GF_nvWi9AI9xdBgYd6QZiIHxXBGh9N3m9GnYN3QJ4_d3h-O5kq8efQWVjQuxY-43bugkB_AzUaTbBZyAzHh1LQmH7vZETjQe9zXZ7M2xx1NCUh2gdd_9C_xP4gOBpxMpB5XF76YN1Trr8BBnX5MwCN6XLbqlDxxuptmXIk=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+              "format": "openai-responses-v1",
+              "id": "rs_0b2653c3848841b4016abb4dd3e1f487d1bad68e75ae9d394a",
+              "index": 1
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 161,
+      "completion_tokens": 109,
+      "total_tokens": 270,
+      "cost": 0.001412,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.001412,
+        "upstream_inference_prompt_cost": 0.000322,
+        "upstream_inference_completions_cost": 0.00109
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 70,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "c0eb58d7bf8973425404c590aac069f57d7c3d72353f7ce63d66c6d924652c7d",
+  "recorded_at": "2026-09-29T05:34:12.718367+00:00",
+  "wall_seconds": 3.905548250011634
+}

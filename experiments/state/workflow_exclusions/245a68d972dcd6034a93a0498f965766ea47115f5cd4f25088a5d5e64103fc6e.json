@@ -1,0 +1,10 @@
+{
+  "scenario_id": "cw_hr01_onboarding",
+  "model": "anthropic/claude-opus-5.5",
+  "condition": "SCOPED",
+  "topology": "DYNAMIC",
+  "execution_round": 1,
+  "status": "provider_refusal",
+  "reason": "Previously recorded provider refusal: 050298252ae3a9cec734a8a8b8a97e608971473257326fcb032ab26d928f6e4e",
+  "treatment": "no fallback to original round; incomplete primary workflow"
+}

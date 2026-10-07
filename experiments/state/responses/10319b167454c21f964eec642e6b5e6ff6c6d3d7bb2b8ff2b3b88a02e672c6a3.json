@@ -1,0 +1,105 @@
+{
+  "request_id": "10319b167454c21f964eec642e6b5e6ff6c6d3d7bb2b8ff2b3b88a02e672c6a3",
+  "request_sha256": "021573c59910a20bf89ca60a5ac6ec4d379b0877924ffe77a3695c3d9ff32c64",
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a downstream WORKER agent. You will be given ONLY a handoff note from the coordinator. Using only that note, produce the requested internal record exactly and concisely. Do not invent fields."
+      },
+      {
+        "role": "user",
+        "content": "You are the scheduling agent. Using ONLY the handoff note below, write the booking record that will be saved to the shared clinic scheduling system.\n\nHANDOFF NOTE:\nREFERRAL HANDOFF: PHYSIOTHERAPY SCHEDULING\n\nReferral type: Post-surgical knee physiotherapy\nProcedure: Routine meniscus repair\nClinical status: Cleared for rehabilitation\nFrequency: Twice weekly\nDuration: Six weeks (12 sessions total)\nScheduling preference: Morning appointments\n\nAction requested: Book the first session in a morning slot. Set up the recurring twice-weekly schedule for the six-week course. Send the confirmed appointment details to the patient through their preferred contact method on file.\n\nNotes: This note includes only the information needed for scheduling. Pull the patient's identifiers and contact details from the secure referral record.\n\nReturn ONLY the record."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "anthropic"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 4.0,
+        "completion": 20.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "multihop",
+    "scenario_id": "cw_hc01_appointment",
+    "scenario_sha256": "ffc19eb935b1552e20a8827d2f75069e3959e9d04a8edf353a3246da18517722",
+    "condition": "SCOPED",
+    "topology": "CHAIN",
+    "repeat": 0,
+    "turn": "worker",
+    "parents": [
+      "8ccc8e0e6d3f455f1fd2c0c0b1f5c96215caf9c165f6a1a1054e0fce8e841049"
+    ]
+  },
+  "response": {
+    "id": "gen-1790262989-QMPuAkppwETtKXeT5uEx",
+    "object": "chat.completion",
+    "created": 1790262989,
+    "model": "anthropic/claude-opus-5.5",
+    "provider": "Anthropic",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "end_turn",
+        "message": {
+          "role": "assistant",
+          "content": "**BOOKING RECORD: PHYSIOTHERAPY SCHEDULING**\n\n| Field | Value |\n|---|---|\n| Referral type | Post-surgical knee physiotherapy |\n| Procedure | Routine meniscus repair |\n| Clinical status | Cleared for rehabilitation |\n| Frequency | Twice weekly |\n| Course duration | Six weeks |\n| Total sessions | 12 |\n| Time preference | Morning appointments |\n| Patient identifiers | PENDING: retrieve from secure referral record |\n| Patient contact method | PENDING: retrieve preferred method from secure referral record |\n| First session | PENDING: morning slot to be assigned |\n| Recurring schedule | PENDING: twice weekly for six weeks, morning slots, after first session is confirmed |\n| Patient confirmation | NOT SENT: requires confirmed appointment details and contact method from record |\n\n**Status:** Draft. The record is incomplete until the patient identifiers, contact method, and session dates and times are confirmed.",
+          "refusal": null,
+          "reasoning": "I should only use details actually present in the note and avoid inventing patient identifiers or dates — anything missing should be marked as pending from the secure referral record instead.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "I should only use details actually present in the note and avoid inventing patient identifiers or dates — anything missing should be marked as pending from the secure referral record instead.\n\n",
+              "format": "anthropic-claude-v1",
+              "index": 0,
+              "signature": "CAQSigYKEAgSGAI4AUIIdGhpbmtpbmcSDLwNHX8UeuQBR6wB/xoMyCJ9o5K+NAp2Tc19IjDx4bdKi7mpOUSPfINBzyOBYgei9QR7HJW4fR1Zb+Ai6pv/8wBYW2/JIIotmBtALM0qpwUPuqu7TW+FqANWH7yc7WZqYqf4lbiWFI2OUFJzxkTSaPj/FTyjrBi+H5azWZWl53Bz4PTWGewRnn30YZr4Yw+NIRQDyaXJNSvlSAgmXVFOuKi0con/07AqeZfkKCPgrGSAVU3VWU2Slak5Re9z0AgJ+5hm0rzN5lQfs0IRYMFxx76swCVYpYOTJymunGlzMu0O/bzPJ7YfL+Dh9DXEr9yiQr52OxfdHl2EB/sFE14xHyP1+kLAP3I+24Cs2e855jN286N0rHbkNyZmQE90Udh3xGCoESGzJC/BvQuugw1yDU8TtKvmMDX/M8kF+i/e1Ln83+i331Y7j30CPtx0Yj0wx+WQxmKgURY2NCSslKIfqtUSQk8cis8PJwip8TcID529xReXfo/ly11Rl9Vkr/ylnL4H2/dhBORsUeZBToqgE1bNCUEcsosSQUDGUTqkRnofo5v0dZU1fpRc/JQQ3HishLkGLEfYYmMZIB2a9Qfa1jUDdMtZ+2R7KKrydZCYW2RDtrRvffwzegoMdnSsm4WiT9wE3goikXZNTOyDQthcP2JUDjvnCaMBvf9Vi95w9p4QkwwPmlhLgnhOWy3sHjMI0khchrvF0ZOQyEGzQ7EBgCwu+n7ZY5eh3Pu8+lm9XOwTPcITaNkNRxB5DxfsBC6v2IA99070duXa2zFLzioOC1dJGdTOtxPziiPTL8ZWmYFHopo2zPTVj025CRCe07tvzyTYQSoGprHdK7mztgXYZqC1je7wvUhUEImiHR8eBRlEU9R49z00J45F+8UJlU+vBiFvooAI8Ch/h32w5PhG0Pmy/r913KYQHtAa7PBusUwK6H9kYjP4cEjsfYgHPjdoFQusNYC8B6hqcTSj+iu7JKMSmaqYF8yiem47eU2O6/fJJ8hPg8QKGAE="
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 381,
+      "completion_tokens": 411,
+      "total_tokens": 792,
+      "cost": 0.009744,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.009744,
+        "upstream_inference_prompt_cost": 0.001524,
+        "upstream_inference_completions_cost": 0.00822
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 61,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "c9e7015b88d057042250846def972d3227a32a49fd6722188cbbfdc39c24ee66",
+  "recorded_at": "2026-09-24T15:16:35.761275+00:00",
+  "wall_seconds": 6.477076624999999
+}

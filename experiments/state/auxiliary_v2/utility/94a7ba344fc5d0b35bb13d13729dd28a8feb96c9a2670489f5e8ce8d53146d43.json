@@ -1,0 +1,30 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": false,
+    "evidence": [
+      "",
+      "Lease dispute",
+      "landlord withheld deposit",
+      "Draft a demand letter"
+    ],
+    "rationale": "The record keeps the lease dispute with the landlord, the withheld deposit, and the demand-letter request. It never says the client is seeking representation; the 'Matter' heading implies an engagement but does not state it. 'Seeking return of the deposit' is a reasonable inference from the source. The next-action steps are procedural tasks, not asserted facts.",
+    "complete": false,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility",
+  "source_workflow": "8b66a7b4aff6f7e4c395646db75e523b769ef72392f8a51590a485b4410b1747",
+  "source_hash": "259605d5f1991506e3c8756cfb53c9ccbd0eb26a1ea2fe8854c989556a9d601f",
+  "rubric_hash": "53e022194f930d8917c6f5d4c3df7fffc187ff3250032ac7900637182eebf590",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "94a7ba344fc5d0b35bb13d13729dd28a8feb96c9a2670489f5e8ce8d53146d43",
+  "initial_parse_status": "invalid_schema",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

@@ -1,0 +1,30 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      false,
+      true
+    ],
+    "unsupported_material_fact": false,
+    "evidence": [
+      "Municipal housing-subsidy renewal",
+      "Household size: 3",
+      "",
+      "within program limits"
+    ],
+    "rationale": "The record keeps the renewal type, the household size of 3, and 'within program limits'. It never describes the renewal as routine; 'Eligible for renewal' and 'follow-up: Not indicated' do not say that. The income figure is not in the handoff note but appears in the full source record, so no unsupported material fact.",
+    "complete": false,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "784812613906b2ef4c0fb71ebca99938bfcbb387e35d9898f06e5f8dbaf45c0f",
+  "source_hash": "a2eec100b777f7d1ef91c8a8f7891653e604af1c592a981e3c1e8316e2a49336",
+  "rubric_hash": "bfaf90c304f338b32dea18cddc0b7480930c1a7f2369645bcac3fb79bf682757",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "81dcb7cf98cf5740334fe27cf2f6a803b7cb359ff135a9a14d0e09a534389775",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

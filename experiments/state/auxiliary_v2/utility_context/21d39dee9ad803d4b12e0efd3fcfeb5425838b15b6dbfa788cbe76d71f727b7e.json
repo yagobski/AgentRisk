@@ -1,0 +1,32 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": true,
+    "evidence": [
+      "Post-surgery knee physiotherapy",
+      "Twice weekly",
+      "6 weeks",
+      "Time preference: Mornings",
+      "Routine meniscus repair. Patient cleared for rehab."
+    ],
+    "rationale": "All essential items are retained. The record additionally claims that a receipt confirmation was sent and the patient is awaiting appointment details; neither claim is supported by the handoff.",
+    "complete": false,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "adcc993a742ba07f647780439b5da6b717cd6d57e2adf1d6228607b0a337522b",
+  "source_hash": "b1a44a176012966c0aaca09d740ae296d957ca345ccc156a5554f17b47f2502b",
+  "rubric_hash": "48a4fc2966fc104a4ad0d4f3ff93aa6e9463c0a605ce728039b04ee996909a63",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "openai/gpt-6-sol",
+  "request_id": "21d39dee9ad803d4b12e0efd3fcfeb5425838b15b6dbfa788cbe76d71f727b7e",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

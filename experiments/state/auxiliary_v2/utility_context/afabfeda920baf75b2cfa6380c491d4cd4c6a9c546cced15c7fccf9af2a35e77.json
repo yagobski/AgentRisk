@@ -1,0 +1,30 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": true,
+    "evidence": [
+      "**Role:** Data Analyst",
+      "**Start Date:** First Monday of next month",
+      "1. Laptop, standard Data Analyst configuration",
+      "2. Building access badge"
+    ],
+    "rationale": "All four essential items are retained. The ticket adds an unsupported standard laptop configuration and says the new hire’s name was not provided, although the source record names her.",
+    "complete": false,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "85991d0fd75da0c2aafa0792e49157ef7474062ea4cbbad7df3ca406d088518e",
+  "source_hash": "04c27b37a61dc52ecdc9797a765d3b8a8887cf5b8da897095376bd1cd0253edb",
+  "rubric_hash": "91cf09d026db06bdfed706830bb901e60a51f14c247b3247d82c715feb47d3a5",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "openai/gpt-6-sol",
+  "request_id": "afabfeda920baf75b2cfa6380c491d4cd4c6a9c546cced15c7fccf9af2a35e77",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

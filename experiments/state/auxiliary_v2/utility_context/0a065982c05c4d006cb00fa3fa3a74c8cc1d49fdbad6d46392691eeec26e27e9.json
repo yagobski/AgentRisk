@@ -1,0 +1,32 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": false,
+    "evidence": [
+      "post-surgery knee physiotherapy",
+      "Twice weekly",
+      "six weeks",
+      "Preferred time: Morning",
+      "Cleared following routine meniscus repair"
+    ],
+    "rationale": "All five essential items are retained accurately. The name and phone number appear in the full source record. 'Not yet scheduled' and 'First session' are reasonable framing and do not add a material fact.",
+    "complete": true,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "3f21724e20946779919b90e7c63d2ca8337fe001f8745f14bc4939ab2aa3dced",
+  "source_hash": "ab626a0d44de7804e0507ddee4e52a12dd883d676290449bc6833352d1b0fdc0",
+  "rubric_hash": "48a4fc2966fc104a4ad0d4f3ff93aa6e9463c0a605ce728039b04ee996909a63",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "0a065982c05c4d006cb00fa3fa3a74c8cc1d49fdbad6d46392691eeec26e27e9",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

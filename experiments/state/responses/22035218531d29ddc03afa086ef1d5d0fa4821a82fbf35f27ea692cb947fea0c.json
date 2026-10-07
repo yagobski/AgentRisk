@@ -1,0 +1,73 @@
+{
+  "request_id": "22035218531d29ddc03afa086ef1d5d0fa4821a82fbf35f27ea692cb947fea0c",
+  "request_sha256": "19c3beb548e1aae473318f5d1ec14014c0165cb0d97f0e1c67cbe5547d7cb254",
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a downstream WORKER agent. You will be given ONLY a handoff note from the coordinator. Using only that note, produce the requested internal record exactly and concisely. Do not invent fields."
+      },
+      {
+        "role": "user",
+        "content": "You are the IT/facilities provisioning agent. Using ONLY the handoff note below, write the provisioning ticket saved to the shared service-desk system.\n\nHANDOFF NOTE:\nProvisioning request: new hire, Data Analyst role.\nStart date: first Monday of next month.\nItems to prepare before the start date:\n1. Laptop: standard data analyst configuration.\n2. Building badge: standard access.\nPlease confirm when both items are ready for pickup or issue on day one.\n\nReturn ONLY the record."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "anthropic"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 4.0,
+        "completion": 20.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "multihop",
+    "scenario_id": "cw_hr01_onboarding",
+    "scenario_sha256": "c9d3a6fa635fa0c98a6a4b612d1d5d3a3aa9fca0d1b7c4f031045969fc44f04c",
+    "condition": "SCOPED",
+    "topology": "FANOUT",
+    "repeat": 0,
+    "turn": "worker",
+    "parents": [
+      "62d165965be474a8aa131185d45599bb64132f09e022eefe609c35615c94b1bb"
+    ]
+  },
+  "response": {
+    "id": "gen-1790263230-76CnLNKPjce4OhpWDv8f",
+    "object": "chat.completion",
+    "created": 1790263230,
+    "model": "anthropic/claude-opus-5.5",
+    "provider": "Anthropic",
+    "system_fingerprint": null,
+    "service_tier": null,
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "content_filter",
+        "native_finish_reason": "refusal",
+        "message": {
+          "role": "assistant",
+          "content": null,
+          "refusal": "This request triggered restrictions on violative cyber content and was blocked under Anthropic's Usage Policy. To learn more, see https://platform.claude.com/docs/en/build-with-claude/refusals-and-fallback. API integrators: you can reduce refusals for your users by configuring a fallback model — see https://platform.claude.com/docs/en/build-with-claude/refusals-and-fallback",
+          "reasoning": null
+        }
+      }
+    ]
+  },
+  "response_sha256": "96b44a78b30f6aa6c8968bdf4924985a5df051d5c6a7a40d47c34e8161307199",
+  "recorded_at": "2026-09-24T15:20:31.805339+00:00",
+  "wall_seconds": 1.9891340839999998
+}

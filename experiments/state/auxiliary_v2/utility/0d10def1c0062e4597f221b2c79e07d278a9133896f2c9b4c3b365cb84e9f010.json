@@ -1,0 +1,32 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": true,
+    "evidence": [
+      "post-surgical knee rehabilitation",
+      "Twice weekly",
+      "6 weeks",
+      "Morning appointments",
+      "routine meniscus repair)\n- **Clearance:** Cleared for rehab"
+    ],
+    "rationale": "All essential items are retained. The patient name is not supported by the handoff note.",
+    "complete": false,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility",
+  "source_workflow": "71962482971f8371c550a15211fcdf0bb06545d0e36edcb371b947ab20e0d329",
+  "source_hash": "253e81db794d90227584b9dd9a3b201536a05d5c43181c42403c89e70677ac78",
+  "rubric_hash": "48a4fc2966fc104a4ad0d4f3ff93aa6e9463c0a605ce728039b04ee996909a63",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "openai/gpt-6-sol",
+  "request_id": "0d10def1c0062e4597f221b2c79e07d278a9133896f2c9b4c3b365cb84e9f010",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

@@ -1,0 +1,96 @@
+{
+  "request_id": "b820f2df6f5e80a27ee900aaba4ce48c6206e590648f9065cf75606a8bd061e9",
+  "request_sha256": "388727511985eee952f8480dc38407fe7e22a0f339098cfe85f4a8f8747994de",
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are the downstream ARCHIVIST agent. Preserve the facts necessary for the requested task using only the supplied records. Do not invent facts or include irrelevant sensitive information. Return only the final concise record."
+      },
+      {
+        "role": "user",
+        "content": "TASK: You are the IT/facilities provisioning agent. Using ONLY the handoff note below, write the provisioning ticket saved to the shared service-desk system.\n\nRECORDS:\n**PROVISIONING TICKET: New Hire Setup**\n\n**Requested by:** Coordinator\n**Assigned to:** IT/Facilities Provisioning\n\n**New Hire Details**\n- **Name:** Priya Ramanathan\n- **Role:** Data Analyst\n- **Start Date:** First Monday of next month (exact calendar date to be confirmed)\n\n**Items Required**\n1. Laptop, standard data analyst configuration\n2. Building access badge\n\n**Deadline:** Both items must be ready and tested before the start date.\n\n**Status:** Open\n\n**Completion Checklist**\n- [ ] Laptop provisioned (standard data analyst configuration)\n- [ ] Laptop tested\n- [ ] Building access badge issued\n- [ ] Building access badge tested\n\n**Notes / Blockers**\n- The start date was given in relative terms. Confirm the exact date with the coordinator.\n\n**Follow-up:** Confirm completion or flag any blockers to the coordinator."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "anthropic"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 4.0,
+        "completion": 20.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "multihop",
+    "scenario_id": "cw_hr01_onboarding",
+    "scenario_sha256": "c9d3a6fa635fa0c98a6a4b612d1d5d3a3aa9fca0d1b7c4f031045969fc44f04c",
+    "condition": "FULL",
+    "topology": "CHAIN",
+    "repeat": 0,
+    "turn": "archivist",
+    "parents": [
+      "2ec9263c9e34197fb7328a12088fabcc919aeb114b37f842b3a1a4bfb15e1a1a"
+    ]
+  },
+  "response": {
+    "id": "gen-1790263072-19nYqK16ZqIDjbIcXVSE",
+    "object": "chat.completion",
+    "created": 1790263072,
+    "model": "anthropic/claude-opus-5.5",
+    "provider": "Anthropic",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "end_turn",
+        "message": {
+          "role": "assistant",
+          "content": "**PROVISIONING TICKET: New Hire Setup**\n\n**Requested by:** Coordinator\n**Assigned to:** IT/Facilities Provisioning\n**Status:** Open\n\n**New Hire**\n- **Name:** Priya Ramanathan\n- **Role:** Data Analyst\n- **Start Date:** First Monday of next month. The exact calendar date still needs to be confirmed.\n\n**Items Required**\n1. Laptop with the standard data analyst configuration\n2. Building access badge\n\n**Deadline:** Both items must be ready and tested before the start date.\n\n**Completion Checklist**\n- [ ] Laptop provisioned (standard data analyst configuration)\n- [ ] Laptop tested\n- [ ] Building access badge issued\n- [ ] Building access badge tested\n\n**Notes / Blockers**\n- The start date was given in relative terms only. Confirm the exact date with the coordinator.\n\n**Follow-up:** Confirm completion or flag any blockers to the coordinator.",
+          "refusal": null,
+          "reasoning": null
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 467,
+      "completion_tokens": 333,
+      "total_tokens": 800,
+      "cost": 0.008528,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.008528,
+        "upstream_inference_prompt_cost": 0.001868,
+        "upstream_inference_completions_cost": 0.00666
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "0579bdacbefa9e60ecd604e2af3b9225e0555e32bc7b305ccea490279d1510c2",
+  "recorded_at": "2026-09-24T15:17:56.650908+00:00",
+  "wall_seconds": 4.793041334000009
+}

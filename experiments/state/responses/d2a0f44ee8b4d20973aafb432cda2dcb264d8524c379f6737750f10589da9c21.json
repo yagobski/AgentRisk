@@ -1,0 +1,105 @@
+{
+  "request_id": "d2a0f44ee8b4d20973aafb432cda2dcb264d8524c379f6737750f10589da9c21",
+  "request_sha256": "5ed784cfffda837b95c46396a6f32c70177929d3d050f592069716ec6bbc4cd3",
+  "request": {
+    "model": "openai/gpt-6-sol",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a downstream WORKER agent. You will be given ONLY a handoff note from the coordinator. Using only that note, produce the requested internal record exactly and concisely. Do not invent fields."
+      },
+      {
+        "role": "user",
+        "content": "You are the IT/facilities provisioning agent. Using ONLY the handoff note below, write the provisioning ticket saved to the shared service-desk system.\n\nHANDOFF NOTE:\nNew data analyst starts Monday, June 1. Please prepare a laptop and building badge before the start date.\n\nReturn ONLY the record."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "openai"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 2.0,
+        "completion": 10.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "multihop",
+    "scenario_id": "cw_hr01_onboarding",
+    "scenario_sha256": "c9d3a6fa635fa0c98a6a4b612d1d5d3a3aa9fca0d1b7c4f031045969fc44f04c",
+    "condition": "SCOPED",
+    "topology": "FANOUT",
+    "repeat": 0,
+    "turn": "worker",
+    "parents": [
+      "a447eb5592e66e32a2c0167d4fc506537d290484eafb042748c70402a5e8664d"
+    ]
+  },
+  "response": {
+    "id": "gen-1790263094-Opj5IS2iY1meNqW8321H",
+    "object": "chat.completion",
+    "created": 1790263094,
+    "model": "openai/gpt-6-sol",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "Provisioning ticket\n\nRequest: Prepare a laptop and building badge for a new data analyst.\nDue: Before Monday, June 1.",
+          "refusal": null,
+          "reasoning": null,
+          "reasoning_details": [
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABqtT84IgUMzdfG98yh7WXWxOx7jJJiFtpCIKKwure3DQAen5KfggQl8KhtGI1Gszi_ZdV8OeUq9De9KsNX2pjNLHsTt105S9c2zpV0Ek1KQTaegv5U0z37tgjKm7XAzoy3AkIZ3vauL2Tqj5D--DbA0Abk9ep-v6IEbzJk7ZK-Tbc0aioc3OtLD4as7SSLiP95VYpDcHuWByvbmqBu5VlvANYkCmG7Lq65hO1qF--uLI6AF0RLJP_azr3OevakcnSQrrT8TC9JnONH9exiZZ4jTSELVIZWXOKyBI5rv7MSEjEjS3XbKpYRE7ghrfPiZ0T72frLfG_SenLcyMLYQkZ_L2kbHHvMSvBkoMQBieyXTEipiuyTX1IkzJZp-JH2pjGYx8qSw0t88K20xL2dxUUQInqEnVzUOrENLSGZtJqnTfjTc8zPgQlUGvb3nxXoANw3INherM8G0x4GLqSHn-usM5XhtkwegBs-eyS_BpRnrw0LulUhB7SLKL2cnBqWehMviYjz0OHaRbUau7tRwsPpuLpbnMPDWgIkgpFw5YezN2wOddHWlPglSR0ayQxtpZ9bSggS1nLv-AuD4gsDLVXkYE4GVoeQl_o1ME5GfqoOThd3MHPAfX4KzOWIHCELIoImjrWjKYj-omFHTXJxuM78dmTIk4GVQUgr1mvU3b6EiLFGgwuyLFLwae5_mgRTlqKTQzqd2jYxM_MWbyMxXpumzW2_Nbobwu35e3DGqVq4FcFwpaBLNDQ1PmoQzYZM79jOattcke-iTR3BoBZ_ImsbtgH9vtahLB7U4M0HxzJOHeOz6fTCL6YNCVxLcfXJtuHM-NndVafpD1P8WK56QNB9igiV067HAyBiNK2f-IB_Gyl7aXQ4nc-yLU6oNrXt4HJXUgv1EDz-TF-AUmsjFnlMq-06vUaD4Y0slHi4RejSeBQGlZQN6IaTUSWBoUu70Yap_CZLDCraFqpJ-yAbHzY4bioU3AHr7zo147fnCE9y5qdafE-SnluWjDMcG6cpjY5tozQOoNnHJL8WlRMos6qXFPhNdpG31NGwve71niuSPO7E78-OJbTM6eVo0mtKScYDlTRpb6fdrG67v6a24EhXA77i0hJYfpd_CB_JmIXR2QSwQVqvY_LV6jHVmru3UTs9wm6ZNiIpCzvrVViR9zHbLrT0KphRM3kuBuneBPlodAVFKMV433psxzy3cbZilMGz_YnDQFbjhe_gwNxznHAJrvxT65tP9Js7Q7bb6uuXb-c9Ebi7hNZZTnaeTShPyZEASfrOIAST6huL4VeksRzboZgwmwOAxh8_me0qDXzl9mvUaPOf2_H7zI0Zn25X9b3_Gbb3DZdKe8Iq09rU7cD0ngwdAbFD7ryVXhM0QgX53xPIzxM6frHgEH5qA25xfSb1v0n4oPGik_dlTHKQGBfcZTcMKg==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+              "format": "openai-responses-v1",
+              "id": "rs_018f8daa9a694293016ab53f37e3c887d19420a46327996a00",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 114,
+      "completion_tokens": 51,
+      "total_tokens": 165,
+      "cost": 0.000738,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000738,
+        "upstream_inference_prompt_cost": 0.000228,
+        "upstream_inference_completions_cost": 0.00051
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 18,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "22a4aa467a5a8d44e9de4e03aa57d3869e47ad0b9d7e3f8379d8218f7ce5d80c",
+  "recorded_at": "2026-09-24T15:18:16.810682+00:00",
+  "wall_seconds": 2.414074499999998
+}

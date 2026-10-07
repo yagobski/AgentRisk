@@ -1,0 +1,48 @@
+{
+  "openai/gpt-6-sol": {
+    "n": 108,
+    "cases": 36,
+    "repeats": [
+      0,
+      1,
+      2
+    ],
+    "RI": 0.02895871842267406,
+    "RI_case_bootstrap95": [
+      0.004478352367855314,
+      0.05804742697458609
+    ],
+    "WSL": 47,
+    "mass": 1623,
+    "binary_any": 13,
+    "exposed_secrets": 14,
+    "secret_opportunities": 540,
+    "cost": 0.146542,
+    "prompt_tokens": 24261,
+    "completion_tokens": 9802,
+    "median_request_seconds": 2.8108475625000153
+  },
+  "anthropic/claude-opus-5.5": {
+    "n": 108,
+    "cases": 36,
+    "repeats": [
+      0,
+      1,
+      2
+    ],
+    "RI": 0.02279728897104128,
+    "RI_case_bootstrap95": [
+      0.007233273056057866,
+      0.04220203418014909
+    ],
+    "WSL": 37,
+    "mass": 1623,
+    "binary_any": 14,
+    "exposed_secrets": 14,
+    "secret_opportunities": 540,
+    "cost": 0.9801639999999998,
+    "prompt_tokens": 40221,
+    "completion_tokens": 40964,
+    "median_request_seconds": 4.8599419375
+  }
+}

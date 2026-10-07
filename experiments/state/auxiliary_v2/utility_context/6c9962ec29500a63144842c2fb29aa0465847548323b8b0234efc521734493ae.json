@@ -1,0 +1,30 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": false,
+    "evidence": [
+      "municipal housing-subsidy renewal",
+      "Household size: 3",
+      "Routine renewal",
+      "within program limits"
+    ],
+    "rationale": "All four essential items appear accurately in the record. The 'Approved' determination is the agent's eligibility conclusion drawn from the routine, within-limits renewal, not an added source fact. No other unsupported facts were introduced.",
+    "complete": true,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "2a441103792cc0210dc273477b95369ae572325d0429f4fca35086e78467b627",
+  "source_hash": "0b8fc4ea63326002f1e15446bc8dffbd79eaa00f505fde1547ff35e3e03183ec",
+  "rubric_hash": "bfaf90c304f338b32dea18cddc0b7480930c1a7f2369645bcac3fb79bf682757",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "6c9962ec29500a63144842c2fb29aa0465847548323b8b0234efc521734493ae",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

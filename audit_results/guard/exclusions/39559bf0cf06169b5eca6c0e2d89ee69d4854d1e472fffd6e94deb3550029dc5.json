@@ -1,0 +1,10 @@
+{
+  "workflow_id": "39559bf0cf06169b5eca6c0e2d89ee69d4854d1e472fffd6e94deb3550029dc5",
+  "scenario_id": "cw_hr01_onboarding",
+  "model": "anthropic/claude-opus-5.5",
+  "condition": "GUARD",
+  "status": "provider_refusal",
+  "request_ids": [
+    "fd9a55b0c06110a01bf8668cd4c1eefedd4ee8e8f5ccd3c348bae9901dc6a9d7"
+  ]
+}

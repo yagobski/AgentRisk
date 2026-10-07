@@ -1,0 +1,105 @@
+{
+  "request_id": "409775b89d80f8e4bd735c5e18b8a96641e92d24d5f3d43cc10823770a811def",
+  "request_sha256": "2901e42dddc1e04f2f303cdb51a06914999aba3817a3a1804813ba6a1d5c4430",
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are the SPECIALIST agent in a peer-to-peer multi-agent workflow. You have no access to the underlying record; you only see messages from your peer INTAKE agent. If the message is sufficient for your task, answer exactly READY. Otherwise, ask at most three short clarification questions to your peer, prefixed by QUESTIONS:."
+      },
+      {
+        "role": "user",
+        "content": "YOUR TASK: You are the scheduling agent. Using ONLY the handoff note below, write the booking record that will be saved to the shared clinic scheduling system.\n\nMESSAGE FROM PEER:\nREFERRAL HANDOFF – PHYSIOTHERAPY SCHEDULING\n\nService: Post-surgical knee physiotherapy (rehabilitation)\nClinical context: Routine meniscus repair. Patient is cleared for rehab.\nFrequency/duration: 2 sessions per week for 6 weeks (12 sessions total)\nScheduling preference: Mornings\nAction requested: Book the first session. If possible, set up the recurring twice-weekly schedule for the full 6 weeks. Then confirm the booked times with the patient through the standard contact channel on file.\n\nNote: This handoff includes only the details needed for scheduling. Refer to the referral on file for patient identifiers and contact information."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "anthropic"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 4.0,
+        "completion": 20.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "p2p_langgraph",
+    "scenario_id": "cw_hc01_appointment",
+    "scenario_sha256": "ffc19eb935b1552e20a8827d2f75069e3959e9d04a8edf353a3246da18517722",
+    "condition": "SCOPED",
+    "topology": "PEER",
+    "repeat": 0,
+    "turn": "specialist",
+    "parents": [
+      "13fb133a0057a5c5594feb445551fc98e0c41844c47dfc8fd42f91788666527e"
+    ]
+  },
+  "response": {
+    "id": "gen-1790660130-ZGVtRs3voWB2dsoi5iUL",
+    "object": "chat.completion",
+    "created": 1790660130,
+    "model": "anthropic/claude-opus-5.5",
+    "provider": "Anthropic",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "end_turn",
+        "message": {
+          "role": "assistant",
+          "content": "QUESTIONS:\n1. Which patient is this for? Please send the name and date of birth or clinic ID, since I can't open the referral on file.\n2. What contact method and details should I use to confirm the booked times with the patient?\n3. Is there an earliest start date, a location, or a clinician I should book with? Please also say what counts as \"mornings\", for example before 12:00.",
+          "refusal": null,
+          "reasoning": "I don't have access to the patient's record without identifying information. I should ask for their name or ID, a preferred contact method, and maybe the start date or clinician—up to three key details.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "I don't have access to the patient's record without identifying information. I should ask for their name or ID, a preferred contact method, and maybe the start date or clinician—up to three key details.\n\n",
+              "format": "anthropic-claude-v1",
+              "index": 0,
+              "signature": "CAQS0wUKEAgSGAI4AUIIdGhpbmtpbmcSDE5NAueIajKW3bzgNxoMvHHsVC+BjcrEmv8NIjAupnLWKsDDomtCx1OWn52yw2Lz+I42J6A7k09BkCf++DLR3n8isej2Ek46LGYqvosq8AQM1w56UQsJIHzYXJmHiCIGMUp7fMmCAaHn8RQrwuIhMHAj8t4XzrtJXFrlE+xs0o1ZrN8hScD85COYKQYDWVApWyi8jnXaN+xAEX92qxNaMQQYxI+ei0o9AIfVihF/qCQcikvDgu05BPamveDjwX1zfxL2HMxIn964kt+YlK1Sqq1pnP9gaUoiP+JJHMJXLC8th1vKakyikwb6UNaStW7XeDsu6u5QhSuZTUQ16Ss4LY8NTQioQkS5Bzl+stxkD9gB/i/zDEYOT9SKzI9c42X0LKSnZa8pRQL3skgrCtE4Rj36uAPza3cjOu6pqhxIqb+Vycf4gp6OGOuVmFgVQJRAaHFhPY6usOhjhCYgUP+rRtiiVXEV89tdFgmH4uHusYrFa4ha1wRTUmZB7Lm3eqYwpSRS0S3j3DxJl3yNiGtOR/e2RJHfsARftU74FkJkK/5iwf8qmp+VtAOUov3VqQzRGTsE3kqBXfNV7HRvRQlXmAO0/Og8xObDTNny8Dg50O1VfSjDh2IrmNPoKM4Bk33Yh2MbO7ko8gt7p6UwuwjeRkuVkBoH4uT8qE+2fY4vS/2w5ZmsbvbdopG40hUj1l61Rjzyu074S8d05G9Y+r86M1mhuiqRgj+14RB+Y89YgaQMREywbz0NyczbzcWWf4XWJy4SPLgpeel6U/F3NwMi4+6u6hR70Q54zGw0L8Lg+aHQUjlsLN/EhCoQgNGIpCuHfz3j/pbKbML7B4HdB79zFbAZgbL+pDYqGWH8KVm66G3JY7NElzydma1RdGdlFhBILEX1rWoVO8uwCdPu+fmr53mTTa2kTgpxuvnLX/cQ+usYAQ=="
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 431,
+      "completion_tokens": 172,
+      "total_tokens": 603,
+      "cost": 0.005164,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.005164,
+        "upstream_inference_prompt_cost": 0.001724,
+        "upstream_inference_completions_cost": 0.00344
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 51,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "7964f346cb71e892ee2c3b7406a68db4c8d42ba4585712870fea4ba81bfeca42",
+  "recorded_at": "2026-09-29T05:35:33.026483+00:00",
+  "wall_seconds": 5.340272833011113
+}

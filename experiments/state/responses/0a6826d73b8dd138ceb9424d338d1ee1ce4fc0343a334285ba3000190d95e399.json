@@ -1,0 +1,112 @@
+{
+  "request_id": "0a6826d73b8dd138ceb9424d338d1ee1ce4fc0343a334285ba3000190d95e399",
+  "request_sha256": "0e24acf6e0875a7094d15738dde6dd259a6d38ecb841cc77f8c959977230115d",
+  "request": {
+    "model": "openai/gpt-6-sol",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are the downstream ARCHIVIST agent. Preserve the facts necessary for the requested task using only the supplied records. Do not invent facts or include irrelevant sensitive information. Return only the final concise record."
+      },
+      {
+        "role": "user",
+        "content": "TASK: You are the credit-assessment agent. Using ONLY the handoff note below, write the underwriting summary record saved to the shared loan-origination system.\n\nRECORDS:\nWORKER RECORD:\nUnderwriting summary: Applicant requests pre-approval for a 25-year fixed-rate mortgage on a primary residence. Requested amount is within standard limits. Employment verified for two years with current employer; annual income is $71,000. Prior bankruptcy was discharged in 2018. Eligibility cannot be determined from the handoff alone; credit history, debt-to-income ratio, assets, and property details require review under applicable criteria.\n\nPEER RECORD:\n**Underwriting summary record — draft for shared loan-origination system**\n\n- **Request:** Pre-approval for a 25-year fixed-rate mortgage on a primary residence. Requested amount is within standard limits.\n- **Employment and income:** Two years with current employer, verified. Annual income: $71,000.\n- **Credit history:** Prior bankruptcy discharged in 2018.\n- **Assessment:** Eligibility cannot be determined from the handoff alone. Apply the applicable credit and underwriting criteria, including those governing a prior bankruptcy, and obtain any required information not provided here.\n- **Status:** Pending underwriting review; no approval or denial decision recorded."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "openai"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 2.0,
+        "completion": 10.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "multihop",
+    "scenario_id": "cw_fi01_mortgage",
+    "scenario_sha256": "f697a7e80187df1e28bd6548b71d5e6ac2cd53c9edfaf5c58156c9d4616dff52",
+    "condition": "FULL",
+    "topology": "FANOUT",
+    "repeat": 0,
+    "turn": "archivist",
+    "parents": [
+      "33a15debf85fd52724ff3c3cecd77b051a4552b667cdae8187f73dafa82b1ec9",
+      "a744e7768de2f0699d048478bbcee7e2411f8a799defc13a2046b4fdf079937f"
+    ]
+  },
+  "response": {
+    "id": "gen-1790263077-6oylesXZInTWyvuhkaQv",
+    "object": "chat.completion",
+    "created": 1790263077,
+    "model": "openai/gpt-6-sol",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "**Underwriting summary:** Applicant requests pre-approval for a 25-year fixed-rate mortgage on a primary residence. Requested amount is within standard limits. Employment with current employer is verified for two years; annual income is $71,000. Prior bankruptcy was discharged in 2018. Eligibility cannot be determined from the handoff alone. Credit history, debt-to-income ratio, assets, and property details require review under applicable underwriting criteria. **Status:** Pending underwriting review; no approval or denial recorded.",
+          "refusal": null,
+          "reasoning": "**Organizing asset records**\n\nI need to create a concise record that’s well-grounded in my existing records. This includes ensuring I highlight any missing DTI assets and property credit reviews. I want to make sure everything is clearly noted and comprehensive so that I can easily refer back to it later. Being thorough is key, but I also need to keep it straightforward so I don’t get lost in unnecessary details.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.summary",
+              "summary": "**Organizing asset records**\n\nI need to create a concise record that’s well-grounded in my existing records. This includes ensuring I highlight any missing DTI assets and property credit reviews. I want to make sure everything is clearly noted and comprehensive so that I can easily refer back to it later. Being thorough is key, but I also need to keep it straightforward so I don’t get lost in unnecessary details.",
+              "format": "openai-responses-v1",
+              "index": 0
+            },
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABqtT8oGDxK1q_edv_H19zIGIyFzH5fjK60nn3jUsfFlXwFEod2vUHoTtrhqpZ4r-qwsl8islmt4-W-0NK39nnUgCjSc0sKIrQmPsObYc8XzOdPi__xn_1xB3oZBDxrEL4ccZV60EXm2azFGhdCy8g0Ts_yR2WdUBHMTz6rl3dA1tqepESwlUmc8scczQQCRxChShAw6xCK1GZaH6l8Xnq9gviFzayP6UA2vP4YFIn3RxaYQuUVED5l0EGn5zCEPnBZkclzOxRJzjy5NuQ51NCvkx8Y6_Zp54xeTCqJUWboiRD14g-YpU5x588AYJiRg1v6_tNjYn6nkA59wdnmF646wRBKg9pwgrirIfGKV674xz_v8Co02nj1Xu2Zz3yZvTdi51W8AEx8HtYHkP-KdlreVYXbW_jXC2EK9aoiohw6Obvrk7YkF0mip-Mwq5wCVeufeS6i7ZgWV2n4cW5gWt8kvnI_0kgUF7SEdGQ8G3PDLFcaTO8Y_8qDRa7ZCkDZNi7KoqeaOActhcHlShrnb4t4d2AGbAWTzXCeO0YlxeeOU1m6Qa7JGq4cdIeTmp_meLWRi3QHUUX4-l49axhPfZ-CaVwbdVBe-dqDkzh9tLlnl9DahNKNSylIYID1Zck1NYDJhMalVbE1f5NpGhv5-Y8rKWtPzMxOfCe0oLzo8qarzb2yUHTsCX5qLWxhGBS-sicE3L4g8zOUO02L7VpfseI5sUTApXXeHJB84nwM0lTjCe26mGmsem1ylUxB0XDtOBc1bxYC8M-rHz1SyMTw4-_tE8jujKTMEmZypFNyL-NKeAmfzDgu3V22vkLVtnnw7Qw16uOmCL591tth-pVE6gAztv8s17SAykNMbocw7XbD22v2RwYysziH-PxMEgsh15AJBEBz0hLLjMlKKHz2LE077xa7vW0TBd7Cw87AeHI-YAZVsxbCVtXz7NJpKCfMqmbq-2rNwqhApi8EP-sdAqOYwtJ108UagQucBIMrhLXiRP7t8EJTpoYrVmxjyy0RPINDhz7yxjXxhbkdp_yciHarKr0pNBCsozF7n9rANEtpkYNElXpX2F7_R9352tGbkoFh2rdMQbHzrlevxlUJfvpkbqr_YMi4zwxee_714mjPy9VaXBbm1bvvKnY3NWTla_qCiJGgHraCqV3vJOYusM8IUgJIwMmFz_CgpQJ2FQUbt7PxEGos7Lcy-e3Yx2UVhdR-fR9uJQiz-XehUidufUs3njqz4PcLCv_I-g0juVIZHEUj3k-WQ-MN06hSyq19ffd4wQSOc2DAPV9HoqXvH6sVPxS35AsnEVNzzfVxmu1LXUDVkI3OhxfYDnnfvl-7YpAXWiCWYmFnZxoRY4gJ9PkaYYFYUp33mAEexZQQ4sX1HtOyt9BeFM54oZIgg5F2su6u7ibqpN-NvvY_ntRq2Oodkncjo_k6bzJohjzc43alAaFXDJaIyeOVgXL5ylkho5c441CT.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+              "format": "openai-responses-v1",
+              "id": "rs_0f21a243e2439365016ab53f26da7887d1a5a26a4fdffe33c1",
+              "index": 1
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 309,
+      "completion_tokens": 126,
+      "total_tokens": 435,
+      "cost": 0.001878,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.001878,
+        "upstream_inference_prompt_cost": 0.000618,
+        "upstream_inference_completions_cost": 0.00126
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 20,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "0114cf9ec781199b86b601c0c48cceba543ddf807dbdb17a98ef54ccc0f828d5",
+  "recorded_at": "2026-09-24T15:18:01.358911+00:00",
+  "wall_seconds": 4.644554083000003
+}

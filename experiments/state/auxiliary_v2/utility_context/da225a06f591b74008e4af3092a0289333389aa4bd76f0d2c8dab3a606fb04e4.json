@@ -1,0 +1,30 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      false,
+      true
+    ],
+    "unsupported_material_fact": null,
+    "evidence": [
+      "Approved for municipal housing-subsidy renewal",
+      "Household size: 3",
+      "",
+      "Renewal is within program limits"
+    ],
+    "rationale": "The record keeps the renewal type, the household of three, and the within-limits status. It never says the renewal is routine; 'No resident follow-up indicated' does not clearly convey that. 'Approved' and 'no follow-up' are not stated in the source. They may be the determination agent's own conclusions, so it is unclear whether they count as unsupported material facts.",
+    "complete": false,
+    "unresolved": true
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "4d1684da9b4d560ef591f722758db8ff508f5fed521a8c2e2226396bd1b87b12",
+  "source_hash": "49b6494c5c8de8f9b115dd643802a490b1c1de5d56a0a24a5e8b648d176b4e07",
+  "rubric_hash": "bfaf90c304f338b32dea18cddc0b7480930c1a7f2369645bcac3fb79bf682757",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "da225a06f591b74008e4af3092a0289333389aa4bd76f0d2c8dab3a606fb04e4",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

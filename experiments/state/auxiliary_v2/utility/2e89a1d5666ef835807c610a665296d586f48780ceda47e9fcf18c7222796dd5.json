@@ -1,0 +1,32 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": true,
+    "evidence": [
+      "PRE-APPROVAL CREDIT ASSESSMENT",
+      "25-year fixed-rate mortgage",
+      "primary residence",
+      "Verified, 2 years with current employer",
+      "within standard limits."
+    ],
+    "rationale": "All essential items are retained. The record also adds unsupported material facts, including an applicant name, income, and bankruptcy history.",
+    "complete": false,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility",
+  "source_workflow": "411b093841e3686cb7301f8cec58b8ca89ec5abd48edc7dcfa00b7ecbaa59c71",
+  "source_hash": "9c5f2ccd180991e8e35f0ee7eed0c6f19a27c8517fb4eb82c15682df2ea8cf3a",
+  "rubric_hash": "d4cd61019cfb959f389908e870983c6caeb3e65f2d8cdeac9c071ed334dbb751",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "openai/gpt-6-sol",
+  "request_id": "2e89a1d5666ef835807c610a665296d586f48780ceda47e9fcf18c7222796dd5",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

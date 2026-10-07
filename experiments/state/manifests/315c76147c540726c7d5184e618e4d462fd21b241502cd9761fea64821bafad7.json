@@ -1,0 +1,2415 @@
+{
+  "campaign": "revision-20260924-v2",
+  "stage": "frontier",
+  "created_at": "2026-09-24T15:08:11.500603+00:00",
+  "config": {
+    "total_budget_usd": 45.0,
+    "stage_budgets_usd": {
+      "pilot": 1.0,
+      "frontier": 20.0,
+      "multihop": 16.0,
+      "judge": 8.0
+    },
+    "max_request_usd": 0.5,
+    "max_tokens": 4096,
+    "timeout_seconds": 180,
+    "temperature": null,
+    "reasoning_effort": "low",
+    "models": [
+      {
+        "id": "anthropic/claude-opus-5.5",
+        "provider": "anthropic",
+        "input_per_million": 4.0,
+        "output_per_million": 20.0,
+        "cache_write_per_million": 5.0
+      },
+      {
+        "id": "openai/gpt-6-sol",
+        "provider": "openai",
+        "input_per_million": 2.0,
+        "output_per_million": 10.0,
+        "cache_write_per_million": 2.5
+      }
+    ]
+  },
+  "requests": [
+    {
+      "id": "4361f748b5921722a7f3e03303bf404ce3a6c8c27cf47bf85f289eaa4cc08dcd",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_re01_buyer_pitch",
+        "scenario_sha256": "d9d37650243bb88d6b64b2199b73b25364cf6bae14f0161cd95be94871fab283",
+        "repeat": 2
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "96b420db0ca7d674bce8e965b02edce2e3f8f40e4d58308376206faca362aaf0",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_hc02_discharge_summary",
+        "scenario_sha256": "d0acf8a4f18f369dd765cbf683a369b05ae4941f18c1dda8c951021729322a9b",
+        "repeat": 1
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "fcb19fad7d2fb8b742c0e84234a45e0b05299c32ecb4e14caebe389e86d6a75a",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_re01_viewing_confirm",
+        "scenario_sha256": "477b693d227942d3342986b3bb101adf27b994f12c0a2357574d7924b382aade",
+        "repeat": 2
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "12efdb375231498e9247722178c0aa7d04c0c84560bc1fa0af705fd2c24212fb",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_ed02_scholarship_congrats",
+        "scenario_sha256": "8951a2b4356af5d079edf1493f356ed0e022eb34f2b71aa1e0082b8aa332bfd1",
+        "repeat": 2
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "cfff177ea0764f71cac6c8dc014f67a81a4243bcedabb1262aa624d3024b7f40",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_so01_birthday_post",
+        "scenario_sha256": "4d8c6def2f8346f8ee7c6fc51afea4a762cfafa0dbe2f74b2f9051d8207eb072",
+        "repeat": 0
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "5c40f8503fa165e74631cba98fa27d0b4c2a68f28c887fe70dc9d526e9251c11",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_le02_paralegal_brief",
+        "scenario_sha256": "d34a1897e5329a93e6990762d0b86b130fb0011942fc7ba7c0ea11ddb7569f1e",
+        "repeat": 1
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "11894fbc2fd01c81ff5ec0d5e23af086143771d84e56ba30e1c43743ee0abce9",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_tr02_itinerary_share",
+        "scenario_sha256": "20c0ddc73dad03688d278acf8b8620b83a89c0b92247fd5e5bcd281d19813c99",
+        "repeat": 0
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "f93ddac57cdf7f78780c73d6fb77f6462e5a022311b4df277c50ffc5e97f75a0",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_sh01_order_followup",
+        "scenario_sha256": "c953adc557434ab60db40f48ea37637c64e4bc9056f8a908f0cb49b77bf81e2d",
+        "repeat": 1
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "9ea260abba4c38fec96d951d65e8685c3a1a1faa0ae823d655f535760a49ccdd",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_sh01_order_followup",
+        "scenario_sha256": "c953adc557434ab60db40f48ea37637c64e4bc9056f8a908f0cb49b77bf81e2d",
+        "repeat": 0
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "48a4a0a82df8341d21d529f578097cd47aece9e399c52e4cb3eee0dbd0f2f4db",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_cs02_outage_apology",
+        "scenario_sha256": "15c09e906613ddfbcbe2196d7af7e4d89aeb881b47271c80cffb20704e516a81",
+        "repeat": 0
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "360444ecaea83b75d095a403087b879c24c6b7892186ec6ece3ae3f86ec72759",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_hc01_referral_handoff",
+        "scenario_sha256": "b2661bc1cb088afe35add9410a314fb9b40aa45c76513f8835871c1e29f2aaab",
+        "repeat": 0
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "43099e8cc7ec91693568a1c1819bec1202d64e67f2d3c0291c72e93ab9859456",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_re02_landlord_brief",
+        "scenario_sha256": "995c9cd61716b9fb7eb62791918f1a60bbdeb97c3306f298eea8e84806d19557",
+        "repeat": 0
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "41e04ab6f58845614754dd21064740284acb9beb5d4bba92dcc2e6677314d5b4",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_le02_paralegal_brief",
+        "scenario_sha256": "d34a1897e5329a93e6990762d0b86b130fb0011942fc7ba7c0ea11ddb7569f1e",
+        "repeat": 2
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "18089991838772ddc7ed453735fc804d357052e8a00c916f9e3ec99772c0c4a8",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_in02_renewal_notice",
+        "scenario_sha256": "dbd6a373872ac271ddd7e00329304add065f9f6f5be6f0874deb76b28860e0fd",
+        "repeat": 2
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "9ae78fee7d157288beff54707a87010a9dd8090f401b80762014b5a32b29cfac",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_re02_landlord_brief",
+        "scenario_sha256": "995c9cd61716b9fb7eb62791918f1a60bbdeb97c3306f298eea8e84806d19557",
+        "repeat": 2
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "a30af5ecbc5db593b1d8556f4f03f3f77a706cf5672c3a3dc641d80a4bd0ff7f",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_trv01_personalized_itinerary",
+        "scenario_sha256": "5f36fbcf22fa23fda55d320b25029d089e0c11d0fc939e93a4e8652d9ff006f2",
+        "repeat": 1
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "8892a2d40d926ac734d599f91653cd67b3be00f8617bc88a2ea8be0af7c582b1",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_ed01_tutor_handoff",
+        "scenario_sha256": "9ecee348266d45c169d92a719e887cbede62365051ac4d718a4ee3340cfbd444",
+        "repeat": 1
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "69e82e6b18957f2f7ed17b9fde851dc316501fd7f09176c32c7880e347937dd7",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_legal01_press_statement",
+        "scenario_sha256": "b1d158fb6045a3e5cbb378b1bc2fa913c2268828b64c1ca70e3868896e209116",
+        "repeat": 0
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "fe8727b80865f040958196b0c77e73ebbffabea4f423080601dcf8595a4d4352",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_legal01_press_statement",
+        "scenario_sha256": "b1d158fb6045a3e5cbb378b1bc2fa913c2268828b64c1ca70e3868896e209116",
+        "repeat": 1
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "190a32eb1b8d1c9ee0bdcf0b7643c9bf6afc9ba0b588838df330d0a32670a764",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_tr02_itinerary_share",
+        "scenario_sha256": "20c0ddc73dad03688d278acf8b8620b83a89c0b92247fd5e5bcd281d19813c99",
+        "repeat": 2
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "461be4f066f8bd41957557d57a887dab91a6d0820acfbfac7acc4cf7a8c96d9e",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_re01_buyer_pitch",
+        "scenario_sha256": "d9d37650243bb88d6b64b2199b73b25364cf6bae14f0161cd95be94871fab283",
+        "repeat": 1
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "5db92494e2e95e167d166c26d52a2a46bd1337577a68cd12f9d25edeb3e5ce9e",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_go02_benefits_confirm",
+        "scenario_sha256": "01f0a49b55cf370fbd7f527e5ac1747a4bf57afa48a32358a7a7a3154b4511cc",
+        "repeat": 1
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "6ff6154d694685095833bc0717ba9496318e5e9f3766bbc91b230c42130b6e40",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_go02_benefits_confirm",
+        "scenario_sha256": "01f0a49b55cf370fbd7f527e5ac1747a4bf57afa48a32358a7a7a3154b4511cc",
+        "repeat": 1
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "9709886000fccf9329e3c3e88d1c4480f83dd4571dcfa4e8f7892ba1502ef511",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_trv01_personalized_itinerary",
+        "scenario_sha256": "5f36fbcf22fa23fda55d320b25029d089e0c11d0fc939e93a4e8652d9ff006f2",
+        "repeat": 2
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "1dc04148af3f42be80e0874c3f1e761caa27396fa328bcde0e9ac9f21180e6db",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_soc01_recovery_blogpost",
+        "scenario_sha256": "1aeb57c8812aedf0c9b9592d1c4c8a97da84853ea507bdd088e55c4030275096",
+        "repeat": 2
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "df61f15059862502c2107b7daa9bcb36adc047dc33e25f1f1c9e4622519a8d9c",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_trv01_personalized_itinerary",
+        "scenario_sha256": "5f36fbcf22fa23fda55d320b25029d089e0c11d0fc939e93a4e8652d9ff006f2",
+        "repeat": 2
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "a82d5046a4a171d6ad90f67a304747db1a5a3e1b9b5c1ed22b9ef50e4119aa48",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_hr02_reference_letter",
+        "scenario_sha256": "330bafc1306401af8ab0cd53cf06b2bcea7fa32766db2e9fcea00242a4c59f5b",
+        "repeat": 0
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "702aeb27893cf8411f6794b070075d52a763abaae2592cb1b0d91c1e6e9a3a2b",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_handoff01_agent_transfer",
+        "scenario_sha256": "39aded7cf782fd67eff6dad7a52329635530f85f99aa416f0bdc73b7849e39b9",
+        "repeat": 0
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "280206d1d006359708b90207ecab09700960d53b94ecfe82ad6681b2bd0c5e22",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_tr01_visa_letter",
+        "scenario_sha256": "3be93fe1d9765b850c5148c2a075c7354074c6e3714b8368aeac241359491f1a",
+        "repeat": 2
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "60f1ba43f9983e3eae9ec63745cda58c1ee3e91f0333961ab5dac5e165606c14",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_le02_paralegal_brief",
+        "scenario_sha256": "d34a1897e5329a93e6990762d0b86b130fb0011942fc7ba7c0ea11ddb7569f1e",
+        "repeat": 0
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "16115091785279827793bba6927b8985ce78730cf2f73cee59a5e019a3e45bbb",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_hc01_empathetic_reminder",
+        "scenario_sha256": "6309e6e40008b2ad3ac41f3530eb5f36edc2a7cb38fb76a38eb1667fe918d5c6",
+        "repeat": 1
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "13925f6f879a4345daf8cb838b9e9e6f26c81a6ed8732cd22c2decb45ad10870",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_so01_birthday_post",
+        "scenario_sha256": "4d8c6def2f8346f8ee7c6fc51afea4a762cfafa0dbe2f74b2f9051d8207eb072",
+        "repeat": 2
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "bc4c7a064c509f5f6bb7f7c8fe57d54c84aa8ca05885cd3eb86f58f8a0636f91",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_go02_benefits_confirm",
+        "scenario_sha256": "01f0a49b55cf370fbd7f527e5ac1747a4bf57afa48a32358a7a7a3154b4511cc",
+        "repeat": 2
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "6a6a4eb79fd5d07d4b7acc577dbf7d61437b10dd80ab709acbc7c138f0e6f5aa",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_in01_claim_status",
+        "scenario_sha256": "b1efaeb4fb0fbada8ad8527d1f05a48fd5b1ce74ac6636b7d0b69ce0f20d00f6",
+        "repeat": 0
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "5e6ca7408c943a11a721e95dc8a049de93a22a6c42d205f9dd83b146017dd778",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_so02_volunteer_intro",
+        "scenario_sha256": "1c5f2231b8844c8674c03c02ceb5967412f3170ea0a9a595316b29a7f3d9afa4",
+        "repeat": 0
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "f7fd9ab5ea155d13ced4a28b3428e624de6ec7a964a16a06873d15ad3badda77",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_fi01_loan_decline_letter",
+        "scenario_sha256": "f306710d22798b7c1b54fb5ba741ca6337a826a988882c8b6758ebdc99407fab",
+        "repeat": 1
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "c35fbcad4aa9f7de8149f1032a2da331a3564d2be35eb0ca6295af71c15f8999",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_le01_settlement_email",
+        "scenario_sha256": "a5d8e6e9da6d5520f32f98f743b2435eb85037346f474b121bd8cc2b4eb3480f",
+        "repeat": 1
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "98493c159f89d255628d286cb48ee392ea3f57b634c4cb60b32b943c4142b886",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_re01_buyer_pitch",
+        "scenario_sha256": "d9d37650243bb88d6b64b2199b73b25364cf6bae14f0161cd95be94871fab283",
+        "repeat": 0
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "254df29a92cb97283febad45111ea78f11f5a1ef35619a93dfe712552422f087",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_ed02_scholarship_congrats",
+        "scenario_sha256": "8951a2b4356af5d079edf1493f356ed0e022eb34f2b71aa1e0082b8aa332bfd1",
+        "repeat": 0
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "d71e0e057129351bd012a54eaeb0fd6156e939ccaff033ecba456b144fac028d",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_fin01_collections_email",
+        "scenario_sha256": "5cf841ed16539e4245f07945dc556577d6617578196f27f7c56e5284cc2f97fe",
+        "repeat": 1
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "1fd5b06e5a0a0f240c6d5ab1df8d2d70a1f312bcbdd8a23a82bcdb4bf568dba3",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_gov01_benefit_letter",
+        "scenario_sha256": "dbadcda393a5424af38c56a8cbe0e60918b1a3014f565b4a35f878f8b11cb882",
+        "repeat": 0
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "df0bbeb4ecefafb92d2ac22c0be2796a2c1652fd70b2072a9c2450d52f39ef3e",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_go02_benefits_confirm",
+        "scenario_sha256": "01f0a49b55cf370fbd7f527e5ac1747a4bf57afa48a32358a7a7a3154b4511cc",
+        "repeat": 0
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "d07f1448c79b0c9be930a42fba8b5bed60f736ee0a050fbf5a7da5782eb9ffc4",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_hc02_discharge_summary",
+        "scenario_sha256": "d0acf8a4f18f369dd765cbf683a369b05ae4941f18c1dda8c951021729322a9b",
+        "repeat": 2
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "300bfbaf47bcac11057a41b688241280684a05c68b93c93724d0179e3981afc8",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_le01_settlement_email",
+        "scenario_sha256": "a5d8e6e9da6d5520f32f98f743b2435eb85037346f474b121bd8cc2b4eb3480f",
+        "repeat": 0
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "de8e2e4f1f6d76557be56028931ec7f5be38d386a4508774a29d2e3a2336f7b3",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_re01_viewing_confirm",
+        "scenario_sha256": "477b693d227942d3342986b3bb101adf27b994f12c0a2357574d7924b382aade",
+        "repeat": 0
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "432e33a6d1ce9ad42dfa1022dfaad79abc7ce17877345a4bc54374729810d2ac",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_go02_benefits_confirm",
+        "scenario_sha256": "01f0a49b55cf370fbd7f527e5ac1747a4bf57afa48a32358a7a7a3154b4511cc",
+        "repeat": 0
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "7ecf2cc60d7761d9a39502a05a785776a0587bd52358b9020cbc988d6daf46a8",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_go01_permit_approval",
+        "scenario_sha256": "9e7aac66b6b64da32c49f167839b6d32abeeef45d6e08134dddaf5f0a7ef8b6f",
+        "repeat": 2
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "abe76eeb27016c00661646b3f945952d01d44e79bb28afb484a26f7854548776",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_edu01_recommendation_letter",
+        "scenario_sha256": "8cfc52d9d742c0bbc908351724ee805c4abb513c8c314b0a76d7d67ac6b53291",
+        "repeat": 1
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "7148934a5812eeb9b0505cd0b7b459d06806f407d724cbab394bec715b627835",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_fi01_loan_decline_letter",
+        "scenario_sha256": "f306710d22798b7c1b54fb5ba741ca6337a826a988882c8b6758ebdc99407fab",
+        "repeat": 0
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "69a1f589b8c21dec8a85d033178f9241a9a95b710d6f25acbebd420e955b18d8",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_ed01_tutor_handoff",
+        "scenario_sha256": "9ecee348266d45c169d92a719e887cbede62365051ac4d718a4ee3340cfbd444",
+        "repeat": 0
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "f6f3d337f8a53c01495cc391efc0bc769d5876accbe6a1cf64fb556b5270aedc",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_ins01_claim_justification",
+        "scenario_sha256": "36f2a29d46e0e0c51b58f6b659e24801add71f62ebcf59e17024a8b1e87e9183",
+        "repeat": 2
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "63b3152881ecdc2dca3e9f5a747cdabb64389630d3777589436d05d9fe08ef0a",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_trv01_personalized_itinerary",
+        "scenario_sha256": "5f36fbcf22fa23fda55d320b25029d089e0c11d0fc939e93a4e8652d9ff006f2",
+        "repeat": 0
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "ab67dc01c975d0c326d5cf6039df49fcd730047fddb218217d8869bf0ff7415e",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_legal01_press_statement",
+        "scenario_sha256": "b1d158fb6045a3e5cbb378b1bc2fa913c2268828b64c1ca70e3868896e209116",
+        "repeat": 2
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "2afabd8002d2cd0f229bbf58a40153f33d95a35c060f1d51c3f502aa39a9de32",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_edu01_recommendation_letter",
+        "scenario_sha256": "8cfc52d9d742c0bbc908351724ee805c4abb513c8c314b0a76d7d67ac6b53291",
+        "repeat": 2
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "57fa18a2b8e855c34cd830fa37822a9c468346cbd1d5334086bf80f508e56c81",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_trv01_personalized_itinerary",
+        "scenario_sha256": "5f36fbcf22fa23fda55d320b25029d089e0c11d0fc939e93a4e8652d9ff006f2",
+        "repeat": 0
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "1f16b9063e8abafc6bb72d375134032c49df2c8b68b9509e163eeff8e29694a7",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_so02_volunteer_intro",
+        "scenario_sha256": "1c5f2231b8844c8674c03c02ceb5967412f3170ea0a9a595316b29a7f3d9afa4",
+        "repeat": 1
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "30521dc6b7d1ad898552dba7693e6bb24d07e0c34c912eeb9aea3dfad00dd0d2",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_hc02_discharge_summary",
+        "scenario_sha256": "d0acf8a4f18f369dd765cbf683a369b05ae4941f18c1dda8c951021729322a9b",
+        "repeat": 1
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "9d41d616f92f282c52d5c78ffc87aa7fbb44392d41d45e8b4143ddc2abaaf382",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_fi01_loan_decline_letter",
+        "scenario_sha256": "f306710d22798b7c1b54fb5ba741ca6337a826a988882c8b6758ebdc99407fab",
+        "repeat": 0
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "87ab1fba3f8208d36f6b16249894a8bf74d78f8e2afcb324b9e05c1301199486",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_in02_renewal_notice",
+        "scenario_sha256": "dbd6a373872ac271ddd7e00329304add065f9f6f5be6f0874deb76b28860e0fd",
+        "repeat": 0
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "7f244850e5d747ec5447a206a18cd8bd5dd6ab4d1404f4bcb8be47eb1682b56e",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_handoff01_agent_transfer",
+        "scenario_sha256": "39aded7cf782fd67eff6dad7a52329635530f85f99aa416f0bdc73b7849e39b9",
+        "repeat": 1
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "1c74b4ccdbcd300cee24d219e5466f5320428f0d3d9ee9a345893d28917eeb2c",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_in02_renewal_notice",
+        "scenario_sha256": "dbd6a373872ac271ddd7e00329304add065f9f6f5be6f0874deb76b28860e0fd",
+        "repeat": 1
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "dd22e2e926b81245c3878ca1ccfd743c09f2c76857876f13d77275118fb287bb",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_fi01_loan_decline_letter",
+        "scenario_sha256": "f306710d22798b7c1b54fb5ba741ca6337a826a988882c8b6758ebdc99407fab",
+        "repeat": 2
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "bcd86ca469afb6a8ed84c72a606688416aff75cccde76007f122b794bc52641f",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_cs01_public_forum_reply",
+        "scenario_sha256": "3b316290e16ea1e3d63cc88cf2aef8c9777a86f3c3bc9036cb257909ec14b7d6",
+        "repeat": 0
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "b56210fb7f62bb751b10e27ef040d05d4bd2b4d42f01c0d07fe9b093f93d384a",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_cs01_refund_escalation",
+        "scenario_sha256": "70f7aa151ddb51f034f869e1e6a090933770103e18960919e74f99a665f8182b",
+        "repeat": 0
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "b044a1521b37fd7bfff53df2b18eabc43b8bbae82a3027f91a71b837a2a48afa",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_hc01_referral_handoff",
+        "scenario_sha256": "b2661bc1cb088afe35add9410a314fb9b40aa45c76513f8835871c1e29f2aaab",
+        "repeat": 1
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "56fa93cb1921f6cfa55b92ca9c81786cccefdbc4be4ab3e3e05737ee110da9d5",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_fin01_collections_email",
+        "scenario_sha256": "5cf841ed16539e4245f07945dc556577d6617578196f27f7c56e5284cc2f97fe",
+        "repeat": 2
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "8b5e7ef900bb1c1a8ed8995f439591de1d835efe28ab718a8fdc28e6705dec8b",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_re01_buyer_pitch",
+        "scenario_sha256": "d9d37650243bb88d6b64b2199b73b25364cf6bae14f0161cd95be94871fab283",
+        "repeat": 2
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "6035f61a26fbc40c89fce080843f25fb6c9d9da1d4bc656679397c35425a5213",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_sh01_order_followup",
+        "scenario_sha256": "c953adc557434ab60db40f48ea37637c64e4bc9056f8a908f0cb49b77bf81e2d",
+        "repeat": 2
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "f472578aedc06bfd5d9dbb1a925cbae8fffe3200ce3815a91945045b23ade46b",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_fi01_loan_decline_letter",
+        "scenario_sha256": "f306710d22798b7c1b54fb5ba741ca6337a826a988882c8b6758ebdc99407fab",
+        "repeat": 2
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "306ed11680459637c23b4b1947fb802fee34d3475c16f8c3bee8b258426fea59",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_hr01_promotion_announce",
+        "scenario_sha256": "c2a00f8a5110abc8c4931e953ae1cfe1fecb2a6d1787601808c5ec97369b2cb4",
+        "repeat": 2
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "b409cd557b16d13b540d6529ee2cfdc1dbdb04e78ecbeb7d62fba09e10e78217",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_so01_birthday_post",
+        "scenario_sha256": "4d8c6def2f8346f8ee7c6fc51afea4a762cfafa0dbe2f74b2f9051d8207eb072",
+        "repeat": 2
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "8eb9c8469b72834adc8d40a5f3e2dff5e96fb079c425ac2d457fd093c9df4eae",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_hc01_empathetic_reminder",
+        "scenario_sha256": "6309e6e40008b2ad3ac41f3530eb5f36edc2a7cb38fb76a38eb1667fe918d5c6",
+        "repeat": 0
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "9af854201446acf83d012219abce778786984d04805dd605c19c0b09f5809687",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_fi02_advisor_handoff",
+        "scenario_sha256": "09894d9a1b499e9827c7a866bdbc90f630d6cd68080472097b1ef4e73772744e",
+        "repeat": 1
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "3120dbce0469f394e0dbe8e65f3ee9dfe3e5fb52d78af99b3389253e9d186196",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_so02_volunteer_intro",
+        "scenario_sha256": "1c5f2231b8844c8674c03c02ceb5967412f3170ea0a9a595316b29a7f3d9afa4",
+        "repeat": 2
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "6d5b0b6d437536d6e8b45afb93fc50dc6d2ffbd199e1e68f76dc91597f36b136",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_hr01_team_intro",
+        "scenario_sha256": "850a3d0362b9ecbc08a0671c192ef19d17348dad6e72b3d3e1a39afbc7fbe8ef",
+        "repeat": 2
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "9b0d07ad685a9c8ee9e8f4b938d9cca597baee962c1e9da74311374e6a46f4fc",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_in01_claim_status",
+        "scenario_sha256": "b1efaeb4fb0fbada8ad8527d1f05a48fd5b1ce74ac6636b7d0b69ce0f20d00f6",
+        "repeat": 2
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "a23c63b178c55b9aec30ac55dc1cb140a9b0ab02421e1367680c005246229441",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_fin01_collections_email",
+        "scenario_sha256": "5cf841ed16539e4245f07945dc556577d6617578196f27f7c56e5284cc2f97fe",
+        "repeat": 0
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "e8f4c68c3e6117892c294bd456191d2e56ba043b5800ed3f2423369973fc50ec",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_cs02_outage_apology",
+        "scenario_sha256": "15c09e906613ddfbcbe2196d7af7e4d89aeb881b47271c80cffb20704e516a81",
+        "repeat": 1
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "6562532a111003714e90d60454c7a6e85d7daa702599dd52ace80d43af3b2127",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_hc01_referral_handoff",
+        "scenario_sha256": "b2661bc1cb088afe35add9410a314fb9b40aa45c76513f8835871c1e29f2aaab",
+        "repeat": 0
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "1fc56a51652ece181d769a5c30d5f90e4d76dc9d3534809fa275bab198fca748",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_go02_benefits_confirm",
+        "scenario_sha256": "01f0a49b55cf370fbd7f527e5ac1747a4bf57afa48a32358a7a7a3154b4511cc",
+        "repeat": 2
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "6f6c88d3c9c416e92aa22a3ffb4b69ce1b18393a0533d04bea1ea81fe6a21769",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_hr01_promotion_announce",
+        "scenario_sha256": "c2a00f8a5110abc8c4931e953ae1cfe1fecb2a6d1787601808c5ec97369b2cb4",
+        "repeat": 0
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "5ef2edc10ac739cac0e3346726e4015dc61d22e98694e5e431c071bb17603704",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_ins01_claim_justification",
+        "scenario_sha256": "36f2a29d46e0e0c51b58f6b659e24801add71f62ebcf59e17024a8b1e87e9183",
+        "repeat": 1
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "8c4c6c0498ab96a14e5b1a78e98bc465a731c645cc27a804ace9a58168e73246",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_hc01_empathetic_reminder",
+        "scenario_sha256": "6309e6e40008b2ad3ac41f3530eb5f36edc2a7cb38fb76a38eb1667fe918d5c6",
+        "repeat": 2
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "5dd75ce28ab84a957e356b09f5b66ffc0663a9a50e49c6db65ae391dfbd50260",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_fin01_collections_email",
+        "scenario_sha256": "5cf841ed16539e4245f07945dc556577d6617578196f27f7c56e5284cc2f97fe",
+        "repeat": 0
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "97494edd091cf642f9b66141541686b34b2493ce775028c64f56cb74d29ac1c4",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_hc02_discharge_summary",
+        "scenario_sha256": "d0acf8a4f18f369dd765cbf683a369b05ae4941f18c1dda8c951021729322a9b",
+        "repeat": 2
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "86c3aa60004377569cb142a0bfd10ae5aa38d2bd55a1759e11a0aca201391543",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_handoff01_agent_transfer",
+        "scenario_sha256": "39aded7cf782fd67eff6dad7a52329635530f85f99aa416f0bdc73b7849e39b9",
+        "repeat": 2
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "a4ea546ed951338d528172fc4c5fa12b0c4d6a341317b3de2eb1d13ab986068f",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_cs01_public_forum_reply",
+        "scenario_sha256": "3b316290e16ea1e3d63cc88cf2aef8c9777a86f3c3bc9036cb257909ec14b7d6",
+        "repeat": 2
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "9181e25085f2c10da57c91ff8aa93681a0bd319cce4a2c4cbd1d57e985d8a4fc",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_hr01_team_intro",
+        "scenario_sha256": "850a3d0362b9ecbc08a0671c192ef19d17348dad6e72b3d3e1a39afbc7fbe8ef",
+        "repeat": 2
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "2d8f049b918ccd5e52cdf5d348740be7909ca13f6af02512a0acda6fae01b7f3",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_hr01_team_intro",
+        "scenario_sha256": "850a3d0362b9ecbc08a0671c192ef19d17348dad6e72b3d3e1a39afbc7fbe8ef",
+        "repeat": 1
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "7be0326f7e4ecddb655b87ff1a26ff14bafc24f2ce2eb79b267ececfa3a9cedd",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_le02_paralegal_brief",
+        "scenario_sha256": "d34a1897e5329a93e6990762d0b86b130fb0011942fc7ba7c0ea11ddb7569f1e",
+        "repeat": 0
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "112f38bff903b770855fd9b687e090789a82c0785e7b79357884ef001488e872",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_sh01_order_followup",
+        "scenario_sha256": "c953adc557434ab60db40f48ea37637c64e4bc9056f8a908f0cb49b77bf81e2d",
+        "repeat": 2
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "460f94716cac68c04fa615aa94766d2bfc4114c25ed242876334822bdbb6ccac",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_legal01_press_statement",
+        "scenario_sha256": "b1d158fb6045a3e5cbb378b1bc2fa913c2268828b64c1ca70e3868896e209116",
+        "repeat": 1
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "9195047dca2fcda1ca8519029eb06bb0ca6814ac2fbdcd78cf3d979452d57c7c",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_edu01_recommendation_letter",
+        "scenario_sha256": "8cfc52d9d742c0bbc908351724ee805c4abb513c8c314b0a76d7d67ac6b53291",
+        "repeat": 2
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "8cfd92135ad2585eb284fdb0e34b44ab9c95b9eca649ebb735233696739fb94a",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_cs02_outage_apology",
+        "scenario_sha256": "15c09e906613ddfbcbe2196d7af7e4d89aeb881b47271c80cffb20704e516a81",
+        "repeat": 1
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "890eda21ab247ae4cc126720e49d1768f690ad1a153a08dccb091fa5db20342f",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_soc01_recovery_blogpost",
+        "scenario_sha256": "1aeb57c8812aedf0c9b9592d1c4c8a97da84853ea507bdd088e55c4030275096",
+        "repeat": 0
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "3113201e913e6f2d098383d330f5a0f57d8d8b2cdc20f1684d8344a607359fd5",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_gov01_benefit_letter",
+        "scenario_sha256": "dbadcda393a5424af38c56a8cbe0e60918b1a3014f565b4a35f878f8b11cb882",
+        "repeat": 0
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "9b78c8c16e0a70f90c847ef8d21a64edbaeff1478c33ded018a30d370f5aef28",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_le02_paralegal_brief",
+        "scenario_sha256": "d34a1897e5329a93e6990762d0b86b130fb0011942fc7ba7c0ea11ddb7569f1e",
+        "repeat": 2
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "72f5eb747060ced5ea780465e8363b75fcf9e84802a278edea78da7fd42bb90d",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_hr02_reference_letter",
+        "scenario_sha256": "330bafc1306401af8ab0cd53cf06b2bcea7fa32766db2e9fcea00242a4c59f5b",
+        "repeat": 2
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "4ca0d286b008904fdd89ff383dd38cc7191c8c8b213960cd14cb6343fd3c7951",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_in01_claim_status",
+        "scenario_sha256": "b1efaeb4fb0fbada8ad8527d1f05a48fd5b1ce74ac6636b7d0b69ce0f20d00f6",
+        "repeat": 2
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "ce996d37926008405d74c9c1222a4ff11b2d49cf282613651216a4dfb6b5ce82",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_le01_settlement_email",
+        "scenario_sha256": "a5d8e6e9da6d5520f32f98f743b2435eb85037346f474b121bd8cc2b4eb3480f",
+        "repeat": 2
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "b004cf1805f6971894b1a8ab0b4e19522fe70311e0efca71840255a223de6b75",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_le01_settlement_email",
+        "scenario_sha256": "a5d8e6e9da6d5520f32f98f743b2435eb85037346f474b121bd8cc2b4eb3480f",
+        "repeat": 2
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "0299a15d54ab6a6836795308d68447b0f2df05dcf1af62d5022e977dbed9090c",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_hc02_discharge_summary",
+        "scenario_sha256": "d0acf8a4f18f369dd765cbf683a369b05ae4941f18c1dda8c951021729322a9b",
+        "repeat": 0
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "97814aa8bb2f9218f5247b1b7599bbf0d24b9981fc35f55a9f3be6b043c00120",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_cs01_refund_escalation",
+        "scenario_sha256": "70f7aa151ddb51f034f869e1e6a090933770103e18960919e74f99a665f8182b",
+        "repeat": 1
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "0152134a62bfb5da6c27f4b111068a41c0510e0c60edcd87d5f1025c62e4efcd",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_fi02_advisor_handoff",
+        "scenario_sha256": "09894d9a1b499e9827c7a866bdbc90f630d6cd68080472097b1ef4e73772744e",
+        "repeat": 2
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "a73f8d116c90a8c3c6bbc593591aaf4fbcc367382f962f7e05f05add8f077028",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_edu01_recommendation_letter",
+        "scenario_sha256": "8cfc52d9d742c0bbc908351724ee805c4abb513c8c314b0a76d7d67ac6b53291",
+        "repeat": 1
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "880a7908bf9a2fffb75da2ad6dc1c4f9ced1f7fd2278d80e21e9fa8ae4a69a8b",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_hr01_team_intro",
+        "scenario_sha256": "850a3d0362b9ecbc08a0671c192ef19d17348dad6e72b3d3e1a39afbc7fbe8ef",
+        "repeat": 0
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "77ea1054fb1b48eda9c5fcf7e6dd1a3908afcf433cb73330fe1fcc2ec84316db",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_re01_viewing_confirm",
+        "scenario_sha256": "477b693d227942d3342986b3bb101adf27b994f12c0a2357574d7924b382aade",
+        "repeat": 1
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "935872fb2c5979d3e448b0591cc326b2b016ff07d77f8f1d4f48bfbad5e86dc4",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_sh02_warranty_claim",
+        "scenario_sha256": "15fec2c201f7265446027570c36e3afbe132298663d05c0ffec498c6c0b1f2ef",
+        "repeat": 2
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "04b9de136407f570e73054e625b60ad1e8ae49bdba3e3032bc457ad6120defe6",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_tr02_itinerary_share",
+        "scenario_sha256": "20c0ddc73dad03688d278acf8b8620b83a89c0b92247fd5e5bcd281d19813c99",
+        "repeat": 2
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "34166405b12281ee274ded7313a6fb52ed8c3f75403f22ea03648cc490bd3b18",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_hc01_empathetic_reminder",
+        "scenario_sha256": "6309e6e40008b2ad3ac41f3530eb5f36edc2a7cb38fb76a38eb1667fe918d5c6",
+        "repeat": 0
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "16eb5ae5b87a0ae0cc26a5f0402cf328c8c5406b991a88c5e6fab237f4710004",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_tr01_visa_letter",
+        "scenario_sha256": "3be93fe1d9765b850c5148c2a075c7354074c6e3714b8368aeac241359491f1a",
+        "repeat": 0
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "41f7948dfbe18a27b57edba255f46ce67d9d11f5ad968178d24df09221467807",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_in02_renewal_notice",
+        "scenario_sha256": "dbd6a373872ac271ddd7e00329304add065f9f6f5be6f0874deb76b28860e0fd",
+        "repeat": 0
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "14927f0dad00dd732c4fc910fd3673f22ea59a9bb171950f407a6c654c0b9f06",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_cs02_outage_apology",
+        "scenario_sha256": "15c09e906613ddfbcbe2196d7af7e4d89aeb881b47271c80cffb20704e516a81",
+        "repeat": 0
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "3545664fffbb8fa742ec49c17226aa1441b006087a21b5f3f6cd1e0fdfee19e6",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_cs02_outage_apology",
+        "scenario_sha256": "15c09e906613ddfbcbe2196d7af7e4d89aeb881b47271c80cffb20704e516a81",
+        "repeat": 2
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "00346d3ee4005a80b4fef3279606df8aee0c0ffdfebe4bc70dd861f466d0cf34",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_trv01_personalized_itinerary",
+        "scenario_sha256": "5f36fbcf22fa23fda55d320b25029d089e0c11d0fc939e93a4e8652d9ff006f2",
+        "repeat": 1
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "760dbd9875dc19acebf6f8ed224e0ff0bd6923c52e6567f18169366f348f1a54",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_re02_landlord_brief",
+        "scenario_sha256": "995c9cd61716b9fb7eb62791918f1a60bbdeb97c3306f298eea8e84806d19557",
+        "repeat": 1
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "909b0d5357e50d200a048db0591fc2cb23edea936ac5e466c0d87f60681e130b",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_re02_landlord_brief",
+        "scenario_sha256": "995c9cd61716b9fb7eb62791918f1a60bbdeb97c3306f298eea8e84806d19557",
+        "repeat": 1
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "7b6c6c38623a2156945f2d40bf62baf0c73a12d44ea23afd1234352ed18d1c9d",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_ed01_tutor_handoff",
+        "scenario_sha256": "9ecee348266d45c169d92a719e887cbede62365051ac4d718a4ee3340cfbd444",
+        "repeat": 0
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "d44c53170553d4e90df3141b163a985481c99df6e1043a9a41e5dc1f96f279c7",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_in02_renewal_notice",
+        "scenario_sha256": "dbd6a373872ac271ddd7e00329304add065f9f6f5be6f0874deb76b28860e0fd",
+        "repeat": 2
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "90767a35c50aa93389d7cbdb94e4207c3d8993036c89cd06cc4cce8d62e517d7",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_fi02_advisor_handoff",
+        "scenario_sha256": "09894d9a1b499e9827c7a866bdbc90f630d6cd68080472097b1ef4e73772744e",
+        "repeat": 0
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "a8d7d24c2f947714e4059b966c9110f1f76b32907148edf66be517ad82aa66f4",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_re01_buyer_pitch",
+        "scenario_sha256": "d9d37650243bb88d6b64b2199b73b25364cf6bae14f0161cd95be94871fab283",
+        "repeat": 1
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "60a3289686fb2ec9ed2014c7e436a2ac07a85a66d4dac0ea711c60ebbd37012a",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_handoff01_agent_transfer",
+        "scenario_sha256": "39aded7cf782fd67eff6dad7a52329635530f85f99aa416f0bdc73b7849e39b9",
+        "repeat": 1
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "84704eb452d482f655cf6151a6edea3393b4da4e6d65b03f4511cc123bcc80b4",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_fi02_advisor_handoff",
+        "scenario_sha256": "09894d9a1b499e9827c7a866bdbc90f630d6cd68080472097b1ef4e73772744e",
+        "repeat": 1
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "13d6d9760f1cc0fa2bbdfe1daf29c3c6783fa580a31dc83741b173d8fb6aab08",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_hr01_team_intro",
+        "scenario_sha256": "850a3d0362b9ecbc08a0671c192ef19d17348dad6e72b3d3e1a39afbc7fbe8ef",
+        "repeat": 0
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "32daae259bbedd656ef9b0ade031377fc0512216b6215d26eb307e6e0efe0b25",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_ins01_claim_justification",
+        "scenario_sha256": "36f2a29d46e0e0c51b58f6b659e24801add71f62ebcf59e17024a8b1e87e9183",
+        "repeat": 0
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "8979f5d27f44b1c10ccb335847423e7cc5366007682bc05794aa3bbb9c5cb7a2",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_hc01_empathetic_reminder",
+        "scenario_sha256": "6309e6e40008b2ad3ac41f3530eb5f36edc2a7cb38fb76a38eb1667fe918d5c6",
+        "repeat": 1
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "d158f8b65b732ec58852f1e0a9fd37e0e607b122cfbf31beaa512fdd8764ea07",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_tr01_visa_letter",
+        "scenario_sha256": "3be93fe1d9765b850c5148c2a075c7354074c6e3714b8368aeac241359491f1a",
+        "repeat": 1
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "5f966caabb17979f1c6708bdfd9acfbacf53c516834f9f0e912c9a6525efc230",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_soc01_recovery_blogpost",
+        "scenario_sha256": "1aeb57c8812aedf0c9b9592d1c4c8a97da84853ea507bdd088e55c4030275096",
+        "repeat": 1
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "48505dcfafb5ef02367185bdc6a9fe1dce3e5b3e62495167db187a01dbcc7cf0",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_edu01_recommendation_letter",
+        "scenario_sha256": "8cfc52d9d742c0bbc908351724ee805c4abb513c8c314b0a76d7d67ac6b53291",
+        "repeat": 0
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "a4ebd1e76e785747cf4120c9d7d074f9cb2a246b131507e1c2958e53b7ce604a",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_cs01_public_forum_reply",
+        "scenario_sha256": "3b316290e16ea1e3d63cc88cf2aef8c9777a86f3c3bc9036cb257909ec14b7d6",
+        "repeat": 1
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "2995c2f208abab826c0206d693b2580514634ecb095d8c186925b5a71f3f462c",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_hr01_promotion_announce",
+        "scenario_sha256": "c2a00f8a5110abc8c4931e953ae1cfe1fecb2a6d1787601808c5ec97369b2cb4",
+        "repeat": 2
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "b1afd712cfa4efac09eab34c4bb6835a7713e4d140bb6876c783c44d3d8ff109",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_so01_birthday_post",
+        "scenario_sha256": "4d8c6def2f8346f8ee7c6fc51afea4a762cfafa0dbe2f74b2f9051d8207eb072",
+        "repeat": 1
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "e24e865f8e5c06961b1f8f898c8c8128ccd72ee7b3bc2ebeaf8edc123b1a9026",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_so02_volunteer_intro",
+        "scenario_sha256": "1c5f2231b8844c8674c03c02ceb5967412f3170ea0a9a595316b29a7f3d9afa4",
+        "repeat": 0
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "e2d930c21fefda890b8384159f89dc7fdb3dafcbf07689e4b05e60cea6ac987b",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_handoff01_agent_transfer",
+        "scenario_sha256": "39aded7cf782fd67eff6dad7a52329635530f85f99aa416f0bdc73b7849e39b9",
+        "repeat": 2
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "59aff7dcd88ed3f4d83788f98feb5d80e8e7582118117c9269766b8e3caf1d57",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_gov01_benefit_letter",
+        "scenario_sha256": "dbadcda393a5424af38c56a8cbe0e60918b1a3014f565b4a35f878f8b11cb882",
+        "repeat": 1
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "04e5bbbe345eb2bb15a1274b5619da6212b671609e4db1d4dd8d81678b593500",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_hc01_referral_handoff",
+        "scenario_sha256": "b2661bc1cb088afe35add9410a314fb9b40aa45c76513f8835871c1e29f2aaab",
+        "repeat": 1
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "ced305a0b64c442897ab29f09d8b1694d3612d7caf77b4a869021022fccddd5e",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_cs01_refund_escalation",
+        "scenario_sha256": "70f7aa151ddb51f034f869e1e6a090933770103e18960919e74f99a665f8182b",
+        "repeat": 0
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "19fa259bb65f5cbae2644f32d19d3fb7bc4de169f5cc924b4c25653e978e8b44",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_hr01_promotion_announce",
+        "scenario_sha256": "c2a00f8a5110abc8c4931e953ae1cfe1fecb2a6d1787601808c5ec97369b2cb4",
+        "repeat": 1
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "b85f443bece72032ef39527437d3ef7dd0126d1735f2f367aae6d1d845450fd1",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_soc01_recovery_blogpost",
+        "scenario_sha256": "1aeb57c8812aedf0c9b9592d1c4c8a97da84853ea507bdd088e55c4030275096",
+        "repeat": 1
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "fcc98a34a28500df1128d0641726c467e99e5514ece5d5f618dd0d0ac3bfca4e",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_sh02_warranty_claim",
+        "scenario_sha256": "15fec2c201f7265446027570c36e3afbe132298663d05c0ffec498c6c0b1f2ef",
+        "repeat": 2
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "0a803758b02c9fea8114196d9fc7c763c3d1d5126e03e99ca727054f82800ef3",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_soc01_recovery_blogpost",
+        "scenario_sha256": "1aeb57c8812aedf0c9b9592d1c4c8a97da84853ea507bdd088e55c4030275096",
+        "repeat": 0
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "e15ac02a1843efc5d26af77503a0c98c45eb6fa50945c54cfbb9c1d0bed18e25",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_hr02_reference_letter",
+        "scenario_sha256": "330bafc1306401af8ab0cd53cf06b2bcea7fa32766db2e9fcea00242a4c59f5b",
+        "repeat": 0
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "472ef388c59a2a0338923d07af414bdea341b5354df3de11013c7d18af1dc68d",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_cs01_refund_escalation",
+        "scenario_sha256": "70f7aa151ddb51f034f869e1e6a090933770103e18960919e74f99a665f8182b",
+        "repeat": 2
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "e9e86e8442603567d3894373dc446a2e484b3e9ef68f0dec7775c1d8961c1b62",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_hr01_promotion_announce",
+        "scenario_sha256": "c2a00f8a5110abc8c4931e953ae1cfe1fecb2a6d1787601808c5ec97369b2cb4",
+        "repeat": 0
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "5348c88d04fa272bcd21677322450a490b014f4c44053f9f2975950a9de9ff7d",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_hc02_discharge_summary",
+        "scenario_sha256": "d0acf8a4f18f369dd765cbf683a369b05ae4941f18c1dda8c951021729322a9b",
+        "repeat": 0
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "d0a27b273505e8c5f6f1d37d8829cea6b977ecc67a41b02a2c6d371de5934d25",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_hr02_reference_letter",
+        "scenario_sha256": "330bafc1306401af8ab0cd53cf06b2bcea7fa32766db2e9fcea00242a4c59f5b",
+        "repeat": 1
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "f617b6cb76172d084a8fb2623980b87cecbb1e1f2ea0f26cc83fc5e482905636",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_ins01_claim_justification",
+        "scenario_sha256": "36f2a29d46e0e0c51b58f6b659e24801add71f62ebcf59e17024a8b1e87e9183",
+        "repeat": 1
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "c93605cff42f589c1ea554dce5f3d6113a54080476ffe75886010e9e9cb45aaa",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_go01_permit_approval",
+        "scenario_sha256": "9e7aac66b6b64da32c49f167839b6d32abeeef45d6e08134dddaf5f0a7ef8b6f",
+        "repeat": 0
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "2717b14148838f4abe72ae3b2c942466a3f14aac3547bab46be0ec3c513f171a",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_so01_birthday_post",
+        "scenario_sha256": "4d8c6def2f8346f8ee7c6fc51afea4a762cfafa0dbe2f74b2f9051d8207eb072",
+        "repeat": 1
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "abcd6f0063bc0afe2c8646a80cc1dbf8fef42f305e7028ae713583604f699c60",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_handoff01_agent_transfer",
+        "scenario_sha256": "39aded7cf782fd67eff6dad7a52329635530f85f99aa416f0bdc73b7849e39b9",
+        "repeat": 0
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "14bad4f46db8f4836f39831c6fa7e4e8097f3c0fc561cc6c4cf9a41b0744fe0b",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_gov01_benefit_letter",
+        "scenario_sha256": "dbadcda393a5424af38c56a8cbe0e60918b1a3014f565b4a35f878f8b11cb882",
+        "repeat": 2
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "56c06687a3ac7487545b69e44930c0f3e4c68f6ebd7ac25a40546fa462d441cd",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_re01_viewing_confirm",
+        "scenario_sha256": "477b693d227942d3342986b3bb101adf27b994f12c0a2357574d7924b382aade",
+        "repeat": 0
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "2e88e510c18b6a081bcf1bff8f295f2143fb22481b8921f4881f7bb2d8fb8996",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_go01_permit_approval",
+        "scenario_sha256": "9e7aac66b6b64da32c49f167839b6d32abeeef45d6e08134dddaf5f0a7ef8b6f",
+        "repeat": 1
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "2962dfa96538eb61cf4ebb778ea91580b7addc9ff77157902b5d5d1ccb0bd958",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_hr02_reference_letter",
+        "scenario_sha256": "330bafc1306401af8ab0cd53cf06b2bcea7fa32766db2e9fcea00242a4c59f5b",
+        "repeat": 1
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "44f8e47814bff75eea05fe0ed9af1cf22cc23379ca28beb9dc6f7894c5146e8c",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_ins01_claim_justification",
+        "scenario_sha256": "36f2a29d46e0e0c51b58f6b659e24801add71f62ebcf59e17024a8b1e87e9183",
+        "repeat": 2
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "575c0c9050c5ab80c99a5c89c181935f0f6376f0a6aeff825daa75d7a4eb6cc7",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_re01_viewing_confirm",
+        "scenario_sha256": "477b693d227942d3342986b3bb101adf27b994f12c0a2357574d7924b382aade",
+        "repeat": 1
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "6cbbe89fdaf707629fe6f1b5cad2e7a5d6c68b3b150b938a68947861517f44de",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_in01_claim_status",
+        "scenario_sha256": "b1efaeb4fb0fbada8ad8527d1f05a48fd5b1ce74ac6636b7d0b69ce0f20d00f6",
+        "repeat": 1
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "535917ef90ea97d971ac5b22f61f8a98cb3b12a7e54ddb4a0aed1f46b803045f",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_in01_claim_status",
+        "scenario_sha256": "b1efaeb4fb0fbada8ad8527d1f05a48fd5b1ce74ac6636b7d0b69ce0f20d00f6",
+        "repeat": 0
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "e09dbbb680b52c5b0303397e80ea766693ac5fcc689984170d6ca9c30da05248",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_hc01_referral_handoff",
+        "scenario_sha256": "b2661bc1cb088afe35add9410a314fb9b40aa45c76513f8835871c1e29f2aaab",
+        "repeat": 2
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "921e186776a78c7bf4851f67b354bfb53b63adb36c8042101655977aedbbb37d",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_fi02_advisor_handoff",
+        "scenario_sha256": "09894d9a1b499e9827c7a866bdbc90f630d6cd68080472097b1ef4e73772744e",
+        "repeat": 2
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "1ba39b5c6d6e93c4a961475d82d43d1f80184489b50aee2e888e83913db2888f",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_fi02_advisor_handoff",
+        "scenario_sha256": "09894d9a1b499e9827c7a866bdbc90f630d6cd68080472097b1ef4e73772744e",
+        "repeat": 0
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "f2f0301c6b4e72715a508bcd3151312ad66d568c8d520b1d481b4f4b88f2941b",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_hr01_promotion_announce",
+        "scenario_sha256": "c2a00f8a5110abc8c4931e953ae1cfe1fecb2a6d1787601808c5ec97369b2cb4",
+        "repeat": 1
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "0291909d20db5de351d06a1d0905bdaad247d2f0c77eb8a86090bf52efb19df7",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_fin01_collections_email",
+        "scenario_sha256": "5cf841ed16539e4245f07945dc556577d6617578196f27f7c56e5284cc2f97fe",
+        "repeat": 2
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "49e92bbc404f31df3aaf93e9b3081226d2861c625d7ecce1d281c84ed0ff3b8c",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_fi01_loan_decline_letter",
+        "scenario_sha256": "f306710d22798b7c1b54fb5ba741ca6337a826a988882c8b6758ebdc99407fab",
+        "repeat": 1
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "d501e12498ac907aa83df2b57d7598f981619f9cfb68530eb3beae9b6a40c7e0",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_sh01_order_followup",
+        "scenario_sha256": "c953adc557434ab60db40f48ea37637c64e4bc9056f8a908f0cb49b77bf81e2d",
+        "repeat": 1
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "196d9328be512417e904b6302bb082d7bd700eb93feaea0ac0a2c122d6257ab8",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_ed02_scholarship_congrats",
+        "scenario_sha256": "8951a2b4356af5d079edf1493f356ed0e022eb34f2b71aa1e0082b8aa332bfd1",
+        "repeat": 0
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "65666a6372a4da3165a2a6477ec6b5ea84cc8ae46df6493ca0f7799b48da2d80",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_sh02_warranty_claim",
+        "scenario_sha256": "15fec2c201f7265446027570c36e3afbe132298663d05c0ffec498c6c0b1f2ef",
+        "repeat": 1
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "5d8c797bf9b02fe96f5e6a77f300598ab487c69a189f6d1867f7f5d4f64acf78",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_ed01_tutor_handoff",
+        "scenario_sha256": "9ecee348266d45c169d92a719e887cbede62365051ac4d718a4ee3340cfbd444",
+        "repeat": 2
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "a0016f0fad0a34c5762b0b5c57c6a3f102900c48f4387b6182fe12bbbd777418",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_sh02_warranty_claim",
+        "scenario_sha256": "15fec2c201f7265446027570c36e3afbe132298663d05c0ffec498c6c0b1f2ef",
+        "repeat": 0
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "c801fa1d43407e012f92dbf07aed36f1b80428bb52cd7977443fbf5376e89a01",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_ed02_scholarship_congrats",
+        "scenario_sha256": "8951a2b4356af5d079edf1493f356ed0e022eb34f2b71aa1e0082b8aa332bfd1",
+        "repeat": 1
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "abcb2fdb4d4bf392598e743840767e03a15867b596fd64eb74aa19cd37a9fc96",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_le02_paralegal_brief",
+        "scenario_sha256": "d34a1897e5329a93e6990762d0b86b130fb0011942fc7ba7c0ea11ddb7569f1e",
+        "repeat": 1
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "2eee17a4996c7255dfc74ed27f3e3c9f13fc19755092ce312e9d681ab0c48759",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_ed02_scholarship_congrats",
+        "scenario_sha256": "8951a2b4356af5d079edf1493f356ed0e022eb34f2b71aa1e0082b8aa332bfd1",
+        "repeat": 1
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "1686099b9f23888f0ae1bee377a95fc69da0a5e6270ac8e9ef3542dcdffe8112",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_in01_claim_status",
+        "scenario_sha256": "b1efaeb4fb0fbada8ad8527d1f05a48fd5b1ce74ac6636b7d0b69ce0f20d00f6",
+        "repeat": 1
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "ecf34c720a1b9aca05a6ea0b11448e4f5c88f58057aa17273369814856eeb186",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_so02_volunteer_intro",
+        "scenario_sha256": "1c5f2231b8844c8674c03c02ceb5967412f3170ea0a9a595316b29a7f3d9afa4",
+        "repeat": 1
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "ff0c448dba92aa705bab94d824360b85af9935dad6b46bdd55d9fb33cee010ba",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_legal01_press_statement",
+        "scenario_sha256": "b1d158fb6045a3e5cbb378b1bc2fa913c2268828b64c1ca70e3868896e209116",
+        "repeat": 2
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "a4cb8dcbf6cd7564afc647265da01771f3027034bde9845712e75b4054755955",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_go01_permit_approval",
+        "scenario_sha256": "9e7aac66b6b64da32c49f167839b6d32abeeef45d6e08134dddaf5f0a7ef8b6f",
+        "repeat": 1
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "99da407a617851ddf27ec86b7c16cb9a2b511d9801438856638f8deb01ff442f",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_go01_permit_approval",
+        "scenario_sha256": "9e7aac66b6b64da32c49f167839b6d32abeeef45d6e08134dddaf5f0a7ef8b6f",
+        "repeat": 0
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "c61505facb66cd552d2300d2c796d6ff47547d7c59909b0d770a832d3ce21790",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_in02_renewal_notice",
+        "scenario_sha256": "dbd6a373872ac271ddd7e00329304add065f9f6f5be6f0874deb76b28860e0fd",
+        "repeat": 1
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "a2db44954cad6b91aa8846db9813ee42c313ca7b7e20d5e8e66d5e53d1ce3759",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_tr01_visa_letter",
+        "scenario_sha256": "3be93fe1d9765b850c5148c2a075c7354074c6e3714b8368aeac241359491f1a",
+        "repeat": 0
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "2c0f588b30e95dcb610b7785b7bc93a92fbed81c43ebe25bb79ef943a1d75579",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_re01_buyer_pitch",
+        "scenario_sha256": "d9d37650243bb88d6b64b2199b73b25364cf6bae14f0161cd95be94871fab283",
+        "repeat": 0
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "9cf64464beae3d35f9d0e2024b813bb0e0f3cdba15ea308ee319402e8795771d",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_fin01_collections_email",
+        "scenario_sha256": "5cf841ed16539e4245f07945dc556577d6617578196f27f7c56e5284cc2f97fe",
+        "repeat": 1
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "005f573c132f0b0e6ff6bf0f746011903b7c21e7384dd8d3331c1844e251a942",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_cs01_refund_escalation",
+        "scenario_sha256": "70f7aa151ddb51f034f869e1e6a090933770103e18960919e74f99a665f8182b",
+        "repeat": 1
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "acea65f77a7cc274fa292262a3481e1225a4b9422f7ef99d624e2f162f0c9197",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_re02_landlord_brief",
+        "scenario_sha256": "995c9cd61716b9fb7eb62791918f1a60bbdeb97c3306f298eea8e84806d19557",
+        "repeat": 2
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "ef6875381f1335bb6f276841d6a290892822f1c8cd42255401020210829c4eb0",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_soc01_recovery_blogpost",
+        "scenario_sha256": "1aeb57c8812aedf0c9b9592d1c4c8a97da84853ea507bdd088e55c4030275096",
+        "repeat": 2
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "576bbe8f7658ea3765b1e3b1ba461aff6c642c728d1d5ce7773cbed98cbd28ff",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_cs01_public_forum_reply",
+        "scenario_sha256": "3b316290e16ea1e3d63cc88cf2aef8c9777a86f3c3bc9036cb257909ec14b7d6",
+        "repeat": 0
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "7a46e342275db79f781643dbf5574f36b2d6455586db77d251168a04af9c546c",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_legal01_press_statement",
+        "scenario_sha256": "b1d158fb6045a3e5cbb378b1bc2fa913c2268828b64c1ca70e3868896e209116",
+        "repeat": 0
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "da58ca696e1fed8d45376d52643d32e718e4c3125f7f947416d11011e908f66b",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_sh01_order_followup",
+        "scenario_sha256": "c953adc557434ab60db40f48ea37637c64e4bc9056f8a908f0cb49b77bf81e2d",
+        "repeat": 0
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "f2c6b9d1b168174fb74404a3477a4e27e9297764ec9de2e81d923d3ecf0f4f9f",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_so01_birthday_post",
+        "scenario_sha256": "4d8c6def2f8346f8ee7c6fc51afea4a762cfafa0dbe2f74b2f9051d8207eb072",
+        "repeat": 0
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "4785bfe4c6b627d1fb32fe6c9a3ede29fc9703d02ccf124e690e16fc742ef7c5",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_tr02_itinerary_share",
+        "scenario_sha256": "20c0ddc73dad03688d278acf8b8620b83a89c0b92247fd5e5bcd281d19813c99",
+        "repeat": 0
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "7c6059491a8d4458c1daf7bcbdd3dc99c6d09e1ca8b64369550f6803b269190f",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_re01_viewing_confirm",
+        "scenario_sha256": "477b693d227942d3342986b3bb101adf27b994f12c0a2357574d7924b382aade",
+        "repeat": 2
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "15b8b9ec6c17326707f7465a4f68f887e0fdfd82395a04f38426637ee4589eda",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_ed01_tutor_handoff",
+        "scenario_sha256": "9ecee348266d45c169d92a719e887cbede62365051ac4d718a4ee3340cfbd444",
+        "repeat": 2
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "4036d68c686d73d0184d4d778724fea4a629b95bcd5e435fc7c1977cd93eaacb",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_re02_landlord_brief",
+        "scenario_sha256": "995c9cd61716b9fb7eb62791918f1a60bbdeb97c3306f298eea8e84806d19557",
+        "repeat": 0
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "0ed1e0ab1a34e5241e116ee4de2562c9e1c7e9c9afc55de98245016a713c6c77",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_tr02_itinerary_share",
+        "scenario_sha256": "20c0ddc73dad03688d278acf8b8620b83a89c0b92247fd5e5bcd281d19813c99",
+        "repeat": 1
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "7b2fa1c4620944844b49482c389deb68a632f9f8d2c8b26fa138d231c1080b0c",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_so02_volunteer_intro",
+        "scenario_sha256": "1c5f2231b8844c8674c03c02ceb5967412f3170ea0a9a595316b29a7f3d9afa4",
+        "repeat": 2
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "e6dfc3e376a9d4e6f9828776bc6348894e3cbd74bc6174c2789a4de04c7f0fcf",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_gov01_benefit_letter",
+        "scenario_sha256": "dbadcda393a5424af38c56a8cbe0e60918b1a3014f565b4a35f878f8b11cb882",
+        "repeat": 1
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "50ad2896d41ade5b8b14d956aa9c1c0b9c9a87d1b73189a1c27cfb3d7d335704",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_hr01_team_intro",
+        "scenario_sha256": "850a3d0362b9ecbc08a0671c192ef19d17348dad6e72b3d3e1a39afbc7fbe8ef",
+        "repeat": 1
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "6007186a13df1435f87ffbd3e4d38110e73f2eef217e822e51e0050558b01c69",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_tr01_visa_letter",
+        "scenario_sha256": "3be93fe1d9765b850c5148c2a075c7354074c6e3714b8368aeac241359491f1a",
+        "repeat": 1
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "4ab7b7623e94473545870775dc7ebe3255424b804c45a89716d26c37a894b844",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_cs01_refund_escalation",
+        "scenario_sha256": "70f7aa151ddb51f034f869e1e6a090933770103e18960919e74f99a665f8182b",
+        "repeat": 2
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "b13bdb0819df68fbd2c360562999af796051e77e5311f06a5b707cd27de0ac10",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_ed01_tutor_handoff",
+        "scenario_sha256": "9ecee348266d45c169d92a719e887cbede62365051ac4d718a4ee3340cfbd444",
+        "repeat": 1
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "f750a4bc8377482cac25c02a7cc9ea261ba133da5753e1821bb9a8f0ed33719c",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_cs01_public_forum_reply",
+        "scenario_sha256": "3b316290e16ea1e3d63cc88cf2aef8c9777a86f3c3bc9036cb257909ec14b7d6",
+        "repeat": 2
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "3af1aa0539ca52b477abbeea9354bbb53080ae26157a625010bcf0570a1dfb45",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_cs02_outage_apology",
+        "scenario_sha256": "15c09e906613ddfbcbe2196d7af7e4d89aeb881b47271c80cffb20704e516a81",
+        "repeat": 2
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "fe3ad9da88cfe3a18bbb5c1a9ae28b359c3fd5b170262cf1e61f3b07aa8b7228",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_cs01_public_forum_reply",
+        "scenario_sha256": "3b316290e16ea1e3d63cc88cf2aef8c9777a86f3c3bc9036cb257909ec14b7d6",
+        "repeat": 1
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "a10eba9d9c4e4f1eac899855692c91aeb715586d8889ce6e8c6d0a7b14d4ca68",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_sh02_warranty_claim",
+        "scenario_sha256": "15fec2c201f7265446027570c36e3afbe132298663d05c0ffec498c6c0b1f2ef",
+        "repeat": 0
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "82bdd8a4933ea308daa9659f34c5e991caae56885eadc7d57609eaeb3aa7f805",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_le01_settlement_email",
+        "scenario_sha256": "a5d8e6e9da6d5520f32f98f743b2435eb85037346f474b121bd8cc2b4eb3480f",
+        "repeat": 1
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "a824d3534687351c7384d73f80a1ddb58cc1a2bcf4e28d1ca7ad0a767ae245ca",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_edu01_recommendation_letter",
+        "scenario_sha256": "8cfc52d9d742c0bbc908351724ee805c4abb513c8c314b0a76d7d67ac6b53291",
+        "repeat": 0
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "0deeb507d906933f671c8486bd85096a8ee21dbfc614ed15ba3ff8b106fe437c",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_ed02_scholarship_congrats",
+        "scenario_sha256": "8951a2b4356af5d079edf1493f356ed0e022eb34f2b71aa1e0082b8aa332bfd1",
+        "repeat": 2
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "2056fefb0fef761d05b2ee03e12cae4135b10d2a5a5f04042ac0dd93fe3ae978",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_go01_permit_approval",
+        "scenario_sha256": "9e7aac66b6b64da32c49f167839b6d32abeeef45d6e08134dddaf5f0a7ef8b6f",
+        "repeat": 2
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "a16f280c71df3f2a70b0453880d53d0df406283ba49faed312176db85b79bf67",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_hc01_empathetic_reminder",
+        "scenario_sha256": "6309e6e40008b2ad3ac41f3530eb5f36edc2a7cb38fb76a38eb1667fe918d5c6",
+        "repeat": 2
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "f05cfeee1c17e5a7af9c3eaf48035b9e30409b1bb8eb85f9e3425a33227d4c53",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_sh02_warranty_claim",
+        "scenario_sha256": "15fec2c201f7265446027570c36e3afbe132298663d05c0ffec498c6c0b1f2ef",
+        "repeat": 1
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "f6a7d258bd5be238d1587c868a04dea7a5cad9aeba352ce257cd6305e2a614b3",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_le01_settlement_email",
+        "scenario_sha256": "a5d8e6e9da6d5520f32f98f743b2435eb85037346f474b121bd8cc2b4eb3480f",
+        "repeat": 0
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "3506c2ab547351766c95b78598cf3f693d8b831970320c9fbaa9be376b13eff6",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_hr02_reference_letter",
+        "scenario_sha256": "330bafc1306401af8ab0cd53cf06b2bcea7fa32766db2e9fcea00242a4c59f5b",
+        "repeat": 2
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "0f927cd5fa91771ace3fc91f67c646f6cce3a6c57ab7497c44f7b434b61b76a8",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_gov01_benefit_letter",
+        "scenario_sha256": "dbadcda393a5424af38c56a8cbe0e60918b1a3014f565b4a35f878f8b11cb882",
+        "repeat": 2
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "e7278b189caf98409449cf4cf6ae4911d5cb43103e142e3be1b5f427def625c3",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_tr02_itinerary_share",
+        "scenario_sha256": "20c0ddc73dad03688d278acf8b8620b83a89c0b92247fd5e5bcd281d19813c99",
+        "repeat": 1
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "fcc718195a2ead873f8f142beabfa0b4da430ef8e65f6cf01529f11f091eb9a8",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_hc01_referral_handoff",
+        "scenario_sha256": "b2661bc1cb088afe35add9410a314fb9b40aa45c76513f8835871c1e29f2aaab",
+        "repeat": 2
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "b212637271dfb37452a080f43c674b351332bbcb30ba39476079a63d73edcc84",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_tr01_visa_letter",
+        "scenario_sha256": "3be93fe1d9765b850c5148c2a075c7354074c6e3714b8368aeac241359491f1a",
+        "repeat": 2
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "fb025471bcf7c930c03099bb1201a94bf1f700adf52ae224197ed0ac01533966",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_ins01_claim_justification",
+        "scenario_sha256": "36f2a29d46e0e0c51b58f6b659e24801add71f62ebcf59e17024a8b1e87e9183",
+        "repeat": 0
+      },
+      "model": "openai/gpt-6-sol"
+    }
+  ],
+  "repetitions": 3,
+  "execution": "four workers maximum, durable reservations, server key cap <=50, local cap45"
+}

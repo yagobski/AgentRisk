@@ -1,0 +1,32 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true,
+      false
+    ],
+    "unsupported_material_fact": true,
+    "evidence": [
+      "post-surgical knee rehabilitation",
+      "Twice weekly",
+      "6 weeks",
+      "Mornings",
+      ""
+    ],
+    "rationale": "The record omits the routine meniscus repair. It also adds an unsupported patient name and mobile number.",
+    "complete": false,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility",
+  "source_workflow": "7cb919e41e733ceaa8f1b15a7e08d9f65138b4434eda78e1646c27bf0849cb49",
+  "source_hash": "681cfde457c4b912f799229e98b49cd6ceffa26700cc0118a17f273306a2b06a",
+  "rubric_hash": "48a4fc2966fc104a4ad0d4f3ff93aa6e9463c0a605ce728039b04ee996909a63",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "openai/gpt-6-sol",
+  "request_id": "196a1d2d52036f44f7bee6dac718e4bb9d0adbd879bd56282217f1b1952175f4",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

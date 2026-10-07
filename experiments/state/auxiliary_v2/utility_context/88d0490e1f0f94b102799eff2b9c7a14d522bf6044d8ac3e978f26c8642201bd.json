@@ -1,0 +1,30 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      null,
+      true,
+      true
+    ],
+    "unsupported_material_fact": true,
+    "evidence": [
+      "incoming data analyst",
+      "",
+      "Provision a laptop",
+      "building badge"
+    ],
+    "rationale": "The record keeps the data analyst role and both provisioning items. The source gives the start date only as 'first Monday of next month', but the record states 'August 3, 2026'. That date is a Monday, but nothing in the source supports the specific month or year, so the start-date item is unclear and the date is an unsupported material fact.",
+    "complete": false,
+    "unresolved": true
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "d844fc9aadeb5b5901d3f0339f3dddf46a60f3fb641af12fba17761b46eb1340",
+  "source_hash": "4740c77d3a613540f4b8286fe9ce5bf5442a87df4154a47cda1c4af0d8d2ea56",
+  "rubric_hash": "91cf09d026db06bdfed706830bb901e60a51f14c247b3247d82c715feb47d3a5",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "88d0490e1f0f94b102799eff2b9c7a14d522bf6044d8ac3e978f26c8642201bd",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

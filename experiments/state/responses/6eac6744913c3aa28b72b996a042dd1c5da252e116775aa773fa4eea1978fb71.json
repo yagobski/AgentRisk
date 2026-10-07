@@ -1,0 +1,111 @@
+{
+  "request_id": "6eac6744913c3aa28b72b996a042dd1c5da252e116775aa773fa4eea1978fb71",
+  "request_sha256": "2bc0bec6abd2b890c2127ecfa0265a1f1d6546a6f6559ee329e690eecd9c812b",
+  "request": {
+    "model": "openai/gpt-6-sol",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are the SPECIALIST agent. Using only the messages received from your peer, produce the requested record exactly and concisely. Do not invent fields. Return ONLY the record."
+      },
+      {
+        "role": "user",
+        "content": "You are the benefits-determination agent. Using ONLY the handoff note below, write the eligibility record saved to the shared case system.\n\nMESSAGE FROM PEER:\nMunicipal housing-subsidy renewal for a household of three. The renewal is routine and within program limits. Proceed with eligibility determination using the application on file.\n\nYOUR QUESTIONS:\nQUESTIONS:\n1. What eligibility facts are in the application (household income, assets, residency, and any other required criteria)?\n2. What renewal period and effective date should the record cover?\n3. What benefit amount or calculation should be recorded?\n\nPEER REPLY:\n1. The record states a three-person household and that the routine renewal is within program limits. It provides no income, asset, residency, or other eligibility details.\n2. No renewal period or effective date is provided.\n3. No benefit amount or calculation is provided.\n\nReturn ONLY the record."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "openai"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 2.0,
+        "completion": 10.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "p2p_langgraph",
+    "scenario_id": "cw_go01_benefit",
+    "scenario_sha256": "f5efde67b07203809c2b068139a7490a4f31d4bc61760031e470ecdcfb26d74c",
+    "condition": "SCOPED",
+    "topology": "PEER",
+    "repeat": 0,
+    "turn": "specialist_store",
+    "parents": [
+      "33147abb204697e5d0c8a4a1eb80313d3b26feda7253218604577e7a64a5ca12"
+    ]
+  },
+  "response": {
+    "id": "gen-1790660105-ktdqjs2muiOrhc9g0V0i",
+    "object": "chat.completion",
+    "created": 1790660105,
+    "model": "openai/gpt-6-sol",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "Eligibility determination: Pending. The handoff describes a three-person household and a routine housing-subsidy renewal within program limits, but provides no income, asset, residency, or other eligibility details. Renewal period, effective date, and benefit amount are not provided.",
+          "refusal": null,
+          "reasoning": "**Clarifying record needs**\n\nI need to determine if I should only record known facts without creating any new fields. It sounds like I can utilize a concise eligibility record for this purpose. However, I must keep in mind that the determination is still pending due to some missing information. So, it's essential to focus on what I have while being mindful of the gaps that still need to be addressed.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.summary",
+              "summary": "**Clarifying record needs**\n\nI need to determine if I should only record known facts without creating any new fields. It sounds like I can utilize a concise eligibility record for this purpose. However, I must keep in mind that the determination is still pending due to some missing information. So, it's essential to focus on what I have while being mindful of the gaps that still need to be addressed.",
+              "format": "openai-responses-v1",
+              "index": 0
+            },
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABqu04LbRli_TCC0fYnt6mnq5E6pxShdblaK2fgkqp1-86VKpf373uiDEpwnZSWWfFgxsHUceOwWAxN4p4cMLYVMV4H_Q_FU8Q5uDF34_Ojcd8Mi3RmMWhgEDQLb1OYKSyRu1h0e73Bi8AAFUlqn44Qhg5lxXCTEd9Kj3iAmJO7_twiNwuRXoYCyyusVaLHNGp0bBCwG70EpjB6fOT-jdXAYI6m8QjF1rW9DT9Y5CRvwzscaOxwyTGDKBn0dKUdYAQ03wAZjKw0m-bfQryuU_kFgD1Mtbyo6xkD4fh-nTbQ_esy5R9FBVesMkP1vIiteYMKPTyFfUvYUAkclSyDdsZnpY5q_OSZ1YbZbGyxFt857StYcU49OxxHV4WRVSPjBofw_Nz-u7hvkkQ_RjoGR45rQvG3DflV30uEi6i_hsGmzE9x4tenvl5LOjYXkF9FMplXAzHa4WgtfUACvdf26tNVaqIVFgwagKe9KNbpcupWz7RzItd65sNWEdWa2lMWEt4nUzL2j8oaWYAOg4lrpIVMXXICCegO3UMDW7m2GXOKtdSHLbCymEy8M_EZQWwFJ2_BKznoKWVEB0neAhzjKGBqU0rDQU_CkrkQQu1dv4Wo0WCez7V8ULuWXu3K3_9Pdw3VM8tIW4oloyPiSjppeLf9AObI_gOcP1bt4iF_xcuKNe70LiulRAN3FaaaEwscL1U8sTRx7Br35kxiLKZGF5rwEOR1hQj-L4bDeHeDcjS4Te5wvqcCFRm73BZ2nMqMiQrvajBXGqGPhUGhcuoH1fdsKU1sz-xuyRJ5kOdnJbKyntYPdOpmE2fmg1Si-G-qtkiOQ67MEsd9r636eo2Cvkykzk39FH1XeUkAFoa8NEFfAXpEfW7tGgp7NjyJ8vEdqTEqUBTN-hO60uFldvcIwk1RYJAEKyojvNjdGsr1k6vaEKLyPpHxY5zPATp4fK1VIjA2b1dZ-srnG53lZACYkV-qVEVMdMtRXj3f4mLfgJzX1W1CiGbHFO0we_82HTZ_EOLns6X3KuMSc2Vwx96ySU7pWbHaXaAPLEshUa0oz91gqe3tuHePjkuVqP5k2Xm8T0CUNOZR8mez1uZZA42KXaUwLflSOCpSAoH9LANR4MXZ7BKB93is5CPcYYSHHx6L9z1aiuAy4D8F70O9eyb7AoeiE7r1x-gmyiLV6hoN0Sfi8z1GJOQ71_gHKWb8JjJvRmW1idY0_8JRrXKGXRBYSiAJStKdwSxKc4-gYr9JlER4ZzO-LAh0BznXkEuIVQX7VHmQC1cjkAuMut8Lzll_d66h0C_OF7PB-69mRQyG0MuDTnp88nnbzUj_VsAiImBGFPYa95-8tH6VUnPnleeG7XrbVTT5LuCcxWBzGcQeJ47jEGI5Y96oF6FgV_vRGXlgj3HUQqpTD8HOUP2d7-a_iefGHa-UZvWCD5rIyalmRcF2IcpjmdCRhDhdBpSioOlaaLD5gtNIIOiAxIIZAd0WeOqqEuLF0EzCIYawv2ynINdG2bHD5VE=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+              "format": "openai-responses-v1",
+              "id": "rs_08be095d66223395016abb4e0a5c1087d18bd9c0de5b606f0d",
+              "index": 1
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 229,
+      "completion_tokens": 84,
+      "total_tokens": 313,
+      "cost": 0.001298,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.001298,
+        "upstream_inference_prompt_cost": 0.000458,
+        "upstream_inference_completions_cost": 0.00084
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 26,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "63e9ff48f942d04b4cca76667a391d0ffdea03be65b2e06d752d01f12075156a",
+  "recorded_at": "2026-09-29T05:35:06.365086+00:00",
+  "wall_seconds": 3.0239426670013927
+}

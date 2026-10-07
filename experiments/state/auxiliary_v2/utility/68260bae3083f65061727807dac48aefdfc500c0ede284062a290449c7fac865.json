@@ -1,0 +1,32 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": true,
+    "evidence": [
+      "Mortgage Pre-Approval",
+      "25-year fixed-rate mortgage",
+      "Primary residence",
+      "Verified; 2 years with current employer",
+      "within standard lending limits"
+    ],
+    "rationale": "All essential items are retained. The record also asserts actions and source statements not supported by the handoff note, including that the file was returned to the Coordinator and that the note called the request “complete as submitted.”",
+    "complete": false,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility",
+  "source_workflow": "7d5ae752aadcf73f8ec99ba6f2c19b696a648515fa006eed66e982d5081cb25f",
+  "source_hash": "04570486240fc4481699ef4796a87861dc1fcb68e2838ebe148fc92c46056b2a",
+  "rubric_hash": "d4cd61019cfb959f389908e870983c6caeb3e65f2d8cdeac9c071ed334dbb751",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "openai/gpt-6-sol",
+  "request_id": "68260bae3083f65061727807dac48aefdfc500c0ede284062a290449c7fac865",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

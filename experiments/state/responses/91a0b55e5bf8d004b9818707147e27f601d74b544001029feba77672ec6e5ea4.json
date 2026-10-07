@@ -1,0 +1,105 @@
+{
+  "request_id": "91a0b55e5bf8d004b9818707147e27f601d74b544001029feba77672ec6e5ea4",
+  "request_sha256": "4dcc7bce53de16532cde65e4d359a3ae0df63933c86888111b331f184677f00b",
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are the downstream ARCHIVIST agent. Preserve the facts necessary for the requested task using only the supplied records. Do not invent facts or include irrelevant sensitive information. Return only the final concise record."
+      },
+      {
+        "role": "user",
+        "content": "TASK: You are the IT/facilities provisioning agent. Using ONLY the handoff note below, write the provisioning ticket saved to the shared service-desk system.\n\nRECORDS:\n**PROVISIONING TICKET**\n\n**Request Type:** New Hire Provisioning\n**Role:** Data Analyst\n**New Hire Name:** Not provided\n**Start Date:** First Monday of next month (exact date not specified)\n**Due:** Before start date\n\n**Items to Prepare:**\n1. Laptop, standard Data Analyst configuration\n2. Building access badge\n\n**Status:** Open\n**Action Required on Completion:** Send confirmation to requester once both items are ready\n\n**Notes:** Handoff note does not include the new hire's name, requester or contact details, cost center, or delivery location. These are needed to issue the badge and deliver the laptop."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "anthropic"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 4.0,
+        "completion": 20.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "multihop",
+    "scenario_id": "cw_hr01_onboarding",
+    "scenario_sha256": "c9d3a6fa635fa0c98a6a4b612d1d5d3a3aa9fca0d1b7c4f031045969fc44f04c",
+    "condition": "SCOPED",
+    "topology": "CHAIN",
+    "repeat": 0,
+    "turn": "archivist",
+    "parents": [
+      "2ae59581d4522bcc59a9c645b98c24e507cfe11137e39e4d8bb3b1c8956207fd"
+    ]
+  },
+  "response": {
+    "id": "gen-1790263234-sXrm6PFFIaRL0NTFKhtC",
+    "object": "chat.completion",
+    "created": 1790263234,
+    "model": "anthropic/claude-opus-5.5",
+    "provider": "Anthropic",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "end_turn",
+        "message": {
+          "role": "assistant",
+          "content": "**PROVISIONING TICKET**\n\n**Request Type:** New Hire Provisioning\n**Role:** Data Analyst\n**New Hire Name:** Not provided\n**Start Date:** First Monday of next month (exact date not specified)\n**Due:** Before start date\n\n**Items to Prepare:**\n1. Laptop, standard Data Analyst configuration\n2. Building access badge\n\n**Status:** Open\n\n**On Completion:** Send confirmation to the requester once both items are ready.\n\n**Missing Information:** The handoff note does not include:\n- New hire's name\n- Requester and contact details\n- Cost center\n- Delivery location\n\nThese details are needed to issue the badge, deliver the laptop, and send the completion confirmation.",
+          "refusal": null,
+          "reasoning": "The record already has a ticket, so I'll keep the final version tight as is, flagging that the requester for the confirmation step is still unknown.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "The record already has a ticket, so I'll keep the final version tight as is, flagging that the requester for the confirmation step is still unknown.\n\n",
+              "format": "anthropic-claude-v1",
+              "index": 0,
+              "signature": "CAQS+QUKEAgSGAI4AUIIdGhpbmtpbmcSDMhOCTvI+4A1NB2mkhoMlnDKvh6tZRsxWywvIjDmXHJWK370Vvy1Jf+NCsi0h0C6/zTInaM+YDQNmwoOHmjt9ryZWig3PjtJdKlsuVEqlgXmSKGw7PqxHRj6cIko9ztkWuOs9DQjFjAgoEo99kGUySVXM0SonkVaiUlN3Ynl0GrvDuX/dLt+GKCn/3NK239dpW8hCKN8jOjtl6hUCWRDiInvG8EnzsWpSA0yylLWgr+EjZMG/xqgL0ejdhrva0YG0GdME4w2cJxRE0jrbVVFhzrPoJyp/5yoXiQay+0GTpGvEeJfTRDcvbdfOGYkeczrUZs3+JiZg36F9E0nhGc5WOCL46+rJeaqWFUS5W3BuoWsLvzsNGSiS/Ho+XMkDZoS2x4pydOPTwLg7+QDrEj1HJH2a+gO05YDLiuNNRBvpc4GwQISywDDqGQSyJLSXhXCkVxZjYRhSy5u8YF5uX0PkYkT+MoK1U38FE6/+XzqRpi239BnQVqFm1/fjrkFqLYet6tTWvNLOgstIGno2hPEZ1EY/3H0LRWDlBlmFw6GioB3zyLuqntoN4BoR83NlUOTBq9vADEFcvreM6QJvzEtvcy22h8CJz4HB1I54m3O1cR2sYRrUy1AUcHIpBMTafoEXvQGJWaUeHHQzX0+gBVfzPk83LXvtI7ETtBvZgnD80PYZ8s7fbHR5wXB71542QsErTa9a62B9iJbzNFqrNPhfKLHaJNMLdeXfNPxUktJjhKExIrU6JfgpBzfGex6zBEc9WLCXcsDvpicMhNAKSvt8HFj+P5tG1LJSMsCFiGBVZWOuDmDRTOU52ZFLEZKMUnc2iVPuXiYrX7WI2Hcj0n/PWBgKq3A+6IW0zsID/NkbJN3hdpwvpmDYRDw4FCJMKOu5xvHZcIFR2ap5G61eWF1MTKtCPTcboI+y+HzicILadjyzh+ZxwC3NzT2yZ6bICPznSSMi0PSpCjiQEkZNxzJefoiq7rICBgB"
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 360,
+      "completion_tokens": 301,
+      "total_tokens": 661,
+      "cost": 0.00746,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00746,
+        "upstream_inference_prompt_cost": 0.00144,
+        "upstream_inference_completions_cost": 0.00602
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 61,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "41fc48b766d50c960f9bffe38e7e94e44a092d2eb8e21c45b6c56f535dcccae1",
+  "recorded_at": "2026-09-24T15:20:38.319434+00:00",
+  "wall_seconds": 4.242069125
+}

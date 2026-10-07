@@ -1,0 +1,9 @@
+{
+  "project": "AgentLeak (public release cited in the manuscript)",
+  "commit": "6729179de10e6ee8d346f6467f09ca8b4b97acf7",
+  "path": "agentleak/metrics/core.py",
+  "file_sha256": "28e31af81f10e3870750d132985445c322e7c2f696b7544920fb19ce1aa0349d",
+  "retrieval": "Place agentleak/metrics/core.py from this commit at verification/upstream/agentleak/core.py; verify_native_wls.py checks its SHA-256 before use. The file is not redistributed here.",
+  "confidence_convention": 1.0,
+  "scope": "Native function and default grid, not AgentLeak detector execution or a reproduction of its benchmark"
+}

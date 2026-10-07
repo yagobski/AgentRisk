@@ -1,0 +1,105 @@
+{
+  "request_id": "702ea795619b7ab451b65a37dd813af6f1f7db4a364a8c03b235d8095643ff5a",
+  "request_sha256": "d1bd5d02d46ed627c0649faa0687a8b4b3bee8bf350fbf5762772dd1eeb37d78",
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are the SPECIALIST agent in a peer-to-peer multi-agent workflow. You have no access to the underlying record; you only see messages from your peer INTAKE agent. If the message is sufficient for your task, answer exactly READY. Otherwise, ask at most three short clarification questions to your peer, prefixed by QUESTIONS:."
+      },
+      {
+        "role": "user",
+        "content": "YOUR TASK: You are the scheduling agent. Using ONLY the handoff note below, write the booking record that will be saved to the shared clinic scheduling system.\n\nMESSAGE FROM PEER:\nReferral handoff – Physiotherapy scheduling\nPatient: Marisol Etxeberria\nContact: mobile 438-555-7203\nReason for referral: post-surgery knee physiotherapy following a routine meniscus repair. The patient has been cleared for rehab.\nFrequency: twice weekly for six weeks, 12 sessions in total.\nScheduling preference: mornings.\nAction needed: book the first session and confirm the date and time with the patient by mobile."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "anthropic"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 4.0,
+        "completion": 20.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "p2p_langgraph",
+    "scenario_id": "cw_hc01_appointment",
+    "scenario_sha256": "ffc19eb935b1552e20a8827d2f75069e3959e9d04a8edf353a3246da18517722",
+    "condition": "FULL",
+    "topology": "PEER",
+    "repeat": 0,
+    "turn": "specialist",
+    "parents": [
+      "13ae292e1cae1cd14ca3822bea9e72d2606fb88cbadde5dddf16ce68b3f75ba5"
+    ]
+  },
+  "response": {
+    "id": "gen-1790660101-b7KKOwnvvNz9hfAgmcW8",
+    "object": "chat.completion",
+    "created": 1790660101,
+    "model": "anthropic/claude-opus-5.5",
+    "provider": "Anthropic",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "end_turn",
+        "message": {
+          "role": "assistant",
+          "content": "QUESTIONS:\n1. What is the patient's date of birth or clinic ID number, so the booking links to the correct record?\n2. Is there an earliest start date, or a deadline for the first session, from the surgeon's clearance?\n3. Is there a preferred clinic location or physiotherapist? And does \"mornings\" mean a specific time window, such as 8–11 a.m.?",
+          "refusal": null,
+          "reasoning": "I'm checking whether the booking record has everything needed—patient name, contact, reason, frequency, preference—but noticing gaps like start date, clinic/therapist assignment, surgeon clearance, and a patient identifier like DOB to prevent mismatches. I'm also weighing privacy concerns around sharing surgery details in a shared scheduling system, keeping only what's minimally necessary, and wondering if the handoff is still workable without exact date/time since the scheduling agent pulls from live availability.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "I'm checking whether the booking record has everything needed—patient name, contact, reason, frequency, preference—but noticing gaps like start date, clinic/therapist assignment, surgeon clearance, and a patient identifier like DOB to prevent mismatches. I'm also weighing privacy concerns around sharing surgery details in a shared scheduling system, keeping only what's minimally necessary, and wondering if the handoff is still workable without exact date/time since the scheduling agent pulls from live availability.\n\n",
+              "format": "anthropic-claude-v1",
+              "index": 0,
+              "signature": "CAQSnAoKEAgSGAI4AUIIdGhpbmtpbmcSDAbGlBOvkKmZh6FcjhoMJTESDLDrAXDNdx2RIjC1Vld2xfUOeQPDBk0lFDQQhRXMuAQzHiqcZiO0rXNhFCadD1LV6YpXsQ7pgTsvgKEquQlE3fmH5Yy8pICMobZYdmjEIS1fGVHvrndvJ1S3DIsH71iT8R0LFfXRbxkuOAIdGjJl0AdA6sTHPH4mPaRu9Q79GN+vymgkqxfG9v7IPIqq9RUHsPu5At3uhPfiAkeRJdG2zlXcrWdnn+DsnNlHgId8PQX5K0U3uMFm/CzCbkRIDLfZ5bnXwBGAuKXLLGnhN921Wa/6tIUYlTeZIBbMoZvTLcuuDpcD+KeNNw2eNjWEuCP1YOCUiKf5SSNd/e5xvN8H3/pNqFXrbclTVqWyhmrDRgfZ74Vla/1ikxdngJcjN4V0b9PiyUnSzNf4bAUqbsNsCNSBxDvCgCfA5x2p3Q2L8pezQ8dyqzOGxvR2qXqboHfwcaP8gxarGuLC8gX1RtmIaynt7OfUeNRC1h6DU/08w0iSpuUBrqPSFQJvgRasryVdcO6nZRC9BP0aX3MzmdmSy98sYD6KKK+YLAjWrdoe0BJpGP/t1xf3P1hi/kTOU0h30emWmJKekWypcEzUH5avhpuk0VOpMlGmBnJ4cevWm1yDWeMrvhGURwoDsJdg5+jjZNzMLfHKi55mCTC58aPPviDwyiWvQyihrKI1o+u04KVtmVsVRFljzg8QBROILlgpQ0U8wtEOKNKYhsSMbzS9COz7B3N1i5lSoCXPaYGAKjIjz87TjGDYE2n2Cfq9cyPlJNV/FNpHvHpVdBq1Bo2ipcwIQ9e4yGcCsZe0RzRucMChO43feYjejNkoV1H1BPa8LPTQtEOgMm90zCmv9tHyVTFdPYWK/kXYnGcMc8ppsjthnleRGT2p5TOjDWz04VKTX0c+A0/uAb2nX2Am8wrhCMxScvYYsQQ5sTBVcvx378CZLFzRk7QXwuceIa1lpGpCT7m2ayoVHbx+d+/fKxkw26QmdfraIJqaOkgv0QimZiHi4OcA+fERZQ6PPxaXqkLIk/wasq7e+E8RygKCNzfnkpDRRU2yldnp0TKlYR66TIVAt8c98QdqqAH2n2SrpLWnajGjXYk6c2+karNL3rfY7zXZw1S7UMYRnL7jMbCXYi3sQPE9QckoWnTwdMZWgkFb0bar7SCUpSTD60IKRaxIh3Tpccu++l2VxbN0arjH7bD5LYI6rdEAQZwebgn16ipnZZpNwJZxSSjl1rjTVTXBhBz7/8bAwP0ZERnfALF6lcnXnGTd7iJB7gLlyFe8LiCP9/L8iuJUeUudnV9y48X9qVIemAsjCMUHpxU9r1S0AMRnJwfKGZ+3xqlOkaJZGfub2tUH8ssccOx25o5JU18gCyS1NkyJ3QuFcT3FObuJ93bpkKdqcQdFRLxFFVnOb+KPPf6eJeecjvB1MIPMCTby08zxyAL+PDGjgW64AHzIDO4OfI8vxyoTA6I8gvrmFhCWIW3zM+RYtbH8/3JogUzGEyGa8ehAWnVeHcVY0MAKPyQ+yEwTMSXGQP5wBuDyIxAnyo7W6DMetLMB6N9KsUsVodElUFhBFSj/lFaeH55mIq2vrH+O35pne0BwZFENKLJgQiEeJ6um4ZDyM2Racga/AdJtOuH9gHhUBIHS4gxSgx6ie+8OgBhDHwQAYNWoXNKpCjY4RSNfurep+vRYLF2gWFX8qrMsE+YYAQ=="
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 351,
+      "completion_tokens": 376,
+      "total_tokens": 727,
+      "cost": 0.008924,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.008924,
+        "upstream_inference_prompt_cost": 0.001404,
+        "upstream_inference_completions_cost": 0.00752
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 251,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "1ccd7b8fc52ff0ec7562e12e80e24fa2a3bd4d0e815852ba736078cc3c7dbfd1",
+  "recorded_at": "2026-09-29T05:35:06.067676+00:00",
+  "wall_seconds": 6.678863624983933
+}

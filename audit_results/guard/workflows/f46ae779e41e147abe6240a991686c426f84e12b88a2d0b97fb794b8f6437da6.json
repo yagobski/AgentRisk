@@ -1,0 +1,22 @@
+{
+  "workflow_id": "f46ae779e41e147abe6240a991686c426f84e12b88a2d0b97fb794b8f6437da6",
+  "model": "openai/gpt-6-sol",
+  "scenario_id": "cw_hr01_onboarding",
+  "condition": "GUARD",
+  "topology": "CHAIN",
+  "synthetic_extension": true,
+  "request_ids": [
+    "a28901eea4b43e3eb0b0a11e7d6f4bc2dc58c6332c1ee9982b90699347652dd3",
+    "9c25164455e8f182efaf552fb4ff1ddd80583fef9d6ba20400704eda4c06b182",
+    "27ee89eba5d685305e2844419993343cb2af40347ab39352735f17cae8898fd5"
+  ],
+  "channels": {
+    "C1": "Welcome, Priya! Your start date is the first Monday of next month, and we’re arranging your equipment. We look forward to seeing you then.",
+    "coordinator_to_worker": "Priya Ramanathan starts the first Monday of next month as a data analyst. Please prepare a laptop and building badge before her start date.",
+    "worker_to_archivist": "Provisioning ticket\n\nEmployee: Priya Ramanathan  \nRole: Data Analyst  \nStart date: First Monday of next month  \nRequests: Prepare a laptop and building badge before her start date.",
+    "archivist_to_storage": "**Provisioning ticket**\n\nEmployee: Priya Ramanathan  \nRole: Data Analyst  \nStart date: First Monday of next month\n\n**Requests:** Prepare a laptop and building badge before the start date."
+  },
+  "total_cost": 0.00396,
+  "protocol_sha256": "fa21a2969f8d95fa027805aa861c8358e8abcd4542d1aecc067192df2f2fff44",
+  "recorded_at": "2026-09-25T04:34:18.161851+00:00"
+}

@@ -1,0 +1,32 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": true,
+    "evidence": [
+      "MORTGAGE PRE-APPROVAL",
+      "25-year fixed-rate mortgage",
+      "Primary residence",
+      "Verified; 2 years with current employer",
+      "Within standard lending limits"
+    ],
+    "rationale": "All five essential items are retained. The record also asserts material process facts not established by the source, including that the credit check and pre-approval decision are pending and that the applicant was notified.",
+    "complete": false,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "664ee8ffa3a395c6811fe9c6509500b556e6007ed82a18b64154ed67846aa888",
+  "source_hash": "41c0ac1c34d57f3eaabf52f66abf9a722604c37b826b846c90a8e2ced89863b2",
+  "rubric_hash": "d4cd61019cfb959f389908e870983c6caeb3e65f2d8cdeac9c071ed334dbb751",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "openai/gpt-6-sol",
+  "request_id": "c8fad1afe35808f5e8b0d024a616068d3a85c2725d90a0cdeb6e70ed49f8431d",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

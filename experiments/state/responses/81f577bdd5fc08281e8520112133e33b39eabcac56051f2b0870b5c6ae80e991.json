@@ -1,0 +1,105 @@
+{
+  "request_id": "81f577bdd5fc08281e8520112133e33b39eabcac56051f2b0870b5c6ae80e991",
+  "request_sha256": "4b89402834f96fd819869c8ca1774939e41b18f5dbcc1d607f02ca8e54ecd90e",
+  "request": {
+    "model": "openai/gpt-6-sol",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a downstream WORKER agent. You will be given ONLY a handoff note from the coordinator. Using only that note, produce the requested internal record exactly and concisely. Do not invent fields."
+      },
+      {
+        "role": "user",
+        "content": "You are the scheduling agent. Using ONLY the handoff note below, write the booking record that will be saved to the shared clinic scheduling system.\n\nHANDOFF NOTE:\nPatient: Marisol Etxeberria\nContact: 438-555-7203\nReferral: Post-surgery knee physiotherapy following routine meniscus repair; cleared for rehab.\nSchedule: Twice weekly for six weeks. Mornings preferred. Please contact the patient to book the first session.\n\nReturn ONLY the record."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "openai"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 2.0,
+        "completion": 10.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "multihop",
+    "scenario_id": "cw_hc01_appointment",
+    "scenario_sha256": "ffc19eb935b1552e20a8827d2f75069e3959e9d04a8edf353a3246da18517722",
+    "condition": "FULL",
+    "topology": "FANOUT",
+    "repeat": 0,
+    "turn": "worker",
+    "parents": [
+      "015d2393fa1209c5c9fe8310d903face93ef5201ba2b06bcc69a79e4b2b31c79"
+    ]
+  },
+  "response": {
+    "id": "gen-1790263296-9Hus7qxVEHzySCE6WfK0",
+    "object": "chat.completion",
+    "created": 1790263296,
+    "model": "openai/gpt-6-sol",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "Patient: Marisol Etxeberria\nContact: 438-555-7203\nReferral: Post-surgery knee physiotherapy following routine meniscus repair; cleared for rehab.\nSchedule: Twice weekly for six weeks; mornings preferred.\nNext step: Contact patient to book the first session.",
+          "refusal": null,
+          "reasoning": null,
+          "reasoning_details": [
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABqtUAC4mI6lH4N32mJsPcIaa8sl6Li3SKmipJX5_km8Hd18nvcbp3gU_RzSVvWCyGJ3rZTsqMLQ2IYXtmEb3Kv5Zr6R8kTF3P3e5topgpxAHyoB7KCdMHyvtHr5uOMbbrc61Sp-rbfB_a9GPt-IlWolVgwMB_NJtzlDD-Ujol0AweE6KHM598NWOO4oZDwcbsjMxo6ysFiQmY0QR5qt549mGXBZ5wLvMeCQnOqnCuwBGsDFMrUQWy9foYeY1AEs2Jw3Zcqbx3Rt9iEKwV9kUqsojI7AjX7-ppFqePw0Ovw59D-5yAJw1_JS4boqZ-z2LHUDVL1Nnsz2xnG2hHAvKZBtDvOG3NPdauP694P5XaHL6xHl1zR9YItfpFCuiL8WjRxB1bBLJlNRufeeb6u_2a6ESWehyODSGMmKZsHajgGqb9tXIkK3oVxJfG-CDAMy3ZxGE9OHQ8eyU4Q9fr9F87hOzFevJqGPrEt_iyP6E_v2lPP1rW9FU1xeejxeMoBPcaBiJL3fb-F9aU49YYEwbx9jSMeDIcvNYSPjCyFwDN0sXIDrb4q98RMxFG7oVWNmf3VNKLxzzTMkJhOwFqVADmgsGMg_uDth_iDDM8KT94yhc6WuLR0iLUiWFrt2XhrFxK2fMWhB9K4Th7MK32PjWaeR066mKaLXVrGOCxazIvLGjA_pj9ZqZTkIvnoilH1sGE8d2z4ftw909-PuGNi01s9kIP6Ew5RHafhA9dNFu2CeUWxDBV6fyQxQpKIv6ty8shhWsiKwsb4z0z84nT53vd3UfgYYFYTrcIx89PktvPLXb1JjDfpJGdLqcEkXWz5ORoOaa5fgHaMPfZRYTQMEn7OWXuEE5c117fWAligSLc0Ao7jiB49rDA1WVphhWXGAqwVWPLQaPK4p62DNiLpgzT3re6cUTS8XXtL8xEPYwjG7fBOEUwDuIsabeK74p4eWYLiJXaNo1qEyz6mBqifcKyqLogRhazwlb2aIehRyeJz9-vICK7SgRy-TmB1JbkrBCB6r7fiBv4KKmF7sQchCcW_4SIP67UxdkeOD541sV59SsIwalRvhdaDl0PB_dpKx-NJIDc5qwJ09TTrOwiAVJyTJVLQwR-xAsuHrIPzVpYGk5femSjow-7YL8nZtYxSS9W1X0V6PPAKzqw4suRvnkfkdnoXsdt9ZBZucsp86pTN_TVeThfAf20jRGbLjISmyDgZEHHCgeK0zkaS-ck_xBsAYPtei9AY8DSoU2Dj3CCd231BgCsu-a7ofI5xRPa_yl2KTkZ0MEQSuIwLnmT-rbzIhDPcef3NODgBkxt9rweoly9WjlGK7MArOi_ITeh4NM59TZyF5Uhr3o0czLWk03rHG06XOUcmCF2LUXhduHvga2qO7DKa8ugSFyjoWNMXkYKSehY2pbdg2H28xTf9VK7cLGVF1xZlhEqbTWdwTGNqa733pg6U2YOaEv8woQeeXAjtygqU.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+              "format": "openai-responses-v1",
+              "id": "rs_04e408a401d359f2016ab54001ca0487d18c85e5c519543cfa",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 151,
+      "completion_tokens": 86,
+      "total_tokens": 237,
+      "cost": 0.001162,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.001162,
+        "upstream_inference_prompt_cost": 0.000302,
+        "upstream_inference_completions_cost": 0.00086
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 20,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "b6db16380516f4db43ad2487c608cb34d331908e7a243d8207a80808b501c46d",
+  "recorded_at": "2026-09-24T15:21:39.216803+00:00",
+  "wall_seconds": 3.4324370420000037
+}

@@ -1,0 +1,2 @@
+# Required only for retrospective aggregate bootstrap replay in --full.
+numpy==2.3.5

@@ -1,0 +1,96 @@
+{
+  "request_id": "010795eb2baf147662c535ab5bc847b716ed8e51a367c61a1da6ac949f1d64f4",
+  "request_sha256": "5584f39a69035ce7f2d69e6a1e15ed673d3fe2b33de0eb5fecf1fdbaa4c8b8d2",
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are the SPECIALIST agent. Using only the messages received from your peer, produce the requested record exactly and concisely. Do not invent fields. Return ONLY the record."
+      },
+      {
+        "role": "user",
+        "content": "You are the IT/facilities provisioning agent. Using ONLY the handoff note below, write the provisioning ticket saved to the shared service-desk system.\n\nMESSAGE FROM PEER:\nProvisioning request: a new hire is joining as a Data Analyst. Their start date is the first Monday of next month.\n\nPlease prepare the following before the start date:\n1. A laptop with the standard data analyst setup.\n2. A building access badge.\n\nPlease confirm with intake once both items are ready. If you need anything else to finish provisioning, such as the name to print on the badge, ask intake. Intake will share only what is needed.\n\nYOUR QUESTIONS:\nQUESTIONS:\n1. What is the new hire's name as it should appear on the badge and their account?\n2. Which office or building, and which floors or areas, should the badge open?\n3. What is the exact start date, and where should the laptop be delivered (desk location, or pickup contact such as the hiring manager)?\n\nPEER REPLY:\nHere's what the record covers for your three questions:\n\n1. **Name for badge and account:** Not in the record I have. Please confirm it with HR or the hiring manager.\n2. **Office, building, and access areas:** Not in the record. The hiring manager or facilities should confirm which site and floors a data analyst needs.\n3. **Start date and laptop delivery:**\n   - **Start date:** The first Monday of next month. The record doesn't give an exact calendar date, so please confirm it against the calendar.\n   - **Delivery location or pickup contact:** Not in the record.\n\n**Known details:** The role is data analyst, and the request is for one laptop and one building badge. For the missing items, please check with the hiring manager or HR before provisioning.\n\nReturn ONLY the record."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "anthropic"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 4.0,
+        "completion": 20.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "p2p_langgraph",
+    "scenario_id": "cw_hr01_onboarding",
+    "scenario_sha256": "c9d3a6fa635fa0c98a6a4b612d1d5d3a3aa9fca0d1b7c4f031045969fc44f04c",
+    "condition": "SCOPED",
+    "topology": "PEER",
+    "repeat": 0,
+    "turn": "specialist_store",
+    "parents": [
+      "386fce59885b49ee6e8015d658c3eafca1604969e55a6571ff8f6ee006ce2b88"
+    ]
+  },
+  "response": {
+    "id": "gen-1790660187-KOgQzMgxJ7YxyQfEEuFx",
+    "object": "chat.completion",
+    "created": 1790660187,
+    "model": "anthropic/claude-opus-5.5",
+    "provider": "Anthropic",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "end_turn",
+        "message": {
+          "role": "assistant",
+          "content": "PROVISIONING TICKET\n\nRequest type: New hire provisioning\nRole: Data Analyst\nStart date: First Monday of next month (exact calendar date not provided; to be confirmed)\nNew hire name: Not provided (pending, confirm with HR or the hiring manager)\n\nItems requested (to be ready before start date):\n1. Laptop, standard Data Analyst setup\n   - Delivery location / pickup contact: Not provided (pending)\n2. Building access badge\n   - Name to print: Not provided (pending)\n   - Office/building and access areas/floors: Not provided (pending, confirm with the hiring manager or facilities)\n\nStatus: Open, blocked on missing information\nOutstanding items:\n- New hire name for badge and account\n- Site/building and badge access areas\n- Exact start date\n- Laptop delivery location or pickup contact\n\nNext action: Get the missing details from HR or the hiring manager. Once the laptop and badge are ready, confirm completion with intake.",
+          "refusal": null,
+          "reasoning": null
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 634,
+      "completion_tokens": 322,
+      "total_tokens": 956,
+      "cost": 0.008976,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.008976,
+        "upstream_inference_prompt_cost": 0.002536,
+        "upstream_inference_completions_cost": 0.00644
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "4af65f32d4377b3ba9bcd65032f127ccbf2f34f867aeb31783eccf44ec34ca8a",
+  "recorded_at": "2026-09-29T05:36:30.725857+00:00",
+  "wall_seconds": 5.329963249969296
+}

@@ -1,0 +1,104 @@
+{
+  "request_id": "ddd76b82bc0d2292a042193cc19ba455864e8588f96d0f6e696c5dba993c11f0",
+  "request_sha256": "0b18bb8f7b1a6848e9ebfc1e3663e192bd24333df8e34acb1de702f170ccc86e",
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are the downstream ARCHIVIST agent. Preserve the facts necessary for the requested task using only the supplied records. Do not invent facts or include irrelevant sensitive information. Return only the final concise record."
+      },
+      {
+        "role": "user",
+        "content": "TASK: You are the drafting paralegal agent. Using ONLY the handoff note below, write the matter record saved to the shared case-management system.\n\nRECORDS:\n**MATTER RECORD**\n\n**Matter:** Lease-deposit dispute\n**Client:** Nadia Köhler\n\n**Scope:** The client's landlord has withheld her lease deposit. Draft a demand letter to the landlord seeking its return.\n\n**Task:** Prepare a draft demand letter for attorney review before it goes to the client.\n\n**Missing information (not in intake record):**\n- Landlord's name\n- Landlord's address\n- Property address\n- Lease dates\n- Deposit amount\n- Landlord's stated reason for withholding\n\n**Source for missing information:** Lease and deposit documents on file, or the supervising attorney. Do not add details the file does not support.\n\n**Client contact:** Only through the firm's standard client-communication channel.\n\n**Limitation:** The letter covers the deposit dispute only.\n\n**Status:** Draft pending. Missing information must be obtained first."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "anthropic"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 4.0,
+        "completion": 20.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "experiment": "guard-chain-20260925",
+    "scenario_id": "cw_le01_intake",
+    "scenario_sha256": "8d307c505fa041eb3ef36282e595ad197bce3e0c7020b8dd0e8f6df47f020c2e",
+    "condition": "GUARD",
+    "topology": "CHAIN",
+    "turn": "archivist",
+    "parents": [
+      "322037c87fb5b7f922b5148720e686d7e33f5e0c581a4abb60594b00a7c421c0"
+    ],
+    "repeat": 0
+  },
+  "response": {
+    "id": "gen-1790310845-C58JyR0Yb9xGOIAy2QpP",
+    "object": "chat.completion",
+    "created": 1790310845,
+    "model": "anthropic/claude-opus-5.5",
+    "provider": "Anthropic",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "end_turn",
+        "message": {
+          "role": "assistant",
+          "content": "**MATTER RECORD**\n\n**Matter:** Lease-deposit dispute\n**Client:** Nadia Köhler\n\n**Scope:** The client's landlord has withheld her lease deposit. The firm will draft a demand letter to the landlord seeking its return. The letter covers the deposit dispute only.\n\n**Task:** Prepare a draft demand letter for attorney review before it goes to the client.\n\n**Missing information (not in the intake record):**\n- Landlord's name\n- Landlord's address\n- Property address\n- Lease dates\n- Deposit amount\n- Landlord's stated reason for withholding the deposit\n\n**Source for missing information:** The lease and deposit documents on file, or the supervising attorney. Do not add details the file does not support.\n\n**Client contact:** Only through the firm's standard client-communication channel.\n\n**Status:** Draft pending. The missing information must be obtained before drafting.",
+          "refusal": null,
+          "reasoning": "I need to produce a concise matter record from the handoff, sticking strictly to the facts given without adding anything invented.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "I need to produce a concise matter record from the handoff, sticking strictly to the facts given without adding anything invented.\n\n",
+              "format": "anthropic-claude-v1",
+              "index": 0,
+              "signature": "CAQSiwUKEAgSGAI4AUIIdGhpbmtpbmcSDApM6LZNsrti2u4ChhoMeGDG+JXY30hsjhSuIjDk9etNDWrTVP21Xx+jVU30JP0Vlfx5D8bpEDizZmczdTUgpemJ8LtQXl1dYYk9I6sqqAS3QxObEX9gAWVmvRDK4esmDxH2VwoVDLEG+f0AWtOLe8ul/dX+c6+VwWBp8KtcaejMAxG19mH4oI3YTTyJcACuAdIArYkr9xG4W89w6Ur8l3t7zWN4+UCwv/3JnpxXrDhll0PhPGzcv7ZF0h/9RGtszUIpfgsQoH4EmsXXkHlqUfDxYBC2Tz4WLxv6OS56XSEcXbc+4u3eoIx8staj1fwHol8w5xtUZ+ImZ6GF1gHTtUwKty+gRugjejZxq1yCPeMydEvfTf5xqm+mJVPrW729xCda4FthkcF2WG54TIlGYM9D7pLjvooSSfSCJnLfLQm9qu977dMZ5HgwxDA3yPVj1gazsJsKF7ie+QTlvWTPE740rVSu9k0CF9tY3IjFr1JPtRtk5D+R1EQhJJmOWUc3AcILDLDIDbn72MUuA/tT4lNLxlDBACzm1ia6nY+GXHheMeHjb1zjq/DxxmhcOrb9E4Ob+W4mZTEwAitu0WkeDz64AkSr/NfflE4SClcQSArqaH1Mfrteua4zVg+Jivq5TfZBnlaH3kMCpdUBcPCO99HgR0O3WqLwH0tYC6J2W4XJ8kDV2+5W1cfQHEmjEx7+HkdXR1B+fxBAkkj8I4oo77L+22zZbX4mFBLF7WO7fDHL5T6/sLFVavA/n0B2p1Rnn2P3xSQN54O5QxNqsbhy4g71rRN36q6H2vwJRF2m2zDkEMnALyXUt0qJfIvxbeyh1z8MHTI1XEsYAQ=="
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 422,
+      "completion_tokens": 321,
+      "total_tokens": 743,
+      "cost": 0.008108,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.008108,
+        "upstream_inference_prompt_cost": 0.001688,
+        "upstream_inference_completions_cost": 0.00642
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 26,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "46e3fa6811d6d026925da3e1131a2329b11dfeb6f1c6a423ed16047a8e028987",
+  "recorded_at": "2026-09-25T04:34:08.621376+00:00",
+  "wall_seconds": 4.027395292000001
+}

@@ -1,0 +1,105 @@
+{
+  "request_id": "167e845a071f7cd670886e93967f9cffc36d0b244af24890b46e9cf6a2f22173",
+  "request_sha256": "20f595d0f6fc718bbdbfd2ccacb1c2b427b7ac1e803774dabec34bccc925bac7",
+  "request": {
+    "model": "openai/gpt-6-sol",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are the downstream ARCHIVIST agent. Preserve the facts necessary for the requested task using only the supplied records. Do not invent facts or include irrelevant sensitive information. Return only the final concise record."
+      },
+      {
+        "role": "user",
+        "content": "TASK: You are the drafting paralegal agent. Using ONLY the handoff note below, write the matter record saved to the shared case-management system.\n\nRECORDS:\n**Matter:** Lease dispute — landlord’s withholding of deposit.\n\n**Client request:** Demand letter seeking return of the deposit.\n\n**Drafting status:** The handoff note does not include the matter file or facts needed to draft the letter. Review the file and draft from the information available there; do not re-interview the client.\n\n**Coordinator flag:** If absent from the file, obtain the parties’ names and addresses, property address, deposit amount, lease and move-out dates, amount withheld and landlord’s stated reason, relevant lease terms and communications, and the applicable jurisdiction."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "openai"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 2.0,
+        "completion": 10.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "multihop",
+    "scenario_id": "cw_le01_intake",
+    "scenario_sha256": "8d307c505fa041eb3ef36282e595ad197bce3e0c7020b8dd0e8f6df47f020c2e",
+    "condition": "SCOPED",
+    "topology": "CHAIN",
+    "repeat": 0,
+    "turn": "archivist",
+    "parents": [
+      "cf56a89b34785a7acfcc2a779ca78272f414df30ca21daba0ab3731c06a6f88d"
+    ]
+  },
+  "response": {
+    "id": "gen-1790263349-n1kbOgtcxtYv6LdDZr7L",
+    "object": "chat.completion",
+    "created": 1790263349,
+    "model": "openai/gpt-6-sol",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "**Matter:** Lease dispute — landlord’s withholding of deposit  \n**Client request:** Demand letter seeking return of the deposit.\n\n**Status:** The handoff does not include the matter file or sufficient facts to draft the letter. Review the file and draft using the information available there; do not re-interview the client.\n\n**File review:** If absent, obtain the parties’ names and addresses, property address, deposit amount, lease and move-out dates, amount withheld and landlord’s stated reason, relevant lease terms and communications, and applicable jurisdiction.",
+          "refusal": null,
+          "reasoning": null,
+          "reasoning_details": [
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABqtUA4iRR3GD50UWHBrqT8SGpEIwfQXQO7GD8zP1ywAHdLbcTw-iqgcDIKpKk0PWhUg1--nIITyX7xR52SX4q8dyavJgPuIxPCp3cMFFPH8P14fsN3ofKZwfnYrSkH_kBNh7t2DbtxeQgsXofugKvGBQVvm9J8jWbJbaSXbU-mVJePtRfR7i5oOe2qifgHQYnU29VuY2wlUXUPYoyv1zYwglLT44-AwzoRqUT0N9cL_koXC531qmlBvcEA10lIPNe4n6BUBs8EezwxGZvi4tmY2qqGJm64NMCHw6faPAtZl5gAx9PbEGTqzgvYprFNN9Hfh2nQUIe6HrgZ0563RLoKFDKBfOVY9hwm5nRP5nIMyUiHWSKlcKVSt58LyrD8G9hXiJBW9hSuCGUH8eTXdi_vb4y7FxEK6TFC0z0jm2VFoI6vJyHX0QVvYnDyg5EOONv3KV5N7DPwjEPcbwcMhRQiMHeYD5p5M-G3OFrsDjkXz8rv9pzQ6Jy72yzdBJ87iqDmCnRdVTB6ex5xIXb_fX68aUs5dbWgV6_DHKtg342m0du3fb3dTcprSa87sE0sUGKan18P_-h_kIEwS0316LfM4gMsCJdE9tCzAXbP7h6ELhaTlRC25Sp64RVv78125rz9Qyyqey75loMlnFdAQ0N4s_e2yZYIFgmOiCSTSC2jwzq3u9Efqz4w3WLpNnSKDjpKlO8wsngHnTKeOroY0v9yid-YsxYmgJpsN4weI6ksJBaT0CqUMJYVMM1oHlnn8IvtUSK6YpDkMoQyIDqg4IOXdCbGkDTZQDh9uvbhOn6kyzi5zC9SYvbjQbxLhflIw928QJmqdFdy2Q2GKTIyhbl4I2YpR47tWgyeNs4EfkLFEkZ5WdqYBTnoW-TiYy32e1JxUfhaMt4v88_Z3icTH3LEYy0h_2xgT8kZWzNdcaVvYYKmb7YVPJHNfiJd7u-C-SVEHrqbKxIAc1twHyGi4euAeC2Viu13ctptMhyEHbGeM7gJ6gFAy7RS7zSIqmc8pdG7T_w5ImDFzeendAU084FKVQJ5aipyKdUsfH6_YP_QSIN-EsGtI7eG7-PlSNsHLeMEoQepCKYUlvNI2RBkDfCfMOQUX17Eulf-abXcGpkkr7Ieq8aGYLDtXtB7Twsa6PNayOYiMr8PXdi3FHREMvalY1382ZLOIt3BX1PXxyDplTT96sZ1aaDzGDasiPDTqS-trWr3sCqhA-XXA6_G3hZQysGU9lQ5ShTvhNJ5QLSSbO8O08ENwgGsc66j8RzCtZvmMn03agH-kzJRq2Q6bgGRozk-cdtED_RvlndsuCxh8_qylE-lVAumvCc0QA3omF-gD8Na2dEgXT8ypqlAX6fIQ0d9ckmTDNSgNCwbNd5sXAnm4bezB-hTW9MEGNeelIWQzQsqebw-tFQXDgi4G6pkTRiGdrwJn1xgtUdoOkPe1-ziWQ6Su9vxDQ9SlGUEPuxAGKHU.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+              "format": "openai-responses-v1",
+              "id": "rs_0c47515aaa576de0016ab54036a93487d19150b650a29d257b",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 200,
+      "completion_tokens": 137,
+      "total_tokens": 337,
+      "cost": 0.00177,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00177,
+        "upstream_inference_prompt_cost": 0.0004,
+        "upstream_inference_completions_cost": 0.00137
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 23,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "e6e98aa35ca3729703a5580287eb3a487f2a3fe5ade820ad550731ae91b931e8",
+  "recorded_at": "2026-09-24T15:22:32.550476+00:00",
+  "wall_seconds": 3.1932602499999803
+}

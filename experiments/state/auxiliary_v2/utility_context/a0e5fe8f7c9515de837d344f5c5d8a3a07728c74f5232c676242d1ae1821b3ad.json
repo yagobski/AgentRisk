@@ -1,0 +1,30 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": false,
+    "evidence": [
+      "Client requests representation",
+      "Lease dispute concerning a deposit withheld by the landlord",
+      "a deposit withheld by the landlord",
+      "a demand letter"
+    ],
+    "rationale": "All four essential items are retained accurately. The note that the deposit amount and dates were not provided is a verification instruction, not an invented fact.",
+    "complete": true,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "f109b88fcc688c26cff9914440bef23853546cef878b74c8d374cb182a774736",
+  "source_hash": "7ae1eeba42e86d6e3e7fa8372aafbd8644113ed606448feadcc3979244a919e7",
+  "rubric_hash": "53e022194f930d8917c6f5d4c3df7fffc187ff3250032ac7900637182eebf590",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "a0e5fe8f7c9515de837d344f5c5d8a3a07728c74f5232c676242d1ae1821b3ad",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

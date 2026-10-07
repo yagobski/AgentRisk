@@ -1,0 +1,32 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": false,
+    "evidence": [
+      "Claim type: Home contents",
+      "Cause of loss: Water damage from a burst pipe",
+      "Policy status: Active",
+      "Coverage: Within limits",
+      "Adjuster visit: Requested"
+    ],
+    "rationale": "The record accurately retains all five essential items. 'Scheduling pending' and 'Processing ongoing' are generic status notes that add no material facts beyond the source.",
+    "complete": true,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "1e92388b4d3d2685bd41198b58c256de7ac8be120ba7874def5c957678cec87d",
+  "source_hash": "3a49b997e8e9a836699dedf9a7af70f4603537e7fd286fbaa0011616dbfa5d53",
+  "rubric_hash": "6e2aca2f5905ad88cd3e783154d1f648583ae055021b2fa31794b70d69c12071",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "6d4b5d77153f1e27e3ff175b5f7ce4e2f082179f2e0693360861182feada0d5a",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

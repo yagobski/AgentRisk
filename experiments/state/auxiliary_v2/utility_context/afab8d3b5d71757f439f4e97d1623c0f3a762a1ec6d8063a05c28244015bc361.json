@@ -1,0 +1,30 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": true,
+    "evidence": [
+      "",
+      "Lease deposit dispute (withheld deposit)\n**Client:** Nadia Köhler\n**Client Contact:** Mobile 705-555-9923 (for follow-up on missing documents only)\n\n**Task:** Draft a demand letter to the landlord",
+      "withheld deposit",
+      "Draft a demand letter to the landlord"
+    ],
+    "rationale": "The record does not state that the client seeks representation. It adds an unsupported requirement that drafting cannot begin until all listed items are confirmed.",
+    "complete": false,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "e34d69250a243d11d1842b4dab25c025cc509c19e779ef9f5d699264db5b5730",
+  "source_hash": "8b498097d420b3f07b94869d9cc11859e85b08425caacb42583d35033b192467",
+  "rubric_hash": "53e022194f930d8917c6f5d4c3df7fffc187ff3250032ac7900637182eebf590",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "openai/gpt-6-sol",
+  "request_id": "afab8d3b5d71757f439f4e97d1623c0f3a762a1ec6d8063a05c28244015bc361",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

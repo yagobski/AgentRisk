@@ -1,0 +1,30 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": false,
+    "evidence": [
+      "",
+      "Household size: 3.",
+      "routine renewal",
+      "within program limits"
+    ],
+    "rationale": "The record never names the municipal housing-subsidy program, so the first item is missing. Household of three, routine renewal, and within program limits are all retained. The income figure ($31,500) is not in the handoff note, but it appears in the full source record, so it is supported and not a fabricated material fact.",
+    "complete": false,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "4f7d1994a596f483edef3a89d90fcaf4daa50d24db31a38dbae2cfc676ba6a45",
+  "source_hash": "f3be8e129a81ce1da91a94f681c394636cf5738725cd53d601a9fbe746bbb644",
+  "rubric_hash": "bfaf90c304f338b32dea18cddc0b7480930c1a7f2369645bcac3fb79bf682757",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "4a34f0e9d30e2cd0c3cefe7ea22876f51397dd7d9d32cdd80a4bd9b059797875",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

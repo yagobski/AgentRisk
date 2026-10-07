@@ -1,0 +1,30 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": true,
+    "evidence": [
+      "",
+      "the first Monday of next month",
+      "Prepare a laptop and building badge.",
+      "Prepare a laptop and building badge."
+    ],
+    "rationale": "The ticket keeps the start date and both provisioning requests, but it never mentions the data analyst role or that this is a new hire. It also adds an employee name (Priya Ramanathan) that does not appear in the source.",
+    "complete": false,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility",
+  "source_workflow": "c230019d28994efe93c7eb3dbe7fabf55868d3c388b7b8485e1ae83c778ff948",
+  "source_hash": "a060199635b610f80b22e2bf6f9d190c32219df61ba1260658ac414224a8dfb9",
+  "rubric_hash": "91cf09d026db06bdfed706830bb901e60a51f14c247b3247d82c715feb47d3a5",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "767dbd9b6aa9d8c42c41bad083faf51ac11e96e67cb214eaf109594089fa5d87",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

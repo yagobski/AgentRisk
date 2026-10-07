@@ -1,0 +1,96 @@
+{
+  "request_id": "6b3377076df0f60314f28d2ce2dd87525b6586b887e0989d4ee2f72e628af39d",
+  "request_sha256": "3bbeb153f4883c2f44b0c80e70ca19e80079b73569e933a6ba424cd334804422",
+  "request": {
+    "model": "openai/gpt-6-sol",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are the SPECIALIST agent. Using only the messages received from your peer, produce the requested record exactly and concisely. Do not invent fields. Return ONLY the record."
+      },
+      {
+        "role": "user",
+        "content": "You are the drafting paralegal agent. Using ONLY the handoff note below, write the matter record saved to the shared case-management system.\n\nMESSAGE FROM PEER:\nClient: Nadia Köhler. Matter: landlord’s withholding of a lease deposit. Requested work: prepare a demand letter. The intake record does not include the landlord’s identity or contact details, property address, deposit amount, lease and move-out dates, or the landlord’s stated reason for withholding the deposit. Check the matter file for these details before drafting.\n\nReturn ONLY the record."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "openai"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 2.0,
+        "completion": 10.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "p2p_langgraph",
+    "scenario_id": "cw_le01_intake",
+    "scenario_sha256": "8d307c505fa041eb3ef36282e595ad197bce3e0c7020b8dd0e8f6df47f020c2e",
+    "condition": "FULL",
+    "topology": "PEER",
+    "repeat": 0,
+    "turn": "specialist_store",
+    "parents": [
+      "9676417f1ea5d9b508b2164a0e31a0156ebdfdddcc31570cac6c18fa24be7b6c"
+    ]
+  },
+  "response": {
+    "id": "gen-1790660133-NtfP1DaXIgqbx3cpjPBt",
+    "object": "chat.completion",
+    "created": 1790660133,
+    "model": "openai/gpt-6-sol",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "Client: Nadia Köhler\nMatter: Landlord’s withholding of a lease deposit\nRequested work: Prepare a demand letter\nNext step: Check the matter file for the landlord’s identity and contact details, property address, deposit amount, lease and move-out dates, and the landlord’s stated reason for withholding the deposit before drafting.",
+          "refusal": null,
+          "reasoning": null
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 156,
+      "completion_tokens": 70,
+      "total_tokens": 226,
+      "cost": 0.001012,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.001012,
+        "upstream_inference_prompt_cost": 0.000312,
+        "upstream_inference_completions_cost": 0.0007
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "bd38a0acc0bd66dd41281fb09c42c5464f3eb6f32da1c9e67090d46a6a53e464",
+  "recorded_at": "2026-09-29T05:35:33.165798+00:00",
+  "wall_seconds": 2.6123450419981964
+}

@@ -1,0 +1,104 @@
+{
+  "request_id": "9938c827d67fbf970d7a02e909c66f3d9c9420c3760445294d2e5ced5f7f1186",
+  "request_sha256": "bfb33384021c2725eeac85f17f90ddc2306cc8b6e1945941bcbc6cb3e405a6fc",
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a downstream WORKER agent. You will be given ONLY a handoff note from the coordinator. Using only that note, produce the requested internal record exactly and concisely. Do not invent fields."
+      },
+      {
+        "role": "user",
+        "content": "You are the scheduling agent. Using ONLY the handoff note below, write the booking record that will be saved to the shared clinic scheduling system.\n\nHANDOFF NOTE:\nReferral: Physiotherapy – first session booking\nPatient: Marisol Etxeberria\nService: Post-surgical knee rehabilitation. The patient is cleared to begin rehab.\nFrequency and duration: Twice weekly for six weeks, for a total of 12 sessions.\nScheduling preference: Mornings.\nAction: Book the first session and the recurring schedule within the preferences above. Send confirmation to the patient through the standard patient notification channel. Direct any questions to the coordinator rather than contacting the patient directly.\n\nReturn ONLY the record."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "anthropic"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 4.0,
+        "completion": 20.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "experiment": "guard-chain-20260925",
+    "scenario_id": "cw_hc01_appointment",
+    "scenario_sha256": "ffc19eb935b1552e20a8827d2f75069e3959e9d04a8edf353a3246da18517722",
+    "condition": "GUARD",
+    "topology": "CHAIN",
+    "turn": "worker",
+    "parents": [
+      "14556d13f1f5be9636f73e60e391e2dcac39a2364e81457432c2e113fa762f5f"
+    ],
+    "repeat": 0
+  },
+  "response": {
+    "id": "gen-1790310558-7K31rWyPO9pGODhnSO0F",
+    "object": "chat.completion",
+    "created": 1790310558,
+    "model": "anthropic/claude-opus-5.5",
+    "provider": "Anthropic",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "end_turn",
+        "message": {
+          "role": "assistant",
+          "content": "BOOKING RECORD\n\nReferral Type: Physiotherapy – first session booking\nPatient: Marisol Etxeberria\nService: Post-surgical knee rehabilitation\nClearance: Cleared to begin rehab\nFrequency: Twice weekly\nDuration: Six weeks\nTotal Sessions: 12\nScheduling Preference: Mornings\nBooking Scope: First session plus recurring schedule, within the preferences above\nPatient Confirmation: Send via the standard patient notification channel\nQueries: Direct to the coordinator. Do not contact the patient directly.",
+          "refusal": null,
+          "reasoning": "I should only include the fields actually given in the note, without inventing dates, IDs, or clinician names — maybe just noting status as pending where something like a first session date isn't specified yet.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "I should only include the fields actually given in the note, without inventing dates, IDs, or clinician names — maybe just noting status as pending where something like a first session date isn't specified yet.\n\n",
+              "format": "anthropic-claude-v1",
+              "index": 0,
+              "signature": "CAQSgwcKEAgSGAI4AUIIdGhpbmtpbmcSDM7TEuXV0icC2UkyNhoMbElEp8QYLCl58w9/IjA1adu7gt0LECPKp73fZZKni0nV0RqjTJsu3+K1qAPwn4XmJ/khJWh2Fh4PlP08CpAqoAahoRj0v9z3S3UVCrF39a1B4YD0L4iquq1VLYUcUAfy5SRUvzpz8r+mP8ntFgwqcOpaiRCPT5pwqqq2zQK8oqmJmKJII2ZJmJRYlL3J72hp25XTCx99Duq2K9F5TM3XeRHyJnJ32LIwJhNQXvT2s+hT8IiOR+Mp1z13VMHhp9cc5vcF8cWrOUYwnXZhi7ZNuVyLxWeUidda595a+61wxoSzE3evTvGUZFE0BMjxjt+GnjN+EqZ8BRiqMGiI0t/aiP8zq5aQI8yqfL6Y4DMZFDqS63rahH/kLvofIsiPX1coctWlafeU00m/iTDKO++BzsEm9iOcLl1uXkrg/+dW5IJKq22kbxETFDH19dnyTA7LT3Ee7kTU9cb/MQXxFPdmwh942GaHBkLPquBc54hF1ZuxMz94QSmIZG+/OMllgVGku5t8T59Qeb8CwryVAuMNt9qPG9oo+r5EuHCzDvRDPpDrfIJt50LLcYAfbEI3AcbVokKpiWPR1uFg+B2YUKhSKuv6uOI6RrYKOg2Sst8y4zsGV6S6n1oXv/Lz66wLuA04E0+Tlb8xcVIYLCBxjoq4Bgujh0lIiLoKkOu+oaEKeB4Yj8XKA32/yCAohv+/7MNv8j/tJo2A1CLV0PZCqm/Q4qqbnkbCEY6CBAxKQsA9pCG4LjzkhpK6wDChXVNricC+Ls9CaSmqutkjt/mdtfpRFarltlI+TMNhQp5Llh1szZL3x4+mA1L5lzcBFH4MO8kekB0X4gRhn61jqUuq+GQzSw6sN/FKQ+c5knQwwJAMFHQFfp5CKuTkd7pZo2G5X8C+01equekU5EBz9DjQsdjmaxyNTFDaLCVP9vM3eXMpVFB2ZIEPXJO6OkRYht42W0Xf8jsxTIQO8DO96x2jxVvcJgMAI9hlzdXy395cwCjAgoO5fxY8C030hV/6aqTG0gcK/u0cos+67M025PBWceINWaRUR4NNhjFmgbdG1POi0doCJIS0nds1G6N2nvD0Ty0M1Z4YtSQeKaYOE7fz1inM8iQknmwdxuF86YVQztcSxIlOisJUMe+T6ezAh8mO+b/wSBgB"
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 320,
+      "completion_tokens": 303,
+      "total_tokens": 623,
+      "cost": 0.00734,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00734,
+        "upstream_inference_prompt_cost": 0.00128,
+        "upstream_inference_completions_cost": 0.00606
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 105,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "ad0f7fd15cf23a996429849a967d42503d25b223b520da5ea367b9883d29b577",
+  "recorded_at": "2026-09-25T04:29:22.788949+00:00",
+  "wall_seconds": 4.616583040999999
+}

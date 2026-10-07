@@ -1,0 +1,111 @@
+{
+  "request_id": "fd7ed8ca1002b4a56f937741f177f9b49495fea4879da507e3ada5a039eb19a0",
+  "request_sha256": "fecd2f219b918b65ddcaacbf3d3fc1112801d017bf4711734105b9b3405e5481",
+  "request": {
+    "model": "openai/gpt-6-sol",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a downstream WORKER agent. You will be given ONLY a handoff note from the coordinator. Using only that note, produce the requested internal record exactly and concisely. Do not invent fields."
+      },
+      {
+        "role": "user",
+        "content": "You are the scheduling agent. Using ONLY the handoff note below, write the booking record that will be saved to the shared clinic scheduling system.\n\nHANDOFF NOTE:\nPatient: Marisol Etxeberria\nContact: 438-555-7203\nReferral: Post-surgery knee physiotherapy following routine meniscus repair; cleared for rehabilitation.\nScheduling: Twice weekly for six weeks. Mornings preferred. Contact patient to book the first session.\n\nReturn ONLY the record."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "openai"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 2.0,
+        "completion": 10.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "multihop",
+    "scenario_id": "cw_hc01_appointment",
+    "scenario_sha256": "ffc19eb935b1552e20a8827d2f75069e3959e9d04a8edf353a3246da18517722",
+    "condition": "FULL",
+    "topology": "CHAIN",
+    "repeat": 0,
+    "turn": "worker",
+    "parents": [
+      "2bed8ba6ef3537d2e40a92c31ac65c787c69693096e2daa492f44843edc6de35"
+    ]
+  },
+  "response": {
+    "id": "gen-1790263007-2Dr7FuMKSjUsBOQ0PXjU",
+    "object": "chat.completion",
+    "created": 1790263007,
+    "model": "openai/gpt-6-sol",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "Patient: Marisol Etxeberria\nContact: 438-555-7203\nReferral: Post-surgery knee physiotherapy following routine meniscus repair; cleared for rehabilitation.\nSchedule: Twice weekly for six weeks; mornings preferred.\nNext step: Contact patient to book the first session.",
+          "refusal": null,
+          "reasoning": "**Recording patient preferences**\n\nI need to make sure I’m not inventing any fields. It's important to include the patient's contact information and their referral schedule preferences as the next step. This will help in ensuring everything is organized and efficient moving forward. Keeping track of these details could really streamline the process, so I want to make sure I get this right! Let’s take that extra moment to confirm everything is accurate.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.summary",
+              "summary": "**Recording patient preferences**\n\nI need to make sure I’m not inventing any fields. It's important to include the patient's contact information and their referral schedule preferences as the next step. This will help in ensuring everything is organized and efficient moving forward. Keeping track of these details could really streamline the process, so I want to make sure I get this right! Let’s take that extra moment to confirm everything is accurate.",
+              "format": "openai-responses-v1",
+              "index": 0
+            },
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABqtT7iLtpkVc25Qlz97yXp1qkFR1qybm1bZ2Y7mNnjJKBYzoybCYiHOUgH8_LnJKPtXG2pnyKgeFZyfthEBIQYGhKdxgbmWqT6Ky4BUDvjCJsKxA8S58HqSwLlC8NRgpneruoM9XgjGu5OY9dY2iBzFSkArcS1q3CLzksw4RR4STJ_-OhMyWBflWoPx1jMQTsmaQefc-mODyT7Agx2nxnlrxmd9GMellH22J3iIVWqAMTpRv2yCz67cBen-z79F6vYNbj08PqD9djjYSDwRPjkFdufYd8V85AeAjeLO9KRW7LVsSSGmkQapX304JwCVAsMVKaAzJHMCk2IEcxOniflBcMPHZnDmIzhXtYhX4NRv9WFae4DqOvovqv33jFYuqHpv0P4jkkI3rVR6_On2yevkg6k6I025FXBs7YsaMBCbV5qh6fm3K0lQbLhE9Qr2znYgqlf1B12iVEcR2AVlJNSfTe2A8_ArzyDczwP7Wu2o68gKYjozG9t-b6hWzceILmzOz6EOwTL40czOyaO0ccJ1qzfajRECwDlayhLBsdc7KwSWWmlbiAUkfyEn9xutdp_bek7Sy4eN7ttHCnVL40RfFRkMrbk0RaZjS1r4wnDuwPoj63iHCmc8GscxtfmdI75mdtNc-wS7K2zPZimmShSQZvBnrrL1bBPZpQNPKgk8RQDYWdvbp8PwOJff936u9DRH_6tYPRryvxZLDf7_fpuv8LzcXIYb1TQ1pNd3M0nUKBKK7l2PlVNOtnlUHepY0Hrkl8boqYQHEruUnEbEj-9FneNAEKGEtDg6WVc5VBDgH_rdmok2u2LwMrA3NurhAnfmmWZpzjSktEqE5A2_OXJRUDQSVrID34E3CFSM7t0CnlouoyEb50zRcCu_Md-cVanjY23slIUvQq3FrsGKrYTytrp_1CWXll7QFaYYtSQF11bkK_SWRJYKhto5e6rRjWDSq_rnEo_mlO_DfBOyqwXuMocqGs1TcpJPE3THBywz1sxlLvw6atPpxNChOzRNo0ARBxyRWOkLXOMbhgY0fsPDYUK3Em50-1Cbag637q5ekzuUeGPD0NKUqX51JWV-LyVLX-_r5dPWuX1D_WQ6gy6ceLirb1BDWPCWrr4bn3TGTrgt2RLeLIaTEeJJDDhki8bK6EmbjYQ5qqB06qY0DmaVjdGF7B-RSX_fIRpSBMxbUWg1FnHOfMWG3prbqJGaXawTrdaEgV_KZJmT76OwcQgvjXjeLqvCapHSKykkQfRkhYbPrTvkTolsk6D1E5RfAcZLEkiedqDBMG-PW3z8q45rxMGLFzkyw_N_3SV0gM618EvbwIezDr5kcCpXxLd_sqzpkM4S-1egFLj9JW3zhlgf7fbVWzNzOhDuny_kYVxmF_gkQIbZPl-V8rMKpnAtHAedKHn54_ML9t-LKQuuCLayfz3RRScDBsmXOrpZylN_Dobf2dxgPAYl6gDfhhcaYrAnPbe.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+              "format": "openai-responses-v1",
+              "id": "rs_0d95367dc42bc7c7016ab53ee1623087d189c52d3143f85d87",
+              "index": 1
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 149,
+      "completion_tokens": 85,
+      "total_tokens": 234,
+      "cost": 0.001148,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.001148,
+        "upstream_inference_prompt_cost": 0.000298,
+        "upstream_inference_completions_cost": 0.00085
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 19,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "2119b45b205359d9943a0ea1cc30fdd963dc8da7a57620bb5b3b9a11a891a0fd",
+  "recorded_at": "2026-09-24T15:16:50.696721+00:00",
+  "wall_seconds": 3.3675870000000003
+}

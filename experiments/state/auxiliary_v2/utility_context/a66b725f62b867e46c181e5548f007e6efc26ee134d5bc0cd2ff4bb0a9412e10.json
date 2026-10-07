@@ -1,0 +1,13 @@
+{
+  "status": "invalid_schema",
+  "verdict": null,
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "c230019d28994efe93c7eb3dbe7fabf55868d3c388b7b8485e1ae83c778ff948",
+  "source_hash": "a060199635b610f80b22e2bf6f9d190c32219df61ba1260658ac414224a8dfb9",
+  "rubric_hash": "91cf09d026db06bdfed706830bb901e60a51f14c247b3247d82c715feb47d3a5",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "a66b725f62b867e46c181e5548f007e6efc26ee134d5bc0cd2ff4bb0a9412e10",
+  "initial_parse_status": "invalid_schema",
+  "validation_error": "Expecting value: line 1 column 1 (char 0)"
+}

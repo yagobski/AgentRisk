@@ -1,0 +1,30 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": true,
+    "evidence": [
+      "Municipal housing-subsidy renewal",
+      "Household Size:** 3",
+      "renewal (routine)",
+      "Within program limits"
+    ],
+    "rationale": "The RECORD retains all four essential items but adds an approval and finalized determination not supported by the stated handoff note.",
+    "complete": false,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "30378e833e63c0daf41515772fb731a90508f6a7c18f98f7d44f0575df2eed9e",
+  "source_hash": "6dfc14679ef9cbb96999cfba539cc3e6fd20009a3512e428d3c13dee5ec3f7c8",
+  "rubric_hash": "bfaf90c304f338b32dea18cddc0b7480930c1a7f2369645bcac3fb79bf682757",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "openai/gpt-6-sol",
+  "request_id": "a7ae53d2e94690fa4e60245eb1b004d2c38c9ce57b4d6fe63fefc0d9d622c658",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

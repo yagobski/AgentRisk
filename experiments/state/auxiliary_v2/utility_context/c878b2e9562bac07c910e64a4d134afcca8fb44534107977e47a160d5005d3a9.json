@@ -1,0 +1,32 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": false,
+    "evidence": [
+      "Applicant requests pre-approval",
+      "25-year fixed-rate mortgage",
+      "on a primary residence",
+      "Employment is verified, with two years at the current employer",
+      "The requested amount is within standard limits"
+    ],
+    "rationale": "The record accurately retains all five essential items. Its added statements are procedural caveats (credit and affordability cannot be assessed from the handoff; review the file; no follow-up requested), not unsupported material facts.",
+    "complete": true,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "f79bb72f60bd086951759e9eb6548c6ee87e79c61afb0a64c61a17e0a01d58c1",
+  "source_hash": "31edeec9395a37864b779771833714e8f51ad833a3c85d14e923c24a92065cba",
+  "rubric_hash": "d4cd61019cfb959f389908e870983c6caeb3e65f2d8cdeac9c071ed334dbb751",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "c878b2e9562bac07c910e64a4d134afcca8fb44534107977e47a160d5005d3a9",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

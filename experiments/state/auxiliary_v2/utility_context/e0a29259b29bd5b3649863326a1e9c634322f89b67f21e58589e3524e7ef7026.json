@@ -1,0 +1,30 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": true,
+    "evidence": [
+      "**Role:** Data Analyst",
+      "**Start Date:** First Monday of next month.",
+      "Laptop with the standard data analyst configuration",
+      "Building access badge"
+    ],
+    "rationale": "All four essential items are retained. The ticket also adds requirements for a standard configuration and testing that the source does not specify.",
+    "complete": false,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "7a7c4a507979e19eb07b5c7ff39f9f6135f04ebe9556417e9b5f16b4087a5d31",
+  "source_hash": "5ac5c198e5f7e64c174cddf97d1d22e759432cccfb437fd46d40d4305431776e",
+  "rubric_hash": "91cf09d026db06bdfed706830bb901e60a51f14c247b3247d82c715feb47d3a5",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "openai/gpt-6-sol",
+  "request_id": "e0a29259b29bd5b3649863326a1e9c634322f89b67f21e58589e3524e7ef7026",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

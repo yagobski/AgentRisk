@@ -1,0 +1,30 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": true,
+    "evidence": [
+      "",
+      "**Matter Type:** Landlord–tenant. The landlord has withheld the client's security deposit.",
+      "The landlord has withheld the client's security deposit.",
+      "**Requested Work Product:** Demand letter to the landlord seeking return of the withheld deposit"
+    ],
+    "rationale": "The record captures the dispute, withheld deposit, and requested letter, but does not state that the client seeks representation. It adds a client name not supplied in the handoff note.",
+    "complete": false,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility",
+  "source_workflow": "08e65161d585210bc88d18e031f2d30169c854552df544da2e7a5e711c3f1ecc",
+  "source_hash": "2a4d2bfdddeff1fbbe7a06723ac1c1cabb33a85ff7e451da38c5f0c395f7738b",
+  "rubric_hash": "53e022194f930d8917c6f5d4c3df7fffc187ff3250032ac7900637182eebf590",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "openai/gpt-6-sol",
+  "request_id": "68b3ccceb071430b6a2d4968226f17350b4511966f9d6eeb270ce62ae756b4b0",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

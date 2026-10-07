@@ -1,0 +1,456 @@
+{
+  "campaign": "revision-20260924-v2",
+  "workflows": 72,
+  "calls": 240,
+  "topologies": [
+    "CHAIN",
+    "FANOUT",
+    "DYNAMIC"
+  ],
+  "seed": 20260925,
+  "repetitions": 1,
+  "conditions": [
+    "FULL",
+    "SCOPED"
+  ],
+  "models": [
+    "anthropic/claude-opus-5.5",
+    "openai/gpt-6-sol"
+  ],
+  "utility_rubric_sha256": "4f83f8bc7ad02a8271c8b0fe1d50764ac48847133680d0af299f091bebef9e48",
+  "jobs": [
+    {
+      "case": "cw_go01_benefit",
+      "model": "openai/gpt-6-sol",
+      "condition": "SCOPED",
+      "topology": "DYNAMIC"
+    },
+    {
+      "case": "cw_in01_claim",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "SCOPED",
+      "topology": "DYNAMIC"
+    },
+    {
+      "case": "cw_hc01_appointment",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "SCOPED",
+      "topology": "CHAIN"
+    },
+    {
+      "case": "cw_go01_benefit",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "SCOPED",
+      "topology": "CHAIN"
+    },
+    {
+      "case": "cw_le01_intake",
+      "model": "openai/gpt-6-sol",
+      "condition": "FULL",
+      "topology": "DYNAMIC"
+    },
+    {
+      "case": "cw_fi01_mortgage",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "SCOPED",
+      "topology": "DYNAMIC"
+    },
+    {
+      "case": "cw_hc01_appointment",
+      "model": "openai/gpt-6-sol",
+      "condition": "FULL",
+      "topology": "CHAIN"
+    },
+    {
+      "case": "cw_go01_benefit",
+      "model": "openai/gpt-6-sol",
+      "condition": "SCOPED",
+      "topology": "CHAIN"
+    },
+    {
+      "case": "cw_fi01_mortgage",
+      "model": "openai/gpt-6-sol",
+      "condition": "SCOPED",
+      "topology": "DYNAMIC"
+    },
+    {
+      "case": "cw_in01_claim",
+      "model": "openai/gpt-6-sol",
+      "condition": "SCOPED",
+      "topology": "CHAIN"
+    },
+    {
+      "case": "cw_le01_intake",
+      "model": "openai/gpt-6-sol",
+      "condition": "SCOPED",
+      "topology": "DYNAMIC"
+    },
+    {
+      "case": "cw_le01_intake",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "SCOPED",
+      "topology": "CHAIN"
+    },
+    {
+      "case": "cw_le01_intake",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "FULL",
+      "topology": "FANOUT"
+    },
+    {
+      "case": "cw_fi01_mortgage",
+      "model": "openai/gpt-6-sol",
+      "condition": "SCOPED",
+      "topology": "FANOUT"
+    },
+    {
+      "case": "cw_hc01_appointment",
+      "model": "openai/gpt-6-sol",
+      "condition": "FULL",
+      "topology": "DYNAMIC"
+    },
+    {
+      "case": "cw_in01_claim",
+      "model": "openai/gpt-6-sol",
+      "condition": "SCOPED",
+      "topology": "FANOUT"
+    },
+    {
+      "case": "cw_fi01_mortgage",
+      "model": "openai/gpt-6-sol",
+      "condition": "FULL",
+      "topology": "FANOUT"
+    },
+    {
+      "case": "cw_hr01_onboarding",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "FULL",
+      "topology": "CHAIN"
+    },
+    {
+      "case": "cw_hc01_appointment",
+      "model": "openai/gpt-6-sol",
+      "condition": "SCOPED",
+      "topology": "DYNAMIC"
+    },
+    {
+      "case": "cw_fi01_mortgage",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "FULL",
+      "topology": "FANOUT"
+    },
+    {
+      "case": "cw_hr01_onboarding",
+      "model": "openai/gpt-6-sol",
+      "condition": "SCOPED",
+      "topology": "FANOUT"
+    },
+    {
+      "case": "cw_le01_intake",
+      "model": "openai/gpt-6-sol",
+      "condition": "FULL",
+      "topology": "CHAIN"
+    },
+    {
+      "case": "cw_hc01_appointment",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "SCOPED",
+      "topology": "DYNAMIC"
+    },
+    {
+      "case": "cw_le01_intake",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "SCOPED",
+      "topology": "FANOUT"
+    },
+    {
+      "case": "cw_hc01_appointment",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "SCOPED",
+      "topology": "FANOUT"
+    },
+    {
+      "case": "cw_hr01_onboarding",
+      "model": "openai/gpt-6-sol",
+      "condition": "SCOPED",
+      "topology": "DYNAMIC"
+    },
+    {
+      "case": "cw_hc01_appointment",
+      "model": "openai/gpt-6-sol",
+      "condition": "SCOPED",
+      "topology": "CHAIN"
+    },
+    {
+      "case": "cw_hr01_onboarding",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "FULL",
+      "topology": "FANOUT"
+    },
+    {
+      "case": "cw_go01_benefit",
+      "model": "openai/gpt-6-sol",
+      "condition": "FULL",
+      "topology": "CHAIN"
+    },
+    {
+      "case": "cw_in01_claim",
+      "model": "openai/gpt-6-sol",
+      "condition": "SCOPED",
+      "topology": "DYNAMIC"
+    },
+    {
+      "case": "cw_hc01_appointment",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "FULL",
+      "topology": "DYNAMIC"
+    },
+    {
+      "case": "cw_hc01_appointment",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "FULL",
+      "topology": "FANOUT"
+    },
+    {
+      "case": "cw_hr01_onboarding",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "SCOPED",
+      "topology": "FANOUT"
+    },
+    {
+      "case": "cw_hr01_onboarding",
+      "model": "openai/gpt-6-sol",
+      "condition": "FULL",
+      "topology": "FANOUT"
+    },
+    {
+      "case": "cw_hr01_onboarding",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "SCOPED",
+      "topology": "CHAIN"
+    },
+    {
+      "case": "cw_in01_claim",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "SCOPED",
+      "topology": "FANOUT"
+    },
+    {
+      "case": "cw_le01_intake",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "FULL",
+      "topology": "CHAIN"
+    },
+    {
+      "case": "cw_go01_benefit",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "SCOPED",
+      "topology": "FANOUT"
+    },
+    {
+      "case": "cw_fi01_mortgage",
+      "model": "openai/gpt-6-sol",
+      "condition": "FULL",
+      "topology": "DYNAMIC"
+    },
+    {
+      "case": "cw_hr01_onboarding",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "FULL",
+      "topology": "DYNAMIC"
+    },
+    {
+      "case": "cw_in01_claim",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "FULL",
+      "topology": "CHAIN"
+    },
+    {
+      "case": "cw_go01_benefit",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "FULL",
+      "topology": "CHAIN"
+    },
+    {
+      "case": "cw_hr01_onboarding",
+      "model": "openai/gpt-6-sol",
+      "condition": "FULL",
+      "topology": "DYNAMIC"
+    },
+    {
+      "case": "cw_fi01_mortgage",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "FULL",
+      "topology": "CHAIN"
+    },
+    {
+      "case": "cw_hc01_appointment",
+      "model": "openai/gpt-6-sol",
+      "condition": "FULL",
+      "topology": "FANOUT"
+    },
+    {
+      "case": "cw_go01_benefit",
+      "model": "openai/gpt-6-sol",
+      "condition": "FULL",
+      "topology": "FANOUT"
+    },
+    {
+      "case": "cw_in01_claim",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "FULL",
+      "topology": "FANOUT"
+    },
+    {
+      "case": "cw_hr01_onboarding",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "SCOPED",
+      "topology": "DYNAMIC"
+    },
+    {
+      "case": "cw_fi01_mortgage",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "FULL",
+      "topology": "DYNAMIC"
+    },
+    {
+      "case": "cw_in01_claim",
+      "model": "openai/gpt-6-sol",
+      "condition": "FULL",
+      "topology": "DYNAMIC"
+    },
+    {
+      "case": "cw_in01_claim",
+      "model": "openai/gpt-6-sol",
+      "condition": "FULL",
+      "topology": "FANOUT"
+    },
+    {
+      "case": "cw_in01_claim",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "FULL",
+      "topology": "DYNAMIC"
+    },
+    {
+      "case": "cw_in01_claim",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "SCOPED",
+      "topology": "CHAIN"
+    },
+    {
+      "case": "cw_go01_benefit",
+      "model": "openai/gpt-6-sol",
+      "condition": "FULL",
+      "topology": "DYNAMIC"
+    },
+    {
+      "case": "cw_fi01_mortgage",
+      "model": "openai/gpt-6-sol",
+      "condition": "SCOPED",
+      "topology": "CHAIN"
+    },
+    {
+      "case": "cw_le01_intake",
+      "model": "openai/gpt-6-sol",
+      "condition": "SCOPED",
+      "topology": "FANOUT"
+    },
+    {
+      "case": "cw_le01_intake",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "SCOPED",
+      "topology": "DYNAMIC"
+    },
+    {
+      "case": "cw_fi01_mortgage",
+      "model": "openai/gpt-6-sol",
+      "condition": "FULL",
+      "topology": "CHAIN"
+    },
+    {
+      "case": "cw_hc01_appointment",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "FULL",
+      "topology": "CHAIN"
+    },
+    {
+      "case": "cw_le01_intake",
+      "model": "openai/gpt-6-sol",
+      "condition": "SCOPED",
+      "topology": "CHAIN"
+    },
+    {
+      "case": "cw_go01_benefit",
+      "model": "openai/gpt-6-sol",
+      "condition": "SCOPED",
+      "topology": "FANOUT"
+    },
+    {
+      "case": "cw_hr01_onboarding",
+      "model": "openai/gpt-6-sol",
+      "condition": "SCOPED",
+      "topology": "CHAIN"
+    },
+    {
+      "case": "cw_go01_benefit",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "FULL",
+      "topology": "FANOUT"
+    },
+    {
+      "case": "cw_hc01_appointment",
+      "model": "openai/gpt-6-sol",
+      "condition": "SCOPED",
+      "topology": "FANOUT"
+    },
+    {
+      "case": "cw_le01_intake",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "FULL",
+      "topology": "DYNAMIC"
+    },
+    {
+      "case": "cw_go01_benefit",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "FULL",
+      "topology": "DYNAMIC"
+    },
+    {
+      "case": "cw_hr01_onboarding",
+      "model": "openai/gpt-6-sol",
+      "condition": "FULL",
+      "topology": "CHAIN"
+    },
+    {
+      "case": "cw_le01_intake",
+      "model": "openai/gpt-6-sol",
+      "condition": "FULL",
+      "topology": "FANOUT"
+    },
+    {
+      "case": "cw_fi01_mortgage",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "SCOPED",
+      "topology": "CHAIN"
+    },
+    {
+      "case": "cw_go01_benefit",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "SCOPED",
+      "topology": "DYNAMIC"
+    },
+    {
+      "case": "cw_fi01_mortgage",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "SCOPED",
+      "topology": "FANOUT"
+    },
+    {
+      "case": "cw_in01_claim",
+      "model": "openai/gpt-6-sol",
+      "condition": "FULL",
+      "topology": "CHAIN"
+    }
+  ],
+  "dynamic_tool": "local deterministic retrieval invoked by orchestrator, not autonomous LLM tool selection"
+}

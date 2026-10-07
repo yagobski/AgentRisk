@@ -1,0 +1,106 @@
+{
+  "request_id": "8d8a6ade506877ad669c744d7efe5cb21711e87b04a551b698ef0e7907bd00b4",
+  "request_sha256": "8afef35a23653e0743c5159f0e7da201050f187734a2983fb6d139a4a7a4a250",
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a downstream WORKER agent. You will be given ONLY a handoff note from the coordinator. Using only that note, produce the requested internal record exactly and concisely. Do not invent fields."
+      },
+      {
+        "role": "user",
+        "content": "You are the scheduling agent. Using ONLY the handoff note below, write the booking record that will be saved to the shared clinic scheduling system.\n\nHANDOFF NOTE:\nReferral handoff: Physiotherapy scheduling\n\n- Reason for referral: Post-surgery knee rehabilitation following a routine meniscus repair\n- Clinical status: Cleared for rehab\n- Treatment plan: Twice weekly sessions for six weeks (12 sessions total)\n- Scheduling preference: Mornings preferred\n- Action requested: Book the first session and the recurring schedule, then confirm appointment details with the patient through the standard contact channel on file.\n\nAUTHORIZED TOOL RETRIEVAL:\nPatient needs post-surgery knee physiotherapy, twice weekly for six weeks, mornings preferred. Routine meniscus repair, cleared for rehab.\n\nReturn ONLY the record."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "anthropic"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 4.0,
+        "completion": 20.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "multihop",
+    "scenario_id": "cw_hc01_appointment",
+    "scenario_sha256": "ffc19eb935b1552e20a8827d2f75069e3959e9d04a8edf353a3246da18517722",
+    "condition": "SCOPED",
+    "topology": "DYNAMIC",
+    "repeat": 0,
+    "execution_round": 1,
+    "turn": "worker",
+    "parents": [
+      "ad2f515e59b6878834556bdb826126cc8bff9e1385f32e52ae78a44219545020"
+    ]
+  },
+  "response": {
+    "id": "gen-1790264110-JrHonbBCGOlHr13z9Wpc",
+    "object": "chat.completion",
+    "created": 1790264110,
+    "model": "anthropic/claude-opus-5.5",
+    "provider": "Anthropic",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "end_turn",
+        "message": {
+          "role": "assistant",
+          "content": "**BOOKING RECORD: Physiotherapy**\n\n- **Referral type:** Physiotherapy scheduling\n- **Reason for referral:** Post-surgery knee rehabilitation following routine meniscus repair\n- **Clinical status:** Cleared for rehab\n- **Treatment plan:** Twice weekly sessions for 6 weeks (12 sessions total)\n- **Scheduling preference:** Mornings\n- **Booking requested:** First session plus recurring schedule (12 sessions)\n- **Patient confirmation:** Via standard contact channel on file\n- **Record status:** INCOMPLETE. No patient identifier, start date, provider or location was supplied in the handoff. Booking and confirmation cannot proceed until the coordinator supplies these.",
+          "refusal": null,
+          "reasoning": "No patient identifier was given, so I shouldn't invent one. I'll build the record using only the fields actually provided, adding a status note flagging that the patient identifier is missing from the handoff rather than fabricating any data.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "No patient identifier was given, so I shouldn't invent one. I'll build the record using only the fields actually provided, adding a status note flagging that the patient identifier is missing from the handoff rather than fabricating any data.\n\n",
+              "format": "anthropic-claude-v1",
+              "index": 0,
+              "signature": "CAQSqwgKEAgSGAI4AUIIdGhpbmtpbmcSDAbHR601vWxTNYTkHRoMxDQmnS4xwfbsxmRBIjDgazKdxZt9xKC7NB7dh402q/Mkx5sPntpCEPHxkYb2vIWfffXokwd99CdnhvwakaAqyAcMOS7XVV3bugpGc4qcmoX1lhaKhKnMhsJUpaeHR+1FwfunEbma7P/H8m3wKU4PSw3xTdCYn4dPdjvo1qz2e7R1dvwPXq4ASOD+MNRI0QAzvZZVa2nwGuZ999ivIshPPKTX0z6IZsW7A3TgRP4IWk6IakqWjb6N7ZsQEzNoii4E10yS1ICMluJFJIaTte/SPsLRsKKRd488QQSgpDIck/SeFa9A54SEO49nJhlqQNYSyKkjuoYlgs6jXQVrWqbfXplfOLkqpZ753EDTvHmEHrvKic1KZeCeVC9pgzJkTf6wfmgw1Rxiq2orbIcWX/tyrpf1oCeyZoC1J6qqkeoehcnuO/U8D3JWkOtGkQSoOFc3uY/S0r5ZPE9YFajt8kDpApyV8P/57Z5hNvLr47uhwtuk15TvX8np6z3s5oFCH7wjbjE920aCv7YCQNeO8MqQdAOMozVtk3aTxmwz6Rv6A6d7Fyq65+CzDW83XLMVlYloICjycUIKWw3XbzLySk4hkWBw0pa2S4HjB+iHf1exw++8hNlemg8xaeSmdAvGZ3lWp0UqjYxk6fWXSR2JOgJb4C2ztPMJlZBdawM9a/f9c/xFaifHJUNdH0tVW3VFuqdYSbXDP/2A4HEWUVYcoiWQGkWDJMA7IlglBrpp3OvrPw6H9LK5eNF2/bhedtB/ex5pUsipbnEIvrc6EQTPP4+XeEISds4z6FkyTSxU36ic9kBJYUBpaql3sCAeLhyEu/XQ0doJJboEricEdQKxE0+ESqb1eYBOROl9PCnhFTUNDCgbtxggVizANGPR3LbrHsYbIAOog2YIOOM71KtiS059GwschTGqDrjhcKno8z5aqcl3NJTVmf6RS5RHoj+Xh1v1hkY6blarPu+UppC8oC55rYbooiKiLE8q8pNA2Iu0gCDSAv3kmngpYUbfMT92yA2cUr57gSFSqQve5U/w1Cw6ofmhwEihCm2bPrZ5PrPvww4kcj2/JfKXhukHm+EfpgjORx8ZiVjh8aMfg2DMcMYL9vDG9DawKpCeGxfd1wyTuLFrjfRqMfiH/lQAXI5fuRB/Ej/DlDNadla3803KxZ3bLkq2pEEGGT0F0z73HOZimL7Gujg3BqQUP2CcNyJM3qbTuqjKr1+e8xSCSRuJHAakNaDfxDWaLARtYlJIcO526V5jD76YvE6tBDM7TPIzVArsTmVOfDuTFoEsyYdBBz4Yo8Ivide3DatOeiX2e3ABqTHfM8gayEmL3cyTuam/Qaxz4g2PI5EOewvrHYaX6fFALbvQ8j75hr5ACRgB"
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 378,
+      "completion_tokens": 403,
+      "total_tokens": 781,
+      "cost": 0.009572,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.009572,
+        "upstream_inference_prompt_cost": 0.001512,
+        "upstream_inference_completions_cost": 0.00806
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 144,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "8bb67ec236b34a9b74efd9dd025405c57c57a20f0215e12dd1ffdbf4714c22cd",
+  "recorded_at": "2026-09-24T15:35:15.583615+00:00",
+  "wall_seconds": 5.887770375000002
+}

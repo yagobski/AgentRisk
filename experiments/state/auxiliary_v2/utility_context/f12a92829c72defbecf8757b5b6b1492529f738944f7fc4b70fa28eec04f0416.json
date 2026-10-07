@@ -1,0 +1,32 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": false,
+    "evidence": [
+      "Home-contents water damage from a burst pipe",
+      "Home-contents water damage from a burst pipe",
+      "Policy active",
+      "claim within coverage limits",
+      "Requested; not yet scheduled"
+    ],
+    "rationale": "The record retains all five essential items accurately. The phone number and policyholder name come from the source record. 'Not yet scheduled' and the next-action step follow reasonably from 'visit requested' and add no material fact.",
+    "complete": true,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "d8a6b447e153a079db2cf4ab1facf49311a48d0664ec7700de15afdb6cc674fc",
+  "source_hash": "d60c0e76d9184c3768848dbaa705a0821d6bdc5b571adf308c420637ee7e28eb",
+  "rubric_hash": "6e2aca2f5905ad88cd3e783154d1f648583ae055021b2fa31794b70d69c12071",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "f12a92829c72defbecf8757b5b6b1492529f738944f7fc4b70fa28eec04f0416",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

@@ -1,0 +1,30 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      null,
+      true,
+      true
+    ],
+    "unsupported_material_fact": true,
+    "evidence": [
+      "**Provisioning ticket — Data analyst**",
+      "",
+      "Prepare a laptop",
+      "building badge"
+    ],
+    "rationale": "The record keeps the data analyst role and both provisioning items (laptop and badge). It replaces 'first Monday of next month' with a specific date, Monday, November 2, 2026, which the source does not state. Whether that date is accurate depends on an unknown current month, so item 2 is unclear, and the specific date counts as an unsupported material fact.",
+    "complete": false,
+    "unresolved": true
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "019ae46fbe84a6bc9c1d0a1d466274a845683c12c2460ecdc8841e16f0287eea",
+  "source_hash": "1ee45c5f609a2c04036f1c594399f81ec0cfc06a03ee8c3a9708b545e5182e0f",
+  "rubric_hash": "91cf09d026db06bdfed706830bb901e60a51f14c247b3247d82c715feb47d3a5",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "608c6093649b907250763b40b015801fb1dd9cf081ab0fafb014deaba66f5866",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

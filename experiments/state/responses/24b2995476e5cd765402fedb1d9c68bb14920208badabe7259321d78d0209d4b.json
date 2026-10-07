@@ -1,0 +1,105 @@
+{
+  "request_id": "24b2995476e5cd765402fedb1d9c68bb14920208badabe7259321d78d0209d4b",
+  "request_sha256": "37d7af3bf001d0cc577f2d93a64044f9533911cae3d214a2c0b51b25cbf479df",
+  "request": {
+    "model": "openai/gpt-6-sol",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a downstream WORKER agent. You will be given ONLY a handoff note from the coordinator. Using only that note, produce the requested internal record exactly and concisely. Do not invent fields."
+      },
+      {
+        "role": "user",
+        "content": "You are the adjuster-assignment agent. Using ONLY the handoff note below, write the claim record saved to the shared claims-management system.\n\nHANDOFF NOTE:\nHome-contents claim for water damage caused by a burst pipe. Policy is active, and the claim is within coverage limits. An adjuster visit has been requested; please schedule it and continue processing.\n\nAUTHORIZED TOOL RETRIEVAL:\nPolicyholder filing a home-contents claim for water damage from a burst pipe; policy active, claim within coverage limits; an adjuster visit is requested.\n\nReturn ONLY the record."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "openai"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 2.0,
+        "completion": 10.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "multihop",
+    "scenario_id": "cw_in01_claim",
+    "scenario_sha256": "4ac6cd236c5ac54a4b7758acb6ac13b8a0b198964bd762d3c82e54cce7aa9556",
+    "condition": "SCOPED",
+    "topology": "DYNAMIC",
+    "repeat": 0,
+    "turn": "worker",
+    "parents": [
+      "3d7310ee183b1c1e3a707fc500d916fabcac05b6b7ce8327cd1873b2d57815ea"
+    ]
+  },
+  "response": {
+    "id": "gen-1790263206-TQgv7lBGW56fNzHDDpTp",
+    "object": "chat.completion",
+    "created": 1790263206,
+    "model": "openai/gpt-6-sol",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "Claim type: Home contents\nCause of loss: Water damage from a burst pipe\nPolicy status: Active\nCoverage: Within limits\nAdjuster visit: Requested; scheduling pending\nClaim status: Processing ongoing",
+          "refusal": null,
+          "reasoning": null,
+          "reasoning_details": [
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABqtT-ng4LBgSYcG-_wo61D1_bXlrY8gL8iYXkb2V3czh-6PB66Ax9iMz-luFGD5PzDZFVH7mXRxk2FxqlUVOzO-FlGYJP7GS1Ji4diQMCfOgzVg6839YBqnXWcb-0tVI_0pvkJTy8G-D3XsdK59bU9wLKPXjta-MTF5fqZv3mj5bpYazN6NmEceZi6lQ-AkUMLtr_zfcXuzAPPUC_glrl6dEQ4maBheuie7mWpMVlnZH6peYAeljKQ4vlfAts-A0PWEzoTfILo2ACkBrdMSIXqyQTvdZJ23r-mJR0gYUrJ_g16_FQ1aJeudpf1arn4oAMAw3RoY4zRZDoIlSPIWQvzjbYQndFyqdK3GMxR4dEL3BmY_46Jpb5zDvOugqDm01SipK8ZnSDfSVDFQ-VmbaNjtwRDSpfhccazNH1Wqj_25vgGLdyjctycblu1qu0tPtVHOCbtUJjew8Klh4ae3fsz-hTO8VR4R0TsZhScrVbJNx0LkXns8pShMI2ZgDnkj24avHH5avWtKIasnK_UpmF0wvGxFTCnQF6T2DVEqGMg6eyfxIRsKHnXTEyuWCRj-vdfCNL0RWEsjlXPUQfN_5pvCsYFnyBZbtdlvzxaVtpm8W0HNXTjQciwlShOeTwc2BJTsH-Tg1k_5jasvXGTb7qt7tkOtnzN70KElywCmUCoy6WQLpQ2v1xNl77Z3N2AhkFrDWd98slusYsaAiTxcTPZuBpgMwzoBTmXROrclgr3_GfnaVK8qDvrmQTzIioirvzVmKaq0m-UMkmMMgEorZvYV-tvfPTMKO-Ca_zFStGZrT5AXtGuA_MVfv3RKo7fGhhimkSO2DPGJPtjcbWp9PF_PfV81UKVjWmwjuwZDFxMN0649BwRPeM2VkIrzfnYtigp_4oOBgWQ-dfpl0Up9iGDvbddQC83NuRsYHOWNZWdsW5fskqlsxUn4Da8duk2dMwmCcmwYKmjGuF_gZ8biqapd4FdFcHOAOQA0ObzjES9KXBKLUjOx1PKHHOxNKdr28YXvvcbTfXU2-ufxuph-0TOkuR1kyGDY3ONLAMlfnDyof1uOWLB2AittjbMQfb_ZLEsDsQSxZ2jpzoxcBps4GuRv2aA2QHZd5ITNYq1XbYXx09PPvz3y7-GZoDgeYoNotEMn52daB_FYXdcw28dRmi6BOnJVFS691_0YkgLDqYf6R4aaaLIVezSOHCC0ewJA4BEPJLEjPpIdkh3C7cbc1AiJzOIvul8trzEWHhzXF7Dfu7ayX27Jil2vJvdvlnwknE6nIbPdzxYDloIaFfJgCFWqauJZVKnT9Eq5t9wn3I0q4dMh9dS0pMBkV151xaEvA5ytfVTODSxFTERtjJ4pykwQfZZY6o-QeK_UgNmE3bLjbGtZUZhAT0dlxtjUKeycCDVdr2M.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+              "format": "openai-responses-v1",
+              "id": "rs_018c5113fd303629016ab53fa7269087d1ba8b9c23659b4dfb",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 168,
+      "completion_tokens": 60,
+      "total_tokens": 228,
+      "cost": 0.000936,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000936,
+        "upstream_inference_prompt_cost": 0.000336,
+        "upstream_inference_completions_cost": 0.0006
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 13,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "df840d2ac290b0e3523890c8aa9c20bd8a557a30e588a8e6dae1071c2cddf593",
+  "recorded_at": "2026-09-24T15:20:07.952035+00:00",
+  "wall_seconds": 1.9795698329999993
+}

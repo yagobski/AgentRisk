@@ -1,0 +1,30 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": true,
+    "evidence": [
+      "**Role:** Data Analyst",
+      "**Start Date:** First Monday of next month (exact date not specified)",
+      "1. Laptop, standard Data Analyst configuration",
+      "2. Building access badge"
+    ],
+    "rationale": "All essential items are retained. The ticket adds a standard Data Analyst laptop configuration that the handoff note does not specify.",
+    "complete": false,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility",
+  "source_workflow": "85991d0fd75da0c2aafa0792e49157ef7474062ea4cbbad7df3ca406d088518e",
+  "source_hash": "04c27b37a61dc52ecdc9797a765d3b8a8887cf5b8da897095376bd1cd0253edb",
+  "rubric_hash": "91cf09d026db06bdfed706830bb901e60a51f14c247b3247d82c715feb47d3a5",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "openai/gpt-6-sol",
+  "request_id": "174f7a45b6ad9da8df53f788e8ae72a43abf16ccb1ad93453bd54c26482721bb",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

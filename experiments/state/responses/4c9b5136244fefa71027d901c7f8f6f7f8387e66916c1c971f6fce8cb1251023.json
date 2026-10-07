@@ -1,0 +1,97 @@
+{
+  "request_id": "4c9b5136244fefa71027d901c7f8f6f7f8387e66916c1c971f6fce8cb1251023",
+  "request_sha256": "f6fac3f7f71be4755358accf31f88887ef5bfdb35a147858cb18d11a77b3e890",
+  "request": {
+    "model": "openai/gpt-6-sol",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are the downstream ARCHIVIST agent. Preserve the facts necessary for the requested task using only the supplied records. Do not invent facts or include irrelevant sensitive information. Return only the final concise record."
+      },
+      {
+        "role": "user",
+        "content": "TASK: You are the drafting paralegal agent. Using ONLY the handoff note below, write the matter record saved to the shared case-management system.\n\nRECORDS:\nWORKER RECORD:\nMatter: Lease dispute concerning landlord’s withholding of client’s deposit.\n\nRequested work: Prepare a demand letter.\n\nBefore drafting, check the matter file for the lease, deposit amount, relevant dates, and landlord contact information; these are not included in the intake summary.\n\nPEER RECORD:\n**Matter:** Lease dispute concerning the landlord’s withholding of the client’s deposit.\n\n**Requested work:** Prepare a demand letter.\n\n**Next action:** Check the matter file for the lease, deposit amount, relevant dates, and landlord contact information before drafting. These details are not in the provided intake summary."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "openai"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 2.0,
+        "completion": 10.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "multihop",
+    "scenario_id": "cw_le01_intake",
+    "scenario_sha256": "8d307c505fa041eb3ef36282e595ad197bce3e0c7020b8dd0e8f6df47f020c2e",
+    "condition": "SCOPED",
+    "topology": "FANOUT",
+    "repeat": 0,
+    "turn": "archivist",
+    "parents": [
+      "98604edddc8acc50b5c69c845a617531ec5949fce02e26dc04d5b9487fb564a2",
+      "aab5a6f9f7670edf59552bfa45437f0ca598969d8deb3155953fd0be873fc690"
+    ]
+  },
+  "response": {
+    "id": "gen-1790263338-8m2iC4f6QtU3p1wScnB1",
+    "object": "chat.completion",
+    "created": 1790263338,
+    "model": "openai/gpt-6-sol",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "**Matter:** Lease dispute concerning the landlord’s withholding of the client’s deposit.\n\n**Requested work:** Prepare a demand letter.\n\n**Next action:** Before drafting, check the matter file for the lease, deposit amount, relevant dates, and landlord contact information. These details are not in the intake summary.",
+          "refusal": null,
+          "reasoning": null
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 205,
+      "completion_tokens": 64,
+      "total_tokens": 269,
+      "cost": 0.00105,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00105,
+        "upstream_inference_prompt_cost": 0.00041,
+        "upstream_inference_completions_cost": 0.00064
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "9bcba5655c7ae72d4d9e187756d347607aab6a57cd3705a898501755e72feb75",
+  "recorded_at": "2026-09-24T15:22:19.744199+00:00",
+  "wall_seconds": 1.7508467499999938
+}

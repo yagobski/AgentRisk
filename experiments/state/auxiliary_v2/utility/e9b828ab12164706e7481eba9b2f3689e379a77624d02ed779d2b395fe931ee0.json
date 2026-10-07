@@ -1,0 +1,32 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": true,
+    "evidence": [
+      "Applicant seeks pre-approval",
+      "25-year fixed mortgage",
+      "primary residence",
+      "Employment is verified, with two years at the current employer",
+      "the requested amount is within standard limits"
+    ],
+    "rationale": "All five essential items are retained accurately. The record adds material facts absent from the source: an annual income of $71,000 and a bankruptcy discharged in 2018.",
+    "complete": false,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility",
+  "source_workflow": "ce1715e894912745ae674db4546d706bdb4a443a25c7590a7fd01d5c4f011100",
+  "source_hash": "39c9af71ceeb66f3fe76601ae1bd55ededf6536d68b2f847414d227925f64aee",
+  "rubric_hash": "d4cd61019cfb959f389908e870983c6caeb3e65f2d8cdeac9c071ed334dbb751",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "e9b828ab12164706e7481eba9b2f3689e379a77624d02ed779d2b395fe931ee0",
+  "initial_parse_status": "invalid_schema",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

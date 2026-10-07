@@ -1,0 +1,153 @@
+{
+  "reason": "Initial resume replayed local tools around cached model responses in 10 dynamic logs; all 24 dynamic cells rerun uniformly, independent of exposure outcomes",
+  "selection": "round 1 replaces round 0 for primary dynamic table; all raw trials retained",
+  "execution_round": 1,
+  "expected_calls": 72,
+  "expected_workflows": 24,
+  "jobs": [
+    {
+      "case": "cw_go01_benefit",
+      "model": "openai/gpt-6-sol",
+      "condition": "SCOPED",
+      "topology": "DYNAMIC"
+    },
+    {
+      "case": "cw_in01_claim",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "SCOPED",
+      "topology": "DYNAMIC"
+    },
+    {
+      "case": "cw_le01_intake",
+      "model": "openai/gpt-6-sol",
+      "condition": "FULL",
+      "topology": "DYNAMIC"
+    },
+    {
+      "case": "cw_fi01_mortgage",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "SCOPED",
+      "topology": "DYNAMIC"
+    },
+    {
+      "case": "cw_fi01_mortgage",
+      "model": "openai/gpt-6-sol",
+      "condition": "SCOPED",
+      "topology": "DYNAMIC"
+    },
+    {
+      "case": "cw_le01_intake",
+      "model": "openai/gpt-6-sol",
+      "condition": "SCOPED",
+      "topology": "DYNAMIC"
+    },
+    {
+      "case": "cw_hc01_appointment",
+      "model": "openai/gpt-6-sol",
+      "condition": "FULL",
+      "topology": "DYNAMIC"
+    },
+    {
+      "case": "cw_hc01_appointment",
+      "model": "openai/gpt-6-sol",
+      "condition": "SCOPED",
+      "topology": "DYNAMIC"
+    },
+    {
+      "case": "cw_hc01_appointment",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "SCOPED",
+      "topology": "DYNAMIC"
+    },
+    {
+      "case": "cw_hr01_onboarding",
+      "model": "openai/gpt-6-sol",
+      "condition": "SCOPED",
+      "topology": "DYNAMIC"
+    },
+    {
+      "case": "cw_in01_claim",
+      "model": "openai/gpt-6-sol",
+      "condition": "SCOPED",
+      "topology": "DYNAMIC"
+    },
+    {
+      "case": "cw_hc01_appointment",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "FULL",
+      "topology": "DYNAMIC"
+    },
+    {
+      "case": "cw_fi01_mortgage",
+      "model": "openai/gpt-6-sol",
+      "condition": "FULL",
+      "topology": "DYNAMIC"
+    },
+    {
+      "case": "cw_hr01_onboarding",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "FULL",
+      "topology": "DYNAMIC"
+    },
+    {
+      "case": "cw_hr01_onboarding",
+      "model": "openai/gpt-6-sol",
+      "condition": "FULL",
+      "topology": "DYNAMIC"
+    },
+    {
+      "case": "cw_hr01_onboarding",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "SCOPED",
+      "topology": "DYNAMIC"
+    },
+    {
+      "case": "cw_fi01_mortgage",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "FULL",
+      "topology": "DYNAMIC"
+    },
+    {
+      "case": "cw_in01_claim",
+      "model": "openai/gpt-6-sol",
+      "condition": "FULL",
+      "topology": "DYNAMIC"
+    },
+    {
+      "case": "cw_in01_claim",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "FULL",
+      "topology": "DYNAMIC"
+    },
+    {
+      "case": "cw_go01_benefit",
+      "model": "openai/gpt-6-sol",
+      "condition": "FULL",
+      "topology": "DYNAMIC"
+    },
+    {
+      "case": "cw_le01_intake",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "SCOPED",
+      "topology": "DYNAMIC"
+    },
+    {
+      "case": "cw_le01_intake",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "FULL",
+      "topology": "DYNAMIC"
+    },
+    {
+      "case": "cw_go01_benefit",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "FULL",
+      "topology": "DYNAMIC"
+    },
+    {
+      "case": "cw_go01_benefit",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "SCOPED",
+      "topology": "DYNAMIC"
+    }
+  ]
+}

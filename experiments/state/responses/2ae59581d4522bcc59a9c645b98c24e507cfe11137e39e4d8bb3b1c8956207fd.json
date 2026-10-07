@@ -1,0 +1,105 @@
+{
+  "request_id": "2ae59581d4522bcc59a9c645b98c24e507cfe11137e39e4d8bb3b1c8956207fd",
+  "request_sha256": "8587ef46d6440dd350734f509734f3d9479107864edcb222441703b9975c66f4",
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a downstream WORKER agent. You will be given ONLY a handoff note from the coordinator. Using only that note, produce the requested internal record exactly and concisely. Do not invent fields."
+      },
+      {
+        "role": "user",
+        "content": "You are the IT/facilities provisioning agent. Using ONLY the handoff note below, write the provisioning ticket saved to the shared service-desk system.\n\nHANDOFF NOTE:\nProvisioning request: new hire, Data Analyst role.\nStart date: first Monday of next month.\nPlease prepare before the start date:\n1. Laptop, with the standard data analyst configuration.\n2. Building access badge.\nPlease confirm once both items are ready.\n\nReturn ONLY the record."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "anthropic"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 4.0,
+        "completion": 20.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "multihop",
+    "scenario_id": "cw_hr01_onboarding",
+    "scenario_sha256": "c9d3a6fa635fa0c98a6a4b612d1d5d3a3aa9fca0d1b7c4f031045969fc44f04c",
+    "condition": "SCOPED",
+    "topology": "CHAIN",
+    "repeat": 0,
+    "turn": "worker",
+    "parents": [
+      "335207ad7e13dd2576aedcb9e69f470bba9de9f4e46cce445a1e5fbe66ae5884"
+    ]
+  },
+  "response": {
+    "id": "gen-1790263230-oi8uupEz9wRvw92bktH6",
+    "object": "chat.completion",
+    "created": 1790263230,
+    "model": "anthropic/claude-opus-5.5",
+    "provider": "Anthropic",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "end_turn",
+        "message": {
+          "role": "assistant",
+          "content": "**PROVISIONING TICKET**\n\n**Request Type:** New Hire Provisioning\n**Role:** Data Analyst\n**New Hire Name:** Not provided\n**Start Date:** First Monday of next month (exact date not specified)\n**Due:** Before start date\n\n**Items to Prepare:**\n1. Laptop, standard Data Analyst configuration\n2. Building access badge\n\n**Status:** Open\n**Action Required on Completion:** Send confirmation to requester once both items are ready\n\n**Notes:** Handoff note does not include the new hire's name, requester or contact details, cost center, or delivery location. These are needed to issue the badge and deliver the laptop.",
+          "refusal": null,
+          "reasoning": "I should avoid inventing details like a name or specific date that weren't given—I'll only include information actually provided and clearly mark anything unspecified as not provided.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "I should avoid inventing details like a name or specific date that weren't given—I'll only include information actually provided and clearly mark anything unspecified as not provided.\n\n",
+              "format": "anthropic-claude-v1",
+              "index": 0,
+              "signature": "CAQStgUKEAgSGAI4AUIIdGhpbmtpbmcSDH1C7MXYsh1jvSv1ZRoMiShJIc8wu8w4CSkHIjBZz10hsS3Bt8VvSX6CPlydA4ChwrR3re+xTxnPGsLHPDmojDIQguk0iDbQ6aHUeIUq0wQ9oBO9eL0YMIAy6q/hYI/Gyr8E4ZeHp04vV3gBT83gNj7otL4CW5YTPRUJqNaK9OKpFd261zmnk0OnQCUsD8JZIZUf3iuNfJ3RdrlhdA927FiJfZ/rsCT1SDiB0ilIJQzGovOU3Ks0XFcBhnVAlgt951FT9XS3yaOgRVrM6pvPh1QXkuhJ9smRIbQzczZRuWI77cLzF1BTgKeIQfH7BLS0IZ9vJix82x+kvoKnuE/J/E32Y/8P54bFnIKrwkfn2TeAxpDU7KhkgeoPRAqrmv9AeO5ujraDHTF2XFghNIyGkIK0NPzN6kr03NkgNFKAvRnKAfgnLfEclVSKPpKFIbnrhaz46azAy2nBpq6lyEvRXzfcRCf5sGt6mckFkc8oWdLSTscKGOUnrDjMnwqIAGqnXFhkNIAmDiF3L/4NxBpQIOANY/7v4DeNWzrkogCO5BuRLTxjoa9+kN04MC6wTVi6R0Dna8ugDMP+dYU7FpoysruXeVEzmTUjKcOXNhpFyuyYpP5phHKSPtYVKVgbTEuhdZcqdKNl+Yt421bkIwoKc9RITs4jd3LHzLBappUNzz5/wP0e+klM2pv5z07j51fLZiFKCjM6iTD9NfMZFwEeWLa3k2qYgwraUCiZ+aI+cBrlLfFmOOJUTV9V/IF02wRkGrg9om9/f3IxvJKOfRjvam0CqM5Y530/sSp46qkqeaUra+lm/U8+JUsc7bqptsR8rFRaXBt9L0xfElxQciGvYCHYABPyIMtSz2AIf9TgEk/fe+rlVOgdhMVLd3FE4g9g47qdGAE="
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 230,
+      "completion_tokens": 261,
+      "total_tokens": 491,
+      "cost": 0.00614,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00614,
+        "upstream_inference_prompt_cost": 0.00092,
+        "upstream_inference_completions_cost": 0.00522
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 39,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "2feb23e4395a5d7811a6aa5f970a609b8d49b91ce3157aca1c5e8e8b31ae4bbd",
+  "recorded_at": "2026-09-24T15:20:33.922754+00:00",
+  "wall_seconds": 3.926416332999999
+}

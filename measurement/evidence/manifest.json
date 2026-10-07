@@ -1,0 +1,13 @@
+{
+  "source_hashes": {
+    "observed_knowledge_edges.json": "dbf3a4347ba51958b2d2c603f996a3b5fb128a8d7374f6d911aa32a632949ce2",
+    "multihop_rows.json": "f5347147842144da60d685f97a571e7edfd6bd0d1e268d14bd26182b21d3c865",
+    "canonical_records.json": "44f38bf30bc1e332cb57f7a46d75ca719e87d3adc89f714f5ea0f0621ae81f85",
+    "overhead.json": "233b37f02041e506f12bfbc3df74ab794840bba48c3ae62fae3d472ad98695cb"
+  },
+  "edges": 316,
+  "workflows": 68,
+  "contextual_worksheet_rows": 90,
+  "human_labels_created": 0,
+  "live_calls": 0
+}

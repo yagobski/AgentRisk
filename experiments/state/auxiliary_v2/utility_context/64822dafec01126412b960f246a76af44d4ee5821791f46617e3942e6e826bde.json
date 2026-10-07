@@ -1,0 +1,32 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": true,
+    "evidence": [
+      "Pre-approval, 25-year fixed-rate mortgage, primary residence",
+      "25-year fixed-rate mortgage",
+      "primary residence",
+      "Employment: Verified, 2 years with current employer",
+      "within standard limits"
+    ],
+    "rationale": "All five essential items are retained. The record also asserts, without support in the source, that no further applicant contact is required.",
+    "complete": false,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "9e58c93a43942db3b679da4722ec47c482cb5e885b3242b2a84e5dd2c690cf1b",
+  "source_hash": "6709dbcc27f5c727e5aeb69acd6b404bcfa5355175e81d5aa27b8130c86298b2",
+  "rubric_hash": "d4cd61019cfb959f389908e870983c6caeb3e65f2d8cdeac9c071ed334dbb751",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "openai/gpt-6-sol",
+  "request_id": "64822dafec01126412b960f246a76af44d4ee5821791f46617e3942e6e826bde",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

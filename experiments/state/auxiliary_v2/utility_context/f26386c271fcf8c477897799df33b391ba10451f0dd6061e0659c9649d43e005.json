@@ -1,0 +1,32 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true,
+      false
+    ],
+    "unsupported_material_fact": false,
+    "evidence": [
+      "Physiotherapy, knee rehabilitation (post-operative; patient cleared for rehab)",
+      "Twice weekly for 6 weeks",
+      "Twice weekly for 6 weeks",
+      "Scheduling preference:** Mornings",
+      ""
+    ],
+    "rationale": "The record retains the service, frequency, duration, and morning preference, but omits the routine meniscus repair. The additional patient and contact details are supported by the supplied grounding record.",
+    "complete": false,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "6b58037d7a50a0ee0a80aa682b409cef2502da1f08c967607774c55d5423fe28",
+  "source_hash": "e88bd82e87a951acad56793e9ddaa05be46bf9bf1612f93b715d441ce676bd2c",
+  "rubric_hash": "48a4fc2966fc104a4ad0d4f3ff93aa6e9463c0a605ce728039b04ee996909a63",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "openai/gpt-6-sol",
+  "request_id": "f26386c271fcf8c477897799df33b391ba10451f0dd6061e0659c9649d43e005",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

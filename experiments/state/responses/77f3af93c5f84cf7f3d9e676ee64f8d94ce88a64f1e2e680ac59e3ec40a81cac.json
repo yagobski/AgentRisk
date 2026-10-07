@@ -1,0 +1,96 @@
+{
+  "request_id": "77f3af93c5f84cf7f3d9e676ee64f8d94ce88a64f1e2e680ac59e3ec40a81cac",
+  "request_sha256": "fdfca04146b9178050352c996d3166cb6addfc70fc8232c178e532ec7ce8fc76",
+  "request": {
+    "model": "openai/gpt-6-sol",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are the SPECIALIST agent. Using only the messages received from your peer, produce the requested record exactly and concisely. Do not invent fields. Return ONLY the record."
+      },
+      {
+        "role": "user",
+        "content": "You are the adjuster-assignment agent. Using ONLY the handoff note below, write the claim record saved to the shared claims-management system.\n\nMESSAGE FROM PEER:\nHome-contents claim for water damage caused by a burst pipe. Policy is active, and the claim is within coverage limits. An adjuster visit has been requested; please contact the policyholder to schedule it and continue processing.\n\nYOUR QUESTIONS:\nQUESTIONS:\n1. What are the claim number and policyholder’s name and contact details?\n2. What is the loss date and property address?\n3. Has an adjuster been assigned? If so, who?\n\nPEER REPLY:\n1. The claim number and policyholder’s name and contact details were not provided.\n2. The loss date and property address were not provided.\n3. An adjuster visit was requested, but no assignment was provided.\n\nReturn ONLY the record."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "openai"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 2.0,
+        "completion": 10.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "p2p_langgraph",
+    "scenario_id": "cw_in01_claim",
+    "scenario_sha256": "4ac6cd236c5ac54a4b7758acb6ac13b8a0b198964bd762d3c82e54cce7aa9556",
+    "condition": "SCOPED",
+    "topology": "PEER",
+    "repeat": 0,
+    "turn": "specialist_store",
+    "parents": [
+      "17de34657b2a715259b0f58229072c35d8d969fb505358c013e01e4e2422a702"
+    ]
+  },
+  "response": {
+    "id": "gen-1790660134-7C8pxFbG9TPXo0vYt6vm",
+    "object": "chat.completion",
+    "created": 1790660134,
+    "model": "openai/gpt-6-sol",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "Claim type: Home contents\nCause of loss: Water damage from a burst pipe\nPolicy status: Active\nCoverage: Claim is within coverage limits\nAdjuster visit: Requested; no adjuster assigned\nNext step: Obtain policyholder contact details to schedule the visit and continue processing\nMissing information: Claim number, policyholder name and contact details, loss date, property address",
+          "refusal": null,
+          "reasoning": null
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 226,
+      "completion_tokens": 79,
+      "total_tokens": 305,
+      "cost": 0.001242,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.001242,
+        "upstream_inference_prompt_cost": 0.000452,
+        "upstream_inference_completions_cost": 0.00079
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "cfbbe120b3207c1c303eb05e2581070808e26b7224e2fa8ce45d878a49596dca",
+  "recorded_at": "2026-09-29T05:35:33.994300+00:00",
+  "wall_seconds": 2.3461490829940885
+}

@@ -1,0 +1,18 @@
+{
+  "anthropic/claude-opus-5.5": {
+    "completed_workflows": 32,
+    "valid_judgments": 32,
+    "rubric_complete": 1,
+    "unresolved": 0,
+    "unsupported_fact_flags": 26,
+    "missing_essential_item_flags": 8
+  },
+  "openai/gpt-6-sol": {
+    "completed_workflows": 36,
+    "valid_judgments": 35,
+    "rubric_complete": 21,
+    "unresolved": 11,
+    "unsupported_fact_flags": 5,
+    "missing_essential_item_flags": 5
+  }
+}

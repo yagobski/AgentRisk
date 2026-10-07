@@ -1,0 +1,96 @@
+{
+  "request_id": "5a758a67af27160f447ed4fff058f89249340d30bd3f1210248fb3f2c187ccef",
+  "request_sha256": "ff7442eaf8c7cf1a52ebabdd9367febe38fbd9d3ac8704acc6e03c3cf2226db7",
+  "request": {
+    "model": "openai/gpt-6-sol",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are the SPECIALIST agent. Using only the messages received from your peer, produce the requested record exactly and concisely. Do not invent fields. Return ONLY the record."
+      },
+      {
+        "role": "user",
+        "content": "You are the credit-assessment agent. Using ONLY the handoff note below, write the underwriting summary record saved to the shared loan-origination system.\n\nMESSAGE FROM PEER:\nRequest: 25-year fixed mortgage for a primary residence; amount within standard limits. Employment verified, with two years at current employer. Annual income: $71,000. Prior bankruptcy discharged in 2018.\n\nYOUR QUESTIONS:\nQUESTIONS:\n1. What are the applicant’s credit score and current credit-report findings?\n2. What are their monthly debt obligations and proposed housing payment?\n3. What are the purchase price, down payment, and available reserves?\n\nPEER REPLY:\nThe record does not provide the applicant’s credit score or current credit-report findings, monthly debt obligations or proposed housing payment, or purchase price, down payment, or available reserves.\n\nReturn ONLY the record."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "openai"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 2.0,
+        "completion": 10.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "p2p_langgraph",
+    "scenario_id": "cw_fi01_mortgage",
+    "scenario_sha256": "f697a7e80187df1e28bd6548b71d5e6ac2cd53c9edfaf5c58156c9d4616dff52",
+    "condition": "FULL",
+    "topology": "PEER",
+    "repeat": 0,
+    "turn": "specialist_store",
+    "parents": [
+      "6ec73516ea0124722730feb20cc6c8916b2e828655395b8f7d20f100f61415aa"
+    ]
+  },
+  "response": {
+    "id": "gen-1790660105-dKfjVOxRnwp7QAhUUYsi",
+    "object": "chat.completion",
+    "created": 1790660105,
+    "model": "openai/gpt-6-sol",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "**Underwriting summary:** Applicant requests a 25-year fixed-rate mortgage for a primary residence, with a loan amount within standard limits. Employment is verified, including two years with the current employer. Annual income is $71,000. Prior bankruptcy was discharged in 2018.\n\n**Assessment:** Insufficient information to determine eligibility. The record does not provide a credit score or current credit-report findings; monthly debt obligations or proposed housing payment; or purchase price, down payment, or available reserves.",
+          "refusal": null,
+          "reasoning": null
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 219,
+      "completion_tokens": 103,
+      "total_tokens": 322,
+      "cost": 0.001468,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.001468,
+        "upstream_inference_prompt_cost": 0.000438,
+        "upstream_inference_completions_cost": 0.00103
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "aee1c519d033ba2768b5d6b74245ad399aeb27e62d3b599e6af1df18d9b6efd7",
+  "recorded_at": "2026-09-29T05:35:05.832268+00:00",
+  "wall_seconds": 2.941986625024583
+}

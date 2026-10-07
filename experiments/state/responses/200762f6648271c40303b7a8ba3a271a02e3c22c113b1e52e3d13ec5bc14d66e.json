@@ -1,0 +1,106 @@
+{
+  "request_id": "200762f6648271c40303b7a8ba3a271a02e3c22c113b1e52e3d13ec5bc14d66e",
+  "request_sha256": "9ed1c6e0b962b7cef2381278ed1a6316eddcad955540de2f979e1d52f4839075",
+  "request": {
+    "model": "openai/gpt-6-sol",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are the downstream ARCHIVIST agent. Preserve the facts necessary for the requested task using only the supplied records. Do not invent facts or include irrelevant sensitive information. Return only the final concise record."
+      },
+      {
+        "role": "user",
+        "content": "TASK: You are the IT/facilities provisioning agent. Using ONLY the handoff note below, write the provisioning ticket saved to the shared service-desk system.\n\nRECORDS:\nWORKER RECORD:\nProvisioning ticket\n\nRequest: Prepare a laptop and building badge for a new data analyst.\nDue: Before Monday, June 1.\n\nPEER RECORD:\n**Provisioning ticket**\n\nNew data analyst starts Monday, June 1. Prepare a laptop and building badge before the start date.\n\n**Next action:** Assign the laptop and badge requests to the appropriate provisioning teams."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "openai"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 2.0,
+        "completion": 10.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "multihop",
+    "scenario_id": "cw_hr01_onboarding",
+    "scenario_sha256": "c9d3a6fa635fa0c98a6a4b612d1d5d3a3aa9fca0d1b7c4f031045969fc44f04c",
+    "condition": "SCOPED",
+    "topology": "FANOUT",
+    "repeat": 0,
+    "turn": "archivist",
+    "parents": [
+      "d2a0f44ee8b4d20973aafb432cda2dcb264d8524c379f6737750f10589da9c21",
+      "1c00669f025c1dbea9b0cfc87f22723bb10082c1a89689bc610fcb38233ae42a"
+    ]
+  },
+  "response": {
+    "id": "gen-1790263101-Tn6dIg9BPz5OMDafz5sM",
+    "object": "chat.completion",
+    "created": 1790263101,
+    "model": "openai/gpt-6-sol",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "**Provisioning ticket**\n\n**Request:** Prepare a laptop and building badge for a new data analyst.  \n**Due:** Before Monday, June 1.  \n**Next action:** Assign the laptop and badge requests to the appropriate provisioning teams.",
+          "refusal": null,
+          "reasoning": null,
+          "reasoning_details": [
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABqtT8_WjmD-n-7OpJHAbhVtMfFvfVbrJ0o53nG1p_-CIp5gmf9KPhcQCPs63oI0hkyMwa_5GmJU6xkmBI2nLZFO3wNJ6PsAZMhji7Exh3kjBWjagFjZCPPYRqIu4zcnbcWH7C9Ki3KJIjVH9ljbvxf1ucJ4OvlzcjcYNrFKo03ny72n0wGfgW9INzBQ_-mKUG-WtJz5mVKXxTSm2XMWahG6Z907xyX8BXdQfcVnz9-fPmCJU7h5KClS-lpgzHw_nd4WT-kunPYh5vVsGsFuTxCZCt3d5dBPvBdogSK3jk3B_Z-U2ybhAV43-vB_-PHYLJinDy02yEX8VV_PnJ_ymjogbEaZb7EcXw_qDPdgxeNerQ7b4ALUfGplSD39t8ornGspgf4n0fGS59LnZSb9Wx31VrcFIcLiI5R7fcTg8JcNUL7xVia-AKvzuQ5n-g0hYLhN1W4yImYVeog4pbv0GRr3XxGazTpV9fWwxSFlFa9h1RMVNyHwA_wOOeIUMRbQ4G5cPHtOrSaIEmWWDvXml1NJLSI9DqJI66_YCtMGslQA-4mrp_b-wdDjidlHEag3IFVpaBt3ffTxM7xYvWv5ud34JSyJNBjV1Ff2kaSy1qvCo7zXMbAoYyqQA3rmsIiO9YN66MNu3nS5abyRFXvi5iBydz7tOywKpwDHLvuiPbyAEfhYCPdBLvYcm3JqqY1NyAqOWRDow-vn6gvGTQ_NsFuWjfnBIFD8Dgqdp5R3wiYfrBPqmqoYzF0HruKrXtH-eQ2VSbAhFIH9Y5MqwK8vGJ5tGzJUbNHl-Lt6kjRGjPjgwnL6CJD5hsgKBb292yYGaLJ-WaV6gwoFz_yPvlP-8eOxd7TgmfchgLVFdkFbLm-CZY8UZCpPh-fNZ0OQyLGBPG5PCtrcOz8x_xDlgQXsLYj9QUm55Vm0PzFppMiNLIYc1-5dCIb7WYq3P4WCF6ji3uqHB7sJPFDGYxCPPAvt0OqGVL1IxQRnoPFbRRnve2u6u0SlgSEoRZJ1zizUqZ5D1Fs2LMMBOQsol_7F0hyRcVCoOitffLSUptsob1llkMDAQvn95qEFqmmICn9tTdpZH9w5gt3xaxWn2p1L2D7boqHUhXMccWTbHaWpxxkryUKu8e1evtDkHvxiu-OPuC2N30I4eCsJmVad8u7wZwRJSRRD8qaOFS-0i1hhiFqzCXWPoOPs3a2iThb8gHvH-f6dpTJNwXmv1dg4J6qMZqIwJnxfQXykuRDMvMTpkWqdRW-ORQM1JUTrNpSQScEmy4JZpVVwjAM_QSN5Eh5HthlgrhPhCTtr4_8zpI4oWVBpHEncnylAlJZ6kXNIM23rHNid6RmrnRI7F-aNMmDfFtZQ_hApfCpH1LUB-FKaT0S0pzCSKFIvXU8dEOQdeHVd23lvILz6Cqsj-EBdGb42p8_ESr5o_Eb_g==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+              "format": "openai-responses-v1",
+              "id": "rs_072841f0d57202d1016ab53f3e71bc87d1a40ca0f975fc6cb8",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 164,
+      "completion_tokens": 71,
+      "total_tokens": 235,
+      "cost": 0.001038,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.001038,
+        "upstream_inference_prompt_cost": 0.000328,
+        "upstream_inference_completions_cost": 0.00071
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 17,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "181c75f993b53445ade03534e5cf773b9998737ce766a98b08271e98229c9f42",
+  "recorded_at": "2026-09-24T15:18:23.098713+00:00",
+  "wall_seconds": 2.235853958000007
+}

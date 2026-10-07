@@ -1,0 +1,18 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "s1": true,
+    "s2": false,
+    "s3": false,
+    "s4": false,
+    "s5": false
+  },
+  "experiment": "auxiliary_exposure_context",
+  "source_trace_id": "8eb9c8469b72834adc8d40a5f3e2dff5e96fb079c425ac2d457fd093c9df4eae",
+  "source_hash": "6cbebd4655a65670c5c057c1e0282bc984835c769fe5f05ce821121a554b5106",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "e687bc9d2f46c9d07b4752f6f5bb0b6967072a8d5ffbe206fea53575fbc9932a",
+  "initial_parse_status": "invalid_schema",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

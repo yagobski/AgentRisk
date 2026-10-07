@@ -1,0 +1,19 @@
+{
+  "adapter": "Presidio Analyzer",
+  "versions": {
+    "presidio-analyzer": "2.2.364",
+    "spacy": "3.8.16",
+    "en-core-web-sm": "3.8.0"
+  },
+  "threshold": 0.5,
+  "coverage_definition": "source-supported alias coverage; a registered marker must occur wholly within a Presidio source entity span; unsupported fields remain unknown; output positives require a matching Presidio entity span",
+  "evaluation_scope": "same 72 saved outputs, no human accuracy claim, no tuning after results",
+  "registered": 360,
+  "resolved": 80,
+  "agreement": 0.9625,
+  "kappa": 0.5555555555555557,
+  "disagreements": 3,
+  "complete_traces": 0,
+  "positive_events": 2,
+  "new_paid_calls": 0
+}

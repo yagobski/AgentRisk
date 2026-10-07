@@ -1,0 +1,32 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": true,
+    "evidence": [
+      "Applicant requests pre-approval",
+      "25-year fixed-rate mortgage",
+      "on a primary residence",
+      "Employment is verified, with two years at the current employer",
+      "The requested loan amount is within standard limits"
+    ],
+    "rationale": "The record accurately retains all five essential items. However, the source does not support the added directive 'no applicant follow-up is indicated' or the instruction to complete the assessment using the existing file. That is a material unsupported claim, especially since the record itself notes that credit and affordability information is missing.",
+    "complete": false,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility",
+  "source_workflow": "3b506ed0ed37f23dfb4abfddea4ea13307c667dcb87e77235dd992da74694c65",
+  "source_hash": "65f196cb90d78d8814a5bb3dba9530533861006c0a694f62ea8abe93096847d7",
+  "rubric_hash": "d4cd61019cfb959f389908e870983c6caeb3e65f2d8cdeac9c071ed334dbb751",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "2bbe24fd07a38c5107d9dc0261f78f944d6d619c1f4e6eae8cd4f0af20d97fe8",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

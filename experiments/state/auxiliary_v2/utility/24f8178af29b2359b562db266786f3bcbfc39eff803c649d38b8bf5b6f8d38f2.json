@@ -1,0 +1,30 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      null,
+      true,
+      true
+    ],
+    "unsupported_material_fact": true,
+    "evidence": [
+      "Role: Data analyst",
+      "",
+      "Prepare a laptop",
+      "building badge before the start date"
+    ],
+    "rationale": "The record keeps the data analyst role and both laptop and badge provisioning. It turns the relative start date into \"February 2, 2026\". That is a first Monday, but the source's reference date isn't given, so accuracy is unclear. It also adds a hire name, \"Priya Ramanathan\", which the source does not support.",
+    "complete": false,
+    "unresolved": true
+  },
+  "experiment": "auxiliary_utility",
+  "source_workflow": "1de525752280b5641d770223619912387c6287c331b5d890a312029195f7ab88",
+  "source_hash": "dac387d8b6a21b4f6b547c2eb24fc0a6eb05ac0d400d6d1dd4eb006813444609",
+  "rubric_hash": "91cf09d026db06bdfed706830bb901e60a51f14c247b3247d82c715feb47d3a5",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "24f8178af29b2359b562db266786f3bcbfc39eff803c649d38b8bf5b6f8d38f2",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

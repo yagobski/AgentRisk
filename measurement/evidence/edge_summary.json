@@ -1,0 +1,156 @@
+[
+  {
+    "topology": "CHAIN",
+    "channel": "C1",
+    "n": 24,
+    "empty_scopes": 12,
+    "WSL": 0,
+    "full_mass": 336,
+    "observed_mass": 168,
+    "RI_full": 0.0,
+    "RI_observed": 0.0
+  },
+  {
+    "topology": "CHAIN",
+    "channel": "coordinator_to_worker",
+    "n": 24,
+    "empty_scopes": 12,
+    "WSL": 20,
+    "full_mass": 336,
+    "observed_mass": 168,
+    "RI_full": 0.05952380952380952,
+    "RI_observed": 0.11904761904761904
+  },
+  {
+    "topology": "CHAIN",
+    "channel": "worker_to_archivist",
+    "n": 24,
+    "empty_scopes": 16,
+    "WSL": 20,
+    "full_mass": 336,
+    "observed_mass": 20,
+    "RI_full": 0.05952380952380952,
+    "RI_observed": 1.0
+  },
+  {
+    "topology": "CHAIN",
+    "channel": "archivist_to_storage",
+    "n": 24,
+    "empty_scopes": 16,
+    "WSL": 20,
+    "full_mass": 336,
+    "observed_mass": 20,
+    "RI_full": 0.05952380952380952,
+    "RI_observed": 1.0
+  },
+  {
+    "topology": "FANOUT",
+    "channel": "C1",
+    "n": 22,
+    "empty_scopes": 11,
+    "WSL": 0,
+    "full_mass": 308,
+    "observed_mass": 154,
+    "RI_full": 0.0,
+    "RI_observed": 0.0
+  },
+  {
+    "topology": "FANOUT",
+    "channel": "coordinator_to_worker",
+    "n": 22,
+    "empty_scopes": 11,
+    "WSL": 22,
+    "full_mass": 308,
+    "observed_mass": 154,
+    "RI_full": 0.07142857142857142,
+    "RI_observed": 0.14285714285714285
+  },
+  {
+    "topology": "FANOUT",
+    "channel": "coordinator_to_peer",
+    "n": 22,
+    "empty_scopes": 11,
+    "WSL": 22,
+    "full_mass": 308,
+    "observed_mass": 154,
+    "RI_full": 0.07142857142857142,
+    "RI_observed": 0.14285714285714285
+  },
+  {
+    "topology": "FANOUT",
+    "channel": "worker_to_archivist",
+    "n": 22,
+    "empty_scopes": 13,
+    "WSL": 22,
+    "full_mass": 308,
+    "observed_mass": 22,
+    "RI_full": 0.07142857142857142,
+    "RI_observed": 1.0
+  },
+  {
+    "topology": "FANOUT",
+    "channel": "peer_to_archivist",
+    "n": 22,
+    "empty_scopes": 13,
+    "WSL": 22,
+    "full_mass": 308,
+    "observed_mass": 22,
+    "RI_full": 0.07142857142857142,
+    "RI_observed": 1.0
+  },
+  {
+    "topology": "FANOUT",
+    "channel": "archivist_to_storage",
+    "n": 22,
+    "empty_scopes": 13,
+    "WSL": 22,
+    "full_mass": 308,
+    "observed_mass": 22,
+    "RI_full": 0.07142857142857142,
+    "RI_observed": 1.0
+  },
+  {
+    "topology": "DYNAMIC",
+    "channel": "C1",
+    "n": 22,
+    "empty_scopes": 22,
+    "WSL": 0,
+    "full_mass": 308,
+    "observed_mass": 0,
+    "RI_full": 0.0,
+    "RI_observed": null
+  },
+  {
+    "topology": "DYNAMIC",
+    "channel": "coordinator_to_worker",
+    "n": 22,
+    "empty_scopes": 22,
+    "WSL": 0,
+    "full_mass": 308,
+    "observed_mass": 0,
+    "RI_full": 0.0,
+    "RI_observed": null
+  },
+  {
+    "topology": "DYNAMIC",
+    "channel": "worker_to_archivist",
+    "n": 22,
+    "empty_scopes": 11,
+    "WSL": 17,
+    "full_mass": 308,
+    "observed_mass": 154,
+    "RI_full": 0.05519480519480519,
+    "RI_observed": 0.11038961038961038
+  },
+  {
+    "topology": "DYNAMIC",
+    "channel": "archivist_to_storage",
+    "n": 22,
+    "empty_scopes": 15,
+    "WSL": 17,
+    "full_mass": 308,
+    "observed_mass": 17,
+    "RI_full": 0.05519480519480519,
+    "RI_observed": 1.0
+  }
+]

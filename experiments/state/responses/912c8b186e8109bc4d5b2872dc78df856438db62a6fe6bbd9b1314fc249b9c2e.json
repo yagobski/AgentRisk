@@ -1,0 +1,97 @@
+{
+  "request_id": "912c8b186e8109bc4d5b2872dc78df856438db62a6fe6bbd9b1314fc249b9c2e",
+  "request_sha256": "404f5f8172a18a16527c3d337ccc6b67e41e57e9fab1011d9bf1e8fb5222bb12",
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are the downstream ARCHIVIST agent. Preserve the facts necessary for the requested task using only the supplied records. Do not invent facts or include irrelevant sensitive information. Return only the final concise record."
+      },
+      {
+        "role": "user",
+        "content": "TASK: You are the drafting paralegal agent. Using ONLY the handoff note below, write the matter record saved to the shared case-management system.\n\nRECORDS:\nWORKER RECORD:\n**MATTER RECORD**\n\n**Matter:** Lease deposit dispute (landlord withheld the deposit)\n**Client Objective:** Recover the security deposit\n**Requested Deliverable:** Demand letter to the landlord seeking return of the withheld deposit\n**Status:** Drafting pending confirmation of the items below from the existing matter file\n\n**Items to Confirm from the Existing Matter File (do not re-interview the client):**\n- [ ] Client and landlord names and addresses\n- [ ] Property address and lease dates\n- [ ] Deposit amount, and any itemized deductions the landlord claimed\n- [ ] Move-out date and forwarding-address notice\n- [ ] The jurisdiction's deposit-return statute and deadline\n\n**Drafting Instructions:**\n- Use only the information needed for the letter.\n- Do not include unrelated personal details about the client.\n- Send the draft for attorney review before it goes out.\n\n**Next Step:** Confirm the items above from the matter file, then prepare the draft demand letter and route it to the attorney for review. Do not send the letter until the attorney approves it.\n\nPEER RECORD:\n# Matter Record: Lease Deposit Dispute\n\n**Matter type:** Landlord-tenant: security deposit withheld\n**Status:** Open. Drafting pending, awaiting confirmation of file details\n**Deliverable:** Demand letter to the landlord seeking return of the withheld security deposit\n**Client objective:** Recover the security deposit\n\n## Known Facts (from the handoff)\n- The client is the former tenant. The landlord has withheld the security deposit.\n- The client wants the deposit recovered through a demand letter.\n\n## Details to Confirm from the Existing Matter File\nPull these from the file. Do not re-interview the client.\n\n| Item | Status |\n|---|---|\n| Client name and address | To confirm |\n| Landlord name and address | To confirm |\n| Property address | To confirm |\n| Lease start and end dates | To confirm |\n| Deposit amount | To confirm |\n| Itemized deductions claimed by the landlord (if any) | To confirm |\n| Move-out date | To confirm |\n| Forwarding-address notice (date and method provided to the landlord) | To confirm |\n| Governing deposit-return statute and return deadline | To confirm (identify the jurisdiction from the property address) |\n\n## Drafting Constraints\n- Include only the information needed for the demand letter.\n- Exclude unrelated personal details about the client.\n- The draft must go to attorney review before it is sent to the landlord.\n\n## Next Action\n1. Retrieve and verify the items listed above from the existing matter file. Flag any that are missing to the supervising attorney. Do not contact the client.\n2. Draft the demand letter covering:\n   - the deposit amount\n   - the move-out and forwarding-address facts\n   - a response to any claimed deductions\n   - the statutory return deadline\n   - a demand for payment by a stated date\n3. Route the draft to the supervising attorney for review. **Do not send it to the landlord before approval.**"
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "anthropic"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 4.0,
+        "completion": 20.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "multihop",
+    "scenario_id": "cw_le01_intake",
+    "scenario_sha256": "8d307c505fa041eb3ef36282e595ad197bce3e0c7020b8dd0e8f6df47f020c2e",
+    "condition": "SCOPED",
+    "topology": "FANOUT",
+    "repeat": 0,
+    "turn": "archivist",
+    "parents": [
+      "2eee5da7d7c81c6f191a7533fb9c81b4c752ea4901d570b6106b8f11dd905666",
+      "557eacddf482fc8ecc16ecc27dc1a57f3521229716bcdd9d8f7540f31ef84d93"
+    ]
+  },
+  "response": {
+    "id": "gen-1790263109-I7IntRAwszY99pvnPX7j",
+    "object": "chat.completion",
+    "created": 1790263109,
+    "model": "anthropic/claude-opus-5.5",
+    "provider": "Anthropic",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "end_turn",
+        "message": {
+          "role": "assistant",
+          "content": "**MATTER RECORD: Lease Deposit Dispute**\n\n**Matter type:** Landlord-tenant. The landlord withheld the security deposit.\n**Client:** Former tenant.\n**Client objective:** Recover the security deposit.\n**Deliverable:** Demand letter to the landlord seeking return of the withheld deposit.\n**Status:** Open. Drafting is pending until the file details below are confirmed.\n\n**Details to Confirm from the Existing Matter File (do not re-interview or contact the client):**\n- Client name and address\n- Landlord name and address\n- Property address\n- Lease start and end dates\n- Deposit amount\n- Itemized deductions the landlord claimed, if any\n- Move-out date\n- Forwarding-address notice given to the landlord\n- Governing deposit-return statute and return deadline for the jurisdiction\n\n**Drafting Constraints:**\n- Use only the information needed for the demand letter.\n- Leave out unrelated personal details about the client.\n- The attorney must review the draft before it is sent.\n\n**Next Steps:**\n1. Confirm the items above from the matter file. Flag any missing item to the supervising attorney.\n2. Prepare the draft demand letter.\n3. Route the draft to the supervising attorney for review. Do not send it to the landlord until the attorney approves it.",
+          "refusal": null,
+          "reasoning": null
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1157,
+      "completion_tokens": 437,
+      "total_tokens": 1594,
+      "cost": 0.013368,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.013368,
+        "upstream_inference_prompt_cost": 0.004628,
+        "upstream_inference_completions_cost": 0.00874
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "2bec192ae7133cc65ed8c0ef6700c14250ba1b5eda1ff5dd76c64df1ee76cff1",
+  "recorded_at": "2026-09-24T15:18:34.077912+00:00",
+  "wall_seconds": 4.68024516600002
+}

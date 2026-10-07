@@ -1,0 +1,30 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      null,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": false,
+    "evidence": [
+      "",
+      "Lease dispute concerning the landlord’s withholding",
+      "landlord’s withholding of the client’s deposit",
+      "Prepare a demand letter."
+    ],
+    "rationale": "The record captures the lease dispute with the landlord, the withheld deposit, and the requested demand letter. It never says the client seeks representation; a matter record may imply this, so that item is unclear. No unsupported material facts are added: the note to check the file for missing details is procedural, and those details are indeed absent from the source.",
+    "complete": false,
+    "unresolved": true
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "3f989a1fdf91eec15d4377709ff945949a9a4e20ea7dd3c01d619c9468058eb8",
+  "source_hash": "ddfcb87883f50646218879d1bf56ec0a663673843589c536214222efa785af15",
+  "rubric_hash": "53e022194f930d8917c6f5d4c3df7fffc187ff3250032ac7900637182eebf590",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "472c75c87ad733affda6f7b06387a9d671b24696f525f2820087fc6fa96e43be",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

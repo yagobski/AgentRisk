@@ -1,0 +1,30 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": true,
+    "evidence": [
+      "**Role:** Data Analyst",
+      "**Start Date:** First Monday of next month",
+      "**Laptop:** Standard configuration for the Data Analyst role",
+      "**Building Badge:** Standard access"
+    ],
+    "rationale": "All four essential items are retained. The ticket adds provisioning details not supported by the source, including standard access and day-one pickup.",
+    "complete": false,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "91966dd2a713f62a809679aac3bfecb9bdae7f616f0b3aea84f7f58e49e81904",
+  "source_hash": "f3bac67b5e1b3b363e29d0fa340c14d0778e5eda5a4c06efd91972c4a440a32d",
+  "rubric_hash": "91cf09d026db06bdfed706830bb901e60a51f14c247b3247d82c715feb47d3a5",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "openai/gpt-6-sol",
+  "request_id": "b171f1d5eeb1ebddb052a9242183788f1168b4c3828bee342fe17722107df4a0",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

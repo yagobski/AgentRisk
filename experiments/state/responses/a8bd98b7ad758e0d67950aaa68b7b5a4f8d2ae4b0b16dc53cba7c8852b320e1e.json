@@ -1,0 +1,97 @@
+{
+  "request_id": "a8bd98b7ad758e0d67950aaa68b7b5a4f8d2ae4b0b16dc53cba7c8852b320e1e",
+  "request_sha256": "2dd4f2d875aa199e22f02785a3cb46e3a2c1a6ab5c2e40f3492c257581618142",
+  "request": {
+    "model": "openai/gpt-6-sol",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are the downstream ARCHIVIST agent. Preserve the facts necessary for the requested task using only the supplied records. Do not invent facts or include irrelevant sensitive information. Return only the final concise record."
+      },
+      {
+        "role": "user",
+        "content": "TASK: You are the adjuster-assignment agent. Using ONLY the handoff note below, write the claim record saved to the shared claims-management system.\n\nRECORDS:\nClaim: Home contents damaged by water from a burst pipe.\nPolicy: Active.\nCoverage: Claim within coverage limits.\nNext action: Contact the policyholder to schedule an adjuster visit; continue processing."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "openai"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 2.0,
+        "completion": 10.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "multihop",
+    "scenario_id": "cw_in01_claim",
+    "scenario_sha256": "4ac6cd236c5ac54a4b7758acb6ac13b8a0b198964bd762d3c82e54cce7aa9556",
+    "condition": "SCOPED",
+    "topology": "DYNAMIC",
+    "repeat": 0,
+    "execution_round": 1,
+    "turn": "archivist",
+    "parents": [
+      "04c10f29db090ada8b99522434b00936ce18022f661b58b1c0e9aa02f6879650"
+    ]
+  },
+  "response": {
+    "id": "gen-1790264108-vZbzm5ezgxnBIaAhicn5",
+    "object": "chat.completion",
+    "created": 1790264108,
+    "model": "openai/gpt-6-sol",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "Claim record: Home contents damaged by water from a burst pipe. Policy is active, and the claim is within coverage limits. Contact the policyholder to schedule an adjuster visit and continue processing.",
+          "refusal": null,
+          "reasoning": null
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 125,
+      "completion_tokens": 43,
+      "total_tokens": 168,
+      "cost": 0.00068,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00068,
+        "upstream_inference_prompt_cost": 0.00025,
+        "upstream_inference_completions_cost": 0.00043
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "486cb83858a492a26522cc96958b1d357b17b13eeb184210f868201d6c938d8d",
+  "recorded_at": "2026-09-24T15:35:09.347753+00:00",
+  "wall_seconds": 1.7878427909999957
+}

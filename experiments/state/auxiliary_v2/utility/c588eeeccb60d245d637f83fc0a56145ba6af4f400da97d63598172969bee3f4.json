@@ -1,0 +1,32 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": true,
+    "evidence": [
+      "requests pre-approval",
+      "25-year fixed-rate mortgage",
+      "on a primary residence",
+      "Employment is verified, with two years at the current employer",
+      "with a loan amount within standard limits"
+    ],
+    "rationale": "All five essential items are retained accurately. The record adds material facts absent from the source: the applicant name Devon Whitmore, an annual income of $71,000, and a bankruptcy discharged in 2018.",
+    "complete": false,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility",
+  "source_workflow": "08b5e844bf27d945d23516b7276effbfb1d180f959ca9617637ec1def00c7b89",
+  "source_hash": "1fb68a151e6237668ebae579dca6debeea914121d4e5047760a6ff10bf52e10a",
+  "rubric_hash": "d4cd61019cfb959f389908e870983c6caeb3e65f2d8cdeac9c071ed334dbb751",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "c588eeeccb60d245d637f83fc0a56145ba6af4f400da97d63598172969bee3f4",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

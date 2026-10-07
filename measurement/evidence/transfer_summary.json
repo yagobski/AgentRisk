@@ -1,0 +1,29 @@
+[
+  {
+    "topology": "CHAIN",
+    "global_distinct": 0.05952380952380952,
+    "transfer_full": 0.044642857142857144,
+    "transfer_observed": 0.1595744680851064,
+    "transfer_numerator": 60,
+    "observed_mass": 376,
+    "full_mass": 1344
+  },
+  {
+    "topology": "FANOUT",
+    "global_distinct": 0.07142857142857142,
+    "transfer_full": 0.05952380952380952,
+    "transfer_observed": 0.20833333333333334,
+    "transfer_numerator": 110,
+    "observed_mass": 528,
+    "full_mass": 1848
+  },
+  {
+    "topology": "DYNAMIC",
+    "global_distinct": 0.05519480519480519,
+    "transfer_full": 0.027597402597402596,
+    "transfer_observed": 0.19883040935672514,
+    "transfer_numerator": 34,
+    "observed_mass": 171,
+    "full_mass": 1232
+  }
+]

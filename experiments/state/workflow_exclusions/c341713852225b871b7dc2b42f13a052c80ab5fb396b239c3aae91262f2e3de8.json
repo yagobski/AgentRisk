@@ -1,0 +1,10 @@
+{
+  "scenario_id": "cw_go01_benefit",
+  "model": "anthropic/claude-opus-5.5",
+  "condition": "FULL",
+  "topology": "DYNAMIC",
+  "execution_round": 1,
+  "status": "provider_refusal",
+  "reason": "Provider refusal excluded without retry: fc66f85015134ae18d39cf9ef1a0418b7644c6320795b2c5763235a1693e2026",
+  "treatment": "no fallback to original round; incomplete primary workflow"
+}

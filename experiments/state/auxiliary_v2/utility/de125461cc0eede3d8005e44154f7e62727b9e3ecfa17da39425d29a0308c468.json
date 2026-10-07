@@ -1,0 +1,30 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      null,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": null,
+    "evidence": [
+      "",
+      "Household of three",
+      "routine renewal",
+      "within program limits"
+    ],
+    "rationale": "The record keeps 'Housing-subsidy renewal' but drops 'municipal', so item 1 is unclear. Household size, routine status and program limits are all retained. 'Eligible for renewal' and 'No resident follow-up indicated' are not stated in the source; they can be read as inferences from a routine, within-limits renewal, so whether they count as unsupported material facts is unclear.",
+    "complete": false,
+    "unresolved": true
+  },
+  "experiment": "auxiliary_utility",
+  "source_workflow": "f799d1558656a7680052f39f506804b986422159841ac3fb1a1cb7ee10bd0a72",
+  "source_hash": "5a86e50c1904b51aa217079823e21a7b5ae680206719032baf7db05217dfff9d",
+  "rubric_hash": "bfaf90c304f338b32dea18cddc0b7480930c1a7f2369645bcac3fb79bf682757",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "de125461cc0eede3d8005e44154f7e62727b9e3ecfa17da39425d29a0308c468",
+  "initial_parse_status": "invalid_schema",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

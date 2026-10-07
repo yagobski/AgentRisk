@@ -1,0 +1,32 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": false,
+    "evidence": [
+      "Home-contents claim",
+      "water damage caused by a burst pipe",
+      "Policy is active",
+      "the claim is within coverage limits",
+      "Adjuster visit requested"
+    ],
+    "rationale": "All five essential items appear accurately in the record. The 'next step' line is procedural and adds no unsupported material fact.",
+    "complete": true,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "df0c307567b0fe03c00e273a72dffc69ca11dba5b04164a12ec2d3c93dc068c8",
+  "source_hash": "f7d40582342bea9b139e4ce74ec1c84c56fbc3e0ebc1e97c7b1232e786554de6",
+  "rubric_hash": "6e2aca2f5905ad88cd3e783154d1f648583ae055021b2fa31794b70d69c12071",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "3ed50694c68729cf1a6a97b8157d30e5ccceb574b7cabf43808695e430fdfe6b",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

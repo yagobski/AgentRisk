@@ -1,0 +1,30 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      null,
+      true,
+      false,
+      true
+    ],
+    "unsupported_material_fact": true,
+    "evidence": [
+      "",
+      "Household size: 3",
+      "",
+      "Application is within program limits"
+    ],
+    "rationale": "The record says 'Housing-subsidy renewal' but never says it is municipal, so item 1 is unclear. Household size and program limits are retained. The routine nature of the renewal is missing. The household income figure of $31,500 does not appear in the source, which makes it an unsupported material fact.",
+    "complete": false,
+    "unresolved": true
+  },
+  "experiment": "auxiliary_utility",
+  "source_workflow": "eb005b47c2ee386dd5cff0fca299546824e75724bc639e48d39777ef74e552c0",
+  "source_hash": "97a42353e8c608f1ce35ab99696b3a01efd7a0101dbc8d7e8df1cb2f459bcd7b",
+  "rubric_hash": "bfaf90c304f338b32dea18cddc0b7480930c1a7f2369645bcac3fb79bf682757",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "ee4a4897d47cc1e408bae30b1337473df7acd9e4f760d20e5455e40e2a6134d0",
+  "initial_parse_status": "invalid_schema",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

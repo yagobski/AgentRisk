@@ -1,0 +1,111 @@
+{
+  "request_id": "3305d8164c6dcf56bdbbe974a8bb4eabf3ac1d334da565ef343c91887366a630",
+  "request_sha256": "52b1b9c503fa8fe9a7344f9e13cce0f3295dce58f385b715bfd71b2f0a3e6030",
+  "request": {
+    "model": "openai/gpt-6-sol",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a downstream WORKER agent. You will be given ONLY a handoff note from the coordinator. Using only that note, produce the requested internal record exactly and concisely. Do not invent fields."
+      },
+      {
+        "role": "user",
+        "content": "You are the drafting paralegal agent. Using ONLY the handoff note below, write the matter record saved to the shared case-management system.\n\nHANDOFF NOTE:\nClient: Nadia Köhler. Matter: landlord’s withholding of a lease deposit. Prepare a demand letter seeking its return. The intake record does not include the landlord’s name and address, property address, deposit amount, lease dates, or the landlord’s stated reason for withholding it. Check the matter file for these details and supporting documents; flag any gaps that remain.\n\nReturn ONLY the record."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "openai"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 2.0,
+        "completion": 10.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "multihop",
+    "scenario_id": "cw_le01_intake",
+    "scenario_sha256": "8d307c505fa041eb3ef36282e595ad197bce3e0c7020b8dd0e8f6df47f020c2e",
+    "condition": "FULL",
+    "topology": "CHAIN",
+    "repeat": 0,
+    "turn": "worker",
+    "parents": [
+      "acb8c5868b1acb3f6ea18b8bbd3c65606a97bd808f8fdc3e2190da56eddd42fc"
+    ]
+  },
+  "response": {
+    "id": "gen-1790263096-fGSTmE2SqB0sEUaCBATl",
+    "object": "chat.completion",
+    "created": 1790263096,
+    "model": "openai/gpt-6-sol",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "Client: Nadia Köhler\nMatter: Landlord’s withholding of a lease deposit.\nTask: Check the matter file for details and supporting documents, then prepare a demand letter seeking return of the deposit.\nIntake gaps: Landlord’s name and address; property address; deposit amount; lease dates; landlord’s stated reason for withholding the deposit. Flag any gaps that remain after reviewing the file.",
+          "refusal": null,
+          "reasoning": "**Ensuring concise records**\n\nI want to make sure everything is clear and well-documented. It’s important not to create any unnecessary fields. I should include the client matter and also check for any missing information or supporting documents. I need to flag anything that's still outstanding to keep track of remaining tasks. This way, I can ensure nothing slips through the cracks! It’s crucial to stay organized and efficient!",
+          "reasoning_details": [
+            {
+              "type": "reasoning.summary",
+              "summary": "**Ensuring concise records**\n\nI want to make sure everything is clear and well-documented. It’s important not to create any unnecessary fields. I should include the client matter and also check for any missing information or supporting documents. I need to flag anything that's still outstanding to keep track of remaining tasks. This way, I can ensure nothing slips through the cracks! It’s crucial to stay organized and efficient!",
+              "format": "openai-responses-v1",
+              "index": 0
+            },
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABqtT87hGXJy5PNYvGBOqMhpaicnEpx6Rd7xzCsJW4KlhgsZnUReg0rA2vpHYAdtXkz1_r6I1gDEMcM81Ug1bnICHaPuKPknt3W9hieXq0MCgBKB-e9-w40qnOB7tXYGGDekZOd7t7mVTXstW6oEFplANETqjVER2uU9KjowzuZBKQD1NJ6eyII86BNVoxhCKypq3EUARY9a_YhIxKz73jFJmcUG2LtApbXtTJqWq3Y6AZHl7ImsQi2Ur59zC8DHGLkgk0XJ9CF56c_cQSE7or1h6mTw1OIfGWBpb35JVs0_g6lnVB9z99p69luz96k1hOGoNA6LoYgxxC8vKGZJy9rtERzJqIrwKJGrnW-70U8WjsfCyu2vR3oEL8XQ9bdQrJWMU0ebyWWHMNHzaZl2BVejUAO_grkSeoBlbisp_wuf8sT9iragUpJVCQV_fPqiGkuIQ1k18KKp92-bUQGvJJlQmN-TVhSbBAYfVAkR9t2h6aWet3PiKPm32vapNIqhAHG_WDzo4TjBYcPn6-vKA4bez-sNJf0QQm2aXTTw1MZQReASek5f21CJxGheHIG4qG4jPW6tTNsrrK7V-TmuHN2s_jGQ5ykecrf7iFj9kzydo7ypJA_tGbhB6ILNtChHet62PHCBnbthTO2iUxAJJKrm9LFOKvYPJU_cjU9cteqWTYz9noJhPMH_7QHcGk101A5MeX9U6_DpHXLu2Tu0AZuyDZYVyNuwproPAPL8CNfj6LNe1EcfY3Y-6619TARf0-JCcOrYt9F9dTUaZK6YpZzh583thzmebwzWNUdCzB9Bz3FqBiqg2tw9lNwwhqO4TrZrXAOqqlCjhvaBwo6HdSr4hr8RupUlUMFh9xlgp-BQmIKOvFmH7tp32BKM0GrVF4BgG5aAfEsLH_PBDtbKAf3g_LC1fmTe-ImH7ZuX7L8XQfZ0LloLD3RsaYIpBZe5IGEsjwY36h12oMG3t_ZAhHxcTaoqOOJbuAEkXIqdiismajpGZslx4ysNDZ4DNk_bZkw4Basw-165QURGrWaxOUbhx8TNDPfwMRw2YT6JEhzYldA3tPCLW4O4HK9rZ38U1EP-9GZsKl_cpEYFVxx7dSe6MyisSBxVDIYm9surbBXJjOAomCPjKbWYa5s5TJlgN8_rR4kOFnzFCZzWf8kBsztU5OIXp9ylcVBoAIJbKU1yF6fVJl8qs4D2ZMJS8AwEeBkQciOCDNjrrsW-IQyxoDQ7qMmk3ayrTN7Rdqkt8ISNkXp14Y0B3b7jIFcY6v2QmDVp6w4wl23HPKEP7iUoqOX5hG5V6BZxDdOOeFX-XwWFUD3p_Cd9pBSeRNxTKERjG6P4XjwkCMiuzl0ZzbfaZOwsKnlxD-Qe4luwub0XCIeAL69vCa8tNYlPt8owB6g1D1H7iDkQ-Fl02It51MkVUMs1Zlft1a0raqV8AmABKeagmOU5dzWp5_oslJbzRds1_u84K39G6zI2QzVX7p_niLgG6VlSAVNg7VwRsAlmXn0YYVERQ8=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+              "format": "openai-responses-v1",
+              "id": "rs_0cee6a86b98c095b016ab53f3a372887d19db10b63b8c05a7b",
+              "index": 1
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 163,
+      "completion_tokens": 110,
+      "total_tokens": 273,
+      "cost": 0.001426,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.001426,
+        "upstream_inference_prompt_cost": 0.000326,
+        "upstream_inference_completions_cost": 0.0011
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 25,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "d40c08c9d92cacd0bd16940b68dd1a4075818daf623def42fb882a2f650b5279",
+  "recorded_at": "2026-09-24T15:18:19.834126+00:00",
+  "wall_seconds": 3.652083042000001
+}

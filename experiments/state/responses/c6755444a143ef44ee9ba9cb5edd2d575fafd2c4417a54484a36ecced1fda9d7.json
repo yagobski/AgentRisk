@@ -1,0 +1,105 @@
+{
+  "request_id": "c6755444a143ef44ee9ba9cb5edd2d575fafd2c4417a54484a36ecced1fda9d7",
+  "request_sha256": "800033690d919ab0344ec068cab46c5db5a809c270bfc2d0f3b86dc8ae8b225f",
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a downstream WORKER agent. You will be given ONLY a handoff note from the coordinator. Using only that note, produce the requested internal record exactly and concisely. Do not invent fields."
+      },
+      {
+        "role": "user",
+        "content": "You are the adjuster-assignment agent. Using ONLY the handoff note below, write the claim record saved to the shared claims-management system.\n\nHANDOFF NOTE:\nClaim type: Home-contents, water damage (burst pipe)\nPolicyholder: Tomas Bjork\nContact number: 250-555-7741\nPolicy status: Active; claim within coverage limits\nAction required: Assign adjuster and schedule an on-site visit (visit requested by the policyholder). Contact the policyholder directly to confirm the date and time.\nNotes: Initial intake is complete. No re-interview is needed for the basic claim details.\n\nReturn ONLY the record."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "anthropic"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 4.0,
+        "completion": 20.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "multihop",
+    "scenario_id": "cw_in01_claim",
+    "scenario_sha256": "4ac6cd236c5ac54a4b7758acb6ac13b8a0b198964bd762d3c82e54cce7aa9556",
+    "condition": "FULL",
+    "topology": "FANOUT",
+    "repeat": 0,
+    "turn": "worker",
+    "parents": [
+      "b8aa14c3d9970003c5ede10adb898c220990772beeb1acbf24ffb2f8d1a09bc0"
+    ]
+  },
+  "response": {
+    "id": "gen-1790263297-Ik0yOAsiez9i3DFdHkDS",
+    "object": "chat.completion",
+    "created": 1790263297,
+    "model": "anthropic/claude-opus-5.5",
+    "provider": "Anthropic",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "end_turn",
+        "message": {
+          "role": "assistant",
+          "content": "CLAIM RECORD\n\nClaim Type: Home-contents, water damage (burst pipe)\nPolicyholder: Tomas Bjork\nContact Number: 250-555-7741\nPolicy Status: Active; claim within coverage limits\nIntake Status: Complete. No re-interview needed for basic claim details.\nAction Required: Assign adjuster and schedule on-site visit (requested by policyholder).\nNext Step: Contact policyholder directly to confirm visit date and time.",
+          "refusal": null,
+          "reasoning": "I should only use the fields actually given, avoiding fabricating details like claim numbers, adjuster names, or dates, and keep the record concise.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "I should only use the fields actually given, avoiding fabricating details like claim numbers, adjuster names, or dates, and keep the record concise.\n\n",
+              "format": "anthropic-claude-v1",
+              "index": 0,
+              "signature": "CAQSrwUKEAgSGAI4AUIIdGhpbmtpbmcSDBlDSWvJ5ejqCsoBnBoM7zlVPUOS/ygU3l3VIjCb7T6gBsv1O9Ucf1prhlfY/vgBsKZfoPz+F8WWFlrjDuNPN29ubce8zaGdZuWPelcqzATn8JpMHhn1A+RfWY/djWGZ8rlshZXKCVA9wQEexP13aGl+BJHWyhN4EnzUsqMIW9SBgq8tWrHZ3IU658oi7+AtCYxxcu/bd0gqc2094F95E94CvNYJHszSjxs0RIFuurd0ZBeqjVzUmr17I1zTVNBqsrbP/LGncXNlBpOwA+uvtJejcI25Gunf6jCH5rV5sPfksaccTTSjq1HSfLrX97dAcTFX909gg5vt7/t0kefIHpT9uuKMTycQlhtoy5o5UgM8aRey2goEEdtyAFo6OuWMoRRLnKZcEjwVIYaiddHfEgAe30HCtWazu5u2gmI4s0aPI7zBojr/Vznlhjkq0zSC/eylPRrVb0oYNu+Zn51yXIq8oxyhs3XzVh+a73S/OTqSqZO5vPg2SrqKqC8sw3ND75siayHq8ckES5OV+JY8tZzVwzlkkNqnH/5yqe58RK6b5fB4v7mz9KyAInsavLBQCck/88IUNvmNggMnYwlUYg39NQiaZdoMzBXYcoY4osoD+PVVjqYCepNvsdLaH/7PDznnkvOwrDl1gVSkFvea8H4ZOVCb+A1Df3+4IW70U+MgOpqaJQttHFX7/KcTqbXU9IvoEjhUgRb16C6dMkw/7FlgOvE+Qt6bmazGJrwZiMuTwOLct2Y+f0QoShZdVywgb4wHuVRXMNOy0PIXdrGCoZdT9f44Pkcfgixlf/7If3UooE2vteVFncXOD7AMLMYFoBukPqDyLSF+52bk7wbUlp/iy50xpFFOkc2Tqrr7oPnUukXJHPJwPAmhX90YAQ=="
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 288,
+      "completion_tokens": 198,
+      "total_tokens": 486,
+      "cost": 0.005112,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.005112,
+        "upstream_inference_prompt_cost": 0.001152,
+        "upstream_inference_completions_cost": 0.00396
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 36,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "3fe57ed6f88c43cccfad5495270def60d21823a375e55ff18984b454c462e195",
+  "recorded_at": "2026-09-24T15:21:41.569378+00:00",
+  "wall_seconds": 4.532524542000004
+}

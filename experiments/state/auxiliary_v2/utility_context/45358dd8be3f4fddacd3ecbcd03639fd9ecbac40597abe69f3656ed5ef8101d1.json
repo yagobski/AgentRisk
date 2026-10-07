@@ -1,0 +1,30 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      null,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": false,
+    "evidence": [
+      "",
+      "Landlord’s withholding of a lease deposit.",
+      "landlord’s stated reason for withholding the deposit",
+      "prepare a demand letter seeking return of the deposit"
+    ],
+    "rationale": "The record captures the landlord lease-deposit dispute, the withheld deposit, and the demand letter request. It never explicitly states that the client seeks representation; labeling her 'Client' only implies it, so that item is unclear. The listed intake gaps and the file-review step are procedural, not unsupported material facts.",
+    "complete": false,
+    "unresolved": true
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "40222a2d08f3ed66d0ac3335b6035c01a5c15e85cf3aaec4b88d00a6f667503e",
+  "source_hash": "f91c0504af1041d406d564d2cd7890cbb93d3d4c910787d44c9e0ed25f4e9c8a",
+  "rubric_hash": "53e022194f930d8917c6f5d4c3df7fffc187ff3250032ac7900637182eebf590",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "45358dd8be3f4fddacd3ecbcd03639fd9ecbac40597abe69f3656ed5ef8101d1",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

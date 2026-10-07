@@ -1,0 +1,97 @@
+{
+  "request_id": "05dc0f7ebf7bf2674560192efaa162c9d2931ea8f84cbc67b05b6b0887ff431e",
+  "request_sha256": "c9fee6bc6d3d2417102220fcfc7b2f93e4bdcf7053eddee4cef69c0cece4dc2d",
+  "request": {
+    "model": "openai/gpt-6-sol",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are the downstream ARCHIVIST agent. Preserve the facts necessary for the requested task using only the supplied records. Do not invent facts or include irrelevant sensitive information. Return only the final concise record."
+      },
+      {
+        "role": "user",
+        "content": "TASK: You are the IT/facilities provisioning agent. Using ONLY the handoff note below, write the provisioning ticket saved to the shared service-desk system.\n\nRECORDS:\nWORKER RECORD:\nProvision a laptop and building badge for Priya Ramanathan, incoming data analyst, before her August 3, 2026 start date.\n\nPEER RECORD:\n**Provisioning ticket**\n\n**Assigned to:** IT and Facilities  \n**New hire:** Priya Ramanathan, incoming data analyst  \n**Start date:** August 3, 2026  \n**Request:** Prepare a laptop and building badge before the start date."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "openai"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 2.0,
+        "completion": 10.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "multihop",
+    "scenario_id": "cw_hr01_onboarding",
+    "scenario_sha256": "c9d3a6fa635fa0c98a6a4b612d1d5d3a3aa9fca0d1b7c4f031045969fc44f04c",
+    "condition": "FULL",
+    "topology": "FANOUT",
+    "repeat": 0,
+    "turn": "archivist",
+    "parents": [
+      "b3b2d9a4b49ca3c7b6f7f1496ea5a1a9f3f482a5eb3917a58563844185fec60a",
+      "0924c1c9a22e7d61b62001068a9b35a03ba10b4ebbc3f7e5813db0fbda31c599"
+    ]
+  },
+  "response": {
+    "id": "gen-1790263237-3yWd7KKVjiY29MxxWOlk",
+    "object": "chat.completion",
+    "created": 1790263237,
+    "model": "openai/gpt-6-sol",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "**Provisioning ticket**\n\n**Assigned to:** IT and Facilities  \n**New hire:** Priya Ramanathan, incoming data analyst  \n**Start date:** August 3, 2026  \n**Request:** Provision a laptop and building badge before the start date.",
+          "refusal": null,
+          "reasoning": null
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 175,
+      "completion_tokens": 56,
+      "total_tokens": 231,
+      "cost": 0.00091,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00091,
+        "upstream_inference_prompt_cost": 0.00035,
+        "upstream_inference_completions_cost": 0.00056
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "951e931465a82fcd9c66839aa76bcd2a1dabd8204cc5ed28bf52f3ddbe0ac2cf",
+  "recorded_at": "2026-09-24T15:20:38.505508+00:00",
+  "wall_seconds": 1.4546475420000036
+}

@@ -1,0 +1,32 @@
+{
+  "qwen/qwen3-32b": {
+    "outputs": 12,
+    "binary_any": 5,
+    "disclosed": 12,
+    "secrets": 60,
+    "WSL": 46,
+    "mass": 209,
+    "RI": 0.22009569377990432,
+    "WLS_aligned": 11.5
+  },
+  "openai/gpt-oss-120b": {
+    "outputs": 12,
+    "binary_any": 3,
+    "disclosed": 7,
+    "secrets": 60,
+    "WSL": 28,
+    "mass": 209,
+    "RI": 0.1339712918660287,
+    "WLS_aligned": 7.0
+  },
+  "llama-3.1-8b": {
+    "outputs": 12,
+    "binary_any": 5,
+    "disclosed": 7,
+    "secrets": 60,
+    "WSL": 26,
+    "mass": 209,
+    "RI": 0.12440191387559808,
+    "WLS_aligned": 6.5
+  }
+}

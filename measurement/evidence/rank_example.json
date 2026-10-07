@@ -1,0 +1,33 @@
+{
+  "selection": "largest positive full-inventory edge, then smallest positive edge with lower WSL and higher observed-inventory RI; lexicographic ties",
+  "higher_amount": {
+    "workflow_id": "0a7d28572a88759893972e697db07be1e56ca8b403250b5957bed3dd8c62b969",
+    "scenario_id": "cw_go01_benefit",
+    "model": "anthropic/claude-opus-5.5",
+    "condition": "FULL",
+    "topology": "CHAIN",
+    "channel": "coordinator_to_worker",
+    "WSL": 3,
+    "WLS_aligned": 0.75,
+    "full_mass": 14,
+    "observed_mass": 14,
+    "RI_full": 0.21428571428571427,
+    "RI_observed": 0.21428571428571427
+  },
+  "higher_fraction": {
+    "workflow_id": "0138e719d9dd706d87d8150b99b9fdc0cf46c9f808491a783dd66878b9e51c2b",
+    "scenario_id": "cw_le01_intake",
+    "model": "openai/gpt-6-sol",
+    "condition": "FULL",
+    "topology": "DYNAMIC",
+    "channel": "archivist_to_storage",
+    "WSL": 2,
+    "WLS_aligned": 0.5,
+    "full_mass": 14,
+    "observed_mass": 2,
+    "RI_full": 0.14285714285714285,
+    "RI_observed": 1.0
+  },
+  "all_edges_csv": "all_edge_comparisons.csv",
+  "not_model_ranking": true
+}

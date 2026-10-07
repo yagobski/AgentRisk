@@ -1,0 +1,105 @@
+{
+  "request_id": "548a8c559cf961eb19d3af1afc972bde1b01a25670463a82884984750b0b1b8e",
+  "request_sha256": "4f79a69719e342034f2fb273ac802101dc53d30cb7498ef5dc2a7fc01ee6d1c3",
+  "request": {
+    "model": "openai/gpt-6-sol",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a downstream WORKER agent. You will be given ONLY a handoff note from the coordinator. Using only that note, produce the requested internal record exactly and concisely. Do not invent fields."
+      },
+      {
+        "role": "user",
+        "content": "You are the benefits-determination agent. Using ONLY the handoff note below, write the eligibility record saved to the shared case system.\n\nHANDOFF NOTE:\nMunicipal housing-subsidy renewal for a household of three. This is a routine renewal within program limits. Proceed with the eligibility determination; no resident follow-up is indicated by the information provided.\n\nReturn ONLY the record."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "openai"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 2.0,
+        "completion": 10.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "multihop",
+    "scenario_id": "cw_go01_benefit",
+    "scenario_sha256": "f5efde67b07203809c2b068139a7490a4f31d4bc61760031e470ecdcfb26d74c",
+    "condition": "SCOPED",
+    "topology": "CHAIN",
+    "repeat": 0,
+    "turn": "worker",
+    "parents": [
+      "dbb5fd5f610b1a28e051d32b320f29fbca88099758a0a6d2be7eb292b25911e8"
+    ]
+  },
+  "response": {
+    "id": "gen-1790263006-JNftChh7cNQU4TPq0PYG",
+    "object": "chat.completion",
+    "created": 1790263006,
+    "model": "openai/gpt-6-sol",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "Housing-subsidy renewal: Household of three. Routine renewal within program limits; eligible for renewal. No resident follow-up indicated.",
+          "refusal": null,
+          "reasoning": null,
+          "reasoning_details": [
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABqtT7hqLjqJlCC6eWlfucGcF_UqaIg3V4L39owfK3UN5-cA4_SQ-UvZRj9FKsKy6uIyCmL7ieugtHzxwMh6MkpYJihLBHw6pSLhHz43vi0KIrrobVmKbiBSrtIwD3o1e7hSx7klnYDxXIerIx8qGL0wZMykGk1y2kWGjZf5EVMf4OY3hNzIV4xJ4ZJkTb__4GnuphtiGHv3X3Ymc8Xy4vU02X42RCu-BhV7dUwKIL7lQbGdEP5oT6kHEq0ckmxozwRc_YWFYSfoEmJ3Sh10fdQ90Csvom2Inhox2D9XqHK6a5mxLP278FmUmtHohBmTCwNDTW7_pkY3ikiErmh4Ved1i5CfXZOCbYi4y_X_CEB2Ge2GEuGe3nAwPMwz0-W_2IEO8ljVfEFL1kKhfQmNYgCiJQAhYP4-NFfSgYNCy3XByC3Pas_X7KtNjMMZl7qplYChi5xhG6r5ewRVZ7IpTfhL-no0c8FMtc7RsNePzZRlg3Cqut2Rda3545JijF7s7tnq5t6txBwP7bn_tZoFCzc87UW1D7DkTrsv7rfsjRTicae4bBlb_kUG38iuscT-9s-ScR6uFwkVSo-JyCU4AGI3osCfTOHp5RB5_XFaMSNV7mq80ymNS5dPEbKRHRbWWSYAht5DHnK75JjM4TbThXyB6uaRI5a2smkXt9BvgHPEVlXnlEYVBQsQ-i2GDFtlO4dQJShywnYok0haG0EKK5t9AGL0DsPq4A1wrvLi5WAu-FdZKXbCd18vuG8DFSBKySt9saWhnmgV50ZQsUb02UoJgDXFZ8BCB0VKH1utmWbfIjKmCHnsUCXe-O9v2ej8UlVjGpkF-NLHJqqRZhQt-r3Xj5WtZ0ZRqpbskv7SU5_aaa-MQmKXAjbdb2_dtFAmTisf_g1tZ2coAoLtDgbhOSssnBgq1KuGm9lnw1d7gZevqyXcGrusZzqfOC7Dl5hZlegdWM97kEZwygFBUsB4S79GlLmtGvL7wDJnWOrqd4as0fP-MvZpCVfgAljknGKllCFg9QK46yZyzZtXI2ZaEcFEPcx7Wvu2_7HtZINHxXpnEk8pd9E4aYfC0vt6ITYyWg9YnfcZiocI_ENETtIxnWDKjRs4Yf0SR5uOzoA2F8GJjz5MzkOforIwKYVBKdFEhmfb9MV9Baf9sVCf-YRuC_n8mI6cuwGYqqiQu7iW8EUJbaPbJkMGkF1O07AntE-UL6WKPWriM4-5TChBfXclgNGkBbCwUei7GvZp5EvTsQw7YJG_gLIIcI00eko8LfA-Qts4-grQP0ujgSUkma6gt5BP2FmYoK56Mcb1uKcpLtyiwuiD6BEZDDiJY79y_m39-cAx7d5HP1c0VI5f8GkCCRiTkiZUjtYq5Egla322G1hg7s46sG9_favqBv_0CoqG10oGZw2EH_DqGq7NMIukZ6dvIzI3jdeibX3cSkKv_4Ydqa4b3tIVGY2BkI_fQGLedJDea962RiaihWXG0BaqLegpf2W9DIemLrpQKkyLbUGLPTy3WUiidq6NHnWQTagSTXRn3_cWPRggeV8g41oC9I-6R09Yw==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+              "format": "openai-responses-v1",
+              "id": "rs_082dc986c222e34a016ab53ee07e9c87d187968cc91b7afd56",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 128,
+      "completion_tokens": 64,
+      "total_tokens": 192,
+      "cost": 0.000896,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.000896,
+        "upstream_inference_prompt_cost": 0.000256,
+        "upstream_inference_completions_cost": 0.00064
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 32,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "73e4ad08034a03a1f9ffc7fd38c1cca43ed41bad7963bf0fd467a41bed860a9e",
+  "recorded_at": "2026-09-24T15:16:49.838830+00:00",
+  "wall_seconds": 3.779504166999999
+}

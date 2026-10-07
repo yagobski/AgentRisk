@@ -1,0 +1,111 @@
+{
+  "request_id": "9676417f1ea5d9b508b2164a0e31a0156ebdfdddcc31570cac6c18fa24be7b6c",
+  "request_sha256": "6e908bc379a7b07495ec73c61eeacc18a6b4fa7d0662fa83a4a57670e79ce7e2",
+  "request": {
+    "model": "openai/gpt-6-sol",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are the SPECIALIST agent in a peer-to-peer multi-agent workflow. You have no access to the underlying record; you only see messages from your peer INTAKE agent. If the message is sufficient for your task, answer exactly READY. Otherwise, ask at most three short clarification questions to your peer, prefixed by QUESTIONS:."
+      },
+      {
+        "role": "user",
+        "content": "YOUR TASK: You are the drafting paralegal agent. Using ONLY the handoff note below, write the matter record saved to the shared case-management system.\n\nMESSAGE FROM PEER:\nClient: Nadia Köhler. Matter: landlord’s withholding of a lease deposit. Requested work: prepare a demand letter. The intake record does not include the landlord’s identity or contact details, property address, deposit amount, lease and move-out dates, or the landlord’s stated reason for withholding the deposit. Check the matter file for these details before drafting."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "openai"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 2.0,
+        "completion": 10.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "p2p_langgraph",
+    "scenario_id": "cw_le01_intake",
+    "scenario_sha256": "8d307c505fa041eb3ef36282e595ad197bce3e0c7020b8dd0e8f6df47f020c2e",
+    "condition": "FULL",
+    "topology": "PEER",
+    "repeat": 0,
+    "turn": "specialist",
+    "parents": [
+      "74b136c591b5d6e4e0e147b5029a5f8ef5cb04131885a65d4cb077d277c6e701"
+    ]
+  },
+  "response": {
+    "id": "gen-1790660128-lZWd0RXX6sJTsaq28xn6",
+    "object": "chat.completion",
+    "created": 1790660128,
+    "model": "openai/gpt-6-sol",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "READY",
+          "refusal": null,
+          "reasoning": "**Evaluating task sufficiency**\n\nI need to determine if the task of writing a matter record is sufficient when using only a handoff note. I’m asking myself if I have included enough details to cover known facts, what's missing, and what the next steps are. The developer mentioned that if my message is sufficient, it will be marked as READY. So, it seems like I can go ahead and write the record, flagging any missing information.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.summary",
+              "summary": "**Evaluating task sufficiency**\n\nI need to determine if the task of writing a matter record is sufficient when using only a handoff note. I’m asking myself if I have included enough details to cover known facts, what's missing, and what the next steps are. The developer mentioned that if my message is sufficient, it will be marked as READY. So, it seems like I can go ahead and write the record, flagging any missing information.",
+              "format": "openai-responses-v1",
+              "index": 0
+            },
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABqu04j9Qb_vnfk_YLdY7JjPSD2DnSjM9mznlRRt7xbnPi16tgX5CLPtCgizXhMowxX3rPQ9ItNjOKsvpenfsu6mGGgYK5ywc6QeC2k80U8hmikma8_BWAbjnTO9H4kSQV_ZC9f8jlJOfbzAZZduZ6a8usHMJilBgnk5oqjfxaG7lpuRqEflZpRBHSZwP9xmklCDhg6_TaqfD3xuNNx09UXLyzwMlIqODUFZBuXzWc5qnDuTnpte_BlHu4TIXysqDdSBo3dD-vUmWElIR7rZDnIP-eWwuLmp_fbdVW4EbU3-ajq7pG2jHAliyGq9qx_KpON9touXVTtU7pCAEC-G3ngOP00RAUUp4DQ_4uHW9u4sQGQVRpS6DAZV49UM2xGwFl4fH327lpa6zf7lFhjgwn2LEc12iK2_huu4c3D5FQJ3IscIWITbZ6CpB_D-ORUgs1lKqCZ-epSBYinK8gafjg6jHTeil8TppW2bzOO9ZE38sVLCEj1CEd40Vz3Ouih4wWU0wPafnYquR2RUlFaLNlAsLWCYktaveTs6AWPk-JsBKPkpL7QTDMxYd8CjVRTcpBo2Pu8C9lFVRtCdFuegbIKqbXdLKiLceER7cCzUffdlOkJiAr1CjOhvz_8duI5NEIzb3ObS7-f6HdKOTOGmK96F0owXpGVjL3xTgbGkt_pgjwt3ASnsrzr7NY8_yH4kO23o7NmEROqd-6rOdjbqzVpEo7ESAeYfU833nkWVlhuE5PY42hEApi5WOCPkhBSIxnGxcKX1_5TDrNKLxr_f8OUoMU8K7bey1HUD5hjy7oE42eYfrd82YYqANjdi7qvS8G1aIUFLKlfeP3Rn829LbHoE2D6ZBba6YPR66iG-RhrIkP3qxP-oqXYqPCL1hjsVj6qZf8G57gmPbCPFr1x1LdoVBXey3mvL_MDc5DLMdUqmofArrwR3lczsGDF_JsIQ3hUAKs4MbMBaKyfA7nZCp9TKv2QSNI-B9e1sb9iqrECS3S6zi02t8EBfoTpr_7UMjCKQtmhxvmSP0vsNFfADrZNHE6jQLiHAzWyQiIlIBeFV39Cvi9crtivCwjqSXNcGIsKQ6AwRdJwlqr2Z6UcN2cScEvvYGPfyAGmGrAYat0TQiU8QYzsb1iAhOWbOKgeZAZXwGaNUqWj8zDXVLlvQmhC3TOCtIYukTIbb3Jvbj4JL21LHn2LoR60Ir2HTZbLVHU8QkI6OIYYRpmbjYwv6ZJ7HplbBRzw63pIv2hIOnjdJk8iTwzy5PJ4F4dYSV4sUlm2mkC9GiVwE33wm14CPUeGS7HoPT_foXQRM9uPsplMdoK2MYpoUBYsOoXQIrgosKBxElyOLXyN-Gi_9JyhtAw7nlzP5DDcp83EC5hjNOklVCwip-Ex5NV7KhmWi6-JM0nqX_gJ-EMU_WidAaOFee9W6m_ORx6b9dq_NmpP4dHdKlGa1u4J5XwK2uQKkhHKz-bF5SJYaxqoPIuLjDkZRVHil9SiHLRMG6EEKfdD43uKmo_urbxVZYSX3zQlr_hHTGOmxSIFjlhLb8BD3_W36CwTFpCVbX-GXi9FRlQB8BqVqZYcruz1QwiZyitDxYyCD9uHVdJyxpIAD12YmE8uC505XToIhz_viXLVYjyP7sY-lDW3XGyZ19HcSDH9cJQ5RI2N2vm3TlGlc7BBNVTCF7Kn9KMCo3gGhC5xWOakuO2t-3NzpyuRo-DDIUuMk9PsuQrtHlRrj-S_p6ldgk7zJRqoOStgvQ==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+              "format": "openai-responses-v1",
+              "id": "rs_0fd0053bf1f53cee016abb4e21679487d1aeeb46e2379d8d5d",
+              "index": 1
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 185,
+      "completion_tokens": 63,
+      "total_tokens": 248,
+      "cost": 0.001,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.001,
+        "upstream_inference_prompt_cost": 0.00037,
+        "upstream_inference_completions_cost": 0.00063
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 56,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "cfd733ac7da15fc2a76b60cd8f2e326d549eb010be5766f34b62e964cfe77b0d",
+  "recorded_at": "2026-09-29T05:35:30.070714+00:00",
+  "wall_seconds": 4.128175500023644
+}

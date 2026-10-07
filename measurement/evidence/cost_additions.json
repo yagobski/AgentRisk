@@ -1,0 +1,29 @@
+{
+  "canonical_storage": {
+    "cross_model_judge": {
+      "traces": 72,
+      "min_bytes": 2566,
+      "median_bytes": 2621.0,
+      "max_bytes": 2821
+    },
+    "marker": {
+      "traces": 72,
+      "min_bytes": 2511,
+      "median_bytes": 2566.0,
+      "max_bytes": 2652
+    },
+    "regex_dlp": {
+      "traces": 72,
+      "min_bytes": 2522,
+      "median_bytes": 2577.0,
+      "max_bytes": 2651
+    }
+  },
+  "reciprocal_median_operations_per_second": {
+    "detection_us": 62336.367036529104,
+    "score_us": 585137.5073142188,
+    "serialize_us": 333333.3333333333
+  },
+  "throughput_scope": "offline individual operation reciprocal, not end-to-end concurrent deployment throughput",
+  "new_paid_calls": 0
+}

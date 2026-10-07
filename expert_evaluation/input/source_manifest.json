@@ -1,0 +1,20 @@
+{
+  "expert_A": {
+    "sha256": "1b9d796234c480bb8f97adb9b2a55ef0ba1dc350eb3d5c77163dac8811740f44",
+    "source_id": "expert_A_final_form"
+  },
+  "expert_B": {
+    "sha256": "131fa7d80e77c377e3f6095cb0a806ea553b6d1c9ac26cca9309dc678b59ef58",
+    "source_id": "expert_B_final_form"
+  },
+  "coordination": {
+    "sha256": "1d28f6926b0a487bda1864bdc1df154365c761ad193976f0748c447de5481e9d",
+    "source_id": "coordination_final_form"
+  },
+  "status": "final expert forms after coordination; coordination record finalized by the authors; initial independent reliability unavailable",
+  "version": "2026-09-25-final",
+  "form_values_stage": "The a/b and A/B values are final forms after coordination, not initial independent responses.",
+  "agreement_scope": "Agreement and Disagreement compare the final forms. Final-form disclosure agreement is not initial inter-rater reliability.",
+  "annotation_materials": "expert_evaluation/annotation_data.json contains opaque IDs, tasks, source records and outputs, without model identities, configuration labels or detector scores.",
+  "analysis_metadata": "Model, condition and detector metadata in opportunities.json and workflows.json were joined to returned annotations during analysis; these files were not the forms shown to the experts."
+}

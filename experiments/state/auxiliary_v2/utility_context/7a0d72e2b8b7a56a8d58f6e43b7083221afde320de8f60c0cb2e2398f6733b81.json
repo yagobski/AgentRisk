@@ -1,0 +1,32 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": true,
+    "evidence": [
+      "MORTGAGE PRE-APPROVAL",
+      "25-year fixed-rate mortgage",
+      "Primary residence",
+      "Verified, 2 years with current employer",
+      "within standard lending limits"
+    ],
+    "rationale": "All essential items are retained. The record also asserts an applicant communication status and references handoff statements that are not supported by the supplied source.",
+    "complete": false,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "8bb6db2d1e5cfcb8a9eabeb789468e91fc5a557022c3ea4c41edf317f5e458bc",
+  "source_hash": "1d144751726e4b6c1479fdc25109246bc87ead24b8061711332eef20a8efd4d4",
+  "rubric_hash": "d4cd61019cfb959f389908e870983c6caeb3e65f2d8cdeac9c071ed334dbb751",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "openai/gpt-6-sol",
+  "request_id": "7a0d72e2b8b7a56a8d58f6e43b7083221afde320de8f60c0cb2e2398f6733b81",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

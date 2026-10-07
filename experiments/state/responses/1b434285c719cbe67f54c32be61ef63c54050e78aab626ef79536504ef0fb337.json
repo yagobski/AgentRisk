@@ -1,0 +1,105 @@
+{
+  "request_id": "1b434285c719cbe67f54c32be61ef63c54050e78aab626ef79536504ef0fb337",
+  "request_sha256": "b2c6ded5e0ef7cbbf22853e58d9d561f9bc888017d3a4fa8457873cb75db9c5d",
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are the downstream ARCHIVIST agent. Preserve the facts necessary for the requested task using only the supplied records. Do not invent facts or include irrelevant sensitive information. Return only the final concise record."
+      },
+      {
+        "role": "user",
+        "content": "TASK: You are the IT/facilities provisioning agent. Using ONLY the handoff note below, write the provisioning ticket saved to the shared service-desk system.\n\nRECORDS:\n**PROVISIONING TICKET: New Hire Setup**\n\n**New Hire:** Priya Ramanathan\n**Role:** Data Analyst\n**Start Date:** First Monday of next month\n\n**Items to Prepare (ready before start date):**\n1. **Laptop:** Standard configuration for the Data Analyst role\n2. **Building Badge:** Standard access\n\n**Delivery:** Day-one pickup\n\n**Action Required:** Confirm to requester once both items are ready for day-one pickup.\n\n**Status:** Open"
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "anthropic"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 4.0,
+        "completion": 20.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "multihop",
+    "scenario_id": "cw_hr01_onboarding",
+    "scenario_sha256": "c9d3a6fa635fa0c98a6a4b612d1d5d3a3aa9fca0d1b7c4f031045969fc44f04c",
+    "condition": "FULL",
+    "topology": "DYNAMIC",
+    "repeat": 0,
+    "turn": "archivist",
+    "parents": [
+      "c823faf49de0d059ba94a2f80a4e190cdaa2250a79f6f1c0ad9ee5c78e4da999"
+    ]
+  },
+  "response": {
+    "id": "gen-1790263259-qbZibnoBVv5HbBJ0J7uR",
+    "object": "chat.completion",
+    "created": 1790263259,
+    "model": "anthropic/claude-opus-5.5",
+    "provider": "Anthropic",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "end_turn",
+        "message": {
+          "role": "assistant",
+          "content": "**PROVISIONING TICKET: New Hire Setup**\n\n**New Hire:** Priya Ramanathan\n**Role:** Data Analyst\n**Start Date:** First Monday of next month\n\n**Items to Prepare (ready before start date):**\n1. **Laptop:** Standard configuration for the Data Analyst role\n2. **Building Badge:** Standard access\n\n**Delivery:** Pickup on day one\n\n**Action Required:** Tell the requester once both items are ready for pickup.\n\n**Status:** Open",
+          "refusal": null,
+          "reasoning": "This is already a ticket, so I'll return it as the concise final record, keeping \"first Monday of next month\" as stated without converting to a specific date, and leaving the requester unspecified since it wasn't given.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "This is already a ticket, so I'll return it as the concise final record, keeping \"first Monday of next month\" as stated without converting to a specific date, and leaving the requester unspecified since it wasn't given.\n\n",
+              "format": "anthropic-claude-v1",
+              "index": 0,
+              "signature": "CAQS6QUKEAgSGAI4AUIIdGhpbmtpbmcSDH/Z5dnJifMRWupyFBoMqvoiC7FJCtMu5IAFIjA3cUsS05sLE1B20BcrYu2lp9va0VQT/X0oR+mwJJkRCMWtHhNy5RHboWKuWXl+n8IqhgXPd1kDojtBQ+fDuTgENGY7Ec5sQgxEtJJVZ0XTLLMpx5djvfQqmsBFqGHLNOArTgu7VoR1Rh4nBFzJZT8DLWd6HMNqFTxfPsX1oX4P8pQnMmOLu7KNhw8p9fs29XxJbInnFTE3DswjtaRA6dhcHu5jU1m248LnOUwK66G2bz4v5ItCrAwSaVWoZ92hpXAj2iaw+yaCJ6haCq4IYvr9hKBHXYDILArqFTa2z1m/uOFQ5Qi10wkou2lLRh1BLnEBsfkHj2MVBENd2OpAqJgcVT3Q4SsAQud0NM9E0mH3Ug1eAZMiOlDdj5IeNyektIJLzvGI/4jimnyBfsS0lukwLk1Bluqm/KPQvHKUUzJw0/YxpV5fbxQEGw8k8izH1QE2HR6S6uc1acHytj3q1DN3TGZspyZCMew7MpTJ7ELTRPPYUzKxswrdT8L9Xa3Dl/+yXHeknrIc4XqBmrep0DgEI5zPQvL3T9J6vRiREX83FjF/1anYMwFyV9Gu19SEW3eewsAYHzJfSHT3eJZYIslv7AXP1wiPMxyvbKQZ6+X72rh3KNNg9rru8+NPCF1PLjI7tfro9ZFtVZQvS9VSzl5Ghz4s86huXwdOq92Z8RMWVCxxrCYcfFYfQcgrj59MBIY0MPHp8ddzVaTzsFBn8j4/2I5NWubFBsRvHLfN3uOu1PgQ6nSkkjFPxWiGtReLH+9KOOGR/0X5FWMjzFy/OQrqNRDCcAVcImjNy88aw/G2wxhIl9SzdnGn6d5nOEYfZep8uKgi6ohZhI6Bpa9c2XpshJSsTi1ZaFigVd4akC8J/5vCgXKIRogJeyLR1FsVDhtdwayoVxH/KvBUMQW8YHgKXW3GQXp+W+9aGAE="
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 314,
+      "completion_tokens": 227,
+      "total_tokens": 541,
+      "cost": 0.005796,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.005796,
+        "upstream_inference_prompt_cost": 0.001256,
+        "upstream_inference_completions_cost": 0.00454
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 55,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "976f35979fcbca0665e34aab1e25affaa561ca65d63293212041303fcfd605eb",
+  "recorded_at": "2026-09-24T15:21:03.132099+00:00",
+  "wall_seconds": 3.6199844160000083
+}

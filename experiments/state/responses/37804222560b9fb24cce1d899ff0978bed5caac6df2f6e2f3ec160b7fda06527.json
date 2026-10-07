@@ -1,0 +1,97 @@
+{
+  "request_id": "37804222560b9fb24cce1d899ff0978bed5caac6df2f6e2f3ec160b7fda06527",
+  "request_sha256": "063d4c2368d969c8411dd8c1831a122571ad7b557bc30182cef7eae943f125e7",
+  "request": {
+    "model": "openai/gpt-6-sol",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a downstream WORKER agent. You will be given ONLY a handoff note from the coordinator. Using only that note, produce the requested internal record exactly and concisely. Do not invent fields."
+      },
+      {
+        "role": "user",
+        "content": "You are the drafting paralegal agent. Using ONLY the handoff note below, write the matter record saved to the shared case-management system.\n\nHANDOFF NOTE:\nMatter: Lease dispute concerning a deposit withheld by the landlord. The client requests a demand letter. Draft from the available file materials; the amount, relevant dates, landlord details, and supporting documents were not provided in this handoff. Flag any information needed to finalize the letter rather than assuming it.\n\nAUTHORIZED TOOL RETRIEVAL:\nClient seeks representation for a lease dispute with a landlord over a withheld deposit; a demand letter is requested.\n\nReturn ONLY the record."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "openai"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 2.0,
+        "completion": 10.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "multihop",
+    "scenario_id": "cw_le01_intake",
+    "scenario_sha256": "8d307c505fa041eb3ef36282e595ad197bce3e0c7020b8dd0e8f6df47f020c2e",
+    "condition": "SCOPED",
+    "topology": "DYNAMIC",
+    "repeat": 0,
+    "execution_round": 1,
+    "turn": "worker",
+    "parents": [
+      "02402908b89e4a032fff4566a207e58b879e1f8febfd4e90671ab508943c5911"
+    ]
+  },
+  "response": {
+    "id": "gen-1790264093-i5W58BTpkdlfEYu2Joyy",
+    "object": "chat.completion",
+    "created": 1790264093,
+    "model": "openai/gpt-6-sol",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "Matter: Lease dispute concerning a deposit withheld by the landlord.\n\nClient request: Representation and a demand letter seeking return of the deposit.\n\nDrafting instruction: Draft from the available file materials. Do not assume missing facts.\n\nInformation needed to finalize the letter: Deposit amount, relevant dates, landlord details, and supporting documents.",
+          "refusal": null,
+          "reasoning": null
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 177,
+      "completion_tokens": 67,
+      "total_tokens": 244,
+      "cost": 0.001024,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.001024,
+        "upstream_inference_prompt_cost": 0.000354,
+        "upstream_inference_completions_cost": 0.00067
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "61d7be95b5bd86ab0e66b282bf28aa0fc771e1b4766bde8b53fa67c2a01df88c",
+  "recorded_at": "2026-09-24T15:34:54.903527+00:00",
+  "wall_seconds": 1.7729930419999995
+}

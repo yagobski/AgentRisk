@@ -1,0 +1,55 @@
+test_complete_requires_no_material_hallucination (test_auxiliary.AuxiliaryTests) ... ok
+test_positive_requires_literal_evidence (test_auxiliary.AuxiliaryTests) ... ok
+test_unknown_is_not_success (test_auxiliary.AuxiliaryTests) ... ok
+test_concurrent_reservations_cannot_overspend (test_campaign.CampaignTests) ... ok
+test_refusal_keeps_reservation_and_never_retries (test_campaign.CampaignTests) ... ok
+test_requests_have_distinct_repetition_ids (test_campaign.CampaignTests) ... ok
+test_server_spend_checked_before_new_call (test_campaign.CampaignTests) ... ok
+test_three_repeats_pilot_reused (test_campaign.CampaignTests) ... ok
+test_cache_tampering_rejected (test_extension.BudgetTests) ... ok
+test_catalog_price_drift_blocks (test_extension.BudgetTests) ... ok
+test_catalog_unsupported_temperature_blocks (test_extension.BudgetTests) ... ok
+test_empty_response_not_scored (test_extension.BudgetTests) ... ok
+test_expensive_response_stops (test_extension.BudgetTests) ... ok
+test_lock_prevents_parallel_spend (test_extension.BudgetTests) ... ok
+test_missing_cost_retains_allowance (test_extension.BudgetTests) ... ok
+test_no_key_in_public_manifest (test_extension.BudgetTests) ... ok
+test_nonfinite_cost_not_accepted (test_extension.BudgetTests) ... ok
+test_pilot_subset_and_identical_payload (test_extension.BudgetTests) ... ok
+test_protocol_change_changes_request_id (test_extension.BudgetTests) ... ok
+test_repeat_and_resume_no_charge (test_extension.BudgetTests) ... ok
+test_reservation_written_before_send (test_extension.BudgetTests) ... ok
+test_returned_model_mismatch (test_extension.BudgetTests) ... ok
+test_stage_cap (test_extension.BudgetTests) ... ok
+test_timeout_never_retried (test_extension.BudgetTests) ... ok
+test_truncation_not_scored (test_extension.BudgetTests) ... ok
+test_uncertain_request_blocks_other_stage (test_extension.BudgetTests) ... ok
+test_zero_remaining_budget_before_network (test_extension.BudgetTests) ... ok
+test_multihop_72_turns_24_workflows (test_extension.IntegrationTests) ... ok
+test_pilot_then_frontier_72_total_mock_calls (test_extension.IntegrationTests) ... ok
+test_binary_fraction_weighted_distinct (test_extension.MeasurementTests) ... ok
+test_clear_requires_evidence (test_extension.MeasurementTests) ... ok
+test_dlp_coverage_and_unknown (test_extension.MeasurementTests) ... ok
+test_empty_scope_not_safe_zero (test_extension.MeasurementTests) ... ok
+test_fixed_denominator_preserves_ranking (test_extension.MeasurementTests) ... ok
+test_global_vs_transfer (test_extension.MeasurementTests) ... ok
+test_judge_invented_span_rejected (test_extension.MeasurementTests) ... ok
+test_judge_missing_not_filled (test_extension.MeasurementTests) ... ok
+test_judge_string_false_rejected (test_extension.MeasurementTests) ... ok
+test_missing_judgment_is_not_zero (test_extension.MeasurementTests) ... ok
+test_native_weights_not_invented (test_extension.MeasurementTests) ... ok
+test_no_fake_channel_fallback (test_extension.MeasurementTests) ... ok
+test_no_joint_coverage_not_perfect_agreement (test_extension.MeasurementTests) ... ok
+test_no_reference_no_accuracy (test_extension.MeasurementTests) ... ok
+test_outside_scope_rejected (test_extension.MeasurementTests) ... ok
+test_quality_unknown_not_true_negative (test_extension.MeasurementTests) ... ok
+test_retrieval_without_access_rejected (test_extension.MeasurementTests) ... ok
+test_revocation_keeps_knowledge (test_extension.MeasurementTests) ... ok
+test_unknown_secret_fails (test_extension.MeasurementTests) ... ok
+test_all_topologies_and_revocation (test_multihop_campaign.MultiTests) ... ok
+test_latest_round_refusal_does_not_fall_back (test_multihop_campaign.MultiTests) ... ok
+
+----------------------------------------------------------------------
+Ran 50 tests in 1.182s
+
+OK

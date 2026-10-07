@@ -1,0 +1,111 @@
+{
+  "request_id": "45c21d63a3d37c76e061d18adfa51bf88e255bbe429a356dd04c6f2c111b88b3",
+  "request_sha256": "e692cfdb7a3d5fa1bb0cd3e4e68b1ae012c88ed7c1265bfdc6b0e73ee0a7ca48",
+  "request": {
+    "model": "openai/gpt-6-sol",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are the SPECIALIST agent. Using only the messages received from your peer, produce the requested record exactly and concisely. Do not invent fields. Return ONLY the record."
+      },
+      {
+        "role": "user",
+        "content": "You are the IT/facilities provisioning agent. Using ONLY the handoff note below, write the provisioning ticket saved to the shared service-desk system.\n\nMESSAGE FROM PEER:\nIT and Facilities: Priya Ramanathan starts the first Monday of next month. Please prepare a laptop and building badge before her start date.\n\nYOUR QUESTIONS:\nQUESTIONS:\n1. Which office location should issue Priya’s building badge?\n2. What laptop type or standard configuration should IT prepare?\n3. Who is Priya’s manager or provisioning contact?\n\nPEER REPLY:\n1. The office location is not provided; confirm it before issuing the badge.\n2. No laptop type or standard configuration is specified; confirm the applicable data analyst standard with IT.\n3. No manager or provisioning contact is provided; confirm with HR or the hiring team.\n\nReturn ONLY the record."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "openai"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 2.0,
+        "completion": 10.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "p2p_langgraph",
+    "scenario_id": "cw_hr01_onboarding",
+    "scenario_sha256": "c9d3a6fa635fa0c98a6a4b612d1d5d3a3aa9fca0d1b7c4f031045969fc44f04c",
+    "condition": "FULL",
+    "topology": "PEER",
+    "repeat": 0,
+    "turn": "specialist_store",
+    "parents": [
+      "b7175bfb92a6bfbe2b7fe79d817a531daadca66df1140d846daeab89447aa2d8"
+    ]
+  },
+  "response": {
+    "id": "gen-1790660081-a322vPpDK3u2gKD9ojT5",
+    "object": "chat.completion",
+    "created": 1790660081,
+    "model": "openai/gpt-6-sol",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "Provisioning ticket\n\nNew hire: Priya Ramanathan\nStart date: First Monday of next month\nRequests: Prepare a laptop and building badge before the start date.\n\nPending confirmations:\n- Office location for badge issuance\n- Applicable data analyst laptop standard configuration (confirm with IT)\n- Manager or provisioning contact (confirm with HR or the hiring team)\n\nDo not issue the badge until the office location is confirmed.",
+          "refusal": null,
+          "reasoning": "**Creating a ticket**\n\nI'm looking to create a ticket with just the necessary details. The date needs to be for the first Monday of next month, but I’m working off current date info from 2026 without a specific date provided. So, I want to keep everything relative and ensure the fields are minimal and unresolved. It's crucial to stay organized yet keep it simple while filling out this ticket!",
+          "reasoning_details": [
+            {
+              "type": "reasoning.summary",
+              "summary": "**Creating a ticket**\n\nI'm looking to create a ticket with just the necessary details. The date needs to be for the first Monday of next month, but I’m working off current date info from 2026 without a specific date provided. So, I want to keep everything relative and ensure the fields are minimal and unresolved. It's crucial to stay organized yet keep it simple while filling out this ticket!",
+              "format": "openai-responses-v1",
+              "index": 0
+            },
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABqu030Oy98lvmfbKO1RG8jvJhvzRS-K365AxH54uODEh4dxlTltxALPKZ1qFYiV-ik0QSLeLndgD8tqgyD5pcqgmyamiRO8VHtVBlOmGkhXAU6mFf5eN0TwsxZ3yEgdORvMoZA4xETJgqrmgQPxODt-3HL3JLn0JytORA-HrzN7MUwXRbnyDulM2k4OuRaNQPTYIw4Jf0xZS4q0Q08h6Q4VNZnSoPaW3am7lMiMMxGVAWOBXKO1qCF1_IyrtQQfApSjsbiL2IHXwT82ThH-bakz6aE0AOCtaXOphWSx9Sk5UXhOEzyzV3bfyNkfrBuYsG71e-Fz2s6ArpMTW6rRhSYibwcYiRMuBk5EDNDFMRITm-c6qMxuQCmZwwap1XkfG-XxOGvHCyi3awZlxKkfe10p82aKYQdtxmVi1eQe4D_hU_aPxNGXVSYcYVmG8L9jS846IZ1NgfSk53oWhy3znlJQdDAF-J9biCrvf3TJ_JMlyorU_4Ky7DHjTsLEpOl7mGDd0_BT57wqATXF3PJUYxgg8tMgkCuH2n4_dAgi3p5Dybuh77deW8DyCEtSpCwcoaHK6FA7t3jaQjpk9EQRYCP7SbHZm_DJ-caUsZ59DzaUg2zJKcyYTSY7NokCBeDXESHIra7R6DZvQZal_sCD12F00VzbgdSixTQylQRxSFcyfEtE9aW2h1gLNSrxUVZEfGwGjJtprCbcYYd6cOwQqawveN2wAnxI13YsppKbjcuWCgBlcXG7S917k6tHf5QYEMmt0OPPEnAPrrbIfN6gFWOIM4R1TT8BHdWcMu-FtUCiy1H242ziYXoYlIFo930AM-bBY10vGY-0C3lN4qk5PpFinG6aTfJHx41dbDmJkyWE6VmgnC6hHoxIfcquxoaupjTJFq3zgFABzIMHHyyJ8ftkS807NcEt8fLd_3vMRIcIkwK7TsXI-6tGCPhH6e5z9cgi3JBd1tCQSaoZVNhv_U4L-mNnjO7AFDTzcCUBjr-YixTnPiZahnGtK39MEExzCHfzqoyLJ6ZsDGPXce-Y96AxQl5geC6JgLkvQ7wVOQ3UrULehToT_WIjl8VkosGf-xxksxF9zpIKXNu80_ckGgqmw3jnQFagUpAto-TAO-AG0EYkNd5Vhs_E3mQfEB0EVyZ10pEqeszp-tn1TvZO17ynjbPv66pIAlqH987J7tayheZYQHWsXi8RV6GKNjE8ihE4n3JDvH0A_1PtxFP7tBcYiWmtQac4UC70VSLCUR7IgXFlHYjMDMF_a0j8epGnJSIJwaXwKO437WkddtbkzZK-VnpUUPOUc9xIy3ODi78w38EJakmREHqSEJw6WMpj6mf3oGDOsJ2i0_MoRYoEAFrUeb1oT05P1zTKhH_JN33dfmUHcKaPxjg8PJJ4BAuVpdjaIqOEYqz8GiHK1LJ8nhPIFIkkpYfITsyEgp2dVtN0-hbHvrFRGJxOXO1Sy5YtIG3PbALzgOO3AiPcX5rkQ7oLXV2Q0-0kEru557TThdG8rKdbX-qwd7Rx3z9-OExdv3xunWf9xJ-Ozed-7XW1_kYn8cWJA==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+              "format": "openai-responses-v1",
+              "id": "rs_047e05cea0c2122d016abb4df2a7b887d196080d5d57bcf5cd",
+              "index": 1
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 217,
+      "completion_tokens": 126,
+      "total_tokens": 343,
+      "cost": 0.001694,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.001694,
+        "upstream_inference_prompt_cost": 0.000434,
+        "upstream_inference_completions_cost": 0.00126
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 38,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "06446c474b9942839b42f54b2af0e52d338cdf30fd4c4e06ffe42bcef73fb440",
+  "recorded_at": "2026-09-29T05:34:43.599331+00:00",
+  "wall_seconds": 3.9934449999709614
+}

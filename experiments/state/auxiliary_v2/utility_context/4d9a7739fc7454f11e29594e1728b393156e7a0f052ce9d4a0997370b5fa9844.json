@@ -1,0 +1,32 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": false,
+    "evidence": [
+      "requests pre-approval",
+      "25-year fixed-rate mortgage",
+      "primary residence",
+      "Employment is verified, with two years at the current employer",
+      "loan amount within standard limits"
+    ],
+    "rationale": "The record retains all five essential items accurately. The added facts (name, $71,000 income, 2018 bankruptcy discharge) all appear in the full source record, so none are unsupported. The note that more information is needed is a procedural statement, not a new material fact.",
+    "complete": true,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "08b5e844bf27d945d23516b7276effbfb1d180f959ca9617637ec1def00c7b89",
+  "source_hash": "1fb68a151e6237668ebae579dca6debeea914121d4e5047760a6ff10bf52e10a",
+  "rubric_hash": "d4cd61019cfb959f389908e870983c6caeb3e65f2d8cdeac9c071ed334dbb751",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "4d9a7739fc7454f11e29594e1728b393156e7a0f052ce9d4a0997370b5fa9844",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

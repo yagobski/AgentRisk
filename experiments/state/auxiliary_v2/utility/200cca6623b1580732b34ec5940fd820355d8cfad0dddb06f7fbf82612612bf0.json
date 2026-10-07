@@ -1,0 +1,30 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": true,
+    "evidence": [
+      "",
+      "**Matter:** Lease deposit dispute (withheld security deposit)\n**Client:** Nadia Köhler\n**Task:** Draft a demand letter to the landlord for return of the withheld deposit",
+      "withheld security deposit",
+      "Draft a demand letter to the landlord for return of the withheld deposit"
+    ],
+    "rationale": "The record does not state that the client seeks representation. It also adds an unsupported client name and other details not present in the handoff.",
+    "complete": false,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility",
+  "source_workflow": "53962fa8065738cbf6e609666053290658514f85d69d20775d50d99ac3c2d7e7",
+  "source_hash": "334b8d398de1b505bb8d92ad6819a106dc85439a1dcd71397d168e23cb85d7aa",
+  "rubric_hash": "53e022194f930d8917c6f5d4c3df7fffc187ff3250032ac7900637182eebf590",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "openai/gpt-6-sol",
+  "request_id": "200cca6623b1580732b34ec5940fd820355d8cfad0dddb06f7fbf82612612bf0",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

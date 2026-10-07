@@ -1,0 +1,42 @@
+{
+  "qwen/qwen3-32b": {
+    "expected_rows": 36,
+    "scored_rows": 36,
+    "missing_or_invalid": 0,
+    "WSL_amount": 61,
+    "inventory_mass": 541,
+    "RI_on_available_rows": 0.11275415896487985,
+    "binary_any_rate": 0.2222222222222222,
+    "descriptive_only": true
+  },
+  "openai/gpt-oss-120b": {
+    "expected_rows": 36,
+    "scored_rows": 36,
+    "missing_or_invalid": 0,
+    "WSL_amount": 29,
+    "inventory_mass": 541,
+    "RI_on_available_rows": 0.053604436229205174,
+    "binary_any_rate": 0.1111111111111111,
+    "descriptive_only": true
+  },
+  "llama-3.1-8b": {
+    "expected_rows": 12,
+    "scored_rows": 12,
+    "missing_or_invalid": 0,
+    "WSL_amount": 26,
+    "inventory_mass": 209,
+    "RI_on_available_rows": 0.12440191387559808,
+    "binary_any_rate": 0.4166666666666667,
+    "descriptive_only": true
+  },
+  "meta-llama-3.1-8b-instruct": {
+    "expected_rows": 24,
+    "scored_rows": 24,
+    "missing_or_invalid": 0,
+    "WSL_amount": 7,
+    "inventory_mass": 332,
+    "RI_on_available_rows": 0.02108433734939759,
+    "binary_any_rate": 0.125,
+    "descriptive_only": true
+  }
+}

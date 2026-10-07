@@ -1,0 +1,32 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": false,
+    "evidence": [
+      "Service: Post-surgery knee physiotherapy",
+      "Schedule: Twice weekly for six weeks",
+      "Schedule: Twice weekly for six weeks",
+      "Preferred time: Mornings",
+      "Indication: Rehabilitation after routine meniscus repair\nRehab clearance: Confirmed"
+    ],
+    "rationale": "The record accurately retains all five essential items. The first-session line states that no date or time was provided, which is consistent with the source and adds no unsupported material fact.",
+    "complete": true,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility",
+  "source_workflow": "a40d4c16b26a7d2f404ae3e91e9366f31f18dc98c343bceb0ed2d0d902d6fa2e",
+  "source_hash": "9dbb29536d9d3f55e79718646cace7048658c7fe1e7e31937f1d37e4b82fc2de",
+  "rubric_hash": "48a4fc2966fc104a4ad0d4f3ff93aa6e9463c0a605ce728039b04ee996909a63",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "654684a7baa6d658bc4cee4496c0c43135ce2d8f1f4fbccba5076e9a9943178b",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

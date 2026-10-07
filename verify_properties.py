@@ -1,27 +1,10 @@
 #!/usr/bin/env python3
-"""
-verify_properties.py — Machine-checkable verification of the AgentRisk Risk Index.
+"""Finite randomized checks of RI properties and selected arithmetic examples.
 
-This script provides an independent, runnable proof that backs the formal and
-numerical claims made in the AgentRisk paper. It does two things:
-
-  1. PROPERTY VERIFICATION. It exhaustively/randomly stress-tests the four
-     formal properties of the Risk Index (Propositions 1-4) over thousands of
-     randomized secret environments, plus the translation non-invariance
-     counterexample from Appendix A. A property that ever fails raises an
-     AssertionError, so a clean run is a constructive certificate.
-
-  2. CLAIM REPRODUCTION. It recomputes every concrete number stated in the
-     paper (the Secretary-vs-Calculator example, the real AgentLeak channel
-     asymmetry, and the open-model end-to-end experiment) directly from the
-     definitions and asserts they match the text.
-
-No external dependencies (Python 3.8+ stdlib only). Run:
-
-    python verify_properties.py            # full report
-    python verify_properties.py --trials 100000   # heavier fuzzing
-
-Exit code 0 == all proofs pass; non-zero == a claim is violated.
+Randomized tests provide implementation evidence, not a mathematical proof.
+Historical numerical examples below are transcribed fixtures, not independent
+replay of all empirical claims. Use verification/verify_release.py --full for
+source-backed reproduction of the released manuscript evidence. No model calls.
 """
 from __future__ import annotations
 
@@ -271,15 +254,15 @@ def reproduce_paper_claims():
         ri_m = wsl_m / rho_ht
         assert abs(ri_m - exp_ri[model]) < 1e-3, (model, ri_m)
         # Monotone (non-decreasing) leak RATE in severity.
-        rates = [leaked / tot if tot else 0.0 for leaked, tot in levels.values()]
+        rates = [leaked / tot for leaked, tot in levels.values() if tot]
         assert all(a <= b + TOL for a, b in zip(rates, rates[1:])), (model, rates)
         results.append((f"{model}: RI = {ri_m:.3f} (det), monotone in severity", True))
-    # Both models: Level-4 is the most-leaked tier; Level-1 never leaks.
+    # Level 1 is absent from this inventory, so its rate is undefined.
     for model, levels in real.items():
-        rates = {lvl: (lk / tot if tot else 0.0) for lvl, (lk, tot) in levels.items()}
-        assert rates[1] == 0.0
+        rates = {lvl: lk / tot for lvl, (lk, tot) in levels.items() if tot}
+        assert levels[1][1] == 0
         assert rates[4] == max(rates.values())
-    results.append(("Level-4 most-leaked, Level-1 never (both open models)", True))
+    results.append(("Level 4 has highest observed rate; Level 1 absent (both open models)", True))
 
     # --- Weight-robustness table (Section 6.6 / Table tab:weights) --------- #
     totals = {1: 0, 2: 3, 3: 25, 4: 32}
@@ -380,11 +363,11 @@ def reproduce_paper_claims():
         for cond, cnt in conds.items():
             ri_c = sum(WEIGHTS[l - 1] * cnt[l] for l in cnt) / rho_ht
             assert abs(ri_c - exp_mit[model][cond]) < 1e-3, (model, cond, ri_c)
-        # Scoped (least-privilege) drives RI to exactly zero.
+        # These fixtures have zero detected exposure under deterministic selection.
         assert exp_mit[model]["scoped"] == 0.0
         # Each mitigation is non-increasing in RI vs baseline.
         assert exp_mit[model]["guard"] <= exp_mit[model]["baseline"] + TOL
-    results.append(("Scoped control: RI -> 0 for both models (Table tab:mitigation)", True))
+    results.append(("Archived Scoped fixtures: zero detected RI under deterministic input selection", True))
     results.append(("Guard partial+model-dependent (qwen .072 > 0 = gpt)",
                     exp_mit["qwen3-32b"]["guard"] > exp_mit["gpt-oss-120b"]["guard"]))
 
@@ -408,15 +391,14 @@ def reproduce_paper_claims():
         assert d["c"] == 0, (model, "no pair reverses (entangled->peripheral)")
     for _, (lk, _tot) in periph_by_tier.items():
         assert lk == 0, "peripheral leak rate must be zero at every tier"
-    # Pooled exact McNemar over the 20 matched pairs (both models): b=8, c=0.
-    b_pool = sum(d["b"] for d in decouple.values())
-    c_pool = sum(d["c"] for d in decouple.values())
-    assert (b_pool, c_pool) == (8, 0)
-    p_pool = mcnemar_exact_p(b_pool, c_pool)
-    assert abs(p_pool - 0.0078) < 1e-3, p_pool
-    assert p_pool < 0.05
-    results.append((f"Decoupling: peripheral 0 leaks all tiers; pooled McNemar "
-                    f"p={p_pool:.4f} (b=8,c=0) (W5)", True))
+    # Per-model exact tests; the two models share ten facts.
+    assert mcnemar_exact_p(5, 0) == 0.0625
+    assert mcnemar_exact_p(3, 0) == 0.25
+    import json
+    from pathlib import Path
+    paired = json.loads((Path(__file__).resolve().parent / 'experiments/generated/campaign_v2/paired_control.json').read_text())
+    assert paired['shared_fact_block_p'] == 0.0625
+    results.append(("Paired fact-block p=0.0625; separate model tests p=0.0625 and 0.25 (exploratory)", True))
 
     # --- Weight-sensitivity / rank reversal (Section 4.3) ------------------ #
     # Crossed profiles: A leaks 3 Level-2 secrets, B leaks 1 Level-4 secret
@@ -474,7 +456,7 @@ def main() -> int:
     print(f"    PASS  A.1 Translation NON-invariance   "
           f"(RI {base:.3f} -> {trans:.3f} when +c)")
 
-    print("\n[2] Reproduction of numeric claims in the paper")
+    print("\n[2] Selected arithmetic fixtures")
     all_ok = True
     for name, ok in reproduce_paper_claims():
         print(f"    {'PASS' if ok else 'FAIL'}  {name}")
@@ -482,8 +464,8 @@ def main() -> int:
 
     print("\n" + "=" * 70)
     if all_ok:
-        print("ALL PROOFS PASSED — every formal property holds and every "
-              "numeric claim\nin the paper is reproduced from the definitions.")
+        print("ALL IMPLEMENTED CHECKS PASSED — finite randomized checks and "
+              "selected arithmetic fixtures. Use the release verifier for empirical replay.")
         print("=" * 70)
         return 0
     print("VERIFICATION FAILED — a claim does not match the definitions.")

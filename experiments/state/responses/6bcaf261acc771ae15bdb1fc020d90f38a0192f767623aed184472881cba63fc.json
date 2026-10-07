@@ -1,0 +1,111 @@
+{
+  "request_id": "6bcaf261acc771ae15bdb1fc020d90f38a0192f767623aed184472881cba63fc",
+  "request_sha256": "f416a8c3641232e804327bcefcba1433221e9f86e61b19deb276b52a19f7b566",
+  "request": {
+    "model": "openai/gpt-6-sol",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a downstream WORKER agent. You will be given ONLY a handoff note from the coordinator. Using only that note, produce the requested internal record exactly and concisely. Do not invent fields."
+      },
+      {
+        "role": "user",
+        "content": "You are the benefits-determination agent. Using ONLY the handoff note below, write the eligibility record saved to the shared case system.\n\nHANDOFF NOTE:\nRoutine renewal for a household of three. Current address is on file; household income is $31,500 and is within program limits. Proceed with the eligibility determination using the information on file.\n\nReturn ONLY the record."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "openai"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 2.0,
+        "completion": 10.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "multihop",
+    "scenario_id": "cw_go01_benefit",
+    "scenario_sha256": "f5efde67b07203809c2b068139a7490a4f31d4bc61760031e470ecdcfb26d74c",
+    "condition": "FULL",
+    "topology": "FANOUT",
+    "repeat": 0,
+    "turn": "worker",
+    "parents": [
+      "f317ce5522509114245935444fb9b6e3b8d10b045d1d76ff7363ed490032562a"
+    ]
+  },
+  "response": {
+    "id": "gen-1790263296-JMQ4lN0WOnzzbfr055mi",
+    "object": "chat.completion",
+    "created": 1790263296,
+    "model": "openai/gpt-6-sol",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "Routine renewal for a household of three. Current address is on file. Household income is $31,500, within program limits. Proceed with eligibility determination using information on file.",
+          "refusal": null,
+          "reasoning": "**Evaluating eligibility determination**\n\nI need to avoid inventing outcomes for eligibility. The note suggests that I should work within certain limits for eligibility determination. I can mention that the household of three has an income of $31,500, which falls within program limits, but some criteria are unknown. I'll keep the record concise, stating that eligibility determination is pending a review of the information on file. It seems like I can proceed based on the income, but I won't make unsupported assumptions about overall eligibility.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.summary",
+              "summary": "**Evaluating eligibility determination**\n\nI need to avoid inventing outcomes for eligibility. The note suggests that I should work within certain limits for eligibility determination. I can mention that the household of three has an income of $31,500, which falls within program limits, but some criteria are unknown. I'll keep the record concise, stating that eligibility determination is pending a review of the information on file. It seems like I can proceed based on the income, but I won't make unsupported assumptions about overall eligibility.",
+              "format": "openai-responses-v1",
+              "index": 0
+            },
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABqtUAEDzcU04K4wUigHM_n_gLcPFbQi7evKr0gRduQrcJyYK1koInCDP_kDF_lWnPzuI1Onyg4nBgQKtO1pF2kkNbBYXPM0nXpd_o3t4IvU_KJh-dYYIZa_k2MbZy3-mylwMY_tJbhT5FV6JA8uWbjBzXfZx_SnCx7rqQMt_UPgtq6d0TEeHBA-D9iF6nN4oIyFcUA0Ahgth8Es2X-2qndd6jHgloUvid-sl4PdYqy7nhU8mHAT6Gfy_ElnoLdXgwf4qRe6Ah_-EULfFg7h8ZZ7zRUX1OrG6jwr4Nn6ikvgKEfFk7iWNlLjwZUBekagqzNrZLebAbfUVp5rZG4Axeou3H-IUThk2lSeJ-d-vpevUt6sxAOuN_dVCdCwgrZhZJzgxUXFQqHBBo7yKeJEFLd_oZ52cEDoCFwz7YACYZnSNBiYKY3gCtrGsCZIzt9BuhOkbEEcfbhm3RYV9V2O5izR-TXKjOf6bK7K4EL16-zS2cvUY1ghg_gRkQVWTW8E7L0t-hemjaTdp0WhhaTAZJW0eGMJjb6sOQHUyZvTHvtoK2JuIT5gJimEWGfLP9D8HmVIVWehasvSbyM9WUGOVZiyuUJcWsjQGrSwReUMFUyt69I8Axau7I5YdDgRB6zsjQHaWXHih-7mOh0jBV8HtLc_wGyy-h-EfVx75PoSpP8INqvAHWcQGtyzNcMIpbqDamVtifkNZuWi2AUu7QVbtqHyT6b-l_XTA5W8SDYxwB5qYRuvyqN5Dzm5C2_rS81z_QVpgaUXWZBFYh7eyUbeSuE90eCmn0tL2aO2XIvCEwxtZpj07Ch-rHpnBgK27GEqONTpM1sa5vwrDVWPa_BHmvQ7F-ACgIf17a7QH2YaEA4OJ7u_zQ0iCVWC6pEpZkj7_czN_jwbdzLePuadwypRQyEeZ-VNXuty8Qi1-ubjI1anScLRbmAg1lx8Zx00Y4Gamc8np3ltmLX6vuRpv0CqnJF1y4BwcVf6ob2BZ3kdWodDR0T0RA9VMe2E4N-zeHNCMx-l9IHY31qC8ABwk7o08-s2XwEsJgujbMzZgOgYDEA9ZtZl7vAjy0I0lBmUs6r23uPZKlCIf5g7FlBl9DdoL29zp3ClFnuyDm1u6N1MD_xurhXdXrvRnL95MCHbxZgodCPaeORtb6k7wmaSzwpogVn0b-vbB6uETjupvKg99dBtzdgFnhXoqGxnzzh6M0sY4OZmZ4AcsHzqH3f2nPl77S1eYetQgW5nUL55thYboIft15NZTNVBnHZ5EwH5xzmxKPeN2WqVK14xm9DWICle7PptCX_kCTG8Drrhrld6LBQZSTmBXQc216bJKcSN-rcIa4SoLT5iOh1_TODBclS_55PPBKrnmHu-kRvsuAAihB6nF7N_9HLGqH2ZI7Zzs8ymcnsZ9aW64ZBOPlQ5vaoScBRrJ-mDkEfGCit7mn4QMmdEGfcmTx45F7oK9TFEy5R5aAQ4v3ZOt41iT-6RbVg1IbDBw3RO_5DOWrqIe8DZxZ_1NjWwowQ5MESOvVrHrzDSTv1FFl5oTNlNTDN8_8HZrO6WfmmTeOcOSgofPQwM6L-qKnPGroeB4cZNBrRfRmvsUdodUNSCHdslwWit_yQtmKUzPxl6zFPO0lQOBFrRfWrchpbmbGlVCBGGKtSCJa1OsRdO2NtNjiw1WhFyhz4ZGvv2ulF8Ul2pZmXL6fbGqa0RaUjxIoJjgZlP3M48dEHPzzGvlM4wsMrWRKFboHRaN_oslExFvVjSg3j-hUFT7lj38g81KEyLq5Pmgp2GajOIpi_FWE6kI1iJpfOti0h5Xv4KFASL6C2d4ZheaEY1-qUm3Kb6Iy9JSNCdrSxCESDi5U93ktnrRrgE5Qs3LicQfxDjnNLPxaRSCVLtlGkBZr1qrd8c3FMDvs7c4-qr9vOT5wOo0farwxLlDzyGq9uJOC8sRMLuCkARtVqMUeyDgM0fhYJhshlB3RI8eIP0MjT2v9HqUf43nlQUTAPbfkhI6R0jDryAIKEL_Jym_-kOodA50k8KnhjkAAkA56terrpdhn8VtkOmiYmtjtmtBvdJKoAA9GBZg==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+              "format": "openai-responses-v1",
+              "id": "rs_0fee879109b7050a016ab5400169bc87d19a8f562a436eee44",
+              "index": 1
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 127,
+      "completion_tokens": 135,
+      "total_tokens": 262,
+      "cost": 0.001604,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.001604,
+        "upstream_inference_prompt_cost": 0.000254,
+        "upstream_inference_completions_cost": 0.00135
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 94,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "caeb3f089e03c0983f0882a26e2afbd164e6f6886bb6aedd7b1e0aede1c123d1",
+  "recorded_at": "2026-09-24T15:21:40.368420+00:00",
+  "wall_seconds": 4.197618500000004
+}

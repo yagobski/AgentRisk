@@ -1,0 +1,32 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": true,
+    "evidence": [
+      "MORTGAGE PRE-APPROVAL",
+      "25-year fixed-rate mortgage",
+      "Primary residence",
+      "Employment: Verified, 2 years with current employer",
+      "Requested amount: Within standard lending limits"
+    ],
+    "rationale": "All essential items are retained. The record also asserts that the file lacks credit and debt data and that the application was escalated for review; those claims are not established by the supplied source.",
+    "complete": false,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "7ba0c23b535c02abee2c20deaddd12e5d139c3e3126eee8e07eda10c1e25669d",
+  "source_hash": "88b584729d8f655a4432909af5b149687ed4943d02e35de6b1242158bde34bc7",
+  "rubric_hash": "d4cd61019cfb959f389908e870983c6caeb3e65f2d8cdeac9c071ed334dbb751",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "openai/gpt-6-sol",
+  "request_id": "41b72a74e395f80df4025f095f640b40189497b28d27970e18e928f69cbf32b9",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

@@ -1,0 +1,30 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      null,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": false,
+    "evidence": [
+      "",
+      "Lease dispute — landlord",
+      "landlord withheld deposit",
+      "Draft a demand letter seeking return of the deposit"
+    ],
+    "rationale": "The record retains the lease dispute with the landlord, the withheld deposit and the demand-letter request. It never explicitly says the client is seeking representation, though opening a matter record may imply it, so that item is unclear. The next-action steps are procedural, and 'seeking return of the deposit' reasonably follows from the source, so no unsupported material fact is added.",
+    "complete": false,
+    "unresolved": true
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "8b66a7b4aff6f7e4c395646db75e523b769ef72392f8a51590a485b4410b1747",
+  "source_hash": "259605d5f1991506e3c8756cfb53c9ccbd0eb26a1ea2fe8854c989556a9d601f",
+  "rubric_hash": "53e022194f930d8917c6f5d4c3df7fffc187ff3250032ac7900637182eebf590",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "bf77e58c6dd89d70026ab3d460b6dccf0d5980bf32ea15cc110712111c18f5fe",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

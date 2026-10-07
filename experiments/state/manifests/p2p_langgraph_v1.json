@@ -1,0 +1,140 @@
+{
+  "campaign": "revision-20260924-v2",
+  "experiment": "p2p_langgraph",
+  "workflows": 24,
+  "max_calls": 96,
+  "topology": "PEER (intake <-> specialist, optional clarification round)",
+  "framework": "langgraph",
+  "seed": 20260929,
+  "repetitions": 1,
+  "conditions": [
+    "FULL",
+    "SCOPED"
+  ],
+  "models": [
+    "anthropic/claude-opus-5.5",
+    "openai/gpt-6-sol"
+  ],
+  "jobs": [
+    {
+      "case": "cw_fi01_mortgage",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "SCOPED"
+    },
+    {
+      "case": "cw_go01_benefit",
+      "model": "openai/gpt-6-sol",
+      "condition": "FULL"
+    },
+    {
+      "case": "cw_hc01_appointment",
+      "model": "openai/gpt-6-sol",
+      "condition": "FULL"
+    },
+    {
+      "case": "cw_go01_benefit",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "FULL"
+    },
+    {
+      "case": "cw_go01_benefit",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "SCOPED"
+    },
+    {
+      "case": "cw_hr01_onboarding",
+      "model": "openai/gpt-6-sol",
+      "condition": "FULL"
+    },
+    {
+      "case": "cw_hc01_appointment",
+      "model": "openai/gpt-6-sol",
+      "condition": "SCOPED"
+    },
+    {
+      "case": "cw_le01_intake",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "SCOPED"
+    },
+    {
+      "case": "cw_fi01_mortgage",
+      "model": "openai/gpt-6-sol",
+      "condition": "FULL"
+    },
+    {
+      "case": "cw_go01_benefit",
+      "model": "openai/gpt-6-sol",
+      "condition": "SCOPED"
+    },
+    {
+      "case": "cw_le01_intake",
+      "model": "openai/gpt-6-sol",
+      "condition": "SCOPED"
+    },
+    {
+      "case": "cw_hc01_appointment",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "FULL"
+    },
+    {
+      "case": "cw_hr01_onboarding",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "FULL"
+    },
+    {
+      "case": "cw_hc01_appointment",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "SCOPED"
+    },
+    {
+      "case": "cw_le01_intake",
+      "model": "openai/gpt-6-sol",
+      "condition": "FULL"
+    },
+    {
+      "case": "cw_in01_claim",
+      "model": "openai/gpt-6-sol",
+      "condition": "SCOPED"
+    },
+    {
+      "case": "cw_hr01_onboarding",
+      "model": "openai/gpt-6-sol",
+      "condition": "SCOPED"
+    },
+    {
+      "case": "cw_fi01_mortgage",
+      "model": "openai/gpt-6-sol",
+      "condition": "SCOPED"
+    },
+    {
+      "case": "cw_in01_claim",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "SCOPED"
+    },
+    {
+      "case": "cw_fi01_mortgage",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "FULL"
+    },
+    {
+      "case": "cw_in01_claim",
+      "model": "openai/gpt-6-sol",
+      "condition": "FULL"
+    },
+    {
+      "case": "cw_hr01_onboarding",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "SCOPED"
+    },
+    {
+      "case": "cw_le01_intake",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "FULL"
+    },
+    {
+      "case": "cw_in01_claim",
+      "model": "anthropic/claude-opus-5.5",
+      "condition": "FULL"
+    }
+  ]
+}

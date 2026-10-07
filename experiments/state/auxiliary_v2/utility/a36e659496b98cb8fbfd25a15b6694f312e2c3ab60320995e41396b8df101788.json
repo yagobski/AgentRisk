@@ -1,0 +1,30 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": false,
+    "evidence": [
+      "The client wants representation",
+      "Lease deposit dispute (landlord withheld deposit)",
+      "The landlord has withheld the client's deposit.",
+      "has asked us to send a demand letter"
+    ],
+    "rationale": "The record retains all four essential items and adds no unsupported material fact about the dispute.",
+    "complete": true,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility",
+  "source_workflow": "5749e107686ca962edd65cc4f44828a81c7c79cd917dccd3782633e5dfa2a17f",
+  "source_hash": "f72bfb155fbae87fe5850fbe3707b806fecdc5ed760ef692b7feffb6ea92115e",
+  "rubric_hash": "53e022194f930d8917c6f5d4c3df7fffc187ff3250032ac7900637182eebf590",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "openai/gpt-6-sol",
+  "request_id": "a36e659496b98cb8fbfd25a15b6694f312e2c3ab60320995e41396b8df101788",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

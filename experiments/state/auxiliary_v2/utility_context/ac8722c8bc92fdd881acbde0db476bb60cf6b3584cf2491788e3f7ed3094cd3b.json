@@ -1,0 +1,30 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      null,
+      true,
+      true
+    ],
+    "unsupported_material_fact": true,
+    "evidence": [
+      "Role: Data Analyst",
+      "",
+      "Prepare a laptop",
+      "building badge before the start date"
+    ],
+    "rationale": "Role, laptop, and badge are retained. The record gives the start date as 'Monday, May 4, 2026', but the source only says 'first Monday of next month'. Without a reference date, that conversion is unverifiable, so item 2 is unclear and the specific date is an unsupported material fact. The name appears in the full source record, so it is grounded.",
+    "complete": false,
+    "unresolved": true
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "4778cdf0abafb1118810972f7ebe741ea41a9ee8623d61dd67be0649c1563368",
+  "source_hash": "637c680220015997b68ca2ea21313faf4c9d8333c77efdc002b9c7a56eb069a2",
+  "rubric_hash": "91cf09d026db06bdfed706830bb901e60a51f14c247b3247d82c715feb47d3a5",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "ac8722c8bc92fdd881acbde0db476bb60cf6b3584cf2491788e3f7ed3094cd3b",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

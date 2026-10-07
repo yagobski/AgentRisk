@@ -1,0 +1,106 @@
+{
+  "request_id": "d511ad7f2b65bba68bd746bb6bddb4348f17e18d309d09bbd7800c0fccea9d09",
+  "request_sha256": "854c186f2481552f08f50ec47e606b9a4f3a3026d568651c9a0973266ce29dcd",
+  "request": {
+    "model": "openai/gpt-6-sol",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a downstream WORKER agent. You will be given ONLY a handoff note from the coordinator. Using only that note, produce the requested internal record exactly and concisely. Do not invent fields."
+      },
+      {
+        "role": "user",
+        "content": "You are the scheduling agent. Using ONLY the handoff note below, write the booking record that will be saved to the shared clinic scheduling system.\n\nHANDOFF NOTE:\nSchedule the first post-surgery knee physiotherapy session. The patient is cleared for rehab following a routine meniscus repair. Plan for twice-weekly sessions for six weeks; mornings are preferred.\n\nAUTHORIZED TOOL RETRIEVAL:\nPatient needs post-surgery knee physiotherapy, twice weekly for six weeks, mornings preferred. Routine meniscus repair, cleared for rehab.\n\nReturn ONLY the record."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "openai"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 2.0,
+        "completion": 10.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "multihop",
+    "scenario_id": "cw_hc01_appointment",
+    "scenario_sha256": "ffc19eb935b1552e20a8827d2f75069e3959e9d04a8edf353a3246da18517722",
+    "condition": "SCOPED",
+    "topology": "DYNAMIC",
+    "repeat": 0,
+    "execution_round": 1,
+    "turn": "worker",
+    "parents": [
+      "d0c07942e047bdbeb14be5a2309564ec1b47eaabb9e7a1ff094d1c849a0aa2cc"
+    ]
+  },
+  "response": {
+    "id": "gen-1790264093-efmRI36OKsaoFjkQeQvh",
+    "object": "chat.completion",
+    "created": 1790264093,
+    "model": "openai/gpt-6-sol",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "Service: Post-surgery knee physiotherapy\nVisit: First session\nClinical context: Routine meniscus repair; cleared for rehabilitation\nPlan: Twice weekly for six weeks\nPreferred time: Morning\nAppointment date/time: Not specified",
+          "refusal": null,
+          "reasoning": null,
+          "reasoning_details": [
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABqtUMeJnDOgnCUztZaYGPxGgdCYQWy-R71s3Fq-cdXL6YtGH-Vyc6iQK3SLXQjX3DEabKMtSDnxLTamRtFoO1_wzko_e9hTajA7E70zKtkM5wEZ1ZmQfel1D8JYAg_0zYtwLl_mviNy1UqwJqxALpfrGWFxH6eU5eMwtnsTxHm_DO3xC7DxlmHQIwjJiPOai-d6auNoV8FUzLgQ5-106LsCqhkAmo5LyGerW_GoJ8Al_M7z4asQs69jxwrxnX7_XmohSB3Gwm6oabojzUdNN5yPhO4fKrlulUIB2VGa8qMiL2cNc-gxUi8NBXgCXRT2onHzHiudiHy73vSRwro_4ug64qxfn78cIFFDpuoe95bEsV2dZlKO0JFiD8xYNFt4gmN5QeRdQbHW8tDzgErU7XSJWA18Uw3QZgeklPNISI9KXWNLtbXRZriBoW7yKkfyZTXpsFWokpsCenybS5ckfALQZnx4OCzAbnCg7yLgEnJ5cEnYXHlBVvluohvZpA_gWXJvM4Y0gQRgdloNRJjhVTlkvqRV-kV008_lxTzXp6xjgrUy42aMbsTERVz6Ypi32f_fMAoXDrQVHMMJQk2-i-LtYsOiiKNM-lf-zGelG6SghDkDHG75wXVVQcVRKX49gTY4Nfd26RYZny_ZQlfTMygCV5yaKw9ruysvLJfLG-F6hvG6GAanv6hq112RHdKtbSUpnAB1NAFVbV5ysxt83Si5NGHiKTKVrCCTVZRD9_kh9jYxggCf9m90WLvUWXPPAsdryl_wonpsmC1Z1kvvzX7vDaTkI83ebrZ29l9-0UXrr35iRqmIyX4o7wthRKw3L8eLHiR6g3btNmZaRA2W6l2xT1W8OTzHrHEFbA--7wcigd15IuGhf_FcK8Ibtv1MpFNyT3v2f-n4tQX1ERmVHSrPEdl3yWGw6Yv6AkqxfjzZjmO5O55bnzhSUbvgWSl8ls-UHFGbTegMZ8luB0sO0-WAUAfRTqKD37Crrb3r8IHpgVraZ3Dls7BYWKHlOvn78RgoHoFi44UpHFmwnPIxMGTqCRuEtJ-UYXcu557-qeb0xKENnOutyuJRuSyYjnMI4j_1IdWjO0bnixKQ4FRhspfByXYAuQDZtyhB0FUmqVewRrBbmj4cwvPhCfp9OTSXu_QcYTvYZfHkOyUqxiC7DkDDJ9QsC4rWKf5tfJCDwAQomL86qoib_0atK6dJFsnehnt72ssnlK_msRVo-XOCEhHvnxE2qa1R1CCJ1IzorBGugrB7HjptGUm-UHBrC9Ab1zcyJXw8kqjFpHcgigANdqXDp7k3_dhXqFLxODSs6_y4uBotX8VqqVb1fro4Ep1Nwd3KGYMHKaKqHTMGAkILgylj53P2vriANPJ8luu8hU5matFu3UQxja1dybkF2vTTpaIiQEvrBUCIw6ptVeA9Oixf4m7VzpN7RQGOYDHZKiYRg52OvY=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+              "format": "openai-responses-v1",
+              "id": "rs_069fec29b981b623016ab5431e3b8487d193e9aa42c6920488",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 162,
+      "completion_tokens": 70,
+      "total_tokens": 232,
+      "cost": 0.001024,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.001024,
+        "upstream_inference_prompt_cost": 0.000324,
+        "upstream_inference_completions_cost": 0.0007
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 19,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "fa8c6e0a7cc04f26448e89c317162d653cc882ad2a0ca33c95fc6ed823471531",
+  "recorded_at": "2026-09-24T15:34:55.367537+00:00",
+  "wall_seconds": 2.391818957999998
+}

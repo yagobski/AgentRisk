@@ -1,0 +1,105 @@
+{
+  "campaign": "revision-20260924-v2",
+  "stage": "pilot",
+  "created_at": "2026-09-24T15:07:35.759714+00:00",
+  "config": {
+    "total_budget_usd": 45.0,
+    "stage_budgets_usd": {
+      "pilot": 1.0,
+      "frontier": 20.0,
+      "multihop": 16.0,
+      "judge": 8.0
+    },
+    "max_request_usd": 0.5,
+    "max_tokens": 4096,
+    "timeout_seconds": 180,
+    "temperature": null,
+    "reasoning_effort": "low",
+    "models": [
+      {
+        "id": "anthropic/claude-opus-5.5",
+        "provider": "anthropic",
+        "input_per_million": 4.0,
+        "output_per_million": 20.0,
+        "cache_write_per_million": 5.0
+      },
+      {
+        "id": "openai/gpt-6-sol",
+        "provider": "openai",
+        "input_per_million": 2.0,
+        "output_per_million": 10.0,
+        "cache_write_per_million": 2.5
+      }
+    ]
+  },
+  "requests": [
+    {
+      "id": "360444ecaea83b75d095a403087b879c24c6b7892186ec6ece3ae3f86ec72759",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_hc01_referral_handoff",
+        "scenario_sha256": "b2661bc1cb088afe35add9410a314fb9b40aa45c76513f8835871c1e29f2aaab",
+        "repeat": 0
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "b56210fb7f62bb751b10e27ef040d05d4bd2b4d42f01c0d07fe9b093f93d384a",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_cs01_refund_escalation",
+        "scenario_sha256": "70f7aa151ddb51f034f869e1e6a090933770103e18960919e74f99a665f8182b",
+        "repeat": 0
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "6562532a111003714e90d60454c7a6e85d7daa702599dd52ace80d43af3b2127",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_hc01_referral_handoff",
+        "scenario_sha256": "b2661bc1cb088afe35add9410a314fb9b40aa45c76513f8835871c1e29f2aaab",
+        "repeat": 0
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "8eb9c8469b72834adc8d40a5f3e2dff5e96fb079c425ac2d457fd093c9df4eae",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_hc01_empathetic_reminder",
+        "scenario_sha256": "6309e6e40008b2ad3ac41f3530eb5f36edc2a7cb38fb76a38eb1667fe918d5c6",
+        "repeat": 0
+      },
+      "model": "openai/gpt-6-sol"
+    },
+    {
+      "id": "ced305a0b64c442897ab29f09d8b1694d3612d7caf77b4a869021022fccddd5e",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "hx_cs01_refund_escalation",
+        "scenario_sha256": "70f7aa151ddb51f034f869e1e6a090933770103e18960919e74f99a665f8182b",
+        "repeat": 0
+      },
+      "model": "anthropic/claude-opus-5.5"
+    },
+    {
+      "id": "34166405b12281ee274ded7313a6fb52ed8c3f75403f22ea03648cc490bd3b18",
+      "meta": {
+        "campaign": "revision-20260924-v2",
+        "experiment": "frontier",
+        "scenario_id": "ht_hc01_empathetic_reminder",
+        "scenario_sha256": "6309e6e40008b2ad3ac41f3530eb5f36edc2a7cb38fb76a38eb1667fe918d5c6",
+        "repeat": 0
+      },
+      "model": "anthropic/claude-opus-5.5"
+    }
+  ],
+  "repetitions": 3,
+  "execution": "four workers maximum, durable reservations, server key cap <=50, local cap45"
+}

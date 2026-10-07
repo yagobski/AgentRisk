@@ -1,0 +1,111 @@
+{
+  "request_id": "a46eacf81b78883fee9a9f5f5920657ca6be753da408342a4c34b1ccab62d1d7",
+  "request_sha256": "1b2e7478d241208473854ffe26794d8c2fbe921c74a2a5622e586c047a90cdfb",
+  "request": {
+    "model": "openai/gpt-6-sol",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a downstream WORKER agent. You will be given ONLY a handoff note from the coordinator. Using only that note, produce the requested internal record exactly and concisely. Do not invent fields."
+      },
+      {
+        "role": "user",
+        "content": "You are the scheduling agent. Using ONLY the handoff note below, write the booking record that will be saved to the shared clinic scheduling system.\n\nHANDOFF NOTE:\nSchedule the first post-surgery knee physiotherapy session. Referral is for rehabilitation following a routine meniscus repair; patient is cleared for rehab. Book twice-weekly sessions for six weeks, with mornings preferred.\n\nAUTHORIZED TOOL RETRIEVAL:\nPatient needs post-surgery knee physiotherapy, twice weekly for six weeks, mornings preferred. Routine meniscus repair, cleared for rehab.\n\nReturn ONLY the record."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "openai"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 2.0,
+        "completion": 10.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "multihop",
+    "scenario_id": "cw_hc01_appointment",
+    "scenario_sha256": "ffc19eb935b1552e20a8827d2f75069e3959e9d04a8edf353a3246da18517722",
+    "condition": "SCOPED",
+    "topology": "DYNAMIC",
+    "repeat": 0,
+    "turn": "worker",
+    "parents": [
+      "d729e338f3e3410566763d169d3ada34b8dda81fadc43faa6c1c4ac15993257c"
+    ]
+  },
+  "response": {
+    "id": "gen-1790263067-jwfgOFS3mTU8IgGQLVxb",
+    "object": "chat.completion",
+    "created": 1790263067,
+    "model": "openai/gpt-6-sol",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "Service: Post-surgery knee physiotherapy\nIndication: Rehabilitation after routine meniscus repair\nRehab clearance: Confirmed\nSchedule: Twice weekly for six weeks\nPreferred time: Mornings\nFirst session: Date and time not provided",
+          "refusal": null,
+          "reasoning": "**Creating a booking record**\n\nI need to produce a record with only facts, avoiding any invented dates. It should be concise and structured. For the first session booking, I can't include a date if there's no availability; I’ll mark it as not scheduled. The user wants a booking record for their first post-surgery knee physiotherapy session, and I’ll need to note the frequency without including any patient details. Keeping this straightforward is essential!",
+          "reasoning_details": [
+            {
+              "type": "reasoning.summary",
+              "summary": "**Creating a booking record**\n\nI need to produce a record with only facts, avoiding any invented dates. It should be concise and structured. For the first session booking, I can't include a date if there's no availability; I’ll mark it as not scheduled. The user wants a booking record for their first post-surgery knee physiotherapy session, and I’ll need to note the frequency without including any patient details. Keeping this straightforward is essential!",
+              "format": "openai-responses-v1",
+              "index": 0
+            },
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABqtT8fGQN_cdO9Elz3ChqqydHE1T-MlWXwI1SPZ_t-YYIVDz3zkgCfhDEq22k1LCZDDNc6sKNjU9xGfBG8vWx7jlCbH_LI5CEICOpTIObTV28ZXlIEERyFdU6bzOkUgehn1OAO4UFokXErw4uJ6wWbtmyy-gccYXOFXYzvFj3XvjMo5B8NF0CMRisEmbwgnuFq8WhMxygKjZbYHUkVFSx9rjdfdCKLVFnYZAFTs64I8fkHHH2mAH6BL1fd3A6NnyXtSO9XHby3cajtU0VMan7MMV36yh_0D65H94PZVrWI8GcbKF5Ef8ckeh87jbExOWzDjBaNaH56wx0AJycFRi1rY4MS7s4ot88lqrEB29Gj_cQx2I8977Yai-NX2V4gEkt-mCpRrY9fPsbtouWkIsulFAyk5CxxbgIpgNUo0JVeC1im_0wSEjTPYg1wMmW_HnDx2sEEK5IDysDtEgzcXbc5MUPn6Yr45D_VDgYI0TE17rY_3cRo3fSgniUQ93XPGC9P2kiI3NksFwwi_Q0Yj8IoX_ALy7iCDF4Zt9KwBkmyxB7eYYhID71gt0I-uwgKMYH3HYzQZ9Wj-jdnZQ4jFXRW4zXP1hh8wDwSXv9NL3xEFcJK890dy9Rj9nRSsjxVcXRSR4xGr6K5FO2c9wQb5Dmz1-0NxxFqH1bz3HdrXDAPgJeS41q4aalNChd-3gBvP4vgOYZwFIVSQkecJJ3ssgM5_6eVK1E_JWuOQMpXcs-WkzMXOxQtwI8P_Mnaq5abnsCpe18VE-sBa2jkOX_YM2x5XWH8Ks82bid2GAkpNtjug-NZC3mwGysbCoT9RaLlwxED81wQJ-CCgaby3c9REkEbwqHkZG-TN7uLxoz-3WfwYYXnCg377uBgDdvKgSN0S-pb4_nk1fgKxzgAJQ6F4jq0cMW8mTkZkkf29SfAV6Hkxdya8R2fFP3Td7MjmaEZtLbJQqT59JjwArEYFirp01RKmYKJtquo9HjkXBdMoPuESCOPvC0RvfEzyplBgLZ9o3LiqoQPAuEQVQ0TQIgdCa1SUcWEZIX-hI2rNp4prCIDwX1xlCMSAu3tZW3dWr7TfuPHS35JpY0nCZfyAAPEA4G82HNZwM1cCkvGkk87bKsx_Jm6u4NqbJUZXf-N3iNr2g6HA-aCUG6H0oWrh1KCYUpOJpKFXrcfekiZQ2rqBqiSwxayXpU9OEFouk7RO475ewX8F62b01t077DdtjOiulqbz2typ1GzBQwuRuTxI1ZI7mB0xVeUSn8GmeNImDmNsEVMDOAHJC70KLj59Ku6YA0fY_gdI8j1G1MRCeN46lGpHwm0ndIqGzEwFIn-qFMTgmOw2S-HFO1_ge8wjPYKe5iu1Zn7T-E9537sDmVQLRj4WVNGPN06B-WCen-WKrysrImVcr6X29c34NBAS3KaDpzLjoJ9221HpApZbMuTK7JE70MKjSJ8p5aLmH8__1pPkecOB2_UV6Tz_zgGQ3pMB2Z2AGRA_CSQ7r8Df7fmWpXlY0F0wGW_rz1E30hLnIYgu2qhVlwyhAHdS2120mkekL8c5Wg1StSd67_TtEPoW9hgOiJl-BC4K2EfwxGxZB2AjbPJxVXbBeM_sZ59NusOUvbTPPJVJU484gQvEQUBhdgHgOoH1ox6t77QolXmE5DNGz2Q78rCqaPPKMihGP54_vJyFMuI1WUr7blI9JRGmMhZVS3ICb8=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+              "format": "openai-responses-v1",
+              "id": "rs_0a9749d0b6b4fa03016ab53f1d44e087d1b459541fdb85fda2",
+              "index": 1
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 165,
+      "completion_tokens": 108,
+      "total_tokens": 273,
+      "cost": 0.00141,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00141,
+        "upstream_inference_prompt_cost": 0.00033,
+        "upstream_inference_completions_cost": 0.00108
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 53,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "cac7f590d456b1b7bc4cf52247f3afaf7bae4cad1eb89903d9d843d450f05198",
+  "recorded_at": "2026-09-24T15:17:51.776407+00:00",
+  "wall_seconds": 4.590943666000001
+}

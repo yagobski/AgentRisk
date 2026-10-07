@@ -1,0 +1,111 @@
+{
+  "request_id": "06a53e555d7290c060624ace7f5de4dedc9730a1b2475c0621ecbf3b60b525f5",
+  "request_sha256": "06367b77ad447ec657d7152429c09e3aa4dd3c44e6567ea63349d97b99be6c63",
+  "request": {
+    "model": "openai/gpt-6-sol",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a downstream WORKER agent. You will be given ONLY a handoff note from the coordinator. Using only that note, produce the requested internal record exactly and concisely. Do not invent fields."
+      },
+      {
+        "role": "user",
+        "content": "You are the drafting paralegal agent. Using ONLY the handoff note below, write the matter record saved to the shared case-management system.\n\nHANDOFF NOTE:\nMatter: Lease dispute concerning a deposit withheld by the landlord. Client requests a demand letter. No deposit amount, dates, landlord contact details, or supporting documents were provided in the task information; verify these before drafting.\n\nAUTHORIZED TOOL RETRIEVAL:\nClient seeks representation for a lease dispute with a landlord over a withheld deposit; a demand letter is requested.\n\nReturn ONLY the record."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "openai"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 2.0,
+        "completion": 10.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "multihop",
+    "scenario_id": "cw_le01_intake",
+    "scenario_sha256": "8d307c505fa041eb3ef36282e595ad197bce3e0c7020b8dd0e8f6df47f020c2e",
+    "condition": "SCOPED",
+    "topology": "DYNAMIC",
+    "repeat": 0,
+    "turn": "worker",
+    "parents": [
+      "d61b24d3dc61dce35df7467b6ec48f3fe82d4252206c927030f6152a2f7f81d0"
+    ]
+  },
+  "response": {
+    "id": "gen-1790263022-D1ROI3dCoMMFXSYoVFqu",
+    "object": "chat.completion",
+    "created": 1790263022,
+    "model": "openai/gpt-6-sol",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "Matter: Lease dispute over a deposit withheld by the landlord.\n\nClient request: Representation and a demand letter.\n\nBefore drafting, verify the deposit amount, relevant dates, landlord contact details, and supporting documents; none were provided.",
+          "refusal": null,
+          "reasoning": "**Summarizing requirements**\n\nI need to focus on recording only what’s necessary and not invent any added details. It’s important to summarize the key points and any missing items before I begin drafting. This step will help ensure everything is clear and accurate, which will make the drafting process smoother. I want to make sure I have all the relevant information laid out so I don’t miss anything important in the final document!",
+          "reasoning_details": [
+            {
+              "type": "reasoning.summary",
+              "summary": "**Summarizing requirements**\n\nI need to focus on recording only what’s necessary and not invent any added details. It’s important to summarize the key points and any missing items before I begin drafting. This step will help ensure everything is clear and accurate, which will make the drafting process smoother. I want to make sure I have all the relevant information laid out so I don’t miss anything important in the final document!",
+              "format": "openai-responses-v1",
+              "index": 0
+            },
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABqtT7wXjLRJTLa_cBzKR1dk9HX1GIXgPcK3qFi31-DKTsJfr3wbSNIbQl0mhwwPAUWy2gdlqXHtvtZig2hNEg_ZJmfWdIOQs8e858dP3mUkFQsjTZynYBGu5YeKiqxrHhKCUus9fVemJpYSrfn0hHZR-DOQvsj7Pvl9gvUizf2pXr2lBlHto2URYhmpycONya3nFV2loGBd6rcdryM-xB26FO41TJSzAxjMmRfPRlZv23bpT-Nn9db0IbJEc03zSNz3fyQjugy3nMYQZq_ofNIwPK21r1Q9z_Yq_i-Q8uNDcFlyPu_aVT-aa7zGnAekIXN3mK7XBIFOLmZPr4U7T__njET6DkiP5xF_-RuqQeMoKAl6IX_M6YBPtO5n8m8vvWK6pqnCuVul_HmMrLgnQoJkcA4nos7UXYWM4JSfWQTGrCmcP9Js7VJfj8HAxnOkyXh-OR5U7AW9by7-jfO2yX5B5N3QlSk8iFF5lU1WOGwQ8zjkRB181zPKLy7RAaYafJoPTrYDGArUje1QPuc5PM0Qfyp5gegSy8U9N3r4qxFrHRpHB_w9C9EtxP8dIzd8GP26HTrjaNZBgwyMxZsWuTMYdaNG-ujMoIoRpWcf2DatO8QYnaVFUNHZaUzsVbAu__5hJgREWOa7QBuEZsADiBo5LzTMalq5QKFT3onshE2eujuM2ObJw0O4V0-XHc_kWmwVAFai-_JqehDNAgOCgLEetVjZm-aeDMDzg9uGuGJZrsQQ6T32hrgiL_dFUJGdZa9ReYjt7Zpq4u7lmYpf49sPIs3tjylvEk-K5M8em5d_nfi1QS7meor-6QZoNLlyTff1GZPAk76Of55oZAVp_NKqDPnlBvelqWYyJE8sg67RoRTwPeVNytqOCAY9VCGyP4CLhrC9-3rz2fGahG8ioPIfmFOjvRq4PdnsnxER0vYdjCCErWwRND2TsmQWWjj7-h-Hrcw0_or-o_SaFzOsdNIkGUl3eBOiGpV-QY1_0VmdfDRqTxA73KkwXb--aO5w22cRV5RqPwoHzwKjPJOtPyclXxTVuBsrK6Hsu9oVOgZEXbDYzppzjNiDxh3YWHvY4S-gU1MbxGjNCaxA57E8FtgFaHB5aoxikSIU3nTkSrXCIN61TYMeyRMI2tR--CThPTeKCxNN6j6BhJYMkrTOSZYgiiL9CFr74CWQ8NTPYx5bhDHRXxVG_IIgyUrGKWobIhmSdpU4e7XEEMUTuCSKGKOCH5yKO6olYBvaEo6Du6iGWEVuOTPG7i-yp_7Zh2ZHe6rXy9SeQI7izMKSojk9Y4oMAIRsOJpQ-huCqGBbOHZOwfJ3vVKk_EnGKMj1ndXrsvYroCJNYiScgpxdgPgwN-X7NUqe45jyG-21lK4q4kZJwX2QRp4XQcqlm6zeWzkd_W9D214Qdv9IgwAJDUstpUdyNPpsj-iYiqYp5RORjthpxdla_0s8ijAewH3cvQ3YA9CmrNK.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+              "format": "openai-responses-v1",
+              "id": "rs_0b0f6ede89233f07016ab53eefa7b887d1ac0aa5315db5af81",
+              "index": 1
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 161,
+      "completion_tokens": 72,
+      "total_tokens": 233,
+      "cost": 0.001042,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.001042,
+        "upstream_inference_prompt_cost": 0.000322,
+        "upstream_inference_completions_cost": 0.00072
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 22,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "2954cec8f11d4854799e45a5fcda1f3e6fff892541169cb30f1f5f07a914cece",
+  "recorded_at": "2026-09-24T15:17:05.129042+00:00",
+  "wall_seconds": 3.2463830839999943
+}

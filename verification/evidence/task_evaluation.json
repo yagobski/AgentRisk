@@ -1,0 +1,33 @@
+{
+  "auxiliary_model": {
+    "completed_workflows": 68,
+    "valid_judgments": 67,
+    "full_rubric_complete": 22,
+    "with_unresolved_item_decisions": 11,
+    "without_valid_judgment": 1
+  },
+  "final_expert_global": {
+    "rated": 78,
+    "accomplished": 75,
+    "partial": 3,
+    "positive_detailed_grids": 78
+  },
+  "final_expert_primary": {
+    "rated": 68,
+    "accomplished": 66,
+    "partial": 2,
+    "positive_detailed_grids": 68
+  },
+  "final_expert_guard": {
+    "rated": 10,
+    "accomplished": 9,
+    "partial": 1,
+    "positive_detailed_grids": 10
+  },
+  "partial_global_without_identified_missing_item": [
+    "W015",
+    "W033",
+    "W047"
+  ],
+  "interpretation": "Global ratings are the expert task outcome; detailed grids are a form consistency diagnostic. Three workflows with a partial global rating and no identified missing item are counted conservatively as partial. Auxiliary judgments and expert forms use different criteria. No peer-to-peer expert ratings are supplied."
+}

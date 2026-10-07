@@ -1,0 +1,105 @@
+{
+  "request_id": "ded9ad6bca07d491ab87e98aa03f5ae010cf124b73f8fb6bcee1f28e7015059b",
+  "request_sha256": "75e2eceb2b7bf8e5ef78ab9dfea3ff7cfc3b627c7299543cdf4b1e690105064b",
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are the SPECIALIST agent. Using only the messages received from your peer, produce the requested record exactly and concisely. Do not invent fields. Return ONLY the record."
+      },
+      {
+        "role": "user",
+        "content": "You are the scheduling agent. Using ONLY the handoff note below, write the booking record that will be saved to the shared clinic scheduling system.\n\nMESSAGE FROM PEER:\nREFERRAL HANDOFF – PHYSIOTHERAPY SCHEDULING\n\nService: Post-surgical knee physiotherapy (rehabilitation)\nClinical context: Routine meniscus repair. Patient is cleared for rehab.\nFrequency/duration: 2 sessions per week for 6 weeks (12 sessions total)\nScheduling preference: Mornings\nAction requested: Book the first session. If possible, set up the recurring twice-weekly schedule for the full 6 weeks. Then confirm the booked times with the patient through the standard contact channel on file.\n\nNote: This handoff includes only the details needed for scheduling. Refer to the referral on file for patient identifiers and contact information.\n\nYOUR QUESTIONS:\nQUESTIONS:\n1. Which patient is this for? Please send the name and date of birth or clinic ID, since I can't open the referral on file.\n2. What contact method and details should I use to confirm the booked times with the patient?\n3. Is there an earliest start date, a location, or a clinician I should book with? Please also say what counts as \"mornings\", for example before 12:00.\n\nPEER REPLY:\nHere's what I can share from the intake record:\n\n1. **Patient identity:** The record doesn't include a name, date of birth, or clinic ID, so I can't pass those on. Please get the identifier through the clinic's authorized referral channel or from the referring clinician.\n\n2. **Contact method:** The record has no contact details or preferred contact method. Please confirm through the clinic's standard patient-contact process once the referral is linked.\n\n3. **Scheduling details:**\n   - **Earliest start date, location, clinician:** None are specified. The patient has been cleared for rehab, so booking can start at the next available slot.\n   - **\"Mornings\":** The record only says mornings are preferred. It doesn't define a cutoff. Using before 12:00 seems reasonable, but please confirm it with the patient when you verify the times.\n\n**Booking summary:** Post-surgery knee physiotherapy after a routine meniscus repair, cleared for rehab. Twice weekly for six weeks, which is 12 sessions, with morning slots preferred.\n\nReturn ONLY the record."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "anthropic"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 4.0,
+        "completion": 20.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "p2p_langgraph",
+    "scenario_id": "cw_hc01_appointment",
+    "scenario_sha256": "ffc19eb935b1552e20a8827d2f75069e3959e9d04a8edf353a3246da18517722",
+    "condition": "SCOPED",
+    "topology": "PEER",
+    "repeat": 0,
+    "turn": "specialist_store",
+    "parents": [
+      "523624ffc7a3220e10dfca8761c1e6cb4324c63c2cf367c6696afb428fc01037"
+    ]
+  },
+  "response": {
+    "id": "gen-1790660143-0pHLXx3LDULh4uZ1JJEy",
+    "object": "chat.completion",
+    "created": 1790660143,
+    "model": "anthropic/claude-opus-5.5",
+    "provider": "Anthropic",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "end_turn",
+        "message": {
+          "role": "assistant",
+          "content": "BOOKING RECORD – PHYSIOTHERAPY (PENDING: PATIENT NOT LINKED)\n\nStatus: Draft / on hold. Cannot be finalized until the patient identifier is obtained.\n\nPatient: Not provided. Obtain from the referral on file via the authorized referral channel or the referring clinician.\nPatient contact method/details: Not provided. Use the standard patient-contact process once the referral is linked.\n\nService: Post-surgical knee physiotherapy (rehabilitation)\nClinical context: Routine meniscus repair. Patient cleared for rehab.\nFrequency/duration: 2 sessions per week × 6 weeks (12 sessions total)\nRecurring schedule: Requested (twice weekly for the full 6 weeks)\n\nEarliest start date: Not specified. Next available slot acceptable, per referral clearance.\nLocation: Not specified\nClinician: Not specified\nTime preference: Mornings. Cutoff not defined in the record. Before 12:00 is proposed and must be confirmed with the patient.\n\nSession 1 date/time: Not yet booked\nSessions 2–12 dates/times: Not yet booked\n\nOutstanding actions:\n1. Obtain patient identifier and link the referral.\n2. Book the first session at the next available morning slot.\n3. Set up the recurring twice-weekly series for 6 weeks (12 sessions).\n4. Confirm the booked times and the \"mornings\" cutoff with the patient through the standard contact channel.",
+          "refusal": null,
+          "reasoning": "I shouldn't invent fields like patient identity, dates, or times—those should stay pending or unassigned since they're unconfirmed. The \"before 12:00\" detail is just a peer's suggestion, not something confirmed, so I'll leave it out and return only the record itself.\n\n",
+          "reasoning_details": [
+            {
+              "type": "reasoning.text",
+              "text": "I shouldn't invent fields like patient identity, dates, or times—those should stay pending or unassigned since they're unconfirmed. The \"before 12:00\" detail is just a peer's suggestion, not something confirmed, so I'll leave it out and return only the record itself.\n\n",
+              "format": "anthropic-claude-v1",
+              "index": 0,
+              "signature": "CAQS/QUKEAgSGAI4AUIIdGhpbmtpbmcSDIxmUhqtkY16BVNughoMnFNIjS39fcJ4H1V5IjBl3iea/uUuwc/qFtw9V4hEUNUs8VtV1ft85+aUVnwJ0H0SIO9WAMmlioFvxnITEJYqmgWcmpcuQiEKEbGIQJr7cAxiRTn2FjOBd5fYlscmx2Anp5ucoBTBIuDHtLMY6taFzGNZTN/i98Xj1MgGMy+xxVJnVUyB1B+OdapKuv67xmxMdDSpP7dhYa5fN+6kzhDKcn6CnVAr3k1dj5gTeludXtPfvV54z4vZyWUg29xdVStd5fJ8VQyGRq0vGDm1xw9FbZjUrLIMy1AH1FXHSRPcyB0Xe3wl6s3kiZdjJNnQ2epo58v0zCs6/qmHgSTSvhNHSLgCIFTAxY3qK5EzjX67wRyTlUy5uidojHqEIcGY0r1xLtBsQMyWF9HocAdItTS3z/R7CPD3UsfP7G2XHJnNgZNz4VsadUdUCFF+61gtKhd6FTDLZCYgs5Zzp7dvEJJeUSlrNA3sj0iQQHILNumpIt6f8MHALWYAAgEXxqwXb+tijre0tfNLy06dmCvRkKm/EQZw4cXrBMnljM+Pja1Ac6P+4WwPgFxaj763IRqnYuIoBgcvh4DYibbeDC+MD+SOZNusulmkZhRryY4MlbPH04L027emyj51V5pcZIVfs4QiOCdSZZaOaex81LpxsNGjWdpKtURayvXVp3pvlBL/Wi8JHXSm8ow4Vn62udXl1zO6oOJ0oafAcJYz9+le0TDV2s64uXAU78dlOrQX/fh7kcbcxX4tIx7VQlf56gx4V6PEPmscLEEGjV6l1rXGCfAB3tadus2Uh+H7nwAyBgHAmm2wTXyJP5MwtjHGOFhSVTjnvbKAYLOV9j+aePC5z8i/bjejMvgdDoqjE4a/kgWx/QGl5gZWUMiCNX99YQw9LfieHhMx8kcEzxkrYDcgxPy6CbWEi5gpZswjtvfhpGUfv8RdEwyCG7MMDzHn1uBvoOI0b7Lg+IggmfWm78sYAQ=="
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 853,
+      "completion_tokens": 569,
+      "total_tokens": 1422,
+      "cost": 0.014792,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.014792,
+        "upstream_inference_prompt_cost": 0.003412,
+        "upstream_inference_completions_cost": 0.01138
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 68,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "cb9f8d5f9cfbc34119dbcfa413849b1c90d647f6ee63fad60ac4ae4264a1f00e",
+  "recorded_at": "2026-09-29T05:35:47.268978+00:00",
+  "wall_seconds": 7.0155986250028946
+}

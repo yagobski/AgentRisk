@@ -1,0 +1,2523 @@
+{
+  "scope": "paired local replay of saved three-agent channels with SHA-256, timestamp, JSON serialization, flush, fsync and atomic replacement; excludes model inference, network collection and production contention",
+  "machine": "macOS-26.3.1-arm64-arm-64bit",
+  "workflows": 24,
+  "warmups": 30,
+  "pairs": 500,
+  "seed": 20260924,
+  "new_model_calls": 0,
+  "baseline_ms": {
+    "median": 0.000667,
+    "p95": 0.001125
+  },
+  "capture_ms": {
+    "median": 0.26568749999999997,
+    "p95": 0.433708
+  },
+  "added_ms": {
+    "median": 0.265,
+    "p95": 0.43299899999999997
+  },
+  "samples": [
+    {
+      "baseline_ms": 0.000542,
+      "capture_ms": 0.345917,
+      "added_ms": 0.345375
+    },
+    {
+      "baseline_ms": 0.000666,
+      "capture_ms": 0.264208,
+      "added_ms": 0.263542
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.320417,
+      "added_ms": 0.319792
+    },
+    {
+      "baseline_ms": 0.001083,
+      "capture_ms": 0.311167,
+      "added_ms": 0.310084
+    },
+    {
+      "baseline_ms": 0.000666,
+      "capture_ms": 0.288833,
+      "added_ms": 0.288167
+    },
+    {
+      "baseline_ms": 0.00075,
+      "capture_ms": 0.57125,
+      "added_ms": 0.5705
+    },
+    {
+      "baseline_ms": 0.000875,
+      "capture_ms": 0.380958,
+      "added_ms": 0.380083
+    },
+    {
+      "baseline_ms": 0.001083,
+      "capture_ms": 0.464625,
+      "added_ms": 0.463542
+    },
+    {
+      "baseline_ms": 0.003084,
+      "capture_ms": 0.381167,
+      "added_ms": 0.378083
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.278125,
+      "added_ms": 0.2775
+    },
+    {
+      "baseline_ms": 0.000791,
+      "capture_ms": 0.301333,
+      "added_ms": 0.30054200000000003
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.3,
+      "added_ms": 0.299375
+    },
+    {
+      "baseline_ms": 0.000917,
+      "capture_ms": 0.361125,
+      "added_ms": 0.360208
+    },
+    {
+      "baseline_ms": 0.001042,
+      "capture_ms": 0.396292,
+      "added_ms": 0.39525
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.336667,
+      "added_ms": 0.336042
+    },
+    {
+      "baseline_ms": 0.001084,
+      "capture_ms": 0.314291,
+      "added_ms": 0.313207
+    },
+    {
+      "baseline_ms": 0.000584,
+      "capture_ms": 0.333583,
+      "added_ms": 0.33299900000000004
+    },
+    {
+      "baseline_ms": 0.000709,
+      "capture_ms": 0.270833,
+      "added_ms": 0.270124
+    },
+    {
+      "baseline_ms": 0.001,
+      "capture_ms": 0.403375,
+      "added_ms": 0.402375
+    },
+    {
+      "baseline_ms": 0.00075,
+      "capture_ms": 0.304,
+      "added_ms": 0.30325
+    },
+    {
+      "baseline_ms": 0.00075,
+      "capture_ms": 0.330292,
+      "added_ms": 0.329542
+    },
+    {
+      "baseline_ms": 0.000584,
+      "capture_ms": 0.330584,
+      "added_ms": 0.33
+    },
+    {
+      "baseline_ms": 0.00075,
+      "capture_ms": 0.381458,
+      "added_ms": 0.38070800000000005
+    },
+    {
+      "baseline_ms": 0.000958,
+      "capture_ms": 0.333084,
+      "added_ms": 0.332126
+    },
+    {
+      "baseline_ms": 0.0005,
+      "capture_ms": 0.331833,
+      "added_ms": 0.331333
+    },
+    {
+      "baseline_ms": 0.00075,
+      "capture_ms": 0.330667,
+      "added_ms": 0.329917
+    },
+    {
+      "baseline_ms": 0.001125,
+      "capture_ms": 0.298208,
+      "added_ms": 0.297083
+    },
+    {
+      "baseline_ms": 0.000875,
+      "capture_ms": 0.371291,
+      "added_ms": 0.37041599999999997
+    },
+    {
+      "baseline_ms": 0.001834,
+      "capture_ms": 0.399459,
+      "added_ms": 0.397625
+    },
+    {
+      "baseline_ms": 0.001,
+      "capture_ms": 0.393417,
+      "added_ms": 0.392417
+    },
+    {
+      "baseline_ms": 0.000833,
+      "capture_ms": 0.452042,
+      "added_ms": 0.451209
+    },
+    {
+      "baseline_ms": 0.000792,
+      "capture_ms": 0.304083,
+      "added_ms": 0.303291
+    },
+    {
+      "baseline_ms": 0.00075,
+      "capture_ms": 0.35425,
+      "added_ms": 0.35350000000000004
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.283167,
+      "added_ms": 0.282542
+    },
+    {
+      "baseline_ms": 0.001083,
+      "capture_ms": 0.292292,
+      "added_ms": 0.291209
+    },
+    {
+      "baseline_ms": 0.000417,
+      "capture_ms": 0.307375,
+      "added_ms": 0.306958
+    },
+    {
+      "baseline_ms": 0.012167,
+      "capture_ms": 0.395084,
+      "added_ms": 0.382917
+    },
+    {
+      "baseline_ms": 0.000459,
+      "capture_ms": 0.300916,
+      "added_ms": 0.30045700000000003
+    },
+    {
+      "baseline_ms": 0.000667,
+      "capture_ms": 0.382958,
+      "added_ms": 0.38229100000000005
+    },
+    {
+      "baseline_ms": 0.000875,
+      "capture_ms": 0.253875,
+      "added_ms": 0.253
+    },
+    {
+      "baseline_ms": 0.000791,
+      "capture_ms": 0.268625,
+      "added_ms": 0.267834
+    },
+    {
+      "baseline_ms": 0.001167,
+      "capture_ms": 0.313584,
+      "added_ms": 0.312417
+    },
+    {
+      "baseline_ms": 0.001167,
+      "capture_ms": 0.3895,
+      "added_ms": 0.38833300000000004
+    },
+    {
+      "baseline_ms": 0.000958,
+      "capture_ms": 0.406583,
+      "added_ms": 0.405625
+    },
+    {
+      "baseline_ms": 0.001,
+      "capture_ms": 0.457458,
+      "added_ms": 0.456458
+    },
+    {
+      "baseline_ms": 0.000792,
+      "capture_ms": 0.427583,
+      "added_ms": 0.426791
+    },
+    {
+      "baseline_ms": 0.000666,
+      "capture_ms": 0.317167,
+      "added_ms": 0.316501
+    },
+    {
+      "baseline_ms": 0.000917,
+      "capture_ms": 0.356042,
+      "added_ms": 0.355125
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.31675,
+      "added_ms": 0.316125
+    },
+    {
+      "baseline_ms": 0.000458,
+      "capture_ms": 0.262292,
+      "added_ms": 0.261834
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.275083,
+      "added_ms": 0.27445800000000004
+    },
+    {
+      "baseline_ms": 0.0005,
+      "capture_ms": 0.293334,
+      "added_ms": 0.292834
+    },
+    {
+      "baseline_ms": 0.056459,
+      "capture_ms": 0.318709,
+      "added_ms": 0.26225000000000004
+    },
+    {
+      "baseline_ms": 0.000916,
+      "capture_ms": 0.35025,
+      "added_ms": 0.34933400000000003
+    },
+    {
+      "baseline_ms": 0.001375,
+      "capture_ms": 0.370834,
+      "added_ms": 0.369459
+    },
+    {
+      "baseline_ms": 0.00075,
+      "capture_ms": 0.417916,
+      "added_ms": 0.41716600000000004
+    },
+    {
+      "baseline_ms": 0.000459,
+      "capture_ms": 0.395959,
+      "added_ms": 0.3955
+    },
+    {
+      "baseline_ms": 0.000541,
+      "capture_ms": 0.321042,
+      "added_ms": 0.320501
+    },
+    {
+      "baseline_ms": 0.000917,
+      "capture_ms": 0.3465,
+      "added_ms": 0.345583
+    },
+    {
+      "baseline_ms": 0.000834,
+      "capture_ms": 0.46475,
+      "added_ms": 0.463916
+    },
+    {
+      "baseline_ms": 0.000958,
+      "capture_ms": 0.321291,
+      "added_ms": 0.320333
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.280875,
+      "added_ms": 0.28025
+    },
+    {
+      "baseline_ms": 0.000584,
+      "capture_ms": 0.2665,
+      "added_ms": 0.26591600000000004
+    },
+    {
+      "baseline_ms": 0.00075,
+      "capture_ms": 0.324791,
+      "added_ms": 0.324041
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.287833,
+      "added_ms": 0.287208
+    },
+    {
+      "baseline_ms": 0.000458,
+      "capture_ms": 0.292709,
+      "added_ms": 0.292251
+    },
+    {
+      "baseline_ms": 0.000875,
+      "capture_ms": 0.332542,
+      "added_ms": 0.331667
+    },
+    {
+      "baseline_ms": 0.00075,
+      "capture_ms": 0.323083,
+      "added_ms": 0.32233300000000004
+    },
+    {
+      "baseline_ms": 0.000875,
+      "capture_ms": 0.306375,
+      "added_ms": 0.3055
+    },
+    {
+      "baseline_ms": 0.0005,
+      "capture_ms": 0.314666,
+      "added_ms": 0.314166
+    },
+    {
+      "baseline_ms": 0.000834,
+      "capture_ms": 0.259208,
+      "added_ms": 0.258374
+    },
+    {
+      "baseline_ms": 0.001084,
+      "capture_ms": 0.240791,
+      "added_ms": 0.239707
+    },
+    {
+      "baseline_ms": 0.000833,
+      "capture_ms": 0.387542,
+      "added_ms": 0.386709
+    },
+    {
+      "baseline_ms": 0.001042,
+      "capture_ms": 0.327583,
+      "added_ms": 0.326541
+    },
+    {
+      "baseline_ms": 0.001125,
+      "capture_ms": 0.280959,
+      "added_ms": 0.279834
+    },
+    {
+      "baseline_ms": 0.000958,
+      "capture_ms": 0.266292,
+      "added_ms": 0.26533399999999996
+    },
+    {
+      "baseline_ms": 0.000541,
+      "capture_ms": 0.257958,
+      "added_ms": 0.257417
+    },
+    {
+      "baseline_ms": 0.000708,
+      "capture_ms": 0.254333,
+      "added_ms": 0.253625
+    },
+    {
+      "baseline_ms": 0.00125,
+      "capture_ms": 0.435292,
+      "added_ms": 0.43404200000000004
+    },
+    {
+      "baseline_ms": 0.000917,
+      "capture_ms": 0.490875,
+      "added_ms": 0.489958
+    },
+    {
+      "baseline_ms": 0.001,
+      "capture_ms": 0.752875,
+      "added_ms": 0.751875
+    },
+    {
+      "baseline_ms": 0.000709,
+      "capture_ms": 0.285333,
+      "added_ms": 0.284624
+    },
+    {
+      "baseline_ms": 0.000541,
+      "capture_ms": 0.286542,
+      "added_ms": 0.286001
+    },
+    {
+      "baseline_ms": 0.000667,
+      "capture_ms": 0.257083,
+      "added_ms": 0.25641600000000003
+    },
+    {
+      "baseline_ms": 0.0005,
+      "capture_ms": 0.246209,
+      "added_ms": 0.245709
+    },
+    {
+      "baseline_ms": 0.000917,
+      "capture_ms": 0.33225,
+      "added_ms": 0.331333
+    },
+    {
+      "baseline_ms": 0.000833,
+      "capture_ms": 0.377292,
+      "added_ms": 0.37645900000000004
+    },
+    {
+      "baseline_ms": 0.000541,
+      "capture_ms": 0.306,
+      "added_ms": 0.305459
+    },
+    {
+      "baseline_ms": 0.000416,
+      "capture_ms": 0.322167,
+      "added_ms": 0.32175099999999995
+    },
+    {
+      "baseline_ms": 0.000583,
+      "capture_ms": 0.344709,
+      "added_ms": 0.344126
+    },
+    {
+      "baseline_ms": 0.000667,
+      "capture_ms": 0.27525,
+      "added_ms": 0.274583
+    },
+    {
+      "baseline_ms": 0.000709,
+      "capture_ms": 0.247334,
+      "added_ms": 0.246625
+    },
+    {
+      "baseline_ms": 0.000916,
+      "capture_ms": 0.229834,
+      "added_ms": 0.228918
+    },
+    {
+      "baseline_ms": 0.00075,
+      "capture_ms": 0.268416,
+      "added_ms": 0.267666
+    },
+    {
+      "baseline_ms": 0.000875,
+      "capture_ms": 0.281833,
+      "added_ms": 0.280958
+    },
+    {
+      "baseline_ms": 0.001084,
+      "capture_ms": 0.262709,
+      "added_ms": 0.26162500000000005
+    },
+    {
+      "baseline_ms": 0.000958,
+      "capture_ms": 0.315125,
+      "added_ms": 0.314167
+    },
+    {
+      "baseline_ms": 0.000666,
+      "capture_ms": 0.371125,
+      "added_ms": 0.370459
+    },
+    {
+      "baseline_ms": 0.000667,
+      "capture_ms": 0.262791,
+      "added_ms": 0.262124
+    },
+    {
+      "baseline_ms": 0.000375,
+      "capture_ms": 0.285333,
+      "added_ms": 0.284958
+    },
+    {
+      "baseline_ms": 0.000667,
+      "capture_ms": 0.309958,
+      "added_ms": 0.30929100000000004
+    },
+    {
+      "baseline_ms": 0.000708,
+      "capture_ms": 0.282709,
+      "added_ms": 0.282001
+    },
+    {
+      "baseline_ms": 0.000584,
+      "capture_ms": 0.39375,
+      "added_ms": 0.393166
+    },
+    {
+      "baseline_ms": 0.002291,
+      "capture_ms": 0.603375,
+      "added_ms": 0.601084
+    },
+    {
+      "baseline_ms": 0.001,
+      "capture_ms": 0.542917,
+      "added_ms": 0.541917
+    },
+    {
+      "baseline_ms": 0.000959,
+      "capture_ms": 0.480083,
+      "added_ms": 0.479124
+    },
+    {
+      "baseline_ms": 0.000917,
+      "capture_ms": 0.39825,
+      "added_ms": 0.397333
+    },
+    {
+      "baseline_ms": 0.001167,
+      "capture_ms": 0.28325,
+      "added_ms": 0.28208300000000003
+    },
+    {
+      "baseline_ms": 0.001041,
+      "capture_ms": 0.336583,
+      "added_ms": 0.335542
+    },
+    {
+      "baseline_ms": 0.000958,
+      "capture_ms": 0.416416,
+      "added_ms": 0.415458
+    },
+    {
+      "baseline_ms": 0.000667,
+      "capture_ms": 0.287375,
+      "added_ms": 0.286708
+    },
+    {
+      "baseline_ms": 0.00075,
+      "capture_ms": 0.242417,
+      "added_ms": 0.241667
+    },
+    {
+      "baseline_ms": 0.000542,
+      "capture_ms": 0.42375,
+      "added_ms": 0.42320800000000003
+    },
+    {
+      "baseline_ms": 0.000709,
+      "capture_ms": 0.241791,
+      "added_ms": 0.24108200000000002
+    },
+    {
+      "baseline_ms": 0.0005,
+      "capture_ms": 0.232625,
+      "added_ms": 0.232125
+    },
+    {
+      "baseline_ms": 0.00075,
+      "capture_ms": 0.30825,
+      "added_ms": 0.30750000000000005
+    },
+    {
+      "baseline_ms": 0.001,
+      "capture_ms": 0.282,
+      "added_ms": 0.28099999999999997
+    },
+    {
+      "baseline_ms": 0.000583,
+      "capture_ms": 0.290833,
+      "added_ms": 0.29025
+    },
+    {
+      "baseline_ms": 0.000916,
+      "capture_ms": 0.32175,
+      "added_ms": 0.320834
+    },
+    {
+      "baseline_ms": 0.000833,
+      "capture_ms": 0.279333,
+      "added_ms": 0.2785
+    },
+    {
+      "baseline_ms": 0.0005,
+      "capture_ms": 0.2475,
+      "added_ms": 0.247
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.298125,
+      "added_ms": 0.2975
+    },
+    {
+      "baseline_ms": 0.000875,
+      "capture_ms": 0.329125,
+      "added_ms": 0.32825
+    },
+    {
+      "baseline_ms": 0.001042,
+      "capture_ms": 0.407833,
+      "added_ms": 0.406791
+    },
+    {
+      "baseline_ms": 0.000875,
+      "capture_ms": 0.328791,
+      "added_ms": 0.327916
+    },
+    {
+      "baseline_ms": 0.000708,
+      "capture_ms": 0.379792,
+      "added_ms": 0.37908400000000003
+    },
+    {
+      "baseline_ms": 0.000875,
+      "capture_ms": 0.308417,
+      "added_ms": 0.307542
+    },
+    {
+      "baseline_ms": 0.001542,
+      "capture_ms": 0.64675,
+      "added_ms": 0.645208
+    },
+    {
+      "baseline_ms": 0.001625,
+      "capture_ms": 0.478708,
+      "added_ms": 0.47708300000000003
+    },
+    {
+      "baseline_ms": 0.00125,
+      "capture_ms": 0.359958,
+      "added_ms": 0.358708
+    },
+    {
+      "baseline_ms": 0.001083,
+      "capture_ms": 0.370125,
+      "added_ms": 0.369042
+    },
+    {
+      "baseline_ms": 0.000666,
+      "capture_ms": 0.366791,
+      "added_ms": 0.366125
+    },
+    {
+      "baseline_ms": 0.000584,
+      "capture_ms": 0.265625,
+      "added_ms": 0.265041
+    },
+    {
+      "baseline_ms": 0.003,
+      "capture_ms": 0.313083,
+      "added_ms": 0.310083
+    },
+    {
+      "baseline_ms": 0.000917,
+      "capture_ms": 0.301334,
+      "added_ms": 0.300417
+    },
+    {
+      "baseline_ms": 0.000958,
+      "capture_ms": 0.390167,
+      "added_ms": 0.38920899999999997
+    },
+    {
+      "baseline_ms": 0.000875,
+      "capture_ms": 0.326459,
+      "added_ms": 0.325584
+    },
+    {
+      "baseline_ms": 0.000666,
+      "capture_ms": 0.275375,
+      "added_ms": 0.274709
+    },
+    {
+      "baseline_ms": 0.001125,
+      "capture_ms": 0.292292,
+      "added_ms": 0.291167
+    },
+    {
+      "baseline_ms": 0.001291,
+      "capture_ms": 0.359708,
+      "added_ms": 0.35841700000000004
+    },
+    {
+      "baseline_ms": 0.00075,
+      "capture_ms": 0.355542,
+      "added_ms": 0.35479200000000005
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.348625,
+      "added_ms": 0.34800000000000003
+    },
+    {
+      "baseline_ms": 0.00075,
+      "capture_ms": 0.258209,
+      "added_ms": 0.25745900000000005
+    },
+    {
+      "baseline_ms": 0.000959,
+      "capture_ms": 0.304041,
+      "added_ms": 0.303082
+    },
+    {
+      "baseline_ms": 0.001459,
+      "capture_ms": 0.405875,
+      "added_ms": 0.404416
+    },
+    {
+      "baseline_ms": 0.000542,
+      "capture_ms": 0.295167,
+      "added_ms": 0.294625
+    },
+    {
+      "baseline_ms": 0.000958,
+      "capture_ms": 0.304917,
+      "added_ms": 0.303959
+    },
+    {
+      "baseline_ms": 0.000708,
+      "capture_ms": 0.395042,
+      "added_ms": 0.394334
+    },
+    {
+      "baseline_ms": 0.0015,
+      "capture_ms": 0.438041,
+      "added_ms": 0.436541
+    },
+    {
+      "baseline_ms": 0.000875,
+      "capture_ms": 0.336375,
+      "added_ms": 0.33549999999999996
+    },
+    {
+      "baseline_ms": 0.000875,
+      "capture_ms": 0.482584,
+      "added_ms": 0.481709
+    },
+    {
+      "baseline_ms": 0.000875,
+      "capture_ms": 0.459208,
+      "added_ms": 0.458333
+    },
+    {
+      "baseline_ms": 0.00075,
+      "capture_ms": 0.299333,
+      "added_ms": 0.29858300000000004
+    },
+    {
+      "baseline_ms": 0.000708,
+      "capture_ms": 0.388459,
+      "added_ms": 0.387751
+    },
+    {
+      "baseline_ms": 0.000916,
+      "capture_ms": 0.345209,
+      "added_ms": 0.344293
+    },
+    {
+      "baseline_ms": 0.000958,
+      "capture_ms": 0.699042,
+      "added_ms": 0.698084
+    },
+    {
+      "baseline_ms": 0.000916,
+      "capture_ms": 0.313208,
+      "added_ms": 0.312292
+    },
+    {
+      "baseline_ms": 0.001083,
+      "capture_ms": 0.253667,
+      "added_ms": 0.252584
+    },
+    {
+      "baseline_ms": 0.001,
+      "capture_ms": 0.435417,
+      "added_ms": 0.434417
+    },
+    {
+      "baseline_ms": 0.000875,
+      "capture_ms": 0.238084,
+      "added_ms": 0.237209
+    },
+    {
+      "baseline_ms": 0.000542,
+      "capture_ms": 0.255209,
+      "added_ms": 0.25466700000000003
+    },
+    {
+      "baseline_ms": 0.0005,
+      "capture_ms": 0.259125,
+      "added_ms": 0.258625
+    },
+    {
+      "baseline_ms": 0.000583,
+      "capture_ms": 0.235959,
+      "added_ms": 0.235376
+    },
+    {
+      "baseline_ms": 0.000709,
+      "capture_ms": 0.433708,
+      "added_ms": 0.43299899999999997
+    },
+    {
+      "baseline_ms": 0.001458,
+      "capture_ms": 0.320667,
+      "added_ms": 0.31920899999999996
+    },
+    {
+      "baseline_ms": 0.001458,
+      "capture_ms": 0.270625,
+      "added_ms": 0.269167
+    },
+    {
+      "baseline_ms": 0.000917,
+      "capture_ms": 0.448459,
+      "added_ms": 0.447542
+    },
+    {
+      "baseline_ms": 0.000709,
+      "capture_ms": 0.283709,
+      "added_ms": 0.283
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.316334,
+      "added_ms": 0.315709
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.286208,
+      "added_ms": 0.28558300000000003
+    },
+    {
+      "baseline_ms": 0.000917,
+      "capture_ms": 0.342792,
+      "added_ms": 0.341875
+    },
+    {
+      "baseline_ms": 0.000541,
+      "capture_ms": 0.243542,
+      "added_ms": 0.243001
+    },
+    {
+      "baseline_ms": 0.000917,
+      "capture_ms": 0.276833,
+      "added_ms": 0.275916
+    },
+    {
+      "baseline_ms": 0.000875,
+      "capture_ms": 0.246833,
+      "added_ms": 0.245958
+    },
+    {
+      "baseline_ms": 0.001,
+      "capture_ms": 0.359291,
+      "added_ms": 0.358291
+    },
+    {
+      "baseline_ms": 0.001,
+      "capture_ms": 0.442042,
+      "added_ms": 0.441042
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.330333,
+      "added_ms": 0.329708
+    },
+    {
+      "baseline_ms": 0.000584,
+      "capture_ms": 0.280417,
+      "added_ms": 0.27983300000000005
+    },
+    {
+      "baseline_ms": 0.000875,
+      "capture_ms": 0.331875,
+      "added_ms": 0.33099999999999996
+    },
+    {
+      "baseline_ms": 0.000542,
+      "capture_ms": 0.270708,
+      "added_ms": 0.270166
+    },
+    {
+      "baseline_ms": 0.000833,
+      "capture_ms": 0.255458,
+      "added_ms": 0.25462500000000005
+    },
+    {
+      "baseline_ms": 0.000709,
+      "capture_ms": 0.4015,
+      "added_ms": 0.400791
+    },
+    {
+      "baseline_ms": 0.000708,
+      "capture_ms": 0.257458,
+      "added_ms": 0.25675000000000003
+    },
+    {
+      "baseline_ms": 0.000916,
+      "capture_ms": 0.257917,
+      "added_ms": 0.25700100000000003
+    },
+    {
+      "baseline_ms": 0.001,
+      "capture_ms": 0.269459,
+      "added_ms": 0.268459
+    },
+    {
+      "baseline_ms": 0.0005,
+      "capture_ms": 0.245667,
+      "added_ms": 0.245167
+    },
+    {
+      "baseline_ms": 0.000667,
+      "capture_ms": 0.241333,
+      "added_ms": 0.240666
+    },
+    {
+      "baseline_ms": 0.000917,
+      "capture_ms": 0.304708,
+      "added_ms": 0.303791
+    },
+    {
+      "baseline_ms": 0.000458,
+      "capture_ms": 0.232792,
+      "added_ms": 0.232334
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.249458,
+      "added_ms": 0.24883300000000003
+    },
+    {
+      "baseline_ms": 0.000417,
+      "capture_ms": 0.312959,
+      "added_ms": 0.312542
+    },
+    {
+      "baseline_ms": 0.00075,
+      "capture_ms": 0.285,
+      "added_ms": 0.28425
+    },
+    {
+      "baseline_ms": 0.000958,
+      "capture_ms": 0.292917,
+      "added_ms": 0.29195899999999997
+    },
+    {
+      "baseline_ms": 0.000666,
+      "capture_ms": 0.260084,
+      "added_ms": 0.259418
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.268666,
+      "added_ms": 0.26804100000000003
+    },
+    {
+      "baseline_ms": 0.000458,
+      "capture_ms": 0.285,
+      "added_ms": 0.28454199999999996
+    },
+    {
+      "baseline_ms": 0.000708,
+      "capture_ms": 0.372583,
+      "added_ms": 0.371875
+    },
+    {
+      "baseline_ms": 0.000541,
+      "capture_ms": 0.26875,
+      "added_ms": 0.268209
+    },
+    {
+      "baseline_ms": 0.000875,
+      "capture_ms": 0.504375,
+      "added_ms": 0.5035000000000001
+    },
+    {
+      "baseline_ms": 0.000916,
+      "capture_ms": 0.301792,
+      "added_ms": 0.30087600000000003
+    },
+    {
+      "baseline_ms": 0.000792,
+      "capture_ms": 0.361208,
+      "added_ms": 0.36041599999999996
+    },
+    {
+      "baseline_ms": 0.000958,
+      "capture_ms": 0.259917,
+      "added_ms": 0.258959
+    },
+    {
+      "baseline_ms": 0.000583,
+      "capture_ms": 0.547875,
+      "added_ms": 0.547292
+    },
+    {
+      "baseline_ms": 0.000708,
+      "capture_ms": 0.42725,
+      "added_ms": 0.42654200000000003
+    },
+    {
+      "baseline_ms": 0.000875,
+      "capture_ms": 0.284416,
+      "added_ms": 0.283541
+    },
+    {
+      "baseline_ms": 0.000583,
+      "capture_ms": 0.254917,
+      "added_ms": 0.254334
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.251708,
+      "added_ms": 0.251083
+    },
+    {
+      "baseline_ms": 0.000708,
+      "capture_ms": 0.258667,
+      "added_ms": 0.257959
+    },
+    {
+      "baseline_ms": 0.000459,
+      "capture_ms": 0.235583,
+      "added_ms": 0.235124
+    },
+    {
+      "baseline_ms": 0.00075,
+      "capture_ms": 0.245209,
+      "added_ms": 0.244459
+    },
+    {
+      "baseline_ms": 0.001083,
+      "capture_ms": 0.31975,
+      "added_ms": 0.318667
+    },
+    {
+      "baseline_ms": 0.00075,
+      "capture_ms": 0.312291,
+      "added_ms": 0.311541
+    },
+    {
+      "baseline_ms": 0.00075,
+      "capture_ms": 0.305583,
+      "added_ms": 0.304833
+    },
+    {
+      "baseline_ms": 0.000834,
+      "capture_ms": 0.270042,
+      "added_ms": 0.269208
+    },
+    {
+      "baseline_ms": 0.000916,
+      "capture_ms": 0.440667,
+      "added_ms": 0.439751
+    },
+    {
+      "baseline_ms": 0.000792,
+      "capture_ms": 0.422792,
+      "added_ms": 0.422
+    },
+    {
+      "baseline_ms": 0.000916,
+      "capture_ms": 0.339959,
+      "added_ms": 0.33904300000000004
+    },
+    {
+      "baseline_ms": 0.000667,
+      "capture_ms": 0.258792,
+      "added_ms": 0.25812500000000005
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.272959,
+      "added_ms": 0.272334
+    },
+    {
+      "baseline_ms": 0.000708,
+      "capture_ms": 0.261084,
+      "added_ms": 0.260376
+    },
+    {
+      "baseline_ms": 0.000584,
+      "capture_ms": 0.312083,
+      "added_ms": 0.311499
+    },
+    {
+      "baseline_ms": 0.000583,
+      "capture_ms": 0.289625,
+      "added_ms": 0.289042
+    },
+    {
+      "baseline_ms": 0.000666,
+      "capture_ms": 0.37575,
+      "added_ms": 0.375084
+    },
+    {
+      "baseline_ms": 0.001208,
+      "capture_ms": 0.373875,
+      "added_ms": 0.372667
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.265584,
+      "added_ms": 0.264959
+    },
+    {
+      "baseline_ms": 0.00075,
+      "capture_ms": 0.234208,
+      "added_ms": 0.233458
+    },
+    {
+      "baseline_ms": 0.000542,
+      "capture_ms": 0.268334,
+      "added_ms": 0.26779200000000003
+    },
+    {
+      "baseline_ms": 0.000708,
+      "capture_ms": 0.245958,
+      "added_ms": 0.24525000000000002
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.285292,
+      "added_ms": 0.284667
+    },
+    {
+      "baseline_ms": 0.000584,
+      "capture_ms": 0.53125,
+      "added_ms": 0.530666
+    },
+    {
+      "baseline_ms": 0.001125,
+      "capture_ms": 0.291875,
+      "added_ms": 0.29075
+    },
+    {
+      "baseline_ms": 0.000834,
+      "capture_ms": 0.290667,
+      "added_ms": 0.289833
+    },
+    {
+      "baseline_ms": 0.00075,
+      "capture_ms": 0.281041,
+      "added_ms": 0.280291
+    },
+    {
+      "baseline_ms": 0.000917,
+      "capture_ms": 0.267917,
+      "added_ms": 0.267
+    },
+    {
+      "baseline_ms": 0.000875,
+      "capture_ms": 0.245375,
+      "added_ms": 0.24450000000000002
+    },
+    {
+      "baseline_ms": 0.000959,
+      "capture_ms": 0.26375,
+      "added_ms": 0.262791
+    },
+    {
+      "baseline_ms": 0.001041,
+      "capture_ms": 0.25925,
+      "added_ms": 0.25820899999999997
+    },
+    {
+      "baseline_ms": 0.000541,
+      "capture_ms": 0.326166,
+      "added_ms": 0.325625
+    },
+    {
+      "baseline_ms": 0.000584,
+      "capture_ms": 0.307625,
+      "added_ms": 0.307041
+    },
+    {
+      "baseline_ms": 0.000792,
+      "capture_ms": 0.43325,
+      "added_ms": 0.432458
+    },
+    {
+      "baseline_ms": 0.000666,
+      "capture_ms": 0.358542,
+      "added_ms": 0.357876
+    },
+    {
+      "baseline_ms": 0.000917,
+      "capture_ms": 0.410459,
+      "added_ms": 0.409542
+    },
+    {
+      "baseline_ms": 0.000708,
+      "capture_ms": 0.289334,
+      "added_ms": 0.288626
+    },
+    {
+      "baseline_ms": 0.000583,
+      "capture_ms": 0.27825,
+      "added_ms": 0.277667
+    },
+    {
+      "baseline_ms": 0.000667,
+      "capture_ms": 0.296167,
+      "added_ms": 0.29550000000000004
+    },
+    {
+      "baseline_ms": 0.0005,
+      "capture_ms": 0.276084,
+      "added_ms": 0.275584
+    },
+    {
+      "baseline_ms": 0.000916,
+      "capture_ms": 0.348959,
+      "added_ms": 0.34804300000000005
+    },
+    {
+      "baseline_ms": 0.001,
+      "capture_ms": 0.302458,
+      "added_ms": 0.301458
+    },
+    {
+      "baseline_ms": 0.000833,
+      "capture_ms": 0.389917,
+      "added_ms": 0.38908400000000004
+    },
+    {
+      "baseline_ms": 0.000458,
+      "capture_ms": 0.276083,
+      "added_ms": 0.275625
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.273667,
+      "added_ms": 0.273042
+    },
+    {
+      "baseline_ms": 0.000583,
+      "capture_ms": 0.239916,
+      "added_ms": 0.239333
+    },
+    {
+      "baseline_ms": 0.000541,
+      "capture_ms": 0.234042,
+      "added_ms": 0.233501
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.248541,
+      "added_ms": 0.24791600000000003
+    },
+    {
+      "baseline_ms": 0.000917,
+      "capture_ms": 0.252542,
+      "added_ms": 0.251625
+    },
+    {
+      "baseline_ms": 0.000708,
+      "capture_ms": 0.238625,
+      "added_ms": 0.23791700000000002
+    },
+    {
+      "baseline_ms": 0.00075,
+      "capture_ms": 0.433459,
+      "added_ms": 0.432709
+    },
+    {
+      "baseline_ms": 0.002,
+      "capture_ms": 0.377375,
+      "added_ms": 0.375375
+    },
+    {
+      "baseline_ms": 0.000833,
+      "capture_ms": 0.233958,
+      "added_ms": 0.233125
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.309833,
+      "added_ms": 0.30920800000000004
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.26575,
+      "added_ms": 0.265125
+    },
+    {
+      "baseline_ms": 0.000875,
+      "capture_ms": 0.22375,
+      "added_ms": 0.22287500000000002
+    },
+    {
+      "baseline_ms": 0.00075,
+      "capture_ms": 0.227166,
+      "added_ms": 0.226416
+    },
+    {
+      "baseline_ms": 0.000458,
+      "capture_ms": 0.222,
+      "added_ms": 0.22154200000000002
+    },
+    {
+      "baseline_ms": 0.000458,
+      "capture_ms": 0.228958,
+      "added_ms": 0.2285
+    },
+    {
+      "baseline_ms": 0.000708,
+      "capture_ms": 0.219042,
+      "added_ms": 0.218334
+    },
+    {
+      "baseline_ms": 0.0005,
+      "capture_ms": 0.233167,
+      "added_ms": 0.232667
+    },
+    {
+      "baseline_ms": 0.000792,
+      "capture_ms": 0.22825,
+      "added_ms": 0.22745800000000002
+    },
+    {
+      "baseline_ms": 0.001,
+      "capture_ms": 0.232917,
+      "added_ms": 0.231917
+    },
+    {
+      "baseline_ms": 0.000875,
+      "capture_ms": 0.224417,
+      "added_ms": 0.22354200000000002
+    },
+    {
+      "baseline_ms": 0.000916,
+      "capture_ms": 0.217375,
+      "added_ms": 0.216459
+    },
+    {
+      "baseline_ms": 0.00075,
+      "capture_ms": 0.246792,
+      "added_ms": 0.246042
+    },
+    {
+      "baseline_ms": 0.0005,
+      "capture_ms": 0.230625,
+      "added_ms": 0.230125
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.22325,
+      "added_ms": 0.22262500000000002
+    },
+    {
+      "baseline_ms": 0.0005,
+      "capture_ms": 0.220666,
+      "added_ms": 0.220166
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.196583,
+      "added_ms": 0.19595800000000002
+    },
+    {
+      "baseline_ms": 0.000667,
+      "capture_ms": 0.215208,
+      "added_ms": 0.214541
+    },
+    {
+      "baseline_ms": 0.000584,
+      "capture_ms": 0.223709,
+      "added_ms": 0.223125
+    },
+    {
+      "baseline_ms": 0.000875,
+      "capture_ms": 0.393375,
+      "added_ms": 0.39249999999999996
+    },
+    {
+      "baseline_ms": 0.000708,
+      "capture_ms": 0.268417,
+      "added_ms": 0.26770900000000003
+    },
+    {
+      "baseline_ms": 0.001,
+      "capture_ms": 0.213791,
+      "added_ms": 0.212791
+    },
+    {
+      "baseline_ms": 0.000791,
+      "capture_ms": 0.221709,
+      "added_ms": 0.220918
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.247667,
+      "added_ms": 0.247042
+    },
+    {
+      "baseline_ms": 0.000583,
+      "capture_ms": 0.231292,
+      "added_ms": 0.230709
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.218167,
+      "added_ms": 0.217542
+    },
+    {
+      "baseline_ms": 0.000708,
+      "capture_ms": 0.262583,
+      "added_ms": 0.261875
+    },
+    {
+      "baseline_ms": 0.000375,
+      "capture_ms": 0.236459,
+      "added_ms": 0.23608400000000002
+    },
+    {
+      "baseline_ms": 0.000667,
+      "capture_ms": 0.229916,
+      "added_ms": 0.229249
+    },
+    {
+      "baseline_ms": 0.002,
+      "capture_ms": 0.327125,
+      "added_ms": 0.325125
+    },
+    {
+      "baseline_ms": 0.000958,
+      "capture_ms": 0.325042,
+      "added_ms": 0.324084
+    },
+    {
+      "baseline_ms": 0.000583,
+      "capture_ms": 0.332917,
+      "added_ms": 0.332334
+    },
+    {
+      "baseline_ms": 0.000708,
+      "capture_ms": 0.253792,
+      "added_ms": 0.25308400000000003
+    },
+    {
+      "baseline_ms": 0.000542,
+      "capture_ms": 0.233125,
+      "added_ms": 0.232583
+    },
+    {
+      "baseline_ms": 0.000584,
+      "capture_ms": 0.218416,
+      "added_ms": 0.217832
+    },
+    {
+      "baseline_ms": 0.000709,
+      "capture_ms": 0.242792,
+      "added_ms": 0.24208300000000002
+    },
+    {
+      "baseline_ms": 0.000958,
+      "capture_ms": 0.259125,
+      "added_ms": 0.258167
+    },
+    {
+      "baseline_ms": 0.000875,
+      "capture_ms": 0.227875,
+      "added_ms": 0.227
+    },
+    {
+      "baseline_ms": 0.000458,
+      "capture_ms": 0.2285,
+      "added_ms": 0.22804200000000002
+    },
+    {
+      "baseline_ms": 0.000583,
+      "capture_ms": 0.223584,
+      "added_ms": 0.223001
+    },
+    {
+      "baseline_ms": 0.000583,
+      "capture_ms": 0.263791,
+      "added_ms": 0.263208
+    },
+    {
+      "baseline_ms": 0.000417,
+      "capture_ms": 0.232,
+      "added_ms": 0.231583
+    },
+    {
+      "baseline_ms": 0.0005,
+      "capture_ms": 0.213916,
+      "added_ms": 0.213416
+    },
+    {
+      "baseline_ms": 0.000459,
+      "capture_ms": 0.209125,
+      "added_ms": 0.20866600000000002
+    },
+    {
+      "baseline_ms": 0.0005,
+      "capture_ms": 0.216583,
+      "added_ms": 0.216083
+    },
+    {
+      "baseline_ms": 0.000834,
+      "capture_ms": 0.211458,
+      "added_ms": 0.210624
+    },
+    {
+      "baseline_ms": 0.000708,
+      "capture_ms": 0.251959,
+      "added_ms": 0.251251
+    },
+    {
+      "baseline_ms": 0.000917,
+      "capture_ms": 0.22275,
+      "added_ms": 0.221833
+    },
+    {
+      "baseline_ms": 0.000583,
+      "capture_ms": 0.236292,
+      "added_ms": 0.235709
+    },
+    {
+      "baseline_ms": 0.000875,
+      "capture_ms": 0.224833,
+      "added_ms": 0.22395800000000002
+    },
+    {
+      "baseline_ms": 0.000875,
+      "capture_ms": 0.225292,
+      "added_ms": 0.224417
+    },
+    {
+      "baseline_ms": 0.000958,
+      "capture_ms": 0.24375,
+      "added_ms": 0.242792
+    },
+    {
+      "baseline_ms": 0.000833,
+      "capture_ms": 0.25975,
+      "added_ms": 0.258917
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.23275,
+      "added_ms": 0.23212500000000003
+    },
+    {
+      "baseline_ms": 0.000792,
+      "capture_ms": 0.213166,
+      "added_ms": 0.212374
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.278833,
+      "added_ms": 0.278208
+    },
+    {
+      "baseline_ms": 0.000666,
+      "capture_ms": 0.232959,
+      "added_ms": 0.232293
+    },
+    {
+      "baseline_ms": 0.000583,
+      "capture_ms": 0.225291,
+      "added_ms": 0.224708
+    },
+    {
+      "baseline_ms": 0.000417,
+      "capture_ms": 0.223375,
+      "added_ms": 0.222958
+    },
+    {
+      "baseline_ms": 0.000541,
+      "capture_ms": 0.232417,
+      "added_ms": 0.231876
+    },
+    {
+      "baseline_ms": 0.000667,
+      "capture_ms": 0.256667,
+      "added_ms": 0.256
+    },
+    {
+      "baseline_ms": 0.000583,
+      "capture_ms": 0.23525,
+      "added_ms": 0.234667
+    },
+    {
+      "baseline_ms": 0.000417,
+      "capture_ms": 0.225083,
+      "added_ms": 0.224666
+    },
+    {
+      "baseline_ms": 0.000666,
+      "capture_ms": 0.237208,
+      "added_ms": 0.236542
+    },
+    {
+      "baseline_ms": 0.000583,
+      "capture_ms": 0.324375,
+      "added_ms": 0.323792
+    },
+    {
+      "baseline_ms": 0.000916,
+      "capture_ms": 0.236459,
+      "added_ms": 0.235543
+    },
+    {
+      "baseline_ms": 0.000416,
+      "capture_ms": 0.220667,
+      "added_ms": 0.220251
+    },
+    {
+      "baseline_ms": 0.000542,
+      "capture_ms": 0.2305,
+      "added_ms": 0.22995800000000002
+    },
+    {
+      "baseline_ms": 0.000708,
+      "capture_ms": 0.265458,
+      "added_ms": 0.26475000000000004
+    },
+    {
+      "baseline_ms": 0.000583,
+      "capture_ms": 0.228916,
+      "added_ms": 0.228333
+    },
+    {
+      "baseline_ms": 0.000459,
+      "capture_ms": 0.227666,
+      "added_ms": 0.22720700000000002
+    },
+    {
+      "baseline_ms": 0.000834,
+      "capture_ms": 0.223167,
+      "added_ms": 0.222333
+    },
+    {
+      "baseline_ms": 0.000708,
+      "capture_ms": 0.238583,
+      "added_ms": 0.237875
+    },
+    {
+      "baseline_ms": 0.000583,
+      "capture_ms": 0.218417,
+      "added_ms": 0.217834
+    },
+    {
+      "baseline_ms": 0.000458,
+      "capture_ms": 0.209791,
+      "added_ms": 0.20933300000000002
+    },
+    {
+      "baseline_ms": 0.000584,
+      "capture_ms": 0.23875,
+      "added_ms": 0.238166
+    },
+    {
+      "baseline_ms": 0.000917,
+      "capture_ms": 0.227416,
+      "added_ms": 0.226499
+    },
+    {
+      "baseline_ms": 0.00075,
+      "capture_ms": 0.258292,
+      "added_ms": 0.25754200000000005
+    },
+    {
+      "baseline_ms": 0.000541,
+      "capture_ms": 0.245833,
+      "added_ms": 0.24529199999999998
+    },
+    {
+      "baseline_ms": 0.000542,
+      "capture_ms": 0.2755,
+      "added_ms": 0.27495800000000004
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.282667,
+      "added_ms": 0.282042
+    },
+    {
+      "baseline_ms": 0.000667,
+      "capture_ms": 0.283041,
+      "added_ms": 0.282374
+    },
+    {
+      "baseline_ms": 0.000666,
+      "capture_ms": 0.234542,
+      "added_ms": 0.233876
+    },
+    {
+      "baseline_ms": 0.000916,
+      "capture_ms": 0.214,
+      "added_ms": 0.213084
+    },
+    {
+      "baseline_ms": 0.000917,
+      "capture_ms": 0.230334,
+      "added_ms": 0.229417
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.222459,
+      "added_ms": 0.221834
+    },
+    {
+      "baseline_ms": 0.0005,
+      "capture_ms": 0.224,
+      "added_ms": 0.2235
+    },
+    {
+      "baseline_ms": 0.000542,
+      "capture_ms": 0.214708,
+      "added_ms": 0.21416600000000002
+    },
+    {
+      "baseline_ms": 0.000791,
+      "capture_ms": 0.200417,
+      "added_ms": 0.19962600000000003
+    },
+    {
+      "baseline_ms": 0.000542,
+      "capture_ms": 0.234125,
+      "added_ms": 0.233583
+    },
+    {
+      "baseline_ms": 0.000541,
+      "capture_ms": 0.311084,
+      "added_ms": 0.310543
+    },
+    {
+      "baseline_ms": 0.000667,
+      "capture_ms": 0.27875,
+      "added_ms": 0.278083
+    },
+    {
+      "baseline_ms": 0.0005,
+      "capture_ms": 0.2135,
+      "added_ms": 0.213
+    },
+    {
+      "baseline_ms": 0.000417,
+      "capture_ms": 0.208625,
+      "added_ms": 0.208208
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.222875,
+      "added_ms": 0.22225
+    },
+    {
+      "baseline_ms": 0.000291,
+      "capture_ms": 0.2145,
+      "added_ms": 0.21420899999999998
+    },
+    {
+      "baseline_ms": 0.000458,
+      "capture_ms": 0.253917,
+      "added_ms": 0.253459
+    },
+    {
+      "baseline_ms": 0.000333,
+      "capture_ms": 0.206083,
+      "added_ms": 0.20575
+    },
+    {
+      "baseline_ms": 0.000541,
+      "capture_ms": 0.304542,
+      "added_ms": 0.30400099999999997
+    },
+    {
+      "baseline_ms": 0.000666,
+      "capture_ms": 0.284083,
+      "added_ms": 0.283417
+    },
+    {
+      "baseline_ms": 0.000584,
+      "capture_ms": 0.235834,
+      "added_ms": 0.23525
+    },
+    {
+      "baseline_ms": 0.0005,
+      "capture_ms": 0.326917,
+      "added_ms": 0.326417
+    },
+    {
+      "baseline_ms": 0.000667,
+      "capture_ms": 0.234459,
+      "added_ms": 0.233792
+    },
+    {
+      "baseline_ms": 0.000583,
+      "capture_ms": 0.316208,
+      "added_ms": 0.315625
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.2785,
+      "added_ms": 0.27787500000000004
+    },
+    {
+      "baseline_ms": 0.00075,
+      "capture_ms": 0.273666,
+      "added_ms": 0.27291600000000005
+    },
+    {
+      "baseline_ms": 0.00075,
+      "capture_ms": 0.274666,
+      "added_ms": 0.27391600000000005
+    },
+    {
+      "baseline_ms": 0.000875,
+      "capture_ms": 0.289917,
+      "added_ms": 0.28904199999999997
+    },
+    {
+      "baseline_ms": 0.000542,
+      "capture_ms": 0.233416,
+      "added_ms": 0.23287400000000003
+    },
+    {
+      "baseline_ms": 0.000417,
+      "capture_ms": 0.213375,
+      "added_ms": 0.212958
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.219333,
+      "added_ms": 0.218708
+    },
+    {
+      "baseline_ms": 0.001583,
+      "capture_ms": 0.308833,
+      "added_ms": 0.30725
+    },
+    {
+      "baseline_ms": 0.000833,
+      "capture_ms": 0.240959,
+      "added_ms": 0.240126
+    },
+    {
+      "baseline_ms": 0.000709,
+      "capture_ms": 0.242083,
+      "added_ms": 0.241374
+    },
+    {
+      "baseline_ms": 0.000583,
+      "capture_ms": 0.222125,
+      "added_ms": 0.221542
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.221333,
+      "added_ms": 0.22070800000000002
+    },
+    {
+      "baseline_ms": 0.0005,
+      "capture_ms": 0.23325,
+      "added_ms": 0.23275
+    },
+    {
+      "baseline_ms": 0.000583,
+      "capture_ms": 0.211125,
+      "added_ms": 0.210542
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.203292,
+      "added_ms": 0.202667
+    },
+    {
+      "baseline_ms": 0.000583,
+      "capture_ms": 0.218333,
+      "added_ms": 0.21775
+    },
+    {
+      "baseline_ms": 0.000666,
+      "capture_ms": 0.239,
+      "added_ms": 0.238334
+    },
+    {
+      "baseline_ms": 0.000459,
+      "capture_ms": 0.24625,
+      "added_ms": 0.245791
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.2455,
+      "added_ms": 0.244875
+    },
+    {
+      "baseline_ms": 0.000416,
+      "capture_ms": 0.219083,
+      "added_ms": 0.218667
+    },
+    {
+      "baseline_ms": 0.000708,
+      "capture_ms": 0.440792,
+      "added_ms": 0.44008400000000003
+    },
+    {
+      "baseline_ms": 0.000542,
+      "capture_ms": 0.254041,
+      "added_ms": 0.25349900000000003
+    },
+    {
+      "baseline_ms": 0.000542,
+      "capture_ms": 0.240667,
+      "added_ms": 0.240125
+    },
+    {
+      "baseline_ms": 0.000542,
+      "capture_ms": 0.257125,
+      "added_ms": 0.256583
+    },
+    {
+      "baseline_ms": 0.000583,
+      "capture_ms": 0.222,
+      "added_ms": 0.221417
+    },
+    {
+      "baseline_ms": 0.000458,
+      "capture_ms": 0.23875,
+      "added_ms": 0.238292
+    },
+    {
+      "baseline_ms": 0.000667,
+      "capture_ms": 0.267417,
+      "added_ms": 0.26675000000000004
+    },
+    {
+      "baseline_ms": 0.0005,
+      "capture_ms": 0.323833,
+      "added_ms": 0.323333
+    },
+    {
+      "baseline_ms": 0.0005,
+      "capture_ms": 0.225709,
+      "added_ms": 0.225209
+    },
+    {
+      "baseline_ms": 0.000583,
+      "capture_ms": 0.217042,
+      "added_ms": 0.216459
+    },
+    {
+      "baseline_ms": 0.000667,
+      "capture_ms": 0.242125,
+      "added_ms": 0.241458
+    },
+    {
+      "baseline_ms": 0.000541,
+      "capture_ms": 0.227,
+      "added_ms": 0.226459
+    },
+    {
+      "baseline_ms": 0.00075,
+      "capture_ms": 0.2585,
+      "added_ms": 0.25775000000000003
+    },
+    {
+      "baseline_ms": 0.000542,
+      "capture_ms": 0.22225,
+      "added_ms": 0.22170800000000002
+    },
+    {
+      "baseline_ms": 0.000459,
+      "capture_ms": 0.225291,
+      "added_ms": 0.224832
+    },
+    {
+      "baseline_ms": 0.0005,
+      "capture_ms": 0.217041,
+      "added_ms": 0.216541
+    },
+    {
+      "baseline_ms": 0.000584,
+      "capture_ms": 0.225708,
+      "added_ms": 0.225124
+    },
+    {
+      "baseline_ms": 0.000583,
+      "capture_ms": 0.2445,
+      "added_ms": 0.243917
+    },
+    {
+      "baseline_ms": 0.000583,
+      "capture_ms": 0.226958,
+      "added_ms": 0.226375
+    },
+    {
+      "baseline_ms": 0.000416,
+      "capture_ms": 0.210291,
+      "added_ms": 0.209875
+    },
+    {
+      "baseline_ms": 0.000667,
+      "capture_ms": 0.233875,
+      "added_ms": 0.233208
+    },
+    {
+      "baseline_ms": 0.000583,
+      "capture_ms": 0.232834,
+      "added_ms": 0.232251
+    },
+    {
+      "baseline_ms": 0.000708,
+      "capture_ms": 0.22,
+      "added_ms": 0.21929200000000001
+    },
+    {
+      "baseline_ms": 0.000541,
+      "capture_ms": 0.236459,
+      "added_ms": 0.235918
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.284708,
+      "added_ms": 0.28408300000000003
+    },
+    {
+      "baseline_ms": 0.000667,
+      "capture_ms": 0.292875,
+      "added_ms": 0.292208
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.251542,
+      "added_ms": 0.250917
+    },
+    {
+      "baseline_ms": 0.0005,
+      "capture_ms": 0.261958,
+      "added_ms": 0.261458
+    },
+    {
+      "baseline_ms": 0.0005,
+      "capture_ms": 0.216166,
+      "added_ms": 0.215666
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.251208,
+      "added_ms": 0.250583
+    },
+    {
+      "baseline_ms": 0.000458,
+      "capture_ms": 0.229625,
+      "added_ms": 0.229167
+    },
+    {
+      "baseline_ms": 0.000417,
+      "capture_ms": 0.211042,
+      "added_ms": 0.210625
+    },
+    {
+      "baseline_ms": 0.000417,
+      "capture_ms": 0.256792,
+      "added_ms": 0.256375
+    },
+    {
+      "baseline_ms": 0.00075,
+      "capture_ms": 0.234,
+      "added_ms": 0.23325
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.254666,
+      "added_ms": 0.254041
+    },
+    {
+      "baseline_ms": 0.000542,
+      "capture_ms": 0.230666,
+      "added_ms": 0.23012400000000002
+    },
+    {
+      "baseline_ms": 0.000458,
+      "capture_ms": 0.216083,
+      "added_ms": 0.215625
+    },
+    {
+      "baseline_ms": 0.001875,
+      "capture_ms": 0.307292,
+      "added_ms": 0.305417
+    },
+    {
+      "baseline_ms": 0.0005,
+      "capture_ms": 0.2165,
+      "added_ms": 0.216
+    },
+    {
+      "baseline_ms": 0.000708,
+      "capture_ms": 0.24575,
+      "added_ms": 0.245042
+    },
+    {
+      "baseline_ms": 0.001,
+      "capture_ms": 0.354666,
+      "added_ms": 0.353666
+    },
+    {
+      "baseline_ms": 0.0005,
+      "capture_ms": 0.234417,
+      "added_ms": 0.23391699999999999
+    },
+    {
+      "baseline_ms": 0.000417,
+      "capture_ms": 0.210041,
+      "added_ms": 0.209624
+    },
+    {
+      "baseline_ms": 0.000417,
+      "capture_ms": 0.24625,
+      "added_ms": 0.245833
+    },
+    {
+      "baseline_ms": 0.000417,
+      "capture_ms": 0.221125,
+      "added_ms": 0.220708
+    },
+    {
+      "baseline_ms": 0.000583,
+      "capture_ms": 0.2355,
+      "added_ms": 0.234917
+    },
+    {
+      "baseline_ms": 0.000667,
+      "capture_ms": 0.284125,
+      "added_ms": 0.28345800000000004
+    },
+    {
+      "baseline_ms": 0.000708,
+      "capture_ms": 0.273583,
+      "added_ms": 0.27287500000000003
+    },
+    {
+      "baseline_ms": 0.00075,
+      "capture_ms": 0.215375,
+      "added_ms": 0.214625
+    },
+    {
+      "baseline_ms": 0.000792,
+      "capture_ms": 0.232208,
+      "added_ms": 0.231416
+    },
+    {
+      "baseline_ms": 0.000542,
+      "capture_ms": 0.216708,
+      "added_ms": 0.21616600000000002
+    },
+    {
+      "baseline_ms": 0.000584,
+      "capture_ms": 0.245166,
+      "added_ms": 0.244582
+    },
+    {
+      "baseline_ms": 0.000959,
+      "capture_ms": 0.228166,
+      "added_ms": 0.22720700000000002
+    },
+    {
+      "baseline_ms": 0.000541,
+      "capture_ms": 0.225875,
+      "added_ms": 0.22533399999999998
+    },
+    {
+      "baseline_ms": 0.000667,
+      "capture_ms": 0.287958,
+      "added_ms": 0.287291
+    },
+    {
+      "baseline_ms": 0.000542,
+      "capture_ms": 0.218125,
+      "added_ms": 0.21758300000000003
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.234834,
+      "added_ms": 0.234209
+    },
+    {
+      "baseline_ms": 0.0005,
+      "capture_ms": 0.255458,
+      "added_ms": 0.254958
+    },
+    {
+      "baseline_ms": 0.0005,
+      "capture_ms": 0.217791,
+      "added_ms": 0.217291
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.228666,
+      "added_ms": 0.22804100000000002
+    },
+    {
+      "baseline_ms": 0.000792,
+      "capture_ms": 0.233417,
+      "added_ms": 0.23262500000000003
+    },
+    {
+      "baseline_ms": 0.000666,
+      "capture_ms": 0.223584,
+      "added_ms": 0.222918
+    },
+    {
+      "baseline_ms": 0.0005,
+      "capture_ms": 0.21575,
+      "added_ms": 0.21525
+    },
+    {
+      "baseline_ms": 0.000666,
+      "capture_ms": 0.206209,
+      "added_ms": 0.205543
+    },
+    {
+      "baseline_ms": 0.000708,
+      "capture_ms": 0.2085,
+      "added_ms": 0.207792
+    },
+    {
+      "baseline_ms": 0.000666,
+      "capture_ms": 0.201584,
+      "added_ms": 0.200918
+    },
+    {
+      "baseline_ms": 0.000458,
+      "capture_ms": 0.215083,
+      "added_ms": 0.214625
+    },
+    {
+      "baseline_ms": 0.000375,
+      "capture_ms": 0.217125,
+      "added_ms": 0.21675000000000003
+    },
+    {
+      "baseline_ms": 0.0005,
+      "capture_ms": 0.245208,
+      "added_ms": 0.244708
+    },
+    {
+      "baseline_ms": 0.000417,
+      "capture_ms": 0.223417,
+      "added_ms": 0.223
+    },
+    {
+      "baseline_ms": 0.000584,
+      "capture_ms": 0.243584,
+      "added_ms": 0.243
+    },
+    {
+      "baseline_ms": 0.000584,
+      "capture_ms": 0.222333,
+      "added_ms": 0.221749
+    },
+    {
+      "baseline_ms": 0.000584,
+      "capture_ms": 0.232875,
+      "added_ms": 0.232291
+    },
+    {
+      "baseline_ms": 0.000541,
+      "capture_ms": 0.237875,
+      "added_ms": 0.237334
+    },
+    {
+      "baseline_ms": 0.000583,
+      "capture_ms": 0.22225,
+      "added_ms": 0.221667
+    },
+    {
+      "baseline_ms": 0.000416,
+      "capture_ms": 0.234208,
+      "added_ms": 0.233792
+    },
+    {
+      "baseline_ms": 0.0005,
+      "capture_ms": 0.252709,
+      "added_ms": 0.252209
+    },
+    {
+      "baseline_ms": 0.000458,
+      "capture_ms": 0.210833,
+      "added_ms": 0.210375
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.206625,
+      "added_ms": 0.20600000000000002
+    },
+    {
+      "baseline_ms": 0.000792,
+      "capture_ms": 0.255666,
+      "added_ms": 0.254874
+    },
+    {
+      "baseline_ms": 0.000708,
+      "capture_ms": 0.24825,
+      "added_ms": 0.247542
+    },
+    {
+      "baseline_ms": 0.000417,
+      "capture_ms": 0.231667,
+      "added_ms": 0.23125
+    },
+    {
+      "baseline_ms": 0.00075,
+      "capture_ms": 0.224958,
+      "added_ms": 0.224208
+    },
+    {
+      "baseline_ms": 0.000791,
+      "capture_ms": 0.245833,
+      "added_ms": 0.24504199999999998
+    },
+    {
+      "baseline_ms": 0.000667,
+      "capture_ms": 0.210709,
+      "added_ms": 0.210042
+    },
+    {
+      "baseline_ms": 0.000709,
+      "capture_ms": 0.261417,
+      "added_ms": 0.260708
+    },
+    {
+      "baseline_ms": 0.000666,
+      "capture_ms": 0.280417,
+      "added_ms": 0.279751
+    },
+    {
+      "baseline_ms": 0.000458,
+      "capture_ms": 0.285958,
+      "added_ms": 0.2855
+    },
+    {
+      "baseline_ms": 0.000541,
+      "capture_ms": 0.294833,
+      "added_ms": 0.294292
+    },
+    {
+      "baseline_ms": 0.000334,
+      "capture_ms": 0.347166,
+      "added_ms": 0.346832
+    },
+    {
+      "baseline_ms": 0.000875,
+      "capture_ms": 0.34775,
+      "added_ms": 0.346875
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.258042,
+      "added_ms": 0.257417
+    },
+    {
+      "baseline_ms": 0.000459,
+      "capture_ms": 0.23325,
+      "added_ms": 0.23279100000000003
+    },
+    {
+      "baseline_ms": 0.0005,
+      "capture_ms": 0.202375,
+      "added_ms": 0.201875
+    },
+    {
+      "baseline_ms": 0.000875,
+      "capture_ms": 0.21475,
+      "added_ms": 0.213875
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.212792,
+      "added_ms": 0.21216700000000002
+    },
+    {
+      "baseline_ms": 0.000833,
+      "capture_ms": 0.218334,
+      "added_ms": 0.217501
+    },
+    {
+      "baseline_ms": 0.000916,
+      "capture_ms": 0.269,
+      "added_ms": 0.26808400000000004
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.269541,
+      "added_ms": 0.268916
+    },
+    {
+      "baseline_ms": 0.000792,
+      "capture_ms": 0.286208,
+      "added_ms": 0.285416
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.282625,
+      "added_ms": 0.28200000000000003
+    },
+    {
+      "baseline_ms": 0.000583,
+      "capture_ms": 0.236083,
+      "added_ms": 0.2355
+    },
+    {
+      "baseline_ms": 0.000541,
+      "capture_ms": 0.257709,
+      "added_ms": 0.257168
+    },
+    {
+      "baseline_ms": 0.000667,
+      "capture_ms": 0.242,
+      "added_ms": 0.241333
+    },
+    {
+      "baseline_ms": 0.000333,
+      "capture_ms": 0.231209,
+      "added_ms": 0.230876
+    },
+    {
+      "baseline_ms": 0.000542,
+      "capture_ms": 0.223875,
+      "added_ms": 0.223333
+    },
+    {
+      "baseline_ms": 0.0005,
+      "capture_ms": 0.242583,
+      "added_ms": 0.242083
+    },
+    {
+      "baseline_ms": 0.000542,
+      "capture_ms": 0.261292,
+      "added_ms": 0.26075000000000004
+    },
+    {
+      "baseline_ms": 0.0005,
+      "capture_ms": 0.241916,
+      "added_ms": 0.241416
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.278458,
+      "added_ms": 0.277833
+    },
+    {
+      "baseline_ms": 0.000709,
+      "capture_ms": 0.296834,
+      "added_ms": 0.29612499999999997
+    },
+    {
+      "baseline_ms": 0.000833,
+      "capture_ms": 0.226209,
+      "added_ms": 0.225376
+    },
+    {
+      "baseline_ms": 0.000458,
+      "capture_ms": 0.199708,
+      "added_ms": 0.19925
+    },
+    {
+      "baseline_ms": 0.000583,
+      "capture_ms": 0.208792,
+      "added_ms": 0.208209
+    },
+    {
+      "baseline_ms": 0.000625,
+      "capture_ms": 0.199458,
+      "added_ms": 0.198833
+    },
+    {
+      "baseline_ms": 0.000708,
+      "capture_ms": 0.283167,
+      "added_ms": 0.282459
+    },
+    {
+      "baseline_ms": 0.000583,
+      "capture_ms": 0.247542,
+      "added_ms": 0.246959
+    }
+  ]
+}

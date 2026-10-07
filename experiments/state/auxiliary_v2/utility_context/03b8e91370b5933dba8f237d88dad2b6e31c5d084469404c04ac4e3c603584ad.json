@@ -1,0 +1,32 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": false,
+    "evidence": [
+      "Post-surgical knee physiotherapy",
+      "Twice weekly",
+      "Six weeks",
+      "Time preference | Morning appointments",
+      "Routine meniscus repair |\n| Clinical status | Cleared for rehabilitation"
+    ],
+    "rationale": "The booking record retains all five essential details. The stated total of 12 sessions follows from twice-weekly appointments for six weeks.",
+    "complete": true,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "b0721762e0a39dc18b6b583a974acc5dfbc78d1c76ccd344702e5e2bc47274f3",
+  "source_hash": "eb92f55524d59e8d0abc68e6707972f7a35ddb9fc967b59588656c097667e1f9",
+  "rubric_hash": "48a4fc2966fc104a4ad0d4f3ff93aa6e9463c0a605ce728039b04ee996909a63",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "openai/gpt-6-sol",
+  "request_id": "03b8e91370b5933dba8f237d88dad2b6e31c5d084469404c04ac4e3c603584ad",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

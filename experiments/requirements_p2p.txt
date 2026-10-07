@@ -1,0 +1,2 @@
+# Python 3.10+ environment for peer_langgraph_campaign.py.
+langgraph==1.0.10

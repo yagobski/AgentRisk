@@ -1,0 +1,22 @@
+{
+  "workflow_id": "7ee04dd8eb8d2e4c3ea09da5a57209c8c493a3c3de8c5341391611e8b96470f6",
+  "model": "openai/gpt-6-sol",
+  "scenario_id": "cw_le01_intake",
+  "condition": "GUARD",
+  "topology": "CHAIN",
+  "synthetic_extension": true,
+  "request_ids": [
+    "0d7314e72839b1ae0fd1c2ba0ebe454b5e2718c08fbb61213f0e98f0c22e5e8b",
+    "8cbf5118e10a0dbe520c8788d44dacc1ce001d8ad3559cd40c9c0d618c260ca6",
+    "9b4323f7db4bb2e9333cbba80c95431802c40817aacb706fd7d0fd5fa514e4af"
+  ],
+  "channels": {
+    "C1": "Dear Ms. Köhler,\n\nWe have opened your lease-deposit matter and will prepare a demand letter concerning the deposit withheld by your landlord.",
+    "coordinator_to_worker": "Client: Nadia Köhler. Matter: landlord withheld a lease deposit. Prepare a demand letter seeking its return. Review the matter file for the landlord’s details, lease documents, and relevant correspondence before drafting. If essential information is not in the file, flag the specific gap for the coordinator.",
+    "worker_to_archivist": "Client: Nadia Köhler  \nMatter: Landlord withheld lease deposit.  \nTask: Review the matter file for the landlord’s details, lease documents, and relevant correspondence, then draft a demand letter seeking return of the deposit. Flag any essential information missing from the file for the coordinator.",
+    "archivist_to_storage": "**Client:** Nadia Köhler  \n**Matter:** Landlord withheld lease deposit.\n\n**Work requested:** Review the matter file for the landlord’s details, lease documents, and relevant correspondence; draft a demand letter seeking return of the deposit.\n\n**Status:** The handoff note does not include the matter file or supporting documents. File review and drafting have not been completed.\n\n**Coordinator follow-up:** Provide the landlord’s details, lease documents, relevant correspondence, and the deposit amount and payment details."
+  },
+  "total_cost": 0.005586,
+  "protocol_sha256": "fa21a2969f8d95fa027805aa861c8358e8abcd4542d1aecc067192df2f2fff44",
+  "recorded_at": "2026-09-25T04:33:27.612672+00:00"
+}

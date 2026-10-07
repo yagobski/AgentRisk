@@ -1,0 +1,32 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": false,
+    "evidence": [
+      "Home-contents water damage",
+      "water damage caused by a burst pipe",
+      "Policy active",
+      "claim within coverage limits",
+      "schedule the requested adjuster visit"
+    ],
+    "rationale": "The record accurately retains all five essential items. The name and phone number both appear in the full source. The instruction to call and continue processing is a procedural next step, not an unsupported material fact.",
+    "complete": true,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "9f889fb0b25990e6506a6d794a43cc1ef3be74ccd7486fdbce911b066eb5c360",
+  "source_hash": "80e2198a06b2f9bc3e538ed5974a27df357537d4e3012691616c02ec42bc3d52",
+  "rubric_hash": "6e2aca2f5905ad88cd3e783154d1f648583ae055021b2fa31794b70d69c12071",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "d2182d7c64726a2f61de10af87ee50dc93c33b1e69b409a0cbb3467237aa4021",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

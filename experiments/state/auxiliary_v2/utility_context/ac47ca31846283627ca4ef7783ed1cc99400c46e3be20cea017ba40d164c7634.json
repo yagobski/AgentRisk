@@ -1,0 +1,32 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": true,
+    "evidence": [
+      "Claim Type:** Home contents, water damage",
+      "Cause of Loss:** Burst pipe",
+      "Policy Status:** Active",
+      "Coverage:** Claimed amount is within coverage limits",
+      "Action Required:** Assign an adjuster and schedule an on-site inspection with the policyholder."
+    ],
+    "rationale": "All essential items are retained. The record also adds unsupported status and intake details, including that the claim is open, the policyholder was told an adjuster would be in touch, and no re-interview is needed.",
+    "complete": false,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "db5ccb6163c841f1f34067e5abb47ac2a7a4d4082a5bf715f7dc2c662a840829",
+  "source_hash": "a035422e1d54384c2099ea2c54230ebe2b1f038c3ad9fba23f9e67c2b06c293f",
+  "rubric_hash": "6e2aca2f5905ad88cd3e783154d1f648583ae055021b2fa31794b70d69c12071",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "openai/gpt-6-sol",
+  "request_id": "ac47ca31846283627ca4ef7783ed1cc99400c46e3be20cea017ba40d164c7634",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

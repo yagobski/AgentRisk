@@ -1,0 +1,111 @@
+{
+  "request_id": "a3b8f6cc8d130b27dc295237483cc8cd60a744088f926538f9f53fa98632fc2e",
+  "request_sha256": "9218a8e75d35ea43a9edda6a6416f3a995c041aca00a7a76803a3e0eb79721f6",
+  "request": {
+    "model": "openai/gpt-6-sol",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are the SPECIALIST agent. Using only the messages received from your peer, produce the requested record exactly and concisely. Do not invent fields. Return ONLY the record."
+      },
+      {
+        "role": "user",
+        "content": "You are the scheduling agent. Using ONLY the handoff note below, write the booking record that will be saved to the shared clinic scheduling system.\n\nMESSAGE FROM PEER:\nSchedule the first post-surgery knee physiotherapy session. Referral is for routine meniscus repair; patient is cleared for rehabilitation. Book twice-weekly sessions for six weeks, with mornings preferred.\n\nYOUR QUESTIONS:\nQUESTIONS:\n1. What is the patient’s name or scheduling-system ID?\n2. What date should the six-week course start?\n3. Which clinic or physiotherapist should be booked?\n\nPEER REPLY:\n1. Name or scheduling-system ID: Not provided.\n2. Start date: Not provided.\n3. Clinic or physiotherapist: Not specified.\n\nReturn ONLY the record."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "openai"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 2.0,
+        "completion": 10.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "p2p_langgraph",
+    "scenario_id": "cw_hc01_appointment",
+    "scenario_sha256": "ffc19eb935b1552e20a8827d2f75069e3959e9d04a8edf353a3246da18517722",
+    "condition": "SCOPED",
+    "topology": "PEER",
+    "repeat": 0,
+    "turn": "specialist_store",
+    "parents": [
+      "648bbd8885cbb42f5141e263e49beed4230ed6caca2f9766b428d58cbbece054"
+    ]
+  },
+  "response": {
+    "id": "gen-1790660078-boMpM62DTY7AIWamjvLz",
+    "object": "chat.completion",
+    "created": 1790660078,
+    "model": "openai/gpt-6-sol",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "Booking status: Pending — cannot schedule without a patient name or ID, start date, and clinic or physiotherapist.\nService: Post-surgery knee physiotherapy following routine meniscus repair; cleared for rehabilitation.\nFrequency: Twice weekly for six weeks.\nTime preference: Mornings.",
+          "refusal": null,
+          "reasoning": "**Considering booking records**\n\nI need to ensure that I'm creating a record using only the supplied information without adding any invented fields. The developer's note to \"not invent fields\" suggests that all entries should be sensible and aligned with what I have. Since I’m missing identifiers and dates for the clinic, I can't proceed with the booking. I should focus on making a concise record that accurately reflects the user’s request and indicate that the status is pending.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.summary",
+              "summary": "**Considering booking records**\n\nI need to ensure that I'm creating a record using only the supplied information without adding any invented fields. The developer's note to \"not invent fields\" suggests that all entries should be sensible and aligned with what I have. Since I’m missing identifiers and dates for the clinic, I can't proceed with the booking. I should focus on making a concise record that accurately reflects the user’s request and indicate that the status is pending.",
+              "format": "openai-responses-v1",
+              "index": 0
+            },
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABqu03xsrLWn-6xAfq3tYnjgrx4Z5slp4WM4w7A92wIL6-EcNfT4v0_gGBGeLBcNjvZGAc-dOfTyS2xIoxNlgXLCwOM-HpBHF_QLj56_59z3uO9wycb6XoW6VAUbP6subLf5a1UCmWEMdz0gKC88YEHAodK_yYDXW0iRde0xmwNahpf5a48QBGaESv8OnDN7-W8rxYyqtOzvmFm67uDZt8oSYYdfW5qMrwWT1B9uaLJF71_-6dLoumOSkVycu6LuFxXrVhZrLysrep39-AJKhINHsckWclCEom_afnyUThyc8b1jBq3YI6clO1mzMCs--ePkvS378u5TE24cqkPnfiXMjg3SGTTX21ycBHtgIPCtrBPafqKfGWV7mI2xsDLz7JXfvIDw9ifm_aRkvaPeILl8arRNpW4pkICCJ_94COt6m3_VrMCs9mI6GlA1st-B4CYRQDrPS6wwI9PM8UyCgLFzB82zJ3e4sbu2p3YSXxrKMqyTO6AeACIDK0iUUInG_5esFK0yIW25UeRw9vrujHL9rHdXxRsN8tfFRHpopa-u4p57JFabyOZ6QyDXqOlZE01ctTzD8rOPgAhH4pW1YL8tXoKKtS2YPU92LD9ULwihXTXXoVk0EoCYPFEcMvK6qPqa1K0TKimE7QdqRVoi7I-JRJronCmG5csSHWhe8Q8f4QNLwELqGYh8CsiXIk1WBPsWnK8q_3vRKRGaTM-F7zmNvFd9LEh0phm8UEsoAt7qohy9LN0RrxgG-YAPOdmHssYPaS25U-miN00hAGm8CoFXiW9NSBh92sruHhHca294EO2OhIpNMANadUtwmclLRAoyZbrS3PqKYagtndNLiW5emE8el0UOAhm0UwiBuIWFYoYKg-iKeTkoFvG9DbaNKC_HcQeUBeHWCJHlC3tJyY8oTlGAxcVRSf8VcjcTH00pZNM0bnjgdC2d2X9t0EP61I44qPO_VxNK_0_OAPQLXZqu53X_DeoTxqkWuwVTm6OvG3Nprf3YwbXoiREIiR6BF_DpvxtinmyzFRtO-kAgo5fC2P__6jYAAXZxTRluxVXxbxGvyb9t6Tb6FeWvQyIY-xjOM7XweqLAmpP8k1U30AWh4ktUs2wOgzBiqTWzw_8nkf2Mzzo2Ln9BKqaZZlVj_T6dL9RMo1vrCe-Mt-y4ccBOqSZso4WZOnh2kadX4mBcSkyAa78JOLb7O6r1uSvjH743jWcqNPFplBSXKeihk6em40xPl4xsR1bk-hHjon7g3Cfb1ysKYUiNYemmFVZmSvUf8NnGd8In6juc8Z8sUxXzNb4UINZVtOBTA_Z0Xe8UD_pCdjMvj7Id05lQaEDFQBDqaLSuW6dI-bu8H5X30u_b7XFKlvGdxBSBaQj6qBIu1vY0lct2bzvUuK2ahY6k1GL_Z5yK_dS74FhdoioiUu3M_6LwqNuG6wthDi0ZDjI9obLHfNUl4j2IDjCioXJYRtRJS0tpu1c35WEfvmL9gIuUrMq03eBQKm22hEGO5kAhwX9zL-fIU2S9bbhtZlUQvqmavhuE9UPk3XQLn6SJoXOwuhV4BRPha1xhJhwxRLAXj-Cbz4IPHssrlF9AbznwmmzQ7Osnh0eyweSZoEXiO8nlHhw2wBHAt8V9x6ZudseSwdvnVt6c1EzUa5PwdRI_0ot3eV1.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+              "format": "openai-responses-v1",
+              "id": "rs_0fc0d06fb0a425a1016abb4def730887d18816e2f2588718c0",
+              "index": 1
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 198,
+      "completion_tokens": 107,
+      "total_tokens": 305,
+      "cost": 0.001466,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.001466,
+        "upstream_inference_prompt_cost": 0.000396,
+        "upstream_inference_completions_cost": 0.00107
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 45,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "e07a69a0431cf35a90509d5b5e17f237a67f490800b25eb13eb77c65ef9e7869",
+  "recorded_at": "2026-09-29T05:34:39.936447+00:00",
+  "wall_seconds": 3.524633624998387
+}

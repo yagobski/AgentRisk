@@ -1,0 +1,111 @@
+{
+  "request_id": "cf56a89b34785a7acfcc2a779ca78272f414df30ca21daba0ab3731c06a6f88d",
+  "request_sha256": "04cde86f018c7296087d908baff966ba795c348a5469d228697ea3937d8fe6de",
+  "request": {
+    "model": "openai/gpt-6-sol",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a downstream WORKER agent. You will be given ONLY a handoff note from the coordinator. Using only that note, produce the requested internal record exactly and concisely. Do not invent fields."
+      },
+      {
+        "role": "user",
+        "content": "You are the drafting paralegal agent. Using ONLY the handoff note below, write the matter record saved to the shared case-management system.\n\nHANDOFF NOTE:\nMatter: Lease dispute concerning a deposit withheld by the landlord. The client requests a demand letter. Draft the letter using the information available in the matter file; flag any essential missing facts for the coordinator rather than re-interviewing the client.\n\nReturn ONLY the record."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "openai"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 2.0,
+        "completion": 10.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "multihop",
+    "scenario_id": "cw_le01_intake",
+    "scenario_sha256": "8d307c505fa041eb3ef36282e595ad197bce3e0c7020b8dd0e8f6df47f020c2e",
+    "condition": "SCOPED",
+    "topology": "CHAIN",
+    "repeat": 0,
+    "turn": "worker",
+    "parents": [
+      "891a259e19384e09d39395888b010827803d3255e60120216558d1eee06b6134"
+    ]
+  },
+  "response": {
+    "id": "gen-1790263344-hXx907pbJ6KCb1VuECpQ",
+    "object": "chat.completion",
+    "created": 1790263344,
+    "model": "openai/gpt-6-sol",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "**Matter:** Lease dispute — landlord’s withholding of deposit.\n\n**Client request:** Demand letter seeking return of the deposit.\n\n**Drafting status:** The handoff note does not include the matter file or facts needed to draft the letter. Review the file and draft from the information available there; do not re-interview the client.\n\n**Coordinator flag:** If absent from the file, obtain the parties’ names and addresses, property address, deposit amount, lease and move-out dates, amount withheld and landlord’s stated reason, relevant lease terms and communications, and the applicable jurisdiction.",
+          "refusal": null,
+          "reasoning": "**Drafting a letter approach**\n\nI need to keep everything factual and only record genuine details. The user's request is to draft a letter using the information in the matter file, but since I don’t have access to that file, I can't draft a substantive letter. Instead, I’ll state that I'm pending a review of the matter file and note the key missing facts if they aren't included. I have to avoid assuming anything is missing from the file and focus on identifying essential items to verify.",
+          "reasoning_details": [
+            {
+              "type": "reasoning.summary",
+              "summary": "**Drafting a letter approach**\n\nI need to keep everything factual and only record genuine details. The user's request is to draft a letter using the information in the matter file, but since I don’t have access to that file, I can't draft a substantive letter. Instead, I’ll state that I'm pending a review of the matter file and note the key missing facts if they aren't included. I have to avoid assuming anything is missing from the file and focus on identifying essential items to verify.",
+              "format": "openai-responses-v1",
+              "index": 0
+            },
+            {
+              "type": "reasoning.encrypted",
+              "data": "gAAAAABqtUAz60qxFkCnalgTrZv2X8kBI72ChswgCjp8p8zovwNMBxjGVTvrLNmk3JD1wSR0_0Qzy0aKCCRNY3uVoC5a_KG0vUyYXi36A8xJRvtZW_2mGWjRoTJvivizcIhgCJMznxy77GXrl0ByJr67va3mMdJ8nMd6nUHHZZufAkBB9jj5XI14JzU40uW_X5a7gaTn_P8oRh9H9AkgvIvtjgRQ_JJcJ8Km4Crf3QzUAu59s0s04xa3H8s9XZi5PP1XGPJKhnUzgfupdLEVKJSVBHgIrTceuGMC2yiLz5CsJlzN-ziHMwk-mmMFUqOEqaRAhOpqqzuPPFnjmBgXum5i_V0QOU34PCTuWtHrN5YF0fXCuoTTxvI-ls9J5m1X-p4_KKu06j6BOj6j7I4bQZsiOYCvvYEKjA4iHBy4M8WSuojhyvT-v4YRh1IN1e2TUgWI5pc2vDVk864yaiYzakzzdVDTAgDH1_GxFS6hplqmB3zUVB7hgBaXijxJuRZ1yj9vhCdgQOT-NsY9BSxUby0H8fP6cY3XaH_U4m2HhcWyGI2GVMMc6dfByS7NxpXHHa2Ym53yUZViMIyX25H0yDX_1-hP8JLbkZE_x2MBYkYFh1bJSoKK1lUb7I4EvBhSp1fAhxScs4NI8SfrwBLVQJS-SlnzeCAG1QmAg8kSTSvyoPbXnUsSVmhE-L4sSYIvRUerMOdQ9-wUkQPGNaUFToAzWb_SQBSzmurhF-LMBt-G_QA1cjJ6jX7sH3XqaWwkDPhOPfo5dk4PpyRuwdBHSt75S8mNm3LZSz4lzW-g1gxWIUcX4uV9MUplaQ8YJGP8d3hoBeaXU3IVBATVSwu1wTPA9mTxztURkc-zlJVFk3SKk4d993_0DvBeZ7EhtNMX9S7cPQXcPKPi4NQrNJtIirzF49C9uwk03L8pDfAm0rgaBGPQ-zEQMIImaPr6uRF_i7XpgAM4Iwpba4PVJNDCaj-J8Z6CHtR_VnlFwns3EEIci5hOuA4C91n7lxN2mbAD56cxPgrQPCe8YY5J8JwiDcc-ux2weyohLu5RO9CIrO6X8usOhzF1hfVe60n3fj0pP8uD-DsenF2Vamv-FPNzDjFaQAK-T_Lbh6cLoaJB07_KZxZyAxJPYaYOQLkt8dyEfpUjzsevUdWKVMhLfF819vJa8hpeNHfYoynPke-VbaA8JoN8WnbniXVF3t3mX1IpQM5josD2gYanZx4-HpVwZbU9j31ibR3ZHYv92iUsYPdYBBofe8KY_bJ0dr72IzWQa-rmr1kBQ-TEUF_qtFvgHjaEOp-BrKfEiXAP99621FOv-2uGqMcLHXKtcu3v_BInvrnto3p3RyZ88aXyy9DETnEuLggncoGZOAKB5eg-_sZIw9UN-5gsqINCnncgV2IfRz9XumQx3EHJmYs_q1GlVAFFQBJXQJmQkZ43jDi2wJuldWY-KpfjH0lW_aTYqnx7eUrUq-nuS6wD7aHY8HADc5ib_DGmuq5YtjNxWELNvBgONWD0NXZHf5GZpOmkIQpN_gBUK3Y7wtDKlxO_vCl7lZHiJr-3NyMqjwzUKnj98PTJ7MRhej60HlFeGpTkzCf1O-hmxq1KnKkELjGaaZPhG4Stob9ogDejjwoij3qzIRKbSIPEsWgyd9WMdrNLcf-5ZaBN6_88T9r5aVIGlJxR01Xz9NY_PHAr90EcHzYGiFKj4PVHX1C4BYkVxU1L136XPpX7fFktxyAqnD1cJdhOb1Nzbd0wQCZFTdzL8rAJsl9sD_kRLjJHlNRQusqhIspDuaYiyXYmxuHCF4nXg1A92ZEpMshm6wfoeXbia8yAZmUWgH_vnMb4O5w=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LXNvbC0yMDI2MDkyMnxvcGVuYWkifQ",
+              "format": "openai-responses-v1",
+              "id": "rs_01de73a4ba09f76a016ab5403194e887d1992f65a7fabba265",
+              "index": 1
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 138,
+      "completion_tokens": 192,
+      "total_tokens": 330,
+      "cost": 0.002196,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.002196,
+        "upstream_inference_prompt_cost": 0.000276,
+        "upstream_inference_completions_cost": 0.00192
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 71,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "1f737bfd80bfb04ba4a1712a7444c9e0545324c155ac9b247698e890ebcca3e4",
+  "recorded_at": "2026-09-24T15:22:29.210446+00:00",
+  "wall_seconds": 4.732390666999976
+}

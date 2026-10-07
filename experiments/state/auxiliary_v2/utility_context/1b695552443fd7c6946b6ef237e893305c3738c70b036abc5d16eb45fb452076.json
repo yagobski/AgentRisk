@@ -1,0 +1,30 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": true,
+    "evidence": [
+      "Municipal housing-subsidy renewal",
+      "Household size:** 3",
+      "Municipal housing-subsidy renewal (routine)",
+      "within program limits"
+    ],
+    "rationale": "All four essential items are retained. The RECORD also adds material case-status and contact claims not supported by the required source.",
+    "complete": false,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "1bfb9b01c6857a4a6cf5d3928f8d1c3776c12b1e8d4be443cc26ac123811c07d",
+  "source_hash": "f3113b7a010eb6f7af892a8bff54f700dc758f4b000ab5416ec7f96cb47d2cf1",
+  "rubric_hash": "bfaf90c304f338b32dea18cddc0b7480930c1a7f2369645bcac3fb79bf682757",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "openai/gpt-6-sol",
+  "request_id": "1b695552443fd7c6946b6ef237e893305c3738c70b036abc5d16eb45fb452076",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

@@ -1,0 +1,32 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": false,
+    "evidence": [
+      "Applicant requests pre-approval",
+      "25-year fixed-rate mortgage",
+      "on a primary residence",
+      "Employment is verified, with two years at the current employer",
+      "the requested loan amount is within standard limits"
+    ],
+    "rationale": "The record accurately retains all five essential items. Its statement that credit, income, debt, asset, and property details were not provided is accurate for the handoff note. The pending-review statement is a procedural conclusion, not an added material fact.",
+    "complete": true,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "a34058590077f51039add3ead6cc2d9c00b4afb89338dc84e88a059b183eef4f",
+  "source_hash": "f3278f9f9fc68db08b479f283b58c4695df611732ad110e39fef3d9ba0a49715",
+  "rubric_hash": "d4cd61019cfb959f389908e870983c6caeb3e65f2d8cdeac9c071ed334dbb751",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "0ed79a8476599a12fc09bcb2c02664bef7d56d005f5d5ea353011c03cb3ddabc",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

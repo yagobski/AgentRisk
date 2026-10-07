@@ -1,0 +1,784 @@
+{
+  "14556d13f1f5be9636f73e60e391e2dcac39a2364e81457432c2e113fa762f5f": {
+    "status": "ok",
+    "stage": "multihop",
+    "started_at": "2026-09-25T04:29:11.343851+00:00",
+    "charged_or_reserved_usd": 0.012644,
+    "allowance_usd": 0.120675,
+    "account_usage_before": 4.056506,
+    "meta": {
+      "experiment": "guard-chain-20260925",
+      "scenario_id": "cw_hc01_appointment",
+      "scenario_sha256": "ffc19eb935b1552e20a8827d2f75069e3959e9d04a8edf353a3246da18517722",
+      "condition": "GUARD",
+      "topology": "CHAIN",
+      "turn": "coordinator",
+      "parents": [],
+      "repeat": 0
+    },
+    "actual_cost_usd": 0.012644,
+    "response_id": "gen-1790310552-AXa6oHKrgUmq7pSe5dOb",
+    "finished_at": "2026-09-25T04:29:18.090610+00:00"
+  },
+  "e558ec3ee8a8ec460cf8d41ccad53dae159b14f75de39b8c846ba4fa52a321ac": {
+    "status": "ok",
+    "stage": "multihop",
+    "started_at": "2026-09-25T04:29:11.515657+00:00",
+    "charged_or_reserved_usd": 0.002922,
+    "allowance_usd": 0.060284375,
+    "account_usage_before": 4.056506,
+    "meta": {
+      "experiment": "guard-chain-20260925",
+      "scenario_id": "cw_fi01_mortgage",
+      "scenario_sha256": "f697a7e80187df1e28bd6548b71d5e6ac2cd53c9edfaf5c58156c9d4616dff52",
+      "condition": "GUARD",
+      "topology": "CHAIN",
+      "turn": "coordinator",
+      "parents": [],
+      "repeat": 0
+    },
+    "actual_cost_usd": 0.002922,
+    "response_id": "gen-1790310552-65BeNFM9riJcQEh8iG0V",
+    "finished_at": "2026-09-25T04:29:16.410208+00:00"
+  },
+  "575c0d9a9895fedb0308dc735f88e821375b67b01bc6fc0c3da3629e2f451ead": {
+    "status": "ok",
+    "stage": "multihop",
+    "started_at": "2026-09-25T04:29:16.495949+00:00",
+    "charged_or_reserved_usd": 0.00097,
+    "allowance_usd": 0.05656875,
+    "account_usage_before": 4.056506,
+    "meta": {
+      "experiment": "guard-chain-20260925",
+      "scenario_id": "cw_fi01_mortgage",
+      "scenario_sha256": "f697a7e80187df1e28bd6548b71d5e6ac2cd53c9edfaf5c58156c9d4616dff52",
+      "condition": "GUARD",
+      "topology": "CHAIN",
+      "turn": "worker",
+      "parents": [
+        "e558ec3ee8a8ec460cf8d41ccad53dae159b14f75de39b8c846ba4fa52a321ac"
+      ],
+      "repeat": 0
+    },
+    "actual_cost_usd": 0.00097,
+    "response_id": "gen-1790310557-t4GX1aap9SWg1V8JUGGi",
+    "finished_at": "2026-09-25T04:29:19.575889+00:00"
+  },
+  "9938c827d67fbf970d7a02e909c66f3d9c9420c3760445294d2e5ced5f7f1186": {
+    "status": "ok",
+    "stage": "multihop",
+    "started_at": "2026-09-25T04:29:18.171764+00:00",
+    "charged_or_reserved_usd": 0.00734,
+    "allowance_usd": 0.11498125,
+    "account_usage_before": 4.056506,
+    "meta": {
+      "experiment": "guard-chain-20260925",
+      "scenario_id": "cw_hc01_appointment",
+      "scenario_sha256": "ffc19eb935b1552e20a8827d2f75069e3959e9d04a8edf353a3246da18517722",
+      "condition": "GUARD",
+      "topology": "CHAIN",
+      "turn": "worker",
+      "parents": [
+        "14556d13f1f5be9636f73e60e391e2dcac39a2364e81457432c2e113fa762f5f"
+      ],
+      "repeat": 0
+    },
+    "actual_cost_usd": 0.00734,
+    "response_id": "gen-1790310558-7K31rWyPO9pGODhnSO0F",
+    "finished_at": "2026-09-25T04:29:22.790335+00:00"
+  },
+  "8db79c716aff5bc1c3aa33d65a4e825882439eb6423b03d2a4fa17db9134a20b": {
+    "status": "ok",
+    "stage": "multihop",
+    "started_at": "2026-09-25T04:29:19.687760+00:00",
+    "charged_or_reserved_usd": 0.00086,
+    "allowance_usd": 0.0565625,
+    "account_usage_before": 4.056506,
+    "meta": {
+      "experiment": "guard-chain-20260925",
+      "scenario_id": "cw_fi01_mortgage",
+      "scenario_sha256": "f697a7e80187df1e28bd6548b71d5e6ac2cd53c9edfaf5c58156c9d4616dff52",
+      "condition": "GUARD",
+      "topology": "CHAIN",
+      "turn": "archivist",
+      "parents": [
+        "575c0d9a9895fedb0308dc735f88e821375b67b01bc6fc0c3da3629e2f451ead"
+      ],
+      "repeat": 0
+    },
+    "actual_cost_usd": 0.00086,
+    "response_id": "gen-1790310560-BsCy0A0c4bYu2q5Etu4i",
+    "finished_at": "2026-09-25T04:29:21.286012+00:00"
+  },
+  "aff539c0b3b04a5bdd2a54327e256f396da0e6d94b4a067180947cc3d3996908": {
+    "status": "transport_uncertain",
+    "stage": "multihop",
+    "started_at": "2026-09-25T04:29:23.031407+00:00",
+    "charged_or_reserved_usd": 0.11484375,
+    "allowance_usd": 0.11484375,
+    "account_usage_before": 4.056506,
+    "meta": {
+      "experiment": "guard-chain-20260925",
+      "scenario_id": "cw_hc01_appointment",
+      "scenario_sha256": "ffc19eb935b1552e20a8827d2f75069e3959e9d04a8edf353a3246da18517722",
+      "condition": "GUARD",
+      "topology": "CHAIN",
+      "turn": "archivist",
+      "parents": [
+        "9938c827d67fbf970d7a02e909c66f3d9c9420c3760445294d2e5ced5f7f1186"
+      ],
+      "repeat": 0
+    },
+    "error_type": "ConnectionResetError",
+    "reconciled": true,
+    "budget_note": "Full allowance retained; billing unresolved; no retry"
+  },
+  "34bb5159084d2630ed7559985e9d12fe0911880407a98b0aa8047172111514d3": {
+    "status": "ok",
+    "stage": "multihop",
+    "started_at": "2026-09-25T04:33:16.114143+00:00",
+    "charged_or_reserved_usd": 0.007184,
+    "allowance_usd": 0.12035,
+    "account_usage_before": 4.08991,
+    "meta": {
+      "experiment": "guard-chain-20260925",
+      "scenario_id": "cw_go01_benefit",
+      "scenario_sha256": "f5efde67b07203809c2b068139a7490a4f31d4bc61760031e470ecdcfb26d74c",
+      "condition": "GUARD",
+      "topology": "CHAIN",
+      "turn": "coordinator",
+      "parents": [],
+      "repeat": 0
+    },
+    "actual_cost_usd": 0.007184,
+    "response_id": "gen-1790310796-TFFvcN5PF6q2Gb3dDcOw",
+    "finished_at": "2026-09-25T04:33:20.691748+00:00"
+  },
+  "0d7314e72839b1ae0fd1c2ba0ebe454b5e2718c08fbb61213f0e98f0c22e5e8b": {
+    "status": "ok",
+    "stage": "multihop",
+    "started_at": "2026-09-25T04:33:16.305006+00:00",
+    "charged_or_reserved_usd": 0.002596,
+    "allowance_usd": 0.06034375,
+    "account_usage_before": 4.08991,
+    "meta": {
+      "experiment": "guard-chain-20260925",
+      "scenario_id": "cw_le01_intake",
+      "scenario_sha256": "8d307c505fa041eb3ef36282e595ad197bce3e0c7020b8dd0e8f6df47f020c2e",
+      "condition": "GUARD",
+      "topology": "CHAIN",
+      "turn": "coordinator",
+      "parents": [],
+      "repeat": 0
+    },
+    "actual_cost_usd": 0.002596,
+    "response_id": "gen-1790310796-a9vw70xXhJDVTYdzhIlv",
+    "finished_at": "2026-09-25T04:33:20.878774+00:00"
+  },
+  "0b79fda6320fd7fe180e942bf2977d9e3d38bba55b3ba249298e162fd3f85486": {
+    "status": "ok",
+    "stage": "multihop",
+    "started_at": "2026-09-25T04:33:20.878000+00:00",
+    "charged_or_reserved_usd": 0.007028,
+    "allowance_usd": 0.113775,
+    "account_usage_before": 4.08991,
+    "meta": {
+      "experiment": "guard-chain-20260925",
+      "scenario_id": "cw_go01_benefit",
+      "scenario_sha256": "f5efde67b07203809c2b068139a7490a4f31d4bc61760031e470ecdcfb26d74c",
+      "condition": "GUARD",
+      "topology": "CHAIN",
+      "turn": "worker",
+      "parents": [
+        "34bb5159084d2630ed7559985e9d12fe0911880407a98b0aa8047172111514d3"
+      ],
+      "repeat": 0
+    },
+    "actual_cost_usd": 0.007028,
+    "response_id": "gen-1790310801-m3SOtNpnh6bdktWQicfx",
+    "finished_at": "2026-09-25T04:33:25.178098+00:00"
+  },
+  "8cbf5118e10a0dbe520c8788d44dacc1ce001d8ad3559cd40c9c0d618c260ca6": {
+    "status": "ok",
+    "stage": "multihop",
+    "started_at": "2026-09-25T04:33:20.946604+00:00",
+    "charged_or_reserved_usd": 0.001246,
+    "allowance_usd": 0.05676875,
+    "account_usage_before": 4.08991,
+    "meta": {
+      "experiment": "guard-chain-20260925",
+      "scenario_id": "cw_le01_intake",
+      "scenario_sha256": "8d307c505fa041eb3ef36282e595ad197bce3e0c7020b8dd0e8f6df47f020c2e",
+      "condition": "GUARD",
+      "topology": "CHAIN",
+      "turn": "worker",
+      "parents": [
+        "0d7314e72839b1ae0fd1c2ba0ebe454b5e2718c08fbb61213f0e98f0c22e5e8b"
+      ],
+      "repeat": 0
+    },
+    "actual_cost_usd": 0.001246,
+    "response_id": "gen-1790310801-PXnTEs8Xr7rJvdEVRFzA",
+    "finished_at": "2026-09-25T04:33:23.752213+00:00"
+  },
+  "9b4323f7db4bb2e9333cbba80c95431802c40817aacb706fd7d0fd5fa514e4af": {
+    "status": "ok",
+    "stage": "multihop",
+    "started_at": "2026-09-25T04:33:23.864966+00:00",
+    "charged_or_reserved_usd": 0.001744,
+    "allowance_usd": 0.056753125,
+    "account_usage_before": 4.08991,
+    "meta": {
+      "experiment": "guard-chain-20260925",
+      "scenario_id": "cw_le01_intake",
+      "scenario_sha256": "8d307c505fa041eb3ef36282e595ad197bce3e0c7020b8dd0e8f6df47f020c2e",
+      "condition": "GUARD",
+      "topology": "CHAIN",
+      "turn": "archivist",
+      "parents": [
+        "8cbf5118e10a0dbe520c8788d44dacc1ce001d8ad3559cd40c9c0d618c260ca6"
+      ],
+      "repeat": 0
+    },
+    "actual_cost_usd": 0.001744,
+    "response_id": "gen-1790310804-FUIZClmTJCyoAvasOoIW",
+    "finished_at": "2026-09-25T04:33:27.612108+00:00"
+  },
+  "a4bd8ee37a5e0d2a7d4c013135cb3574832d370acd5e1ab49d7e7a41f0608633": {
+    "status": "ok",
+    "stage": "multihop",
+    "started_at": "2026-09-25T04:33:25.253492+00:00",
+    "charged_or_reserved_usd": 0.00998,
+    "allowance_usd": 0.115925,
+    "account_usage_before": 4.08991,
+    "meta": {
+      "experiment": "guard-chain-20260925",
+      "scenario_id": "cw_go01_benefit",
+      "scenario_sha256": "f5efde67b07203809c2b068139a7490a4f31d4bc61760031e470ecdcfb26d74c",
+      "condition": "GUARD",
+      "topology": "CHAIN",
+      "turn": "archivist",
+      "parents": [
+        "0b79fda6320fd7fe180e942bf2977d9e3d38bba55b3ba249298e162fd3f85486"
+      ],
+      "repeat": 0
+    },
+    "actual_cost_usd": 0.00998,
+    "response_id": "gen-1790310805-ZY78AiDIghFlVrD7Oceb",
+    "finished_at": "2026-09-25T04:33:31.747975+00:00"
+  },
+  "83332f5c38edf028d7e8d472eec06852e6b31d8eac1768b85935f8afbcb157b6": {
+    "status": "ok",
+    "stage": "multihop",
+    "started_at": "2026-09-25T04:33:31.847528+00:00",
+    "charged_or_reserved_usd": 0.002576,
+    "allowance_usd": 0.060175,
+    "account_usage_before": 4.08991,
+    "meta": {
+      "experiment": "guard-chain-20260925",
+      "scenario_id": "cw_go01_benefit",
+      "scenario_sha256": "f5efde67b07203809c2b068139a7490a4f31d4bc61760031e470ecdcfb26d74c",
+      "condition": "GUARD",
+      "topology": "CHAIN",
+      "turn": "coordinator",
+      "parents": [],
+      "repeat": 0
+    },
+    "actual_cost_usd": 0.002576,
+    "response_id": "gen-1790310812-fWAaVh7QQu8EUAObWFPn",
+    "finished_at": "2026-09-25T04:33:36.542484+00:00"
+  },
+  "c6fff5579538fee51b5454191c06f441fac646bf3e46ebb09dee97fc27e85f7c": {
+    "status": "ok",
+    "stage": "multihop",
+    "started_at": "2026-09-25T04:33:32.143793+00:00",
+    "charged_or_reserved_usd": 0.00248,
+    "allowance_usd": 0.06015,
+    "account_usage_before": 4.08991,
+    "meta": {
+      "experiment": "guard-chain-20260925",
+      "scenario_id": "cw_in01_claim",
+      "scenario_sha256": "4ac6cd236c5ac54a4b7758acb6ac13b8a0b198964bd762d3c82e54cce7aa9556",
+      "condition": "GUARD",
+      "topology": "CHAIN",
+      "turn": "coordinator",
+      "parents": [],
+      "repeat": 0
+    },
+    "actual_cost_usd": 0.00248,
+    "response_id": "gen-1790310813-ztTzTtdij3MCrawNwVbl",
+    "finished_at": "2026-09-25T04:33:36.790326+00:00"
+  },
+  "ab47b9e61e863732fb937f62743f533dce2749846ef620c5cf006a09af7e1ec0": {
+    "status": "ok",
+    "stage": "multihop",
+    "started_at": "2026-09-25T04:33:36.709601+00:00",
+    "charged_or_reserved_usd": 0.001118,
+    "allowance_usd": 0.056646875,
+    "account_usage_before": 4.08991,
+    "meta": {
+      "experiment": "guard-chain-20260925",
+      "scenario_id": "cw_go01_benefit",
+      "scenario_sha256": "f5efde67b07203809c2b068139a7490a4f31d4bc61760031e470ecdcfb26d74c",
+      "condition": "GUARD",
+      "topology": "CHAIN",
+      "turn": "worker",
+      "parents": [
+        "83332f5c38edf028d7e8d472eec06852e6b31d8eac1768b85935f8afbcb157b6"
+      ],
+      "repeat": 0
+    },
+    "actual_cost_usd": 0.001118,
+    "response_id": "gen-1790310817-Zp4mwh1XpbhjO7mYVTUT",
+    "finished_at": "2026-09-25T04:33:39.579291+00:00"
+  },
+  "b7576029d9c3c36f61fee3f8b9e5006474b447aeb61e5875e96df39f9a650fc6": {
+    "status": "ok",
+    "stage": "multihop",
+    "started_at": "2026-09-25T04:33:36.894987+00:00",
+    "charged_or_reserved_usd": 0.000864,
+    "allowance_usd": 0.056284375,
+    "account_usage_before": 4.100936,
+    "meta": {
+      "experiment": "guard-chain-20260925",
+      "scenario_id": "cw_in01_claim",
+      "scenario_sha256": "4ac6cd236c5ac54a4b7758acb6ac13b8a0b198964bd762d3c82e54cce7aa9556",
+      "condition": "GUARD",
+      "topology": "CHAIN",
+      "turn": "worker",
+      "parents": [
+        "c6fff5579538fee51b5454191c06f441fac646bf3e46ebb09dee97fc27e85f7c"
+      ],
+      "repeat": 0
+    },
+    "actual_cost_usd": 0.000864,
+    "response_id": "gen-1790310817-87lE4o8cyIx3IriNgCtA",
+    "finished_at": "2026-09-25T04:33:38.805557+00:00"
+  },
+  "349167f8192cb06be6966cf104c40b49fd2a7ca20c4ec4831d51f9335836405d": {
+    "status": "ok",
+    "stage": "multihop",
+    "started_at": "2026-09-25T04:33:38.913675+00:00",
+    "charged_or_reserved_usd": 0.000764,
+    "allowance_usd": 0.05630625,
+    "account_usage_before": 4.100936,
+    "meta": {
+      "experiment": "guard-chain-20260925",
+      "scenario_id": "cw_in01_claim",
+      "scenario_sha256": "4ac6cd236c5ac54a4b7758acb6ac13b8a0b198964bd762d3c82e54cce7aa9556",
+      "condition": "GUARD",
+      "topology": "CHAIN",
+      "turn": "archivist",
+      "parents": [
+        "b7576029d9c3c36f61fee3f8b9e5006474b447aeb61e5875e96df39f9a650fc6"
+      ],
+      "repeat": 0
+    },
+    "actual_cost_usd": 0.000764,
+    "response_id": "gen-1790310819-RNHk7Y8Y7UABTO2OIGZG",
+    "finished_at": "2026-09-25T04:33:41.128489+00:00"
+  },
+  "28350e6f157d45b69c2427e777c5784c26359cca9ca5c700669e0b549abc8300": {
+    "status": "ok",
+    "stage": "multihop",
+    "started_at": "2026-09-25T04:33:39.673632+00:00",
+    "charged_or_reserved_usd": 0.000808,
+    "allowance_usd": 0.0565125,
+    "account_usage_before": 4.100936,
+    "meta": {
+      "experiment": "guard-chain-20260925",
+      "scenario_id": "cw_go01_benefit",
+      "scenario_sha256": "f5efde67b07203809c2b068139a7490a4f31d4bc61760031e470ecdcfb26d74c",
+      "condition": "GUARD",
+      "topology": "CHAIN",
+      "turn": "archivist",
+      "parents": [
+        "ab47b9e61e863732fb937f62743f533dce2749846ef620c5cf006a09af7e1ec0"
+      ],
+      "repeat": 0
+    },
+    "actual_cost_usd": 0.000808,
+    "response_id": "gen-1790310820-T6LTTIvoh8yC3hhBZM5R",
+    "finished_at": "2026-09-25T04:33:41.137318+00:00"
+  },
+  "6af5c69dfcc86480bf5c1a5f6f27f3bff50a6e26badbf7dd6e50fe7f58ab86e0": {
+    "status": "ok",
+    "stage": "multihop",
+    "started_at": "2026-09-25T04:33:41.238427+00:00",
+    "charged_or_reserved_usd": 0.011608,
+    "allowance_usd": 0.1203,
+    "account_usage_before": 4.100936,
+    "meta": {
+      "experiment": "guard-chain-20260925",
+      "scenario_id": "cw_in01_claim",
+      "scenario_sha256": "4ac6cd236c5ac54a4b7758acb6ac13b8a0b198964bd762d3c82e54cce7aa9556",
+      "condition": "GUARD",
+      "topology": "CHAIN",
+      "turn": "coordinator",
+      "parents": [],
+      "repeat": 0
+    },
+    "actual_cost_usd": 0.011608,
+    "response_id": "gen-1790310821-l5jEq29xaqgpvn6iZf0q",
+    "finished_at": "2026-09-25T04:33:46.649210+00:00"
+  },
+  "fd9a55b0c06110a01bf8668cd4c1eefedd4ee8e8f5ccd3c348bae9901dc6a9d7": {
+    "status": "ok",
+    "stage": "multihop",
+    "started_at": "2026-09-25T04:33:41.343469+00:00",
+    "charged_or_reserved_usd": 0.00696,
+    "allowance_usd": 0.12055625,
+    "account_usage_before": 4.100936,
+    "meta": {
+      "experiment": "guard-chain-20260925",
+      "scenario_id": "cw_hr01_onboarding",
+      "scenario_sha256": "c9d3a6fa635fa0c98a6a4b612d1d5d3a3aa9fca0d1b7c4f031045969fc44f04c",
+      "condition": "GUARD",
+      "topology": "CHAIN",
+      "turn": "coordinator",
+      "parents": [],
+      "repeat": 0
+    },
+    "actual_cost_usd": 0.00696,
+    "response_id": "gen-1790310821-EuHE13ZjKBt7QyY8UKcU",
+    "finished_at": "2026-09-25T04:33:45.062861+00:00"
+  },
+  "17d3abef932df8a3f3b6ca5ab1dfb76a8a91770fcd79f22ba3cb281edee414d1": {
+    "status": "provider_refusal",
+    "stage": "multihop",
+    "started_at": "2026-09-25T04:33:45.161634+00:00",
+    "charged_or_reserved_usd": 0.11354375,
+    "allowance_usd": 0.11354375,
+    "account_usage_before": 4.08991,
+    "meta": {
+      "experiment": "guard-chain-20260925",
+      "scenario_id": "cw_hr01_onboarding",
+      "scenario_sha256": "c9d3a6fa635fa0c98a6a4b612d1d5d3a3aa9fca0d1b7c4f031045969fc44f04c",
+      "condition": "GUARD",
+      "topology": "CHAIN",
+      "turn": "worker",
+      "parents": [
+        "fd9a55b0c06110a01bf8668cd4c1eefedd4ee8e8f5ccd3c348bae9901dc6a9d7"
+      ],
+      "repeat": 0
+    },
+    "reconciled": true,
+    "billing_note": "Maximum reservation retained when cost absent; refusal excluded without retry",
+    "response_id": "gen-1790310825-YzedIQUsT9JbZsQunSjY",
+    "finished_at": "2026-09-25T04:33:46.761529+00:00"
+  },
+  "54f26b782bc51fcd50e66b6ca77344c86e44f7110754c14531c348b4735f769f": {
+    "status": "ok",
+    "stage": "multihop",
+    "started_at": "2026-09-25T04:33:46.759738+00:00",
+    "charged_or_reserved_usd": 0.006116,
+    "allowance_usd": 0.1146125,
+    "account_usage_before": 4.100936,
+    "meta": {
+      "experiment": "guard-chain-20260925",
+      "scenario_id": "cw_in01_claim",
+      "scenario_sha256": "4ac6cd236c5ac54a4b7758acb6ac13b8a0b198964bd762d3c82e54cce7aa9556",
+      "condition": "GUARD",
+      "topology": "CHAIN",
+      "turn": "worker",
+      "parents": [
+        "6af5c69dfcc86480bf5c1a5f6f27f3bff50a6e26badbf7dd6e50fe7f58ab86e0"
+      ],
+      "repeat": 0
+    },
+    "actual_cost_usd": 0.006116,
+    "response_id": "gen-1790310827-xy6AvN0gqrzqCxb3OKf9",
+    "finished_at": "2026-09-25T04:33:50.480580+00:00"
+  },
+  "f1d2cc5695109f2f6e6160b1b43316d4fc955d3647fc5afc4a9feaae37e84f08": {
+    "status": "ok",
+    "stage": "multihop",
+    "started_at": "2026-09-25T04:33:50.645560+00:00",
+    "charged_or_reserved_usd": 0.006828,
+    "allowance_usd": 0.11443125,
+    "account_usage_before": 4.119688,
+    "meta": {
+      "experiment": "guard-chain-20260925",
+      "scenario_id": "cw_in01_claim",
+      "scenario_sha256": "4ac6cd236c5ac54a4b7758acb6ac13b8a0b198964bd762d3c82e54cce7aa9556",
+      "condition": "GUARD",
+      "topology": "CHAIN",
+      "turn": "archivist",
+      "parents": [
+        "54f26b782bc51fcd50e66b6ca77344c86e44f7110754c14531c348b4735f769f"
+      ],
+      "repeat": 0
+    },
+    "actual_cost_usd": 0.006828,
+    "response_id": "gen-1790310831-gcFgFHto64cNJuveaMD4",
+    "finished_at": "2026-09-25T04:33:54.483515+00:00"
+  },
+  "243c3e32e73601b361e7b17582cf7c20bf01b08dd7734468cf9fc585530f0ff2": {
+    "status": "ok",
+    "stage": "multihop",
+    "started_at": "2026-09-25T04:33:54.632465+00:00",
+    "charged_or_reserved_usd": 0.010104,
+    "allowance_usd": 0.1206875,
+    "account_usage_before": 4.119688,
+    "meta": {
+      "experiment": "guard-chain-20260925",
+      "scenario_id": "cw_le01_intake",
+      "scenario_sha256": "8d307c505fa041eb3ef36282e595ad197bce3e0c7020b8dd0e8f6df47f020c2e",
+      "condition": "GUARD",
+      "topology": "CHAIN",
+      "turn": "coordinator",
+      "parents": [],
+      "repeat": 0
+    },
+    "actual_cost_usd": 0.010104,
+    "response_id": "gen-1790310835-9AtJoGqmUlvaTxKqE9le",
+    "finished_at": "2026-09-25T04:33:59.571342+00:00"
+  },
+  "8481f78e07aab5449be06e75bf54b08a41fa17f6228989f3ea345954552706d1": {
+    "status": "ok",
+    "stage": "multihop",
+    "started_at": "2026-09-25T04:33:54.771207+00:00",
+    "charged_or_reserved_usd": 0.002602,
+    "allowance_usd": 0.0603375,
+    "account_usage_before": 4.119688,
+    "meta": {
+      "experiment": "guard-chain-20260925",
+      "scenario_id": "cw_hc01_appointment",
+      "scenario_sha256": "ffc19eb935b1552e20a8827d2f75069e3959e9d04a8edf353a3246da18517722",
+      "condition": "GUARD",
+      "topology": "CHAIN",
+      "turn": "coordinator",
+      "parents": [],
+      "repeat": 0
+    },
+    "actual_cost_usd": 0.002602,
+    "response_id": "gen-1790310835-yfaVOZXE33sD3IXar4If",
+    "finished_at": "2026-09-25T04:34:00.324893+00:00"
+  },
+  "322037c87fb5b7f922b5148720e686d7e33f5e0c581a4abb60594b00a7c421c0": {
+    "status": "ok",
+    "stage": "multihop",
+    "started_at": "2026-09-25T04:33:59.724284+00:00",
+    "charged_or_reserved_usd": 0.007784,
+    "allowance_usd": 0.1161375,
+    "account_usage_before": 4.119688,
+    "meta": {
+      "experiment": "guard-chain-20260925",
+      "scenario_id": "cw_le01_intake",
+      "scenario_sha256": "8d307c505fa041eb3ef36282e595ad197bce3e0c7020b8dd0e8f6df47f020c2e",
+      "condition": "GUARD",
+      "topology": "CHAIN",
+      "turn": "worker",
+      "parents": [
+        "243c3e32e73601b361e7b17582cf7c20bf01b08dd7734468cf9fc585530f0ff2"
+      ],
+      "repeat": 0
+    },
+    "actual_cost_usd": 0.007784,
+    "response_id": "gen-1790310840-9asEBxWpsCyua4qWmYS4",
+    "finished_at": "2026-09-25T04:34:04.442312+00:00"
+  },
+  "2756c218ff8fdf99501045643fde1877f0f4095371ff333164219a6305f63644": {
+    "status": "ok",
+    "stage": "multihop",
+    "started_at": "2026-09-25T04:34:00.427290+00:00",
+    "charged_or_reserved_usd": 0.001042,
+    "allowance_usd": 0.05630625,
+    "account_usage_before": 4.146866,
+    "meta": {
+      "experiment": "guard-chain-20260925",
+      "scenario_id": "cw_hc01_appointment",
+      "scenario_sha256": "ffc19eb935b1552e20a8827d2f75069e3959e9d04a8edf353a3246da18517722",
+      "condition": "GUARD",
+      "topology": "CHAIN",
+      "turn": "worker",
+      "parents": [
+        "8481f78e07aab5449be06e75bf54b08a41fa17f6228989f3ea345954552706d1"
+      ],
+      "repeat": 0
+    },
+    "actual_cost_usd": 0.001042,
+    "response_id": "gen-1790310841-GlNKTRktiQDcXP4eGhwp",
+    "finished_at": "2026-09-25T04:34:03.439051+00:00"
+  },
+  "45c71c4354d8a274e3187107b73ddec8fc6d65bc606a4b0c89675583831c95ad": {
+    "status": "ok",
+    "stage": "multihop",
+    "started_at": "2026-09-25T04:34:03.535835+00:00",
+    "charged_or_reserved_usd": 0.00069,
+    "allowance_usd": 0.0564375,
+    "account_usage_before": 4.100936,
+    "meta": {
+      "experiment": "guard-chain-20260925",
+      "scenario_id": "cw_hc01_appointment",
+      "scenario_sha256": "ffc19eb935b1552e20a8827d2f75069e3959e9d04a8edf353a3246da18517722",
+      "condition": "GUARD",
+      "topology": "CHAIN",
+      "turn": "archivist",
+      "parents": [
+        "2756c218ff8fdf99501045643fde1877f0f4095371ff333164219a6305f63644"
+      ],
+      "repeat": 0
+    },
+    "actual_cost_usd": 0.00069,
+    "response_id": "gen-1790310844-zpiAUKcw4g5tkM4rqZDo",
+    "finished_at": "2026-09-25T04:34:05.067778+00:00"
+  },
+  "ddd76b82bc0d2292a042193cc19ba455864e8588f96d0f6e696c5dba993c11f0": {
+    "status": "ok",
+    "stage": "multihop",
+    "started_at": "2026-09-25T04:34:04.591342+00:00",
+    "charged_or_reserved_usd": 0.008108,
+    "allowance_usd": 0.11699375,
+    "account_usage_before": 4.119688,
+    "meta": {
+      "experiment": "guard-chain-20260925",
+      "scenario_id": "cw_le01_intake",
+      "scenario_sha256": "8d307c505fa041eb3ef36282e595ad197bce3e0c7020b8dd0e8f6df47f020c2e",
+      "condition": "GUARD",
+      "topology": "CHAIN",
+      "turn": "archivist",
+      "parents": [
+        "322037c87fb5b7f922b5148720e686d7e33f5e0c581a4abb60594b00a7c421c0"
+      ],
+      "repeat": 0
+    },
+    "actual_cost_usd": 0.008108,
+    "response_id": "gen-1790310845-C58JyR0Yb9xGOIAy2QpP",
+    "finished_at": "2026-09-25T04:34:08.622235+00:00"
+  },
+  "a28901eea4b43e3eb0b0a11e7d6f4bc2dc58c6332c1ee9982b90699347652dd3": {
+    "status": "ok",
+    "stage": "multihop",
+    "started_at": "2026-09-25T04:34:08.821341+00:00",
+    "charged_or_reserved_usd": 0.00194,
+    "allowance_usd": 0.060278125,
+    "account_usage_before": 4.109708,
+    "meta": {
+      "experiment": "guard-chain-20260925",
+      "scenario_id": "cw_hr01_onboarding",
+      "scenario_sha256": "c9d3a6fa635fa0c98a6a4b612d1d5d3a3aa9fca0d1b7c4f031045969fc44f04c",
+      "condition": "GUARD",
+      "topology": "CHAIN",
+      "turn": "coordinator",
+      "parents": [],
+      "repeat": 0
+    },
+    "actual_cost_usd": 0.00194,
+    "response_id": "gen-1790310849-wOp3AUbXTw1gZwam1Sbf",
+    "finished_at": "2026-09-25T04:34:11.918974+00:00"
+  },
+  "097dfbfe1e58b01c5f2887f1c560ebf59aaa3ef1ce2f509b05bd60391e8d22ed": {
+    "status": "ok",
+    "stage": "multihop",
+    "started_at": "2026-09-25T04:34:08.931307+00:00",
+    "charged_or_reserved_usd": 0.009192,
+    "allowance_usd": 0.12056875,
+    "account_usage_before": 4.146866,
+    "meta": {
+      "experiment": "guard-chain-20260925",
+      "scenario_id": "cw_fi01_mortgage",
+      "scenario_sha256": "f697a7e80187df1e28bd6548b71d5e6ac2cd53c9edfaf5c58156c9d4616dff52",
+      "condition": "GUARD",
+      "topology": "CHAIN",
+      "turn": "coordinator",
+      "parents": [],
+      "repeat": 0
+    },
+    "actual_cost_usd": 0.009192,
+    "response_id": "gen-1790310849-cV4Wzf9VnRsbfjiIvjoL",
+    "finished_at": "2026-09-25T04:34:13.571888+00:00"
+  },
+  "9c25164455e8f182efaf552fb4ff1ddd80583fef9d6ba20400704eda4c06b182": {
+    "status": "ok",
+    "stage": "multihop",
+    "started_at": "2026-09-25T04:34:12.032137+00:00",
+    "charged_or_reserved_usd": 0.00112,
+    "allowance_usd": 0.0562625,
+    "account_usage_before": 4.146866,
+    "meta": {
+      "experiment": "guard-chain-20260925",
+      "scenario_id": "cw_hr01_onboarding",
+      "scenario_sha256": "c9d3a6fa635fa0c98a6a4b612d1d5d3a3aa9fca0d1b7c4f031045969fc44f04c",
+      "condition": "GUARD",
+      "topology": "CHAIN",
+      "turn": "worker",
+      "parents": [
+        "a28901eea4b43e3eb0b0a11e7d6f4bc2dc58c6332c1ee9982b90699347652dd3"
+      ],
+      "repeat": 0
+    },
+    "actual_cost_usd": 0.00112,
+    "response_id": "gen-1790310852-lmsD1FdDDplrOXktir4M",
+    "finished_at": "2026-09-25T04:34:15.769533+00:00"
+  },
+  "3335bd9e33b028f9137b79877ffe35ae543f0d62a6fba032aed49b4da812f36d": {
+    "status": "ok",
+    "stage": "multihop",
+    "started_at": "2026-09-25T04:34:13.691261+00:00",
+    "charged_or_reserved_usd": 0.01148,
+    "allowance_usd": 0.11595625,
+    "account_usage_before": 4.172516,
+    "meta": {
+      "experiment": "guard-chain-20260925",
+      "scenario_id": "cw_fi01_mortgage",
+      "scenario_sha256": "f697a7e80187df1e28bd6548b71d5e6ac2cd53c9edfaf5c58156c9d4616dff52",
+      "condition": "GUARD",
+      "topology": "CHAIN",
+      "turn": "worker",
+      "parents": [
+        "097dfbfe1e58b01c5f2887f1c560ebf59aaa3ef1ce2f509b05bd60391e8d22ed"
+      ],
+      "repeat": 0
+    },
+    "actual_cost_usd": 0.01148,
+    "response_id": "gen-1790310854-pBgxw1LxmrMt8Z5IY0qU",
+    "finished_at": "2026-09-25T04:34:19.989221+00:00"
+  },
+  "27ee89eba5d685305e2844419993343cb2af40347ab39352735f17cae8898fd5": {
+    "status": "ok",
+    "stage": "multihop",
+    "started_at": "2026-09-25T04:34:15.903611+00:00",
+    "charged_or_reserved_usd": 0.0009,
+    "allowance_usd": 0.0564125,
+    "account_usage_before": 4.15981,
+    "meta": {
+      "experiment": "guard-chain-20260925",
+      "scenario_id": "cw_hr01_onboarding",
+      "scenario_sha256": "c9d3a6fa635fa0c98a6a4b612d1d5d3a3aa9fca0d1b7c4f031045969fc44f04c",
+      "condition": "GUARD",
+      "topology": "CHAIN",
+      "turn": "archivist",
+      "parents": [
+        "9c25164455e8f182efaf552fb4ff1ddd80583fef9d6ba20400704eda4c06b182"
+      ],
+      "repeat": 0
+    },
+    "actual_cost_usd": 0.0009,
+    "response_id": "gen-1790310856-3FbD5Vnp7pLrFo5daTVs",
+    "finished_at": "2026-09-25T04:34:18.160868+00:00"
+  },
+  "241a4eef3c4046d9493f49bd36026f8bbd3c9c10fa88065147d09d6d8704569a": {
+    "status": "ok",
+    "stage": "multihop",
+    "started_at": "2026-09-25T04:34:20.145340+00:00",
+    "charged_or_reserved_usd": 0.011884,
+    "allowance_usd": 0.1195625,
+    "account_usage_before": 4.15981,
+    "meta": {
+      "experiment": "guard-chain-20260925",
+      "scenario_id": "cw_fi01_mortgage",
+      "scenario_sha256": "f697a7e80187df1e28bd6548b71d5e6ac2cd53c9edfaf5c58156c9d4616dff52",
+      "condition": "GUARD",
+      "topology": "CHAIN",
+      "turn": "archivist",
+      "parents": [
+        "3335bd9e33b028f9137b79877ffe35ae543f0d62a6fba032aed49b4da812f36d"
+      ],
+      "repeat": 0
+    },
+    "actual_cost_usd": 0.011884,
+    "response_id": "gen-1790310860-uoh5gJ53Ts8cdsSdbogW",
+    "finished_at": "2026-09-25T04:34:25.040064+00:00"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      null,
+      true,
+      true
+    ],
+    "unsupported_material_fact": true,
+    "evidence": [
+      "Provisioning ticket — Data analyst",
+      "",
+      "Prepare a laptop",
+      "building badge"
+    ],
+    "rationale": "The record keeps the data analyst role, the laptop, and the building badge. The source gives the start date only as 'first Monday of next month'. The record states a specific calendar date, November 2, 2026. That date is a Monday and is the first Monday of November, but the source does not say which month 'next month' is. So the specific date is unsupported, and whether it is accurate is unclear.",
+    "complete": false,
+    "unresolved": true
+  },
+  "experiment": "auxiliary_utility",
+  "source_workflow": "019ae46fbe84a6bc9c1d0a1d466274a845683c12c2460ecdc8841e16f0287eea",
+  "source_hash": "1ee45c5f609a2c04036f1c594399f81ec0cfc06a03ee8c3a9708b545e5182e0f",
+  "rubric_hash": "91cf09d026db06bdfed706830bb901e60a51f14c247b3247d82c715feb47d3a5",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "6060ebeb3df8ae164375c7060339c1abbd5973bd6184ea762b7069cfa35b3011",
+  "initial_parse_status": "invalid_schema",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

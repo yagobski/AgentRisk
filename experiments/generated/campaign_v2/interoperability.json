@@ -1,0 +1,31 @@
+{
+  "regex": {
+    "registered": 360,
+    "resolved_pairs": 50,
+    "agreement": 1.0,
+    "kappa": 1.0,
+    "positive_agreement": 1.0,
+    "negative_agreement": 1.0,
+    "complete_traces": 0,
+    "RI_complete": null,
+    "mean_delta_RI_complete": null,
+    "delta_RI_range": null,
+    "reference": "lexical detector for agreement, not ground-truth accuracy"
+  },
+  "semantic": {
+    "registered": 360,
+    "resolved_pairs": 358,
+    "agreement": 0.9916201117318436,
+    "kappa": 0.8653122648607984,
+    "positive_agreement": 0.8695652173913043,
+    "negative_agreement": 0.9956709956709957,
+    "complete_traces": 70,
+    "RI_complete": 0.03813155386081983,
+    "mean_delta_RI_complete": 0.009047434763379035,
+    "delta_RI_range": [
+      0.0,
+      0.23529411764705882
+    ],
+    "reference": "lexical detector for agreement, not ground-truth accuracy"
+  }
+}

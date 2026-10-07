@@ -1,0 +1,30 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      false,
+      true
+    ],
+    "unsupported_material_fact": true,
+    "evidence": [
+      "Approved for municipal housing-subsidy renewal",
+      "Household size: 3",
+      "",
+      "Renewal is within program limits"
+    ],
+    "rationale": "The record retains the subsidy renewal, the household of three, and the within-limits status. It never says the renewal is routine. It also adds material claims the source does not support: 'Approved' as a final determination and 'No resident follow-up indicated.'",
+    "complete": false,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility",
+  "source_workflow": "4d1684da9b4d560ef591f722758db8ff508f5fed521a8c2e2226396bd1b87b12",
+  "source_hash": "49b6494c5c8de8f9b115dd643802a490b1c1de5d56a0a24a5e8b648d176b4e07",
+  "rubric_hash": "bfaf90c304f338b32dea18cddc0b7480930c1a7f2369645bcac3fb79bf682757",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "5d0a6584a331e7bdfb87173240d621360ef2d3841ddf947fdbbe4b5ab3a8681b",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

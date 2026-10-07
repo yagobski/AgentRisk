@@ -1,0 +1,30 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      null,
+      true,
+      true
+    ],
+    "unsupported_material_fact": true,
+    "evidence": [
+      "new data analyst",
+      "",
+      "Provision a laptop",
+      "building badge"
+    ],
+    "rationale": "The record keeps the role, the laptop, and the badge. It turns 'first Monday of next month' into a specific date, 'Monday, September 7, 2026', which the source does not give. September 7, 2026 is the first Monday of that month, but the current month is unknown, so its accuracy is unclear. The specific date is therefore an unsupported material fact.",
+    "complete": false,
+    "unresolved": true
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "db83fa7c70a2e28fde010654777141addd720a3e9e8ae197c04723cd6fb739df",
+  "source_hash": "73284ba4669eb5f3cc96f16be64a34c077080eafd85ffca1d27a1f69d5dd2aa0",
+  "rubric_hash": "91cf09d026db06bdfed706830bb901e60a51f14c247b3247d82c715feb47d3a5",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "f7b246827a3bf3f0b6fde34ae3c6c6b971dd01ea239c6bb6f66c6a5a1d661d7e",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

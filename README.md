@@ -1,147 +1,168 @@
-# AgentRisk — Reproduction Code
+# AgentRisk reproducibility artifact
 
-Reproducible code for the AgentRisk paper. AgentRisk scores privacy failures in
-multi-agent LLM systems with a **severity-weighted, density-normalized Risk
-Index** $\mathrm{RI} = \mathrm{WSL}/\rho_S \in [0,1]$, where each disclosed
-secret contributes a weight by its sensitivity level (1–4) and $\rho_S$ is the
-total weighted risk mass available in the scenario.
+This artifact contains the frozen synthetic executions, final annotation forms,
+analysis code and offline checks supporting the manuscript. It contains
+one reproduction guide: this README.
 
-Everything here runs on the Python standard library (Python 3.9+); there are no
-third-party Python dependencies. The end-to-end agent experiments query an
-OpenAI-compatible chat endpoint — we used a local
-[LM Studio](https://lmstudio.ai/) server serving `qwen/qwen3-32b` and
-`openai/gpt-oss-120b`, but any compatible endpoint works.
+## Run the offline verification
 
-## Layout
+From the artifact root, use Python 3.12:
 
-| File | What it does |
-|------|--------------|
-| `verify_properties.py` | Machine-checkable proof of the five RI properties and reproduction of every numeric claim in the paper. Stdlib only; no server needed. |
-| `run_real_eval.py` | Runs the agents under a data-minimization system prompt over a scenario set, applies deterministic marker detection, and scores ELR / WSL / RI with per-severity leak rates. |
-| `judge_existing.py` | Adds a paraphrase-aware LLM-judge second opinion over already-collected outputs (corroboration only; the deterministic detector stays the headline signal). |
-| `run_mitigation_eval.py` | Re-runs the high-tension scenarios under two defenses (instructional GUARD, architectural SCOPED) to show RI responds to mitigation. |
-| `run_case_study.py` | End-to-end audit case study (paper §"End-to-End Audit Case Study"): six realistic coordinator→worker workflows scored across four configurations (Baseline, GUARD, DLP-regex, SCOPED) on channels C1/C2/C5, emitting per-model results and a DPO-style audit report for the flagship workflow. |
-| `analyze_results.py` | Turns raw real-eval output into the headline numbers and the binary-vs-RI re-ranking; emits a LaTeX fragment. |
-| `analyze_decoupled.py` | Matched-pair decoupling analysis (severity held fixed, task-centrality varied) with an exact McNemar test. |
-| `analyze_extension.py` | Pooled analysis of the severity-balanced extension and repeated sampled runs: per-level summaries, Wilson CIs, Cochran–Armitage trend tests, Monte-Carlo permutation tests (n=36), bootstrap CIs, and the sampling-stability table. |
-| `inference_stats.py` | Exact paired sign-flip permutation tests and bootstrap CIs over the saved high-tension results (deterministic, no new model runs). |
-| `detector_triangulation.py` | Recomputes RI on saved outputs under four distinct detector sources (lexical-strict, lexical-fuzzy, two LLM judges) to test detector robustness. |
-| `trend_stats.py` | Standalone Wilson CI and Cochran–Armitage trend test reproducing the paper's statistical claims. Stdlib only. |
-| `exact_trend_test.py` | Exact conditional (permutation) Cochran–Armitage trend test for the small per-level counts, where the asymptotic normal approximation is fragile. Reads the per-level counts straight from the saved result JSONs; no model runs. Stdlib only. |
-| `final_table.py` | Builds the headline results table from the judged run. |
-| `meta_analysis.py` | Transcribes *published, cited* leakage rates from prior benchmarks (nothing fabricated) to show the field reports binary rates only. |
-| `score_agentrisk.py` | Severity-composition analysis of the AgentRisk scenario corpus (tab:composition). |
-| `score_privacylens.py` | Keyword-based severity mapper for the PrivacyLens secret set (tab:composition, ~62% coverage). Takes `--data` pointing at a local PrivacyLens dump (not redistributed here). |
-| `score_trustllm.py` | Keyword-based severity mapper for the TrustLLM secret set (tab:composition, full coverage). Takes `--data-dir` pointing at a local TrustLLM `privacy_data` directory (not redistributed here). |
-| `data/` | Scenario sets used by the experiments. |
-| `results/` | Saved run outputs and generated LaTeX fragments. |
-
-### Scenario sets
-
-- `data/privacy_scenarios.json` — 29 base scenarios.
-- `data/privacy_scenarios_hightension.json` — 12 high-tension scenarios (the headline deterministic baseline and the mitigation study).
-- `data/privacy_scenarios_decoupled.json` — 20 matched-pair scenarios (10 pairs); each pair shares one target secret under a *peripheral* and an *entangled* framing to separate severity from task-centrality.
-- `data/privacy_scenarios_hightension_ext.json` — 24 severity-balanced extension scenarios with full Level 1–4 coverage (ρ_S = 332).
-- `data/privacy_scenarios_hightension_pooled.json` — the pooled 36-scenario set (12 original + 24 extension, ρ_S = 541) used by the repeated sampled runs.
-- `data/case_study_workflows.json` — 6 realistic coordinator→worker workflows (healthcare, finance, HR, insurance, legal, government) for the end-to-end audit case study; each carries a full record (Private Vault, 5 labelled secrets) plus a scoped task-relevant subset. 30 secrets total (ρ_S = 84).
-
-## Reproduce the formal claims (no server required)
-
-```bash
-python verify_properties.py
+```sh
+python3 verification/verify_release.py
+python3 -m venv .venv
+.venv/bin/python -m pip install -r verification/requirements-offline.txt
+.venv/bin/python verification/verify_release.py --full
 ```
 
-This checks the four RI properties and re-derives the numeric claims in the
-paper (padding-invariance ratio, composite-scale orderings, Wilson intervals,
-Cochran–Armitage trend tests, and the decoupling counts).
+The basic verifier checks every file hash, eight audit-contract assertions,
+184 native WLS bounds, the canonical export of 1,440 detector observations,
+and the task-rating reconciliation. The AgentLeak WLS
+function is not redistributed: `verification/upstream/agentleak/SOURCE.json`
+records its commit and SHA-256. Placing that public file at
+`verification/upstream/agentleak/core.py` makes `verify_native_wls.py` compare
+the replay with the upstream function itself (after checking the hash);
+otherwise it compares with the WLS definition and says so in its output. Full replay adds
+61 unit tests and recomputes the released numerical analyses in a temporary
+copy, with relative and absolute float tolerances of 1e-12. Neither mode calls
+model providers or requires credentials. A successful status means these
+technical checks passed. Optional live execution requires separate provider
+configuration and may incur charges; it is unnecessary for reproducing the
+reported results. See `requirements.txt` and `experiments/requirements_p2p.txt`
+for live-run dependencies, and `LICENSE` for the MIT license.
 
-## Reproduce the experiments
+## Claims and evidence
 
-Point the scripts at any OpenAI-compatible endpoint. With LM Studio running
-locally:
+Paths below are relative to this directory. `SHA256SUMS.json` fixes the delivered
+file set and content. Run commands from the artifact root.
 
-```bash
-# Headline run: two larger models on high-tension scenarios
-python run_real_eval.py \
-  --models qwen/qwen3-32b openai/gpt-oss-120b \
-  --data data/privacy_scenarios_hightension.json \
-  --out ht_both.json
+| Manuscript result | Evidence | Offline replay |
+| --- | --- | --- |
+| Audit validity and scope | `verification/evidence/contract_replay.json`; `experiments/analysis.py`; `experiments/scope.py` | `python3 verification/reproduce_contract.py --check` |
+| 216 frontier generations | `experiments/generated/campaign_v2/frontier_summary.json` | `python3 verification/verify_release.py --full` |
+| 68 primary multi-hop, 24 peer and 10 Guard workflows completed | `experiments/generated/campaign_v2/multihop_rows.json`; `audit_results/frontier_blind_spots.json`; `experiments/generated/audit_summary/results.json` | `python3 verification/verify_release.py --full` |
+| Native WLS and RI on the same 92 primary and peer workflows | `experiments/generated/audit_summary/native_per_workflow.json`; `verification/evidence/native_field_mapping.csv`; `verification/upstream/agentleak/SOURCE.json` | `python3 verification/verify_native_wls.py` |
+| 316 edge observations and retention after revocation | `measurement/evidence/all_edge_comparisons.csv`; `measurement/evidence/edge_summary.json` | `python3 measurement/scripts/strengthening_analysis.py` |
+| Final disclosure labels on 360 opportunities from 72 outputs | `expert_evaluation/input/`; `expert_evaluation/results.json` | `python3 expert_evaluation/analyze_expert_evaluation.py` |
+| Task-rating denominators | `verification/evidence/task_evaluation.json`; `expert_evaluation/workflow_results.json` | `python3 verification/reconcile_task_evaluation.py --check` |
+| Paired control, inventory sensitivity and review volume | `experiments/generated/campaign_v2/paired_control.json`; `experiments/generated/audit_summary/results.json`; `measurement/evidence/capture_overhead.json` | `python3 verification/verify_release.py --full` |
 
-# Third model (Llama-3.1-8B, high-tension only)
-python run_real_eval.py \
-  --models meta-llama/meta-llama-3.1-8b-instruct \
-  --data data/privacy_scenarios_hightension.json \
-  --out ht_llama.json
+The top-level `data/` and `results/` directories retain the historical synthetic
+scenario inventories and benchmark outputs. The revision analyses are in
+`experiments/`, `measurement/`, `expert_evaluation/`, `audit_results/` and
+`verification/`. Legacy `verify_properties.py` checks randomized mathematical
+examples and selected transcribed calculations; it does not prove all paper
+claims or replace the source-backed release verifier.
 
-# Optional paraphrase-aware corroboration from an LLM judge
-python judge_existing.py --in results/ht_both.json --judge openai/gpt-oss-120b
+## Canonical observation export
 
-# Headline table and per-severity breakdown
-python final_table.py
-python analyze_results.py
+The files `experiments/generated/campaign_v2/canonical_records.json` (1,080
+observations) and `measurement/evidence/presidio_canonical.json` (360) retain
+the adapters' internal encoding. The manuscript's Table 5 describes the
+resolved interface exported to `verification/evidence/canonical_observations.json`.
+`experiments/canonical_schema.py` validates the following mapping:
 
-# Detector robustness check (four detector sources, same stored outputs)
-python detector_triangulation.py --both results/ht_both.json \
-  --judged results/ht_both_judged.json \
-  --qcache results/ht_qwen_judge.json
+| Internal field/value | Canonical field/value |
+| --- | --- |
+| `channel` | `channel_id` |
+| `detector` | `detector_source` |
+| `severity` | `severity_level` |
+| `task_required: null` with unavailable-adjudication status | `task_required: "unsure"`, with that status in `task_required_provenance` |
 
-# Trend statistics (Wilson CIs and Cochran–Armitage test)
-python trend_stats.py results/ht_both_judged.json
+All 1,440 archived observations lack independent contextual adjudication;
+this is an unresolved policy label, not evidence that disclosure was required
+or unnecessary. The separate finalized expert labels are analyzed as described
+below. `OUT` is the single-output surface in this panel; it is not relabeled as
+a multi-hop C1 event. Disclosure values, evidence, identities, source hashes,
+severity tiers and scope IDs are preserved, including inventory hashes where
+present. A null `disclosed` value remains unresolved.
 
-# Mitigation study (GUARD vs SCOPED)
-python run_mitigation_eval.py --models qwen/qwen3-32b openai/gpt-oss-120b
+Run `python3 verification/export_canonical.py --check` to validate every exported
+record, reproduce the mapping and compare scores for all 288 trace/adapter
+groups. This check is included in both release-verification modes. The exporter
+rejects missing fields, conflicting aliases, invalid values and positives
+without evidence. `--write` rebuilds the export from the frozen internal files;
+no detector or model is rerun.
 
-# Decoupling experiment: severity fixed, task-centrality varied
-python run_real_eval.py \
-  --models qwen/qwen3-32b openai/gpt-oss-120b \
-  --data data/privacy_scenarios_decoupled.json \
-  --out decoupled_results.json --max-tokens 1200
-python analyze_decoupled.py
+## Task judgments and their denominators
 
-# Cross-corpus taxonomy portability (tab:composition — no server needed).
-# PrivacyLens and TrustLLM raw data are third-party corpora and are not
-# redistributed here; point the scripts at your own local checkout.
-python score_agentrisk.py
-python score_privacylens.py --data /path/to/privacylens_dump.json
-python score_trustllm.py --data-dir /path/to/trustllm/privacy_data
+| Reference and population | Complete or accomplished | Other observations |
+| --- | --- | --- |
+| Auxiliary opposite-family model, primary multi-hop only | 22/67 valid judgments meet the full rubric | 11/67 contain unresolved item decisions; one of 68 completed workflows has no valid judgment |
+| Final expert global rating, primary multi-hop | 66/68 accomplished | 2 partial; FULL 33/34 and SCOPED 33/34 accomplished |
+| Final expert global rating, additional Guard workflows | 9/10 accomplished | 1 partial |
+| Final expert detailed forms, same 78 workflows | 78/78 have all applicable items positive and no material invention | A form consistency diagnostic, not a task-success rate |
 
-# Severity-balanced extension (24 scenarios, L1-L4 balanced) + pooled stats
-python run_real_eval.py --models qwen/qwen3-32b \
-  --data data/privacy_scenarios_hightension_ext.json --out hx_qwen.json
-python run_real_eval.py --models openai/gpt-oss-120b \
-  --data data/privacy_scenarios_hightension_ext.json --out hx_gpt.json
-python run_real_eval.py --models meta-llama-3.1-8b-instruct \
-  --data data/privacy_scenarios_hightension_ext.json --out hx_llama.json
+These are distinct assessments with different criteria, reported descriptively.
+W015, W033 and W047 received a partial global rating without an identified
+missing item; they are counted conservatively as partial. The automated rubric
+is stricter because it requires literal evidence for every essential item
+(W001 is an example). Exact archived outputs and both final forms for these four
+workflows are in `verification/evidence/contract_replay.json`. The 24 peer
+workflows have no expert task rating.
 
-# Repeated sampled runs (sampling-stability check, temperature 0.7, pooled 36)
-for run in 1 2 3; do
-  python run_real_eval.py --models <model> --temperature 0.7 \
-    --data data/privacy_scenarios_hightension_pooled.json \
-    --out stab_run${run}_<tag>.json
-done
+## Annotation provenance and detector coverage
 
-# Pooled analysis: extension + pooled summaries, Wilson CIs, trend tests,
-# MC permutation (n=36), bootstrap CIs, and stability table (tab:ext, §6.2)
-python analyze_extension.py
+Two risk-assessment experts labeled the same synthetic outputs, blind to model
+identities, configuration labels and detector scores. A coordination record
+finalized by the authors reconciles their forms. The released `a` and `b`
+values (also stored as `A` and `B`) come from final forms after coordination,
+not the initial independent responses. Their 360/360 disclosure agreement
+describes consistency of the final forms; it does not estimate initial
+inter-rater reliability. Across all 2,489 decisions, 2,472 final-form pairs
+agree and 17 differ on contextual necessity or authorization; these 17
+decisions retain Unknown. Comparison labels and reasons refer to these final
+forms. Stable source IDs and hashes are in
+`expert_evaluation/input/source_manifest.json`.
 
-# Exact permutation tests + bootstrap CIs on the original 12-scenario set (§7.4)
-python inference_stats.py
+The annotation materials in `expert_evaluation/annotation_data.json` use
+opaque trace, workflow and context IDs alongside the tasks, source records
+and outputs to assess. They omit model identities, configuration labels and
+detector scores. In contrast, `input/opportunities.json` and
+`input/workflows.json` are consolidated analysis files: model, condition
+and detector metadata were joined to the returned annotations during
+analysis. They are not the forms shown to the experts.
 
-# End-to-end audit case study (§"End-to-End Audit Case Study"):
-# six workflows × four configurations (BASELINE / GUARD / DLP / SCOPED),
-# channels C1/C2/C5, plus a DPO-style audit report per model
-python run_case_study.py \
-  --models qwen/qwen3-32b openai/gpt-oss-120b meta-llama-3.1-8b-instruct
-```
+The 360 final disclosure labels contain 11 Yes, 348 No and one Unknown.
+Precision and recall use jointly resolved opportunities for each detector:
+marker 359, regex DLP 50, Presidio 80 and cross-model judge 357. Adapter-specific
+abstentions and uncovered fields are not negatives. Unknown labels contribute
+lower and upper exposure bounds, which are not confidence intervals. Reported
+precision and recall are descriptive comparisons against these finalized labels.
 
-Useful flags shared by the runners: `--base-url` (default
-`http://localhost:1234/v1`), `--limit N` (first N scenarios), `--max-tokens`.
+## Experimental scope and interpretation
 
-## Notes on integrity
+The primary multi-hop campaign planned 72 workflows and completed 68; peer
+execution completed 24/24; Guard completed 10/12. There are six synthetic tasks
+per model, topology and condition, with one execution per cell. Refusals and
+transport failures are retained in the records and excluded from exposure
+denominators without being scored as zero. Dynamic cells were rerun uniformly
+after a resume/instrumentation audit found cached timestamp replay; primary
+dynamic results use the fresh round, with both rounds archived.
 
-- The deterministic detector is the headline signal; the LLM judge is reported
-  only as paraphrase-aware corroboration, since the judge model also appears as
-  a tested agent (a self-judgment bias also present in prior work).
-- Severity-weighted results are measured directly on the open-model experiments,
-  where each secret's level is known. They are never retro-fitted onto external
-  corpora that publish only binary labels.
+C1 is the user-facing reply; it precedes or follows internal processing
+depending on topology. It is not a universal terminal record. Internal exposure occurs in 24/34 completed
+FULL primary workflows and 8/12 FULL peer workflows despite clean user-facing
+replies. The deterministic SCOPED selector acts outside the model and excludes
+registered irrelevant secrets before generation. Zero detected SCOPED exposure
+is conditional on that selector, the registered inventory and detector coverage;
+it is not a general privacy guarantee or evidence of protection against an
+upstream model that sees the full record.
+
+Native WLS counts field/channel occurrences, whereas RI counts distinct
+weighted secrets relative to a declared inventory. Native WLS and RI have
+Kendall tau-b approximately 0.32 across the 32 exposed workflows in these identical records. A
+separate tier-weighted occurrence surrogate gives approximately 0.40; it uses
+a different weighting convention. Repeated propagation can increase WLS
+without increasing distinct exposure. The comparison also changes native
+field/channel weights, so the rank disagreement does not isolate deduplication.
+This illustrates complementary measurements and does not establish RI as a
+universally better score. The native default grid maps 19 of the 30 registered
+fields; unmapped types remain explicit. Neither score estimates actual harm.
+
+The experiments are controlled synthetic tasks, with small samples, detector
+coverage limits and no real deployment. Review queues measure text volume, not
+auditor time. Human audit decisions are not evaluated.
+
+The readable mortgage report lists C2 and C5 as tied at RI 0.500. The
+historical JSON stores C2, the first maximum selected by the original generator.

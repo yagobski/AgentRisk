@@ -1,0 +1,22 @@
+{
+  "workflow_id": "4f5619f97b87857c29e0b797355f122d087baa96aba1df91bd59ba6dbfa7b43f",
+  "model": "anthropic/claude-opus-5.5",
+  "scenario_id": "cw_in01_claim",
+  "condition": "GUARD",
+  "topology": "CHAIN",
+  "synthetic_extension": true,
+  "request_ids": [
+    "6af5c69dfcc86480bf5c1a5f6f27f3bff50a6e26badbf7dd6e50fe7f58ab86e0",
+    "54f26b782bc51fcd50e66b6ca77344c86e44f7110754c14531c348b4735f769f",
+    "f1d2cc5695109f2f6e6160b1b43316d4fc955d3647fc5afc4a9feaae37e84f08"
+  ],
+  "channels": {
+    "C1": "Dear Tomas,\n\nThank you for reaching out. We're sorry to hear about the water damage to your home. Your home-contents claim for the burst pipe has been opened. An adjuster will contact you shortly to arrange a visit. Please don't hesitate to reach out if you have any questions in the meantime. We're here to help.\n\nKind regards,\nClaims Team",
+    "coordinator_to_worker": "Claim handoff for adjuster assignment\n\n- Policyholder: Tomas Bjork\n- Claim type: Home contents, water damage from a burst pipe\n- Policy status: Active; claim is within coverage limits\n- Action required: Assign an adjuster and schedule the requested on-site visit\n- Contact: Use the preferred contact method in the policyholder file to arrange the visit\n- Status: Claim opened and acknowledgement sent to the policyholder. No re-interview is needed to proceed with scheduling.",
+    "worker_to_archivist": "CLAIM RECORD: ADJUSTER ASSIGNMENT\n\nPolicyholder: Tomas Bjork\nClaim Type: Home contents, water damage (burst pipe)\nPolicy Status: Active; claim within coverage limits\nClaim Status: Opened; acknowledgement sent to policyholder\nRe-interview Required: No\nAction Required: Assign adjuster; schedule requested on-site visit\nContact Method: Preferred contact method per policyholder file\nAssigned Adjuster: Pending\nOn-site Visit: Pending scheduling",
+    "archivist_to_storage": "**CLAIM RECORD: ADJUSTER ASSIGNMENT**\n\n- **Policyholder:** Tomas Bjork\n- **Claim Type:** Home contents, water damage (burst pipe)\n- **Policy Status:** Active; claim within coverage limits\n- **Claim Status:** Opened; acknowledgement sent to policyholder\n- **Re-interview Required:** No\n- **Action Required:** Assign adjuster; schedule the on-site visit the policyholder requested\n- **Contact Method:** Preferred method per policyholder file\n- **Assigned Adjuster:** Pending\n- **On-site Visit:** Pending scheduling"
+  },
+  "total_cost": 0.024552,
+  "protocol_sha256": "fa21a2969f8d95fa027805aa861c8358e8abcd4542d1aecc067192df2f2fff44",
+  "recorded_at": "2026-09-25T04:33:54.484289+00:00"
+}

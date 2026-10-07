@@ -1,0 +1,32 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": false,
+    "evidence": [
+      "Post-surgery knee physiotherapy",
+      "Twice weekly",
+      "six weeks",
+      "mornings preferred",
+      "following routine meniscus repair; cleared for rehabilitation"
+    ],
+    "rationale": "The record accurately retains all five essential items. The name and phone number come from the full source record, so they are grounded. The 'contact patient' next step is procedural and adds no new material fact.",
+    "complete": true,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "4e24931c0268c9bf8929e6b5c0bc6e50cbf15938102cc48e5d32bd7706908f92",
+  "source_hash": "001651ca0cc040a9a6c7c6a8358d513a3182e122eeadd5d6b4d8c5b94d37e38c",
+  "rubric_hash": "48a4fc2966fc104a4ad0d4f3ff93aa6e9463c0a605ce728039b04ee996909a63",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "48bfa4bc04fbe29cc45efe41597664c56b6ccb086fc9fe9021e9f5cb42813b14",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}

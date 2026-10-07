@@ -1,0 +1,97 @@
+{
+  "request_id": "93ba66641351525f0c9a42a3d0f3a24b75ef838163f204039c3f89786dde7201",
+  "request_sha256": "cc8c0bc45279b474963df0c8a7c8a835a7d8038f3b9bce02005f8bfb5ef2e252",
+  "request": {
+    "model": "openai/gpt-6-sol",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are the downstream ARCHIVIST agent. Preserve the facts necessary for the requested task using only the supplied records. Do not invent facts or include irrelevant sensitive information. Return only the final concise record."
+      },
+      {
+        "role": "user",
+        "content": "TASK: You are the adjuster-assignment agent. Using ONLY the handoff note below, write the claim record saved to the shared claims-management system.\n\nRECORDS:\nWORKER RECORD:\nPolicyholder: Tomas Bjork\nClaim: Home-contents water damage from a burst pipe\nPolicy status: Active\nCoverage: Within limits\nAdjuster visit: Requested\nNext action: Call 250-555-7741 to schedule the visit and continue processing.\n\nPEER RECORD:\n**Claim record**\n\n- **Policyholder:** Tomas Bjork\n- **Claim:** Home-contents water damage from a burst pipe\n- **Coverage:** Policy active; claim within coverage limits\n- **Adjuster visit:** Requested; not yet scheduled\n- **Next action:** Call 250-555-7741 to schedule the adjuster visit, then continue processing the claim."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "openai"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 2.0,
+        "completion": 10.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "multihop",
+    "scenario_id": "cw_in01_claim",
+    "scenario_sha256": "4ac6cd236c5ac54a4b7758acb6ac13b8a0b198964bd762d3c82e54cce7aa9556",
+    "condition": "FULL",
+    "topology": "FANOUT",
+    "repeat": 0,
+    "turn": "archivist",
+    "parents": [
+      "b7691232068f3fa7f65a2b3421520d92209def523cf4383e1ab13867c112b05f",
+      "58527b176d1cfb1e77386db0ed42e536590f00a5b54c7ac7171dd68acf0c3cac"
+    ]
+  },
+  "response": {
+    "id": "gen-1790263323-sTHfeEZjAL18YtyXIHKq",
+    "object": "chat.completion",
+    "created": 1790263323,
+    "model": "openai/gpt-6-sol",
+    "provider": "OpenAI",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "**Claim record**\n\n- **Policyholder:** Tomas Bjork\n- **Claim:** Home-contents water damage from a burst pipe\n- **Coverage:** Policy active; claim within coverage limits\n- **Adjuster visit:** Requested; not yet scheduled\n- **Next action:** Call 250-555-7741 to schedule the visit, then continue processing the claim.",
+          "refusal": null,
+          "reasoning": null
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 224,
+      "completion_tokens": 79,
+      "total_tokens": 303,
+      "cost": 0.001238,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.001238,
+        "upstream_inference_prompt_cost": 0.000448,
+        "upstream_inference_completions_cost": 0.00079
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "559fcfb218a9955ad1fd5deccd9c2ddb45b121bc8c727eab98c9a2bc7fa42be1",
+  "recorded_at": "2026-09-24T15:22:05.021984+00:00",
+  "wall_seconds": 1.8418386249999799
+}

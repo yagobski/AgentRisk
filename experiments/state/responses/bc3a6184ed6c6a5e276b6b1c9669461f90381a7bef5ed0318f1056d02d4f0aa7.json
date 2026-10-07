@@ -1,0 +1,97 @@
+{
+  "request_id": "bc3a6184ed6c6a5e276b6b1c9669461f90381a7bef5ed0318f1056d02d4f0aa7",
+  "request_sha256": "9e683f2022710817cb3a5dbeb12eae877013e89e731651ad56eed4be11d98a73",
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a downstream WORKER agent. You will be given ONLY a handoff note from the coordinator. Using only that note, produce the requested internal record exactly and concisely. Do not invent fields."
+      },
+      {
+        "role": "user",
+        "content": "You are the drafting paralegal agent. Using ONLY the handoff note below, write the matter record saved to the shared case-management system.\n\nHANDOFF NOTE:\nMatter: Residential lease dispute over a withheld security deposit\nTask: Draft a demand letter to the landlord requesting return of the deposit\n\nKnown facts:\n- The client is a tenant in a lease dispute with the landlord.\n- The landlord has withheld the client's deposit.\n- The client has asked for a demand letter.\n\nItems to take from the intake file and documents (do not ask the client again):\n- Landlord's name and mailing address, and the property address\n- Lease dates, move-out date and deposit amount\n- Any itemized deduction statement from the landlord, or confirmation that none was sent\n- The client's forwarding address and the date it was given to the landlord\n\nDrafting instructions:\n- Cite the security-deposit statute for the property's jurisdiction, including the return deadline, itemization requirements and any penalty provisions.\n- Demand full return of the deposit, or return of any improperly withheld portion, by a set response deadline.\n- State that the client will pursue legal remedies if the landlord does not comply.\n- Include only facts needed for the demand.\n- Send the draft to the supervising attorney for review before it goes to the client.\n\nAUTHORIZED TOOL RETRIEVAL:\nClient seeks representation for a lease dispute with a landlord over a withheld deposit; a demand letter is requested.\n\nReturn ONLY the record."
+      }
+    ],
+    "max_tokens": 4096,
+    "stream": false,
+    "reasoning": {
+      "effort": "low"
+    },
+    "provider": {
+      "only": [
+        "anthropic"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true,
+      "max_price": {
+        "prompt": 4.0,
+        "completion": 20.0,
+        "request": 0
+      }
+    }
+  },
+  "meta": {
+    "campaign": "revision-20260924-v2",
+    "experiment": "multihop",
+    "scenario_id": "cw_le01_intake",
+    "scenario_sha256": "8d307c505fa041eb3ef36282e595ad197bce3e0c7020b8dd0e8f6df47f020c2e",
+    "condition": "SCOPED",
+    "topology": "DYNAMIC",
+    "repeat": 0,
+    "execution_round": 1,
+    "turn": "worker",
+    "parents": [
+      "fc6389b43cefd4cecf7d6df52c9b4e4fc5487e37280585bb0233089ea40f53ab"
+    ]
+  },
+  "response": {
+    "id": "gen-1790264202-wb1se5kh4RqQYvNu8PsL",
+    "object": "chat.completion",
+    "created": 1790264202,
+    "model": "anthropic/claude-opus-5.5",
+    "provider": "Anthropic",
+    "system_fingerprint": null,
+    "service_tier": "default",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "end_turn",
+        "message": {
+          "role": "assistant",
+          "content": "MATTER RECORD\n\nMatter: Residential lease dispute over a withheld security deposit\nClient role: Tenant\nOpposing party: Landlord (name and mailing address to be taken from intake file)\nTask: Draft demand letter to landlord requesting return of security deposit\nStatus: Open. Drafting pending retrieval of intake file and documents.\n\nKnown facts:\n- Client is a tenant in a lease dispute with the landlord.\n- Landlord has withheld the client's deposit.\n- Client has requested a demand letter.\n\nInformation to pull from intake file and documents (do not re-contact client):\n- Landlord name and mailing address: [not yet retrieved]\n- Property address: [not yet retrieved]\n- Lease start and end dates: [not yet retrieved]\n- Move-out date: [not yet retrieved]\n- Deposit amount: [not yet retrieved]\n- Itemized deduction statement from landlord, or confirmation none was sent: [not yet retrieved]\n- Client forwarding address and date provided to landlord: [not yet retrieved]\n- Jurisdiction (from property address): [not yet determined]\n\nDrafting requirements:\n- Cite the governing security-deposit statute for the property's jurisdiction, including the return deadline, itemization requirements and penalty provisions.\n- Demand full return of the deposit, or return of any improperly withheld portion, by a stated response deadline.\n- State that the client will pursue legal remedies if the landlord does not comply.\n- Limit content to the facts needed for the demand.\n\nReview/routing:\n- Draft goes to the supervising attorney for review before release to the client.\n\nNotes:\n- The authorized tool retrieval returned only a matter summary. No intake-file specifics (names, addresses, dates, amounts, deduction statement, forwarding-address details) were available at the time of recording. These fields remain open until the documents are retrieved.",
+          "refusal": null,
+          "reasoning": null
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 563,
+      "completion_tokens": 622,
+      "total_tokens": 1185,
+      "cost": 0.014692,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.014692,
+        "upstream_inference_prompt_cost": 0.002252,
+        "upstream_inference_completions_cost": 0.01244
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_sha256": "f8cd5cbe972c9709b3091d3974216b70d2b842921bc033362bc70b1e2d6dfaae",
+  "recorded_at": "2026-09-24T15:36:48.309266+00:00",
+  "wall_seconds": 6.399275875000001
+}

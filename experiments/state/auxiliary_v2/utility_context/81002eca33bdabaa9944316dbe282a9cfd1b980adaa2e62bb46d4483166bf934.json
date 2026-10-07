@@ -1,0 +1,32 @@
+{
+  "status": "valid_structure",
+  "verdict": {
+    "items": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "unsupported_material_fact": false,
+    "evidence": [
+      "Pre-approval requested",
+      "25-year fixed-rate mortgage",
+      "primary residence",
+      "Employment verified; applicant has two years with the current employer.",
+      "Requested amount is within standard limits."
+    ],
+    "rationale": "All five essential items are retained accurately. The statement that credit assessment is pending is a status note, not an unsupported material fact.",
+    "complete": true,
+    "unresolved": false
+  },
+  "experiment": "auxiliary_utility_context",
+  "source_workflow": "9c52ce8a1a5585f20bf49dcaffe56dc6f6c4b227849052e4d7c4c7ce6784c17c",
+  "source_hash": "1a38b907cebc68eb19e0260494cbff88b9e70b796454ad13275a2f85f931f2c5",
+  "rubric_hash": "d4cd61019cfb959f389908e870983c6caeb3e65f2d8cdeac9c071ed334dbb751",
+  "campaign": "revision-20260924-v2",
+  "judge_model": "anthropic/claude-opus-5.5",
+  "request_id": "81002eca33bdabaa9944316dbe282a9cfd1b980adaa2e62bb46d4483166bf934",
+  "initial_parse_status": "valid_structure",
+  "parser": "strict JSON; optional surrounding JSON code fence"
+}
